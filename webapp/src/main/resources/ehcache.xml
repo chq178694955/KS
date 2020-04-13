@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ehcache updateCheck="false" name="archiveCache">
+
+    <diskStore path="java.io.tmpdir"/>
+
+    <!-- 默认 -->
+    <defaultCache
+            maxElementsInMemory="10000"
+            eternal="false"
+            timeToIdleSeconds="0"
+            timeToLiveSeconds="7200"
+            overflowToDisk="false"
+            diskPersistent="false"
+            diskExpiryThreadIntervalSeconds="120"
+            memoryStoreEvictionPolicy="LFU"
+    />
+
+    <!-- 机构 -->
+    <cache name="500"
+           maxElementsInMemory="10000"
+           eternal="false"
+           timeToIdleSeconds="0"
+           timeToLiveSeconds="7200"
+           overflowToDisk="false"
+           diskPersistent="false"
+           diskExpiryThreadIntervalSeconds="120"
+           memoryStoreEvictionPolicy="LFU"
+    />
+
+    <!-- 变电站 -->
+    <cache name="521"
+           maxElementsInMemory="10000"
+           eternal="false"
+           timeToIdleSeconds="0"
+           timeToLiveSeconds="7200"
+           overflowToDisk="false"
+           diskPersistent="false"
+           diskExpiryThreadIntervalSeconds="120"
+           memoryStoreEvictionPolicy="LFU"
+    />
+
+    <!-- 专变-->
+    <cache name="7210"
+           maxElementsInMemory="10000"
+           eternal="false"
+           timeToIdleSeconds="0"
+           timeToLiveSeconds="7200"
+           overflowToDisk="false"
+           diskPersistent="false"
+           diskExpiryThreadIntervalSeconds="120"
+           memoryStoreEvictionPolicy="LFU"
+    />
+
+    <!-- 公变 -->
+    <cache name="7215"
+           maxElementsInMemory="10000"
+           eternal="false"
+           timeToIdleSeconds="0"
+           timeToLiveSeconds="7200"
+           overflowToDisk="false"
+           diskPersistent="false"
+           diskExpiryThreadIntervalSeconds="120"
+           memoryStoreEvictionPolicy="LFU"
+    />
+
+    <!-- 主变 -->
+    <cache name="70"
+           maxElementsInMemory="10000"
+           eternal="false"
+           timeToIdleSeconds="0"
+           timeToLiveSeconds="7200"
+           overflowToDisk="false"
+           diskPersistent="false"
+           diskExpiryThreadIntervalSeconds="120"
+           memoryStoreEvictionPolicy="LFU"
+    />
+
+    <!-- 线路 -->
+    <cache name="7220"
+           maxElementsInMemory="10000"
+           eternal="false"
+           timeToIdleSeconds="0"
+           timeToLiveSeconds="7200"
+           overflowToDisk="false"
+           diskPersistent="false"
+           diskExpiryThreadIntervalSeconds="120"
+           memoryStoreEvictionPolicy="LFU"
+    />
+
+    <!-- 大用户 -->
+    <cache name="542"
+           maxElementsInMemory="10000"
+           eternal="false"
+           timeToIdleSeconds="0"
+           timeToLiveSeconds="7200"
+           overflowToDisk="false"
+           diskPersistent="false"
+           diskExpiryThreadIntervalSeconds="120"
+           memoryStoreEvictionPolicy="LFU"
+    />
+
+    <!-- 电厂 -->
+    <cache name="522"
+           maxElementsInMemory="10000"
+           eternal="false"
+           timeToIdleSeconds="0"
+           timeToLiveSeconds="7200"
+           overflowToDisk="false"
+           diskPersistent="false"
+           diskExpiryThreadIntervalSeconds="120"
+           memoryStoreEvictionPolicy="LFU"
+    />
+
+    <!-- 母线 -->
+    <cache name="40"
+           maxElementsInMemory="10000"
+           eternal="false"
+           timeToIdleSeconds="0"
+           timeToLiveSeconds="7200"
+           overflowToDisk="false"
+           diskPersistent="false"
+           diskExpiryThreadIntervalSeconds="120"
+           memoryStoreEvictionPolicy="LFU"
+    />
+
+    <!-- 台区 -->
+    <cache name="545"
+           maxElementsInMemory="10000"
+           eternal="false"
+           timeToIdleSeconds="0"
+           timeToLiveSeconds="7200"
+           overflowToDisk="false"
+           diskPersistent="false"
+           diskExpiryThreadIntervalSeconds="120"
+           memoryStoreEvictionPolicy="LFU"
+    />
+
+    <!-- 居民 -->
+    <cache name="570"
+           maxElementsInMemory="10000"
+           eternal="false"
+           timeToIdleSeconds="0"
+           timeToLiveSeconds="7200"
+           overflowToDisk="false"
+           diskPersistent="false"
+           diskExpiryThreadIntervalSeconds="120"
+           memoryStoreEvictionPolicy="LFU"
+    />
+
+    <!-- 采集器 -->
+    <cache name="85"
+           maxElementsInMemory="10000"
+           eternal="false"
+           timeToIdleSeconds="0"
+           timeToLiveSeconds="7200"
+           overflowToDisk="false"
+           diskPersistent="false"
+           diskExpiryThreadIntervalSeconds="120"
+           memoryStoreEvictionPolicy="LFU"
+    />
+
+    <!-- 终端 -->
+    <cache name="2010"
+           maxElementsInMemory="10000"
+           eternal="false"
+           timeToIdleSeconds="0"
+           timeToLiveSeconds="7200"
+           overflowToDisk="false"
+           diskPersistent="false"
+           diskExpiryThreadIntervalSeconds="120"
+           memoryStoreEvictionPolicy="LFU"
+    />
+
+    <!-- 集中器 -->
+    <cache name="2011"
+           maxElementsInMemory="10000"
+           eternal="false"
+           timeToIdleSeconds="0"
+           timeToLiveSeconds="7200"
+           overflowToDisk="false"
+           diskPersistent="false"
+           diskExpiryThreadIntervalSeconds="120"
+           memoryStoreEvictionPolicy="LFU"
+    />
+
+    <!-- 表计-->
+    <cache name="2001"
+           maxElementsInMemory="10000"
+           eternal="false"
+           timeToIdleSeconds="0"
+           timeToLiveSeconds="7200"
+           overflowToDisk="false"
+           diskPersistent="false"
+           diskExpiryThreadIntervalSeconds="120"
+           memoryStoreEvictionPolicy="LFU"
+    />
+
+    <!-- 居民表计 -->
+    <cache name="2004"
+           maxElementsInMemory="10000"
+           eternal="false"
+           timeToIdleSeconds="0"
+           timeToLiveSeconds="7200"
+           overflowToDisk="false"
+           diskPersistent="false"
+           diskExpiryThreadIntervalSeconds="120"
+           memoryStoreEvictionPolicy="LFU"
+    />
+
+    <!-- 计量点 -->
+    <cache name="2003"
+           maxElementsInMemory="10000"
+           eternal="false"
+           timeToIdleSeconds="0"
+           timeToLiveSeconds="7200"
+           overflowToDisk="false"
+           diskPersistent="false"
+           diskExpiryThreadIntervalSeconds="120"
+           memoryStoreEvictionPolicy="LFU"
+    />
+
+    <!-- 开关 -->
+    <cache name="5009"
+           maxElementsInMemory="10000"
+           eternal="false"
+           timeToIdleSeconds="0"
+           timeToLiveSeconds="7200"
+           overflowToDisk="false"
+           diskPersistent="false"
+           diskExpiryThreadIntervalSeconds="120"
+           memoryStoreEvictionPolicy="LFU"
+    />
+
+    <!-- 分析对象 -->
+    <cache name="5007"
+           maxElementsInMemory="10000"
+           eternal="false"
+           timeToIdleSeconds="0"
+           timeToLiveSeconds="7200"
+           overflowToDisk="false"
+           diskPersistent="false"
+           diskExpiryThreadIntervalSeconds="120"
+           memoryStoreEvictionPolicy="LFU"
+    />
+
+    <!-- 生产厂家-->
+    <cache name="10000001"
+           maxElementsInMemory="10000"
+           eternal="false"
+           timeToIdleSeconds="0"
+           timeToLiveSeconds="7200"
+           overflowToDisk="false"
+           diskPersistent="false"
+           diskExpiryThreadIntervalSeconds="120"
+           memoryStoreEvictionPolicy="LFU"
+    />
+
+    <!-- PT类型-->
+    <cache name="10000002"
+           maxElementsInMemory="10000"
+           eternal="false"
+           timeToIdleSeconds="0"
+           timeToLiveSeconds="7200"
+           overflowToDisk="false"
+           diskPersistent="false"
+           diskExpiryThreadIntervalSeconds="120"
+           memoryStoreEvictionPolicy="LFU"
+    />
+
+    <!-- CT类型-->
+    <cache name="10000003"
+           maxElementsInMemory="10000"
+           eternal="false"
+           timeToIdleSeconds="0"
+           timeToLiveSeconds="7200"
+           overflowToDisk="false"
+           diskPersistent="false"
+           diskExpiryThreadIntervalSeconds="120"
+           memoryStoreEvictionPolicy="LFU"
+    />
+
+    <!-- 部门类型-->
+    <cache name="10000004"
+           maxElementsInMemory="10000"
+           eternal="false"
+           timeToIdleSeconds="0"
+           timeToLiveSeconds="7200"
+           overflowToDisk="false"
+           diskPersistent="false"
+           diskExpiryThreadIntervalSeconds="120"
+           memoryStoreEvictionPolicy="LFU"
+    />
+
+    <!-- 表计类型-->
+    <cache name="10000005"
+           maxElementsInMemory="10000"
+           eternal="false"
+           timeToIdleSeconds="0"
+           timeToLiveSeconds="7200"
+           overflowToDisk="false"
+           diskPersistent="false"
+           diskExpiryThreadIntervalSeconds="120"
+           memoryStoreEvictionPolicy="LFU"
+    />
+
+    <!-- 行业类型-->
+    <cache name="10000006"
+           maxElementsInMemory="10000"
+           eternal="false"
+           timeToIdleSeconds="0"
+           timeToLiveSeconds="7200"
+           overflowToDisk="false"
+           diskPersistent="false"
+           diskExpiryThreadIntervalSeconds="120"
+           memoryStoreEvictionPolicy="LFU"
+    />
+
+    <!-- 使用类型-->
+    <cache name="10000007"
+           maxElementsInMemory="10000"
+           eternal="false"
+           timeToIdleSeconds="0"
+           timeToLiveSeconds="7200"
+           overflowToDisk="false"
+           diskPersistent="false"
+           diskExpiryThreadIntervalSeconds="120"
+           memoryStoreEvictionPolicy="LFU"
+    />
+
+    <!-- 对象类型-->
+    <cache name="10000008"
+           maxElementsInMemory="10000"
+           eternal="false"
+           timeToIdleSeconds="0"
+           timeToLiveSeconds="7200"
+           overflowToDisk="false"
+           diskPersistent="false"
+           diskExpiryThreadIntervalSeconds="120"
+           memoryStoreEvictionPolicy="LFU"
+    />
+
+</ehcache>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.king.system.dao.SysResourcesMapper">
+  <resultMap id="BaseResultMap" type="com.king.system.entity.SysResources">
+    <result column="id" jdbcType="BIGINT" property="id" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="url" jdbcType="VARCHAR" property="url" />
+    <result column="type" jdbcType="TINYINT" property="type" />
+    <result column="pid" jdbcType="BIGINT" property="pid" />
+    <result column="permission" jdbcType="VARCHAR" property="permission" />
+    <result column="icon" jdbcType="VARCHAR" property="icon" />
+  </resultMap>
+  <insert id="insert" parameterType="com.king.system.entity.SysResources">
+    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Long">
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into sys_resources (name, url, type, 
+      pid, permission, icon)
+    values (#{name,jdbcType=VARCHAR}, #{url,jdbcType=VARCHAR}, #{type,jdbcType=TINYINT}, 
+      #{pid,jdbcType=BIGINT}, #{permission,jdbcType=VARCHAR}, #{icon,jdbcType=VARCHAR})
+  </insert>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select id, name, url, type, pid, permission, icon
+    from sys_resources
+  </select>
+  <select id="getResourceByRoleId" resultMap="BaseResultMap" parameterType="java.lang.Long">
+    select a.id, a.name, a.url, a.type, a.pid, a.permission, icon
+    from sys_resources a ,sys_role_resources b
+    where a.id = b.res_id and b.role_id = #{roleId,jdbcType=BIGINT}
+  </select>
+  <select id="findResources" resultMap="BaseResultMap" parameterType="java.util.Map">
+    select a.id, a.name, a.url, a.type, a.pid, a.permission, icon
+    from sys_resources a, sys_role_resources b, sys_user_role c
+    where a.id = b.res_id and b.role_id = c.rid
+    <if test="userId != null and userId != ''">
+      and c.uid = #{userId,jdbcType=BIGINT}
+    </if>
+    <if test="type != null and type != ''">
+      and a.type = #{type,jdbcType=INTEGER}
+    </if>
+    order by a.id
+  </select>
+</mapper>

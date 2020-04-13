@@ -1,0 +1,87 @@
+server:
+  # web端口
+  port: 8080
+logging:
+  # 日志
+  config: classpath:logback-boot.xml
+spring:
+  devtools:
+    restart:
+      enabled: false
+      additional-exclude: src/main/java
+      exclude: WEB-INF/**
+  cache:
+    ehcache:
+      config: classpath:/ehcache.xml
+  mvc:
+    view:
+      prefix: /WEB-INF/jsp/
+      suffix: .jsp
+  datasource:
+    # jdbc连接
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/shopping_mall?characterEncoding=utf8&serverTimezone=GMT%2B8
+    username: root
+    password:
+    # druid数据源
+    type: com.alibaba.druid.pool.DruidDataSource
+    initialSize: 1
+    minIdle: 3
+    maxActive: 20
+    maxWait: 60000
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 30000
+    validationQuery: select 'x'
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    poolPreparedStatements: true
+    maxPoolPreparedStatementPerConnectionSize: 20
+    filters: stat,wall,slf4j
+    connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
+    useGlobalDataSourceStat: true
+
+  # redis配置
+  redis:
+    database: 0
+    host: 127.0.0.1
+    port: 6379
+    password:
+    jedis:
+      pool:
+        max-active: 200
+        max-wait: -1
+        max-idle: 8
+        min-idle: 0
+    timeout: 3000
+  aop:
+    auto: true
+    proxy-target-class: true
+
+  # 国际化
+i18n:
+  basename: i18n
+  resources-locations: classpath*:i18n/*.properties
+  encoding: UTF-8
+  cacheSeconds: -1
+  alwaysUseMessageFormat: false
+  fallbackToSystemLocale: true
+  default:
+    language: en
+    country: US
+
+# mybatis配置
+mybatis:
+  mapper-locations: classpath*:mapper/**/*Mapper.xml
+
+# 档案缓存
+default:
+  archive:
+    local-cache:
+      enable: true
+    redis-cache:
+      enable: true
+      expire:
+        hours: 0
+
+
