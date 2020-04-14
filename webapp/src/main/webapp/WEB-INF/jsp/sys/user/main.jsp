@@ -18,17 +18,17 @@
         <div class="layui-col-md12">
             <div class="layui-card">
                 <div class="layui-card-header">
-                    <form class="layui-form" lay-filter="sysDictSearchForm">
+                    <form class="layui-form" lay-filter="searchForm">
                         <div class="layui-form-item">
                             <div class="layui-inline">
-                                <label class="layui-form-label"><spring:message code="sys.dict.label.dictType"/></label>
+                                <label class="layui-form-label"><spring:message code="sys.user.field.state"/></label>
                                 <div class="layui-input-inline">
-                                    <select id="classNo_${menuId}" name="classNo" lay-verify=""></select>
+                                    <select id="state_${menuId}" name="state" lay-verify=""></select>
                                 </div>
                             </div>
                             <div class="layui-inline">
                                 <div class="layui-input-inline">
-                                    <input id="dictDesc_${menuId}" type="text" name="dictDesc"  placeholder="<spring:message code="sys.dict.label.dictDescTip"/>" autocomplete="off" class="layui-input">
+                                    <input id="searchKey_${menuId}" type="text" name="searchKey"  placeholder="<spring:message code="sys.user.label.accountOrNameTip"/>" autocomplete="off" class="layui-input">
                                 </div>
                             </div>
                             <div class="layui-inline">
@@ -46,40 +46,20 @@
                     </form>
                 </div>
                 <div class="layui-card-body ">
-                    <table class="layui-table" lay-filter="sysDictList_${menuId}" lay-data="{url:'${ctx}/sys/dict/find',
-                        id:'sysDictList_${menuId}',
-                        page:true,
-                        }">
+                    <table class="layui-table" lay-filter="sysUserList_${menuId}">
                         <thead>
                         <tr>
-                            <th lay-data="{checkbox:true}">ID</th>
-                            <th lay-data="{field:'dictSn',width:100,align:'center'}"><spring:message code="sys.dict.field.sn"/></th>
-                            <th lay-data="{field:'classNo',width:100,align:'center'}"><spring:message code="sys.dict.field.classNo"/></th>
-                            <th lay-data="{field:'dictNo',width:100,align:'center'}"><spring:message code="sys.dict.field.dictNo"/></th>
-                            <th lay-data="{field:'dictDesc',width:300,align:'center'}"><spring:message code="sys.dict.field.dictDesc"/></th>
-                            <th lay-data="{field:'dispOrder',width:100,align:'center'}"><spring:message code="sys.dict.field.dispOrder"/></th>
-                            <th lay-data="{field:'parentSn',width:100,align:'center'}"><spring:message code="sys.dict.field.parentSn"/></th>
-                            <th lay-data="{field:'useFlag',width:100,align:'center',templet:'#usedFlagSwitchTpl_${menuId}'}"><spring:message code="sys.dict.field.useFlag"/></th>
+                            <th lay-data="{checkbox:true}"></th>
+                            <th lay-data="{field:'name',width:200,align:'center'}"><spring:message code="sys.user.field.name"/></th>
+                            <th lay-data="{field:'username',width:200,align:'center'}"><spring:message code="sys.user.field.username"/></th>
+                            <th lay-data="{field:'idCardNum',width:300,align:'center'}"><spring:message code="sys.user.field.idCardNo"/></th>
+                            <th lay-data="{field:'state',width:120,align:'center',templet:'#stateTpl_${menuId}'}"><spring:message code="sys.user.field.state"/></th>
                             <th lay-data="{field:'oper',fixed:'right',width:180,align:'center',toolbar:'#operBar_${menuId}'}"><spring:message code="com.btn.oper"/></th>
                         </thead>
-                        <tbody>
-                            <tr>
-                                <td>ID</td>
-                                <td>1</td>
-                                <td>1</td>
-                                <td>1</td>
-                                <td>1</td>
-                                <td>1</td>
-                                <td>1</td>
-                                <td>1</td>
-                                <td>1</td>
-                                <td></td>
-                            </tr>
-                        </tbody>
                     </table>
 
-                    <script type="text/html" id="usedFlagSwitchTpl_${menuId}">
-                        <input type = "checkbox" name = "useFlag" value = "{{d.useFlag}}" lay-skin = "switch" lay-text = "<spring:message code="sys.dict.field.useFlag.enable"/>|<spring:message code="sys.dict.field.useFlag.disable"/>" lay-filter = "usedFlagFilter" {{ d.useFlag == 1 ? 'checked': ''}} >
+                    <script type="text/html" id="stateTpl_${menuId}">
+                        <input type = "checkbox" name = "state" value = "{{d.state}}" lay-skin = "switch" lay-text = "<spring:message code="sys.user.field.state.normal"/>|<spring:message code="sys.user.field.state.locked"/>" lay-filter = "stateFilter" {{ d.state == 1 ? 'checked': ''}} >
                     </script>
 
                     <script type="text/html" id="operBar_${menuId}">
@@ -104,21 +84,22 @@
         var element = layui.element;
         var table = layui.table;
 
-        //var tableIns = table.render();
+        table.init('sysUserList_${menuId}',{
+            id: 'sysUserList_${menuId}',
+            url: '${ctx}/sys/dict/find',
+            page: true
+        });
 
         element.render('breadcrumb');
-        loadDictTypes(function(){
-            form.render('select','sysDictSearchForm');
-        });
 
         $('#query_${menuId}').bind('click',table,query);
         $('#add_${menuId}').bind('click',toAdd);
 
-        form.on('switch(usedFlagFilter)',function(obj){
-            var useFlagObj = obj.othis;
-            var parentTr = useFlagObj.parents("tr");
+        form.on('switch(stateFilter)',function(obj){
+            var stateObj = obj.othis;
+            var parentTr = stateObj.parents("tr");
             var parentTrIndex = parentTr.attr("data-index");
-            var data = table.cache['sysDictList_${menuId}'];
+            var data = table.cache['sysUserList_${menuId}'];
             var row = {};
             for(var i=0;i<data.length;i++){
                 if(data[i].LAY_TABLE_INDEX == parentTrIndex){
@@ -126,10 +107,10 @@
                     break;
                 }
             }
-            layer.tips(this.value + ' ' + this.name + '：'+ obj.elem.checked ? "关" : "开", obj.othis);
+            //layer.tips(this.value + ' ' + this.name + '：'+ obj.elem.checked ? "关" : "开", obj.othis);
         });
 
-        table.on('tool(sysDictList_${menuId})',function(obj){
+        table.on('tool(sysUserList_${menuId})',function(obj){
             var data = obj.data;
             data.menuId = '${menuId}';
             switch(obj.event){
@@ -158,10 +139,10 @@
 
     function query(event){
         var table = event.data;
-        table.reload('sysDictList_${menuId}',{
+        table.reload('sysUserList_${menuId}',{
             where:{
-                classNo: WebUtils.fmtStr($('#classNo_${menuId}').val()),
-                dictDesc: WebUtils.fmtStr($('#dictDesc_${menuId}').val())
+                state: WebUtils.fmtStr($('#state_${menuId}').val()),
+                searchKey: WebUtils.fmtStr($('#searchKey_${menuId}').val())
             },
             page:{
                 curr:1
@@ -169,42 +150,8 @@
         });
     }
 
-    function loadDictTypes(callback){
-        $.ajax({
-            url: APP_ENV + '/sys/dict/loadDictTypes',
-            data:{
-                flag:"1"
-            },
-            dataType: 'json',
-            success: function(dictTypes){
-                if(dictTypes){
-                    for(var i=0;i<dictTypes.length;i++){
-                        var dict = dictTypes[i];
-                        $('#classNo_${menuId}').append('<option value="'+dict.classNo+'">'+dict.dictDesc+'</option>')
-                    }
-                }
-                if(typeof callback == 'function'){
-                    callback();
-                }
-            }
-        })
-    }
-
     function toAdd(){
         Frame.loadPage('${menuId}','sys/dict/toAdd?menuId=${menuId}',{},WebUtils.getMessage('com.btn.add'),400);
-        <%--Frame.tips('只是测试一下','dictDesc_${menuId}')--%>
-        // Frame.load();
-        // setTimeout(function(){
-        //     Frame.closeLoad();
-        // },5000);
-        // Frame.confirm('确认执行吗？',function(){
-        //     Frame.alert('收到，准备执行');
-        // })
-        //Frame.loadPage('${menuId}','sys/dict/toAdd','新增字典',400,600);
-        // Frame.alert('在线调试');
-        // Frame.warn('在线调试');
-        // Frame.err('在线调试');
-        //Frame.addMainTab({id:'${menuId}_01',title:{icon:'&#xe68e;',name:'新增字典'},url:APP_ENV + '/sys/dict/toAdd'});
     }
 
 </script>

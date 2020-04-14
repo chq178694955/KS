@@ -3,7 +3,12 @@ package com.king.framework.base;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import com.github.pagehelper.PageInfo;
+import com.king.framework.export.Field;
+import com.king.framework.export.HtmlDataGridExport;
+import com.king.framework.export.ITableExport;
 import com.king.framework.utils.I18nUtils;
+import org.apache.shiro.SecurityUtils;
+import org.apache.shiro.subject.Subject;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.support.PropertiesLoaderUtils;
@@ -105,19 +110,59 @@ public class BaseController {
     }
 
     protected <T> Map<String, Object> getGridData(PageInfo<T> page) {
-        Map<String, Object> map = new HashMap();
-        map.put("code",0);
-        map.put("msg","");
-        map.put("data", page.getList());
-        map.put("count", page.getTotal());
-        if (page.getTotal() == -1L) {
-            int total = (page.getPageNum() - 1) * page.getPageSize() + (page.getList() != null ? page.getList().size() : 0);
-            if (page.getList() != null && page.getList().size() == page.getPageSize()) {
-                ++total;
-            }
+        if(this.isDownloadReq()){
+            return this.download(page);
+        }else{
+            Map<String, Object> map = new HashMap();
+            map.put("code",0);
+            map.put("msg","");
+            map.put("data", page.getList());
+            map.put("count", page.getTotal());
+            if (page.getTotal() == -1L) {
+                int total = (page.getPageNum() - 1) * page.getPageSize() + (page.getList() != null ? page.getList().size() : 0);
+                if (page.getList() != null && page.getList().size() == page.getPageSize()) {
+                    ++total;
+                }
 
-            map.put("total", total);
+                map.put("total", total);
+            }
+            return map;
         }
+    }
+
+    private <T> Map<String, Object> download(PageInfo<T> page) {
+        List<T> result = page.getList();//导出结果集
+
+        Map<String, Object> map = new HashMap();
+        HttpServletRequest request = this.getRequest();
+        HttpServletResponse response = this.getResponse();
+        String exportHeaders = request.getParameter("exportHeaders");
+        String exportTitle = request.getParameter("exportTitle");
+        Subject subject = SecurityUtils.getSubject();
+        String author = subject.getPrincipal().toString();
+
+        JSONArray columns= JSONObject.parseArray(exportHeaders);
+        List<List<Field>> headers = new ArrayList<>();
+        for(int i=0;i<columns.size();i++){
+            JSONArray cols = columns.getJSONArray(i);
+            List<Field> fields = new ArrayList<>();
+            for(int j=0;j<cols.size();j++){
+                JSONObject fieldJson = cols.getJSONObject(j);
+                Field field = JSONObject.parseObject(fieldJson.toString(),Field.class);
+                fields.add(field);
+            }
+            headers.add(fields);
+        }
+
+        try {
+            ITableExport<T> excelExport = new HtmlDataGridExport<>(request,response);
+            String guid = (String)excelExport.export(author,exportTitle,headers,result);
+            map.put("success", true);
+            map.put("guid", guid);
+        } catch (Exception var12) {
+            var12.printStackTrace();
+        }
+
         return map;
     }
 

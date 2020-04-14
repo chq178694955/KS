@@ -30,6 +30,7 @@
         <ehcache.core.verion>2.5.7</ehcache.core.verion>
         <shiro.version>1.4.0</shiro.version>
         <shiro.redis.version>2.4.2.1-RELEASE</shiro.redis.version>
+        <poi.version>3.9</poi.version>
     </properties>
 
     <!-- 依赖声明 -->
@@ -140,6 +141,17 @@
                 <groupId>org.crazycake</groupId>
                 <artifactId>shiro-redis</artifactId>
                 <version>${shiro.redis.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.poi</groupId>
+                <artifactId>poi</artifactId>
+                <version>${poi.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.poi</groupId>
+                <artifactId>poi-ooxml</artifactId>
+                <version>${poi.version}</version>
             </dependency>
 
             <!--<dependency>-->

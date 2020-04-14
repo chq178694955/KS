@@ -1,6 +1,8 @@
 package com.king.system.service;
 
 
+import com.github.pagehelper.PageInfo;
+import com.king.framework.model.Criteria;
 import com.king.system.entity.SysUser;
 
 import java.util.List;
@@ -17,5 +19,7 @@ public interface ISysUserService {
     SysUser findByUserName(String username);
 
     SysUser findByNameAndPass(String username, String password);
+
+    PageInfo<SysUser> find(PageInfo<SysUser> page, Criteria criteria, Boolean isDownload);
 
 }

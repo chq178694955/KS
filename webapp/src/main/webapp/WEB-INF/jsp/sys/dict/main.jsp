@@ -38,7 +38,7 @@
                                 <button id="add_${menuId}" type="button" class="layui-btn layui-btn-warm" title="<spring:message code="com.btn.add"/>">
                                     <i class="layui-icon layui-icon-add-1"></i>
                                 </button>
-                                <button type="button" class="layui-btn" title="<spring:message code="com.btn.excel"/>">
+                                <button id="excel_${menuId}" type="button" class="layui-btn" title="<spring:message code="com.btn.excel"/>">
                                     <i class="iconfont layui-icon-excel"></i>
                                 </button>
                             </div>
@@ -46,14 +46,15 @@
                     </form>
                 </div>
                 <div class="layui-card-body ">
-                    <table class="layui-table" lay-filter="sysDictList_${menuId}" lay-data="{url:'${ctx}/sys/dict/find',
+                    <table class="layui-table" lay-filter="sysDictList_${menuId}" lay-data="{
+                        url:'${ctx}/sys/dict/find',
                         id:'sysDictList_${menuId}',
                         page:true,
                         }">
                         <thead>
                         <tr>
-                            <th lay-data="{checkbox:true}">ID</th>
-                            <th lay-data="{field:'dictSn',width:100,align:'center'}"><spring:message code="sys.dict.field.sn"/></th>
+                            <th lay-data="{checkbox:true}"></th>
+                            <th lay-data="{field:'dictSn',width:100,align:'left'}"><spring:message code="sys.dict.field.sn"/></th>
                             <th lay-data="{field:'classNo',width:100,align:'center'}"><spring:message code="sys.dict.field.classNo"/></th>
                             <th lay-data="{field:'dictNo',width:100,align:'center'}"><spring:message code="sys.dict.field.dictNo"/></th>
                             <th lay-data="{field:'dictDesc',width:300,align:'center'}"><spring:message code="sys.dict.field.dictDesc"/></th>
@@ -62,20 +63,6 @@
                             <th lay-data="{field:'useFlag',width:100,align:'center',templet:'#usedFlagSwitchTpl_${menuId}'}"><spring:message code="sys.dict.field.useFlag"/></th>
                             <th lay-data="{field:'oper',fixed:'right',width:180,align:'center',toolbar:'#operBar_${menuId}'}"><spring:message code="com.btn.oper"/></th>
                         </thead>
-                        <tbody>
-                            <tr>
-                                <td>ID</td>
-                                <td>1</td>
-                                <td>1</td>
-                                <td>1</td>
-                                <td>1</td>
-                                <td>1</td>
-                                <td>1</td>
-                                <td>1</td>
-                                <td>1</td>
-                                <td></td>
-                            </tr>
-                        </tbody>
                     </table>
 
                     <script type="text/html" id="usedFlagSwitchTpl_${menuId}">
@@ -104,7 +91,11 @@
         var element = layui.element;
         var table = layui.table;
 
-        //var tableIns = table.render();
+        table.init('sysDictList_${menuId}',{
+            id: 'sysDictList_${menuId}',
+            url: '${ctx}/sys/dict/find',
+            page: true
+        });
 
         element.render('breadcrumb');
         loadDictTypes(function(){
@@ -113,6 +104,7 @@
 
         $('#query_${menuId}').bind('click',table,query);
         $('#add_${menuId}').bind('click',toAdd);
+        $('#excel_${menuId}').bind('click',exportExcel);
 
         form.on('switch(usedFlagFilter)',function(obj){
             var useFlagObj = obj.othis;
@@ -126,7 +118,7 @@
                     break;
                 }
             }
-            layer.tips(this.value + ' ' + this.name + '：'+ obj.elem.checked ? "关" : "开", obj.othis);
+            //layer.tips(this.value + ' ' + this.name + '：'+ obj.elem.checked ? "关" : "开", obj.othis);
         });
 
         table.on('tool(sysDictList_${menuId})',function(obj){
@@ -205,6 +197,17 @@
         // Frame.warn('在线调试');
         // Frame.err('在线调试');
         //Frame.addMainTab({id:'${menuId}_01',title:{icon:'&#xe68e;',name:'新增字典'},url:APP_ENV + '/sys/dict/toAdd'});
+    }
+
+    function exportExcel(){
+        var layId = 'sysDictList_${menuId}';
+        Frame.DataGrid.defFilterCols = 2;
+        Frame.exportExcel(layId,'${ctx}/sys/dict/find',{
+            classNo: WebUtils.fmtStr($('#classNo_${menuId}').val()),
+            dictDesc: WebUtils.fmtStr($('#dictDesc_${menuId}').val())
+        },'字典列表');
+        // var columns = Frame.getHeaders(layId);
+        // console.log(columns);
     }
 
 </script>

@@ -6,7 +6,39 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fe042204-8736-438e-94f6-a48ebd7c8011" name="Default Changelist" comment="" />
+    <list default="true" id="fe042204-8736-438e-94f6-a48ebd7c8011" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/framework/src/main/java/com/king/framework/export/AbsTableExport.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/framework/src/main/java/com/king/framework/export/ExcelBody.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/framework/src/main/java/com/king/framework/export/ExcelHeader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/framework/src/main/java/com/king/framework/export/ExcelTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/framework/src/main/java/com/king/framework/export/Field.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/framework/src/main/java/com/king/framework/export/FieldType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/framework/src/main/java/com/king/framework/export/HssfTableExport.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/framework/src/main/java/com/king/framework/export/HtmlDataGridExport.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/framework/src/main/java/com/king/framework/export/ITableExport.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/framework/src/main/java/com/king/framework/utils/DateUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/framework/src/main/java/com/king/framework/utils/FileUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/framework/src/main/java/com/king/framework/utils/ReflectUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webapp/src/main/java/com/king/app/webapp/controller/system/DataGridController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KS_DATA/logs/ks_log(LAPTOP-3H9KE96D)-default-current.log" beforeDir="false" afterPath="$PROJECT_DIR$/KS_DATA/logs/ks_log(LAPTOP-3H9KE96D)-default-current.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/framework/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/framework/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/framework/src/main/java/com/king/framework/base/BaseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/framework/src/main/java/com/king/framework/base/BaseController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/framework/src/main/resources/i18n/message_en_US.properties" beforeDir="false" afterPath="$PROJECT_DIR$/framework/src/main/resources/i18n/message_en_US.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/framework/src/main/resources/i18n/message_zh_CN.properties" beforeDir="false" afterPath="$PROJECT_DIR$/framework/src/main/resources/i18n/message_zh_CN.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/system/src/main/java/com/king/system/service/ISysUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/system/src/main/java/com/king/system/service/ISysUserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/system/src/main/java/com/king/system/service/impl/SysUserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/system/src/main/java/com/king/system/service/impl/SysUserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/system/src/main/resources/i18n/system_en_US.properties" beforeDir="false" afterPath="$PROJECT_DIR$/system/src/main/resources/i18n/system_en_US.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/system/src/main/resources/i18n/system_zh_CN.properties" beforeDir="false" afterPath="$PROJECT_DIR$/system/src/main/resources/i18n/system_zh_CN.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/system/src/main/resources/mapper/system/SysUserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/system/src/main/resources/mapper/system/SysUserMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/src/main/java/com/king/app/webapp/controller/system/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/java/com/king/app/webapp/controller/system/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/sys/dict/main.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/sys/dict/main.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/sys/user/main.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/sys/user/main.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/src/main/webapp/static/js/frame.js" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/webapp/static/js/frame.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/src/main/webapp/static/js/utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/webapp/static/js/utils.js" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/framework/target/" />
     <ignored path="$PROJECT_DIR$/webapp/target/" />
@@ -27,22 +59,43 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/sys/dict/main.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3800">
-              <caret line="200" column="4" selection-start-line="200" selection-start-column="4" selection-end-line="200" selection-end-column="4" />
+            <state relative-caret-position="143">
+              <caret line="54" selection-start-line="54" selection-end-line="54" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/framework/src/main/java/com/king/framework/base/BaseController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="158" column="27" lean-forward="true" selection-start-line="158" selection-start-column="27" selection-end-line="158" selection-end-column="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/framework/src/main/java/com/king/framework/export/AbsTableExport.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="227">
+              <caret line="29" column="19" lean-forward="true" selection-start-line="29" selection-start-column="19" selection-end-line="29" selection-end-column="19" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/webapp/src/main/webapp/static/js/frame.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="344">
-              <caret line="77" column="14" lean-forward="true" selection-start-line="77" selection-start-column="14" selection-end-line="77" selection-end-column="14" />
+            <state relative-caret-position="138">
+              <caret line="366" column="7" lean-forward="true" selection-start-line="366" selection-start-column="7" selection-end-line="366" selection-end-column="7" />
               <folding>
-                <element signature="e#32#38#1" expanded="true" />
+                <element signature="e#30#36#1" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
               </folding>
             </state>
@@ -50,22 +103,69 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/sys/user/main.jsp">
+        <entry file="file://$PROJECT_DIR$/webapp/src/main/java/com/king/app/webapp/controller/system/DataGridController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2470">
-              <caret line="130" selection-start-line="130" selection-end-line="130" />
+            <state relative-caret-position="243">
+              <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/webapp/src/main/java/com/king/app/webapp/controller/system/UserController.java">
+        <entry file="file://$PROJECT_DIR$/framework/src/main/java/com/king/framework/export/HtmlDataGridExport.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="19" column="15" selection-start-line="19" selection-start-column="15" selection-end-line="19" selection-end-column="15" />
+            <state relative-caret-position="1178">
+              <caret line="71" column="21" selection-start-line="71" selection-start-column="21" selection-end-line="71" selection-end-column="21" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/framework/src/main/java/com/king/framework/utils/FileUtils.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="245">
+              <caret line="19" column="5" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/framework/src/main/java/com/king/framework/export/HssfTableExport.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="186">
+              <caret line="64" column="43" lean-forward="true" selection-start-line="64" selection-start-column="43" selection-end-line="64" selection-end-column="43" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/framework/src/main/java/com/king/framework/export/ExcelHeader.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="169">
+              <caret line="65" column="36" selection-start-line="65" selection-start-column="36" selection-end-line="65" selection-end-column="36" />
+              <folding>
+                <element signature="e#1386#1387#0" expanded="true" />
+                <element signature="e#1435#1436#0" expanded="true" />
+                <element signature="e#1471#1472#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/framework/src/main/java/com/king/framework/utils/ReflectUtils.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1026">
+              <caret line="54" column="5" selection-start-line="54" selection-start-column="5" selection-end-line="54" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -75,28 +175,15 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Enum" />
-        <option value="Interface" />
         <option value="Jsp File" />
+        <option value="Interface" />
+        <option value="Enum" />
         <option value="Class" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>getPermissions</find>
-      <find>#nav</find>
-      <find>left-nav #nav</find>
-      <find>xbs_tab</find>
-      <find>get_cate_data</find>
-      <find>set_cate_data</find>
-      <find>mainFrameHomePage</find>
-      <find>King System</find>
-      <find>sysDictService</find>
-      <find>existTab</find>
-      <find>参数过滤器初始化</find>
-      <find>spring:message</find>
-      <find>checkbox</find>
       <find>layui-layout-right</find>
       <find>showOrHideVersion</find>
       <find>layui-table-cell</find>
@@ -107,13 +194,26 @@
       <find>layui-input</find>
       <find>addMainTab</find>
       <find>loadI18nData</find>
-      <find>usedFlagFilter</find>
       <find>lay-filter=&quot;sysDictSearchForm&quot;</find>
-      <find>sysDictSearchForm</find>
       <find>loadDictTypes</find>
       <find>Frame.op</find>
       <find>useFlagFilter</find>
       <find>debugger</find>
+      <find>usedFlagFilter</find>
+      <find>sysDictSearchForm</find>
+      <find>exportExcel</find>
+      <find>sysDictList_</find>
+      <find>getGridData</find>
+      <find>Subject</find>
+      <find>exportFile</find>
+      <find>createZipStream</find>
+      <find>formatDate</find>
+      <find>doExport</find>
+      <find>grid_export_cache</find>
+      <find>CacheUtils</find>
+      <find>createXlsFile</find>
+      <find>exportToExcel</find>
+      <find>addMergedRegion</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -122,30 +222,12 @@
       <dir>D:\projects\KS\KS_DATA\cache</dir>
     </dirStrings>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/webapp/src/main/java/com/king/app/webapp/starter/Startup.java" />
-        <option value="$PROJECT_DIR$/system/src/main/java/com/king/system/dao/SysRoleMapper.java" />
-        <option value="$PROJECT_DIR$/system/src/main/resources/mapper/system/SysRoleMapper.xml" />
-        <option value="$PROJECT_DIR$/system/src/main/java/com/king/system/service/ISysRoleService.java" />
-        <option value="$PROJECT_DIR$/system/src/main/java/com/king/system/service/impl/SysRoleServiceImpl.java" />
-        <option value="$PROJECT_DIR$/webapp/src/main/webapp/static/X-admin/error.html" />
-        <option value="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/500.jsp" />
-        <option value="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/common/include.jsp" />
-        <option value="$PROJECT_DIR$/system/src/main/java/com/king/system/shiro/CustomerShiroRealm.java" />
-        <option value="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/login.jsp" />
-        <option value="$PROJECT_DIR$/system/src/main/java/com/king/system/conf/ShiroConfig.java" />
-        <option value="$PROJECT_DIR$/system/src/main/java/com/king/system/dao/SysResourcesMapper.java" />
-        <option value="$PROJECT_DIR$/system/src/main/java/com/king/system/entity/SysResources.java" />
-        <option value="$PROJECT_DIR$/system/src/main/java/com/king/system/service/ISysResourcesService.java" />
-        <option value="$PROJECT_DIR$/system/src/main/java/com/king/system/service/impl/SysResourcesServiceImpl.java" />
-        <option value="$PROJECT_DIR$/system/src/main/resources/mapper/system/SysResourcesMapper.xml" />
-        <option value="$PROJECT_DIR$/webapp/src/main/webapp/static/X-admin/css/theme1.css" />
-        <option value="$PROJECT_DIR$/webapp/src/main/webapp/static/X-admin/js/xadmin.js" />
-        <option value="$PROJECT_DIR$/system/src/main/java/com/king/system/shiro/GlobalExceptionHandler.java" />
-        <option value="$PROJECT_DIR$/system/src/main/resources/generatorConfig.xml" />
-        <option value="$PROJECT_DIR$/webapp/src/main/java/com/king/app/webapp/init/InitApplicationRun.java" />
         <option value="$PROJECT_DIR$/framework/src/main/java/com/king/framework/cache/SystemCache.java" />
         <option value="$PROJECT_DIR$/system/src/main/java/com/king/system/cache/DictCache.java" />
         <option value="$PROJECT_DIR$/system/src/main/java/com/king/system/conts/DictConts.java" />
@@ -157,8 +239,6 @@
         <option value="$PROJECT_DIR$/webapp/src/main/webapp/static/X-admin/lib/layui/css/layui.css" />
         <option value="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/index.jsp" />
         <option value="$PROJECT_DIR$/webapp/src/main/webapp/static/X-admin/css/xadmin.css" />
-        <option value="$PROJECT_DIR$/framework/src/main/java/com/king/framework/base/BaseController.java" />
-        <option value="$PROJECT_DIR$/webapp/src/main/webapp/static/js/utils.js" />
         <option value="$PROJECT_DIR$/webapp/src/main/resources/i18n/common_en_US.properties" />
         <option value="$PROJECT_DIR$/webapp/src/main/resources/i18n/common_zh_CN.properties" />
         <option value="$PROJECT_DIR$/webapp/src/main/java/com/king/app/webapp/dto/ResultResp.java" />
@@ -167,15 +247,38 @@
         <option value="$PROJECT_DIR$/system/src/main/resources/mapper/system/SysDictMapper.xml" />
         <option value="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/sys/dict/add.jsp" />
         <option value="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/sys/dict/update.jsp" />
-        <option value="$PROJECT_DIR$/system/src/main/resources/i18n/system_zh_CN.properties" />
-        <option value="$PROJECT_DIR$/system/src/main/resources/i18n/system_en_US.properties" />
         <option value="$PROJECT_DIR$/system/src/main/java/com/king/system/service/ISysDictService.java" />
         <option value="$PROJECT_DIR$/system/src/main/java/com/king/system/service/impl/SysDictServiceImpl.java" />
         <option value="$PROJECT_DIR$/webapp/src/main/java/com/king/app/webapp/controller/system/DictController.java" />
-        <option value="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/sys/dict/main.jsp" />
+        <option value="$PROJECT_DIR$/system/src/main/java/com/king/system/service/ISysUserService.java" />
+        <option value="$PROJECT_DIR$/system/src/main/java/com/king/system/service/impl/SysUserServiceImpl.java" />
         <option value="$PROJECT_DIR$/webapp/src/main/java/com/king/app/webapp/controller/system/UserController.java" />
+        <option value="$PROJECT_DIR$/system/src/main/resources/i18n/system_en_US.properties" />
+        <option value="$PROJECT_DIR$/system/src/main/resources/i18n/system_zh_CN.properties" />
+        <option value="$PROJECT_DIR$/system/src/main/resources/mapper/system/SysUserMapper.xml" />
         <option value="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/sys/user/main.jsp" />
+        <option value="$PROJECT_DIR$/webapp/src/main/webapp/static/js/utils.js" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/framework/pom.xml" />
+        <option value="$PROJECT_DIR$/framework/src/main/java/com/king/framework/export/FieldType.java" />
+        <option value="$PROJECT_DIR$/framework/src/main/java/com/king/framework/export/Field.java" />
+        <option value="$PROJECT_DIR$/framework/src/main/java/com/king/framework/export/ITableExport.java" />
+        <option value="$PROJECT_DIR$/framework/src/main/java/com/king/framework/export/ExcelTable.java" />
+        <option value="$PROJECT_DIR$/framework/src/main/java/com/king/framework/export/ExcelBody.java" />
+        <option value="$PROJECT_DIR$/framework/src/main/java/com/king/framework/utils/DateUtils.java" />
+        <option value="$PROJECT_DIR$/framework/src/main/java/com/king/framework/export/AbsTableExport.java" />
+        <option value="$PROJECT_DIR$/framework/src/main/java/com/king/framework/base/DataGridController.java" />
+        <option value="$PROJECT_DIR$/framework/src/main/java/com/king/framework/utils/FileUtils.java" />
+        <option value="$PROJECT_DIR$/framework/src/main/java/com/king/framework/base/BaseController.java" />
+        <option value="$PROJECT_DIR$/framework/src/main/resources/i18n/message_en_US.properties" />
+        <option value="$PROJECT_DIR$/framework/src/main/resources/i18n/message_zh_CN.properties" />
+        <option value="$PROJECT_DIR$/framework/src/main/java/com/king/framework/utils/ReflectUtils.java" />
+        <option value="$PROJECT_DIR$/framework/src/main/java/com/king/framework/export/ExcelHeader.java" />
+        <option value="$PROJECT_DIR$/framework/src/main/java/com/king/framework/export/HtmlDataGridExport.java" />
+        <option value="$PROJECT_DIR$/webapp/src/main/java/com/king/app/webapp/controller/system/DataGridController.java" />
+        <option value="$PROJECT_DIR$/framework/src/main/java/com/king/framework/export/HssfTableExport.java" />
         <option value="$PROJECT_DIR$/webapp/src/main/webapp/static/js/frame.js" />
+        <option value="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/sys/dict/main.jsp" />
       </list>
     </option>
   </component>
@@ -242,6 +345,7 @@
     <option name="width" value="1400" />
     <option name="height" value="820" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -257,6 +361,98 @@
             <path>
               <item name="KS" type="b2602c69:ProjectViewProjectNode" />
               <item name="KS" type="462c0819:PsiDirectoryNode" />
+              <item name="framework" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="KS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="KS" type="462c0819:PsiDirectoryNode" />
+              <item name="framework" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="KS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="KS" type="462c0819:PsiDirectoryNode" />
+              <item name="framework" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="KS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="KS" type="462c0819:PsiDirectoryNode" />
+              <item name="framework" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="KS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="KS" type="462c0819:PsiDirectoryNode" />
+              <item name="framework" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="framework" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="KS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="KS" type="462c0819:PsiDirectoryNode" />
+              <item name="framework" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="framework" type="462c0819:PsiDirectoryNode" />
+              <item name="base" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="KS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="KS" type="462c0819:PsiDirectoryNode" />
+              <item name="framework" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="framework" type="462c0819:PsiDirectoryNode" />
+              <item name="exception" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="KS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="KS" type="462c0819:PsiDirectoryNode" />
+              <item name="framework" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="framework" type="462c0819:PsiDirectoryNode" />
+              <item name="export" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="KS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="KS" type="462c0819:PsiDirectoryNode" />
+              <item name="framework" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="framework" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="KS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="KS" type="462c0819:PsiDirectoryNode" />
+              <item name="framework" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="KS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="KS" type="462c0819:PsiDirectoryNode" />
+              <item name="framework" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="i18n" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="KS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="KS" type="462c0819:PsiDirectoryNode" />
               <item name="system" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -288,26 +484,6 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="system" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="KS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="KS" type="462c0819:PsiDirectoryNode" />
-              <item name="system" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="system" type="462c0819:PsiDirectoryNode" />
-              <item name="conf" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="KS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="KS" type="462c0819:PsiDirectoryNode" />
-              <item name="system" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="system" type="462c0819:PsiDirectoryNode" />
-              <item name="dao" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="KS" type="b2602c69:ProjectViewProjectNode" />
@@ -399,16 +575,6 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="conf" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="KS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="KS" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
               <item name="system" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -417,53 +583,7 @@
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="KS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="KS" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="i18n" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="KS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="KS" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="KS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="KS" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="KS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="KS" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="fonts" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="KS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="KS" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="KS" type="b2602c69:ProjectViewProjectNode" />
@@ -483,17 +603,6 @@
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
               <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
               <item name="jsp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="KS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="KS" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-              <item name="jsp" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="KS" type="b2602c69:ProjectViewProjectNode" />
@@ -518,12 +627,24 @@
               <item name="sys" type="462c0819:PsiDirectoryNode" />
               <item name="dict" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="KS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="KS" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="jsp" type="462c0819:PsiDirectoryNode" />
+              <item name="sys" type="462c0819:PsiDirectoryNode" />
+              <item name="user" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -535,7 +656,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1586684488046" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1586849472526" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/web.xml" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -545,24 +666,24 @@
     <property name="settings.editor.selected.configurable" value="Settings.JavaScript" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\projects\KS\webapp\src\main\webapp\WEB-INF\jsp\sys" />
+      <recent name="D:\projects\KS\webapp\src\main\webapp\static" />
+      <recent name="D:\projects\KS\framework\src\main\resources\i18n" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.king.app.webapp.controller.system" />
+      <recent name="com.king.system.service.impl" />
+      <recent name="com.king.system.service" />
+      <recent name="com.king.system.dao" />
+      <recent name="com.king.system.entity" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\projects\KS\webapp\src\main\webapp\WEB-INF\jsp\sys\user" />
       <recent name="D:\projects\KS\webapp\src\main\webapp\WEB-INF\jsp\sys\dict" />
       <recent name="D:\projects\KS\webapp\src\main\webapp\static\fonts" />
       <recent name="D:\projects\KS\system\src\main\resources" />
       <recent name="D:\projects\KS\webapp\src\main\webapp\static\X-admin\lib\layui\css\modules\layui.icon.extend" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.king.system.service.impl" />
-      <recent name="com.king.system.service" />
-      <recent name="com.king.system.dao" />
-      <recent name="com.king.system.entity" />
-      <recent name="com.king.system.conf" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\projects\KS\webapp\src\main\webapp\WEB-INF\jsp\sys" />
-      <recent name="D:\projects\KS\webapp\src\main\webapp\static" />
-      <recent name="D:\projects\KS\framework\src\main\resources\i18n" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -728,18 +849,21 @@
       <workItem from="1586644409468" duration="6588000" />
       <workItem from="1586655901053" duration="1180000" />
       <workItem from="1586681684247" duration="2812000" />
-      <workItem from="1586737434430" duration="380000" />
+      <workItem from="1586737434430" duration="3843000" />
+      <workItem from="1586743842259" duration="3172000" />
+      <workItem from="1586774329912" duration="6760000" />
+      <workItem from="1586822937763" duration="23987000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="233429000" />
+    <option name="totallyTimeSpent" value="270811000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20107238" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15147454" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -749,8 +873,8 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.43484625" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.431918" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.36950147" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.4032258" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -761,13 +885,13 @@
       <window_info anchor="bottom" id="Java Enterprise" order="11" />
       <window_info anchor="bottom" id="Database Changes" order="12" />
       <window_info anchor="bottom" id="Version Control" order="13" />
-      <window_info anchor="bottom" id="Messages" order="14" weight="0.329429" />
+      <window_info anchor="bottom" id="Messages" order="14" weight="0.32844576" />
       <window_info anchor="bottom" id="Application Servers" order="15" weight="0.329429" />
       <window_info anchor="bottom" id="Problems" order="16" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Maven" order="3" sideWeight="0.4974093" visible="true" weight="0.14745308" />
+      <window_info anchor="right" id="Maven" order="3" sideWeight="0.4974093" weight="0.14745308" />
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
       <window_info anchor="right" id="Database" order="6" />
@@ -783,317 +907,53 @@
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
       <expression>
+        <expression-string>fieldIndex + f.getColspan()</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>f.getColspan()</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>value</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>f.getName()</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>dataMap.get(&quot;guid&quot;)</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>ContextLoader.getCurrentWebApplicationContext()</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>JSONObject.parseArray(&quot;[{\&quot;name\&quot;:\&quot;dictSn\&quot;,\&quot;text\&quot;:\&quot;SN\&quot;,\&quot;align\&quot;:\&quot;left\&quot;,\&quot;rowspan\&quot;:\&quot;1\&quot;,\&quot;colspan\&quot;:\&quot;1\&quot;},{\&quot;name\&quot;:\&quot;classNo\&quot;,\&quot;text\&quot;:\&quot;类别\&quot;,\&quot;align\&quot;:\&quot;left\&quot;,\&quot;rowspan\&quot;:\&quot;1\&quot;,\&quot;colspan\&quot;:\&quot;1\&quot;},{\&quot;name\&quot;:\&quot;dictNo\&quot;,\&quot;text\&quot;:\&quot;值\&quot;,\&quot;align\&quot;:\&quot;left\&quot;,\&quot;rowspan\&quot;:\&quot;1\&quot;,\&quot;colspan\&quot;:\&quot;1\&quot;},{\&quot;name\&quot;:\&quot;dictDesc\&quot;,\&quot;text\&quot;:\&quot;描述\&quot;,\&quot;align\&quot;:\&quot;left\&quot;,\&quot;rowspan\&quot;:\&quot;1\&quot;,\&quot;colspan\&quot;:\&quot;1\&quot;},{\&quot;name\&quot;:\&quot;dispOrder\&quot;,\&quot;text\&quot;:\&quot;排序\&quot;,\&quot;align\&quot;:\&quot;left\&quot;,\&quot;rowspan\&quot;:\&quot;1\&quot;,\&quot;colspan\&quot;:\&quot;1\&quot;},{\&quot;name\&quot;:\&quot;parentSn\&quot;,\&quot;text\&quot;:\&quot;父SN\&quot;,\&quot;align\&quot;:\&quot;left\&quot;,\&quot;rowspan\&quot;:\&quot;1\&quot;,\&quot;colspan\&quot;:\&quot;1\&quot;},{\&quot;name\&quot;:\&quot;useFlag\&quot;,\&quot;text\&quot;:\&quot;是否启用\&quot;,\&quot;align\&quot;:\&quot;left\&quot;,\&quot;rowspan\&quot;:\&quot;1\&quot;,\&quot;colspan\&quot;:\&quot;1\&quot;}]&quot;,Field.class)</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>JSONObject.parseArray(&quot;[{\&quot;name\&quot;:\&quot;dictSn\&quot;,\&quot;text\&quot;:\&quot;SN\&quot;,\&quot;align\&quot;:\&quot;left\&quot;,\&quot;rowspan\&quot;:\&quot;1\&quot;,\&quot;colspan\&quot;:\&quot;1\&quot;},{\&quot;name\&quot;:\&quot;classNo\&quot;,\&quot;text\&quot;:\&quot;类别\&quot;,\&quot;align\&quot;:\&quot;left\&quot;,\&quot;rowspan\&quot;:\&quot;1\&quot;,\&quot;colspan\&quot;:\&quot;1\&quot;},{\&quot;name\&quot;:\&quot;dictNo\&quot;,\&quot;text\&quot;:\&quot;值\&quot;,\&quot;align\&quot;:\&quot;left\&quot;,\&quot;rowspan\&quot;:\&quot;1\&quot;,\&quot;colspan\&quot;:\&quot;1\&quot;},{\&quot;name\&quot;:\&quot;dictDesc\&quot;,\&quot;text\&quot;:\&quot;描述\&quot;,\&quot;align\&quot;:\&quot;left\&quot;,\&quot;rowspan\&quot;:\&quot;1\&quot;,\&quot;colspan\&quot;:\&quot;1\&quot;},{\&quot;name\&quot;:\&quot;dispOrder\&quot;,\&quot;text\&quot;:\&quot;排序\&quot;,\&quot;align\&quot;:\&quot;left\&quot;,\&quot;rowspan\&quot;:\&quot;1\&quot;,\&quot;colspan\&quot;:\&quot;1\&quot;},{\&quot;name\&quot;:\&quot;parentSn\&quot;,\&quot;text\&quot;:\&quot;父SN\&quot;,\&quot;align\&quot;:\&quot;left\&quot;,\&quot;rowspan\&quot;:\&quot;1\&quot;,\&quot;colspan\&quot;:\&quot;1\&quot;},{\&quot;name\&quot;:\&quot;useFlag\&quot;,\&quot;text\&quot;:\&quot;是否启用\&quot;,\&quot;align\&quot;:\&quot;left\&quot;,\&quot;rowspan\&quot;:\&quot;1\&quot;,\&quot;colspan\&quot;:\&quot;1\&quot;}]&quot;)</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
         <expression-string>StringUtils.isEmpty(paramValue)</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>dict.getDictNo()</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>DICT_CACHE.get(100)</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>DICT_CACHE.get(&quot;100&quot;)</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>DICT_CACHE.get(classNo)</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>subject.hasRole(&quot;超级管理员&quot;)</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>locale.getLanguage() + &quot;_&quot; + locale.getCountry()</expression-string>
         <language-id>JAVA</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/system/src/main/resources/mapper/system/SysResourcesMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="38" column="30" lean-forward="true" selection-start-line="38" selection-start-column="30" selection-end-line="38" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.dom.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="4897" column="4" selection-start-line="4897" selection-start-column="4" selection-end-line="4897" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webapp/src/main/webapp/static/X-admin/css/theme1.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="13" selection-start-line="13" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webapp/src/main/webapp/static/X-admin/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="117">
-          <caret line="335" column="51" selection-start-line="335" selection-start-column="51" selection-end-line="335" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/system/src/main/java/com/king/system/shiro/GlobalExceptionHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="90" column="38" selection-start-line="90" selection-start-column="38" selection-end-line="90" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/system/src/main/resources/generatorConfig.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
-          <caret line="58" column="29" lean-forward="true" selection-start-line="58" selection-start-column="29" selection-end-line="58" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/system/src/main/java/com/king/system/dao/SysResourcesMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="16" column="36" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webapp/src/main/java/com/king/app/webapp/init/InitApplicationRun.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="26" column="22" lean-forward="true" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/mavenLocalRepository/org/springframework/boot/spring-boot/2.2.1.RELEASE/spring-boot-2.2.1.RELEASE.jar!/org/springframework/boot/SpringApplication.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="123">
-          <caret line="518" selection-start-line="518" selection-end-line="518" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/framework/src/main/java/com/king/framework/cache/SystemCache.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="53">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#307#308#0" expanded="true" />
-            <element signature="e#255#256#0" expanded="true" />
-            <element signature="e#276#277#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/mavenLocalRepository/org/slf4j/slf4j-api/1.7.2/slf4j-api-1.7.2.jar!/org/slf4j/helpers/NOPLogger.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="123">
-          <caret line="63" column="22" selection-start-line="63" selection-start-column="22" selection-end-line="63" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/mavenLocalRepository/org/slf4j/slf4j-api/1.7.2/slf4j-api-1.7.2.jar!/org/slf4j/Logger.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="64" column="11" lean-forward="true" selection-start-line="64" selection-start-column="11" selection-end-line="64" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/system/src/main/java/com/king/system/cache/DictCache.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" column="26" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/framework/src/main/java/com/king/framework/utils/BeanLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="24" column="29" selection-start-line="24" selection-start-column="29" selection-end-line="24" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/system/src/main/java/com/king/system/conts/DictConts.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" column="22" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/welcome.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" selection-start-line="7" selection-end-line="7" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webapp/src/main/webapp/static/X-admin/js/xadmin.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1892">
-          <caret line="66" column="5" lean-forward="true" selection-start-line="66" selection-start-column="5" selection-end-line="66" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webapp/src/main/java/com/king/app/webapp/conf/InterceptorConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="18" column="43" lean-forward="true" selection-start-line="18" selection-start-column="43" selection-end-line="18" selection-end-column="43" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#458#459#0" expanded="true" />
-            <element signature="e#481#482#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webapp/src/main/java/com/king/app/webapp/conf/FilterConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="18" column="18" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webapp/src/main/java/com/king/app/webapp/filter/ParamFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="111">
-          <caret line="24" column="35" lean-forward="true" selection-start-line="24" selection-start-column="35" selection-end-line="24" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webapp/src/main/java/com/king/app/webapp/interceptor/ParamInterceptor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
-          <caret line="19" column="64" selection-start-line="19" selection-start-column="64" selection-end-line="19" selection-end-column="64" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webapp/src/main/webapp/static/X-admin/lib/layui/lay/modules/table.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="1" column="2553" selection-start-line="1" selection-start-column="2553" selection-end-line="1" selection-end-column="2553" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webapp/src/main/webapp/static/X-admin/lib/layui/css/layui.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="1" column="21088" selection-start-line="1" selection-start-column="21088" selection-end-line="1" selection-end-column="21088" />
-          <folding>
-            <element signature="e#61524#61663#2" expanded="true" />
-            <element signature="e#63117#63256#2" expanded="true" />
-            <element signature="e#63804#63943#2" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webapp/src/main/webapp/static/X-admin/css/xadmin.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="280" column="99" lean-forward="true" selection-start-line="280" selection-start-column="14" selection-end-line="280" selection-end-column="99" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webapp/src/main/webapp/static/js/utils.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="131">
-          <caret line="82" selection-start-line="82" selection-end-line="82" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webapp/src/main/webapp/static/fonts/iconfont.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/framework/src/main/java/com/king/framework/base/BaseController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2147">
-          <caret line="127" selection-start-line="127" selection-end-line="127" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/common/include.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="26" column="58" selection-start-line="26" selection-start-column="50" selection-end-line="26" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/login.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-114">
-          <caret line="57" column="34" lean-forward="true" selection-start-line="57" selection-start-column="34" selection-end-line="57" selection-end-column="34" />
-          <folding>
-            <element signature="n#style#0;n#input#0;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/mavenLocalRepository/org/springframework/spring-web/5.2.1.RELEASE/spring-web-5.2.1.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="101" selection-start-line="101" selection-end-line="101" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/system/src/main/java/com/king/system/entity/SysDict.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webapp/src/main/resources/i18n/common_en_US.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
-          <caret line="25" column="22" lean-forward="true" selection-start-line="25" selection-start-column="22" selection-end-line="25" selection-end-column="22" />
-        </state>
-      </provider>
-      <provider editor-type-id="ResourceBundle" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webapp/src/main/resources/i18n/common_zh_CN.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="358">
-          <caret line="28" column="24" selection-start-line="28" selection-start-column="24" selection-end-line="28" selection-end-column="24" />
-        </state>
-      </provider>
-      <provider editor-type-id="ResourceBundle" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/webapp/src/main/java/com/king/app/webapp/dto/ResultResp.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="741">
@@ -1116,27 +976,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/webapp/src/main/java/com/king/app/webapp/controller/system/LoginController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="138" column="21" lean-forward="true" selection-start-line="138" selection-start-column="21" selection-end-line="138" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/system/src/main/java/com/king/system/dao/SysDictMapper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
           <caret line="15" column="28" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/system/src/main/resources/mapper/system/SysDictMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="31" column="11" lean-forward="true" selection-start-line="31" selection-start-column="11" selection-end-line="31" selection-end-column="11" />
         </state>
       </provider>
     </entry>
@@ -1154,22 +997,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/system/src/main/resources/i18n/system_en_US.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="241">
-          <caret line="30" column="64" selection-start-line="30" selection-start-column="64" selection-end-line="30" selection-end-column="64" />
-        </state>
-      </provider>
-      <provider editor-type-id="ResourceBundle" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/system/src/main/resources/i18n/system_zh_CN.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="30" selection-start-line="30" selection-end-line="30" selection-end-column="24" />
-        </state>
-      </provider>
-      <provider editor-type-id="ResourceBundle" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/system/src/main/java/com/king/system/service/ISysDictService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="232">
@@ -1182,46 +1009,417 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/system/src/main/java/com/king/system/service/impl/SysDictServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="91">
-          <caret line="56" lean-forward="true" selection-start-line="56" selection-end-line="56" />
+        <state relative-caret-position="281">
+          <caret line="43" column="24" lean-forward="true" selection-start-line="36" selection-start-column="8" selection-end-line="43" selection-end-column="24" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1603#1604#0" expanded="true" />
-            <element signature="e#1627#1628#0" expanded="true" />
+            <element signature="e#1652#1653#0" expanded="true" />
             <element signature="e#1708#1709#0" expanded="true" />
-            <element signature="e#1732#1733#0" expanded="true" />
+            <element signature="e#1759#1760#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/webapp/src/main/java/com/king/app/webapp/controller/system/DictController.java">
+    <entry file="file://$PROJECT_DIR$/system/src/main/java/com/king/system/dao/SysUserDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="110" column="14" lean-forward="true" selection-start-line="110" selection-start-column="14" selection-end-line="110" selection-end-column="14" />
+        <state relative-caret-position="190">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system/src/main/resources/mapper/system/SysDictMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="64" column="33" selection-start-line="64" selection-start-column="27" selection-end-line="64" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/framework/src/main/java/com/king/framework/base/BaseDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="111">
+          <caret line="124" column="23" selection-start-line="124" selection-start-column="23" selection-end-line="124" selection-end-column="23" />
+          <folding>
+            <element signature="e#3987#3988#0" expanded="true" />
+            <element signature="e#4035#4036#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system/src/main/resources/i18n/system_en_US.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="741">
+          <caret line="39" selection-start-line="39" selection-end-line="39" selection-end-column="62" />
+        </state>
+      </provider>
+      <provider editor-type-id="ResourceBundle" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system/src/main/resources/i18n/system_zh_CN.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="741">
+          <caret line="39" selection-start-line="39" selection-end-line="39" selection-end-column="31" />
+        </state>
+      </provider>
+      <provider editor-type-id="ResourceBundle" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system/src/main/java/com/king/system/service/ISysUserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="22" column="90" selection-start-line="22" selection-start-column="90" selection-end-line="22" selection-end-column="90" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system/src/main/java/com/king/system/service/impl/SysUserServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1045">
+          <caret line="55" column="39" selection-start-line="55" selection-start-column="39" selection-end-line="55" selection-end-column="39" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/sys/dict/main.jsp">
+    <entry file="file://$PROJECT_DIR$/system/src/main/resources/mapper/system/SysUserMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3800">
-          <caret line="200" column="4" selection-start-line="200" selection-start-column="4" selection-end-line="200" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/sys/user/main.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2470">
-          <caret line="130" selection-start-line="130" selection-end-line="130" />
+        <state relative-caret-position="152">
+          <caret line="8" column="71" selection-start-line="8" selection-start-column="62" selection-end-line="8" selection-end-column="71" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/webapp/src/main/java/com/king/app/webapp/controller/system/UserController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="19" column="15" selection-start-line="19" selection-start-column="15" selection-end-line="19" selection-end-column="15" />
+        <state relative-caret-position="169">
+          <caret line="38" column="42" selection-start-line="38" selection-start-column="42" selection-end-line="38" selection-end-column="42" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.dom.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="3195" column="4" selection-start-line="3195" selection-start-column="4" selection-end-line="3195" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapp/src/main/webapp/static/X-admin/lib/layui/layui.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="1" column="702" selection-start-line="1" selection-start-column="702" selection-end-line="1" selection-end-column="702" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapp/src/main/webapp/static/X-admin/lib/layui/layui.all.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="1" column="702" selection-start-line="1" selection-start-column="702" selection-end-line="1" selection-end-column="702" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapp/src/main/webapp/static/X-admin/lib/layui/lay/modules/laydate.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="1" column="8185" selection-start-line="1" selection-start-column="8185" selection-end-line="1" selection-end-column="8185" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/sys/user/main.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="51" column="55" lean-forward="true" selection-start-line="51" selection-start-column="55" selection-end-line="51" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapp/src/main/webapp/static/js/utils.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="16" column="14" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapp/src/main/java/com/king/app/webapp/controller/system/LoginController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="109">
+          <caret line="78" column="8" selection-start-line="78" selection-start-column="8" selection-end-line="78" selection-end-column="53" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapp/src/main/webapp/static/X-admin/lib/layui/lay/modules/table.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="1" column="29534" selection-start-line="1" selection-start-column="29534" selection-end-line="1" selection-end-column="29534" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapp/src/main/java/com/king/app/webapp/controller/system/DictController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="950">
+          <caret line="65" column="21" selection-start-line="65" selection-start-column="21" selection-end-line="65" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/login.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1805">
+          <caret line="95" column="31" selection-start-line="89" selection-start-column="28" selection-end-line="95" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="154" column="25" lean-forward="true" selection-start-line="145" selection-start-column="12" selection-end-line="154" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/framework/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="594">
+          <caret line="123" column="21" selection-start-line="123" selection-start-column="21" selection-end-line="123" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/framework/src/main/java/com/king/framework/export/FieldType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" column="21" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="21" />
+          <folding>
+            <element signature="e#459#460#0" expanded="true" />
+            <element signature="e#485#486#0" expanded="true" />
+            <element signature="e#520#521#0" expanded="true" />
+            <element signature="e#550#551#0" expanded="true" />
+            <element signature="e#581#582#0" expanded="true" />
+            <element signature="e#608#609#0" expanded="true" />
+            <element signature="e#648#649#0" expanded="true" />
+            <element signature="e#680#681#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/mavenLocalRepository/com/alibaba/fastjson/1.2.13/fastjson-1.2.13.jar!/com/alibaba/fastjson/JSON.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="13">
+          <caret line="341" column="29" selection-start-line="341" selection-start-column="29" selection-end-line="341" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/framework/src/main/java/com/king/framework/export/Field.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="283">
+          <caret line="23" column="29" selection-start-line="23" selection-start-column="29" selection-end-line="23" selection-end-column="29" />
+          <folding>
+            <element signature="e#348#349#0" expanded="true" />
+            <element signature="e#388#389#0" expanded="true" />
+            <element signature="e#420#421#0" expanded="true" />
+            <element signature="e#451#452#0" expanded="true" />
+            <element signature="e#478#479#0" expanded="true" />
+            <element signature="e#518#519#0" expanded="true" />
+            <element signature="e#550#551#0" expanded="true" />
+            <element signature="e#579#580#0" expanded="true" />
+            <element signature="e#607#608#0" expanded="true" />
+            <element signature="e#646#647#0" expanded="true" />
+            <element signature="e#680#681#0" expanded="true" />
+            <element signature="e#712#713#0" expanded="true" />
+            <element signature="e#740#741#0" expanded="true" />
+            <element signature="e#782#783#0" expanded="true" />
+            <element signature="e#816#817#0" expanded="true" />
+            <element signature="e#847#848#0" expanded="true" />
+            <element signature="e#877#878#0" expanded="true" />
+            <element signature="e#920#921#0" expanded="true" />
+            <element signature="e#958#959#0" expanded="true" />
+            <element signature="e#989#990#0" expanded="true" />
+            <element signature="e#1019#1020#0" expanded="true" />
+            <element signature="e#1062#1063#0" expanded="true" />
+            <element signature="e#1100#1101#0" expanded="true" />
+            <element signature="e#1139#1140#0" expanded="true" />
+            <element signature="e#1171#1172#0" expanded="true" />
+            <element signature="e#1224#1225#0" expanded="true" />
+            <element signature="e#1266#1267#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/mavenLocalRepository/org/springframework/spring-web/5.2.1.RELEASE/spring-web-5.2.1.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="106" column="46" selection-start-line="106" selection-start-column="46" selection-end-line="106" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/framework/src/main/java/com/king/framework/export/ITableExport.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="15" column="80" selection-start-line="15" selection-start-column="80" selection-end-line="15" selection-end-column="80" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/framework/src/main/java/com/king/framework/export/ExcelBody.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="303">
+          <caret line="18" column="5" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
+          <folding>
+            <element signature="e#353#354#0" expanded="true" />
+            <element signature="e#381#382#0" expanded="true" />
+            <element signature="e#424#425#0" expanded="true" />
+            <element signature="e#458#459#0" expanded="true" />
+            <element signature="e#491#492#0" expanded="true" />
+            <element signature="e#523#524#0" expanded="true" />
+            <element signature="e#570#571#0" expanded="true" />
+            <element signature="e#612#613#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/framework/src/main/java/com/king/framework/export/ExcelTable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="12">
+          <caret line="23" column="11" selection-start-line="23" selection-start-column="11" selection-end-line="23" selection-end-column="11" />
+          <folding>
+            <element signature="e#292#293#0" expanded="true" />
+            <element signature="e#328#329#0" expanded="true" />
+            <element signature="e#469#470#0" expanded="true" />
+            <element signature="e#501#502#0" expanded="true" />
+            <element signature="e#551#552#0" expanded="true" />
+            <element signature="e#593#594#0" expanded="true" />
+            <element signature="e#631#632#0" expanded="true" />
+            <element signature="e#660#661#0" expanded="true" />
+            <element signature="e#709#710#0" expanded="true" />
+            <element signature="e#745#746#0" expanded="true" />
+            <element signature="e#779#780#0" expanded="true" />
+            <element signature="e#806#807#0" expanded="true" />
+            <element signature="e#849#850#0" expanded="true" />
+            <element signature="e#881#882#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/framework/src/main/java/com/king/framework/utils/DateUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="96" column="40" selection-start-line="96" selection-start-column="40" selection-end-line="96" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2572#2573#0" expanded="true" />
+            <element signature="e#2630#2631#0" expanded="true" />
+            <element signature="e#2686#2687#0" expanded="true" />
+            <element signature="e#2754#2755#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/framework/src/main/java/com/king/framework/export/ExcelDataModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" column="27" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/framework/src/main/java/com/king/framework/utils/FileUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="245">
+          <caret line="19" column="5" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/framework/src/main/java/com/king/framework/base/DataGridController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="32" column="35" lean-forward="true" selection-start-line="32" selection-start-column="35" selection-end-line="32" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/framework/src/main/resources/i18n/message_en_US.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-column="44" />
+        </state>
+      </provider>
+      <provider editor-type-id="ResourceBundle" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/framework/src/main/resources/i18n/message_zh_CN.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-column="23" />
+        </state>
+      </provider>
+      <provider editor-type-id="ResourceBundle" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/framework/src/main/java/com/king/framework/export/AbsTableExport.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="227">
+          <caret line="29" column="19" lean-forward="true" selection-start-line="29" selection-start-column="19" selection-end-line="29" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/framework/src/main/java/com/king/framework/utils/ReflectUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1026">
+          <caret line="54" column="5" selection-start-line="54" selection-start-column="5" selection-end-line="54" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/framework/src/main/java/com/king/framework/export/ExcelHeader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="169">
+          <caret line="65" column="36" selection-start-line="65" selection-start-column="36" selection-end-line="65" selection-end-column="36" />
+          <folding>
+            <element signature="e#1386#1387#0" expanded="true" />
+            <element signature="e#1435#1436#0" expanded="true" />
+            <element signature="e#1471#1472#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/framework/src/main/java/com/king/framework/base/BaseController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="158" column="27" lean-forward="true" selection-start-line="158" selection-start-column="27" selection-end-line="158" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapp/src/main/java/com/king/app/webapp/controller/system/DataGridController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/framework/src/main/java/com/king/framework/export/HtmlDataGridExport.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1178">
+          <caret line="71" column="21" selection-start-line="71" selection-start-column="21" selection-end-line="71" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/framework/src/main/java/com/king/framework/export/HssfTableExport.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="64" column="43" lean-forward="true" selection-start-line="64" selection-start-column="43" selection-end-line="64" selection-end-column="43" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1230,12 +1428,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/webapp/src/main/webapp/static/js/frame.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="344">
-          <caret line="77" column="14" lean-forward="true" selection-start-line="77" selection-start-column="14" selection-end-line="77" selection-end-column="14" />
+        <state relative-caret-position="138">
+          <caret line="366" column="7" lean-forward="true" selection-start-line="366" selection-start-column="7" selection-end-line="366" selection-end-column="7" />
           <folding>
-            <element signature="e#32#38#1" expanded="true" />
+            <element signature="e#30#36#1" expanded="true" />
             <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/sys/dict/main.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="143">
+          <caret line="54" selection-start-line="54" selection-end-line="54" />
         </state>
       </provider>
     </entry>

@@ -1,6 +1,8 @@
 var element;
-layui.use(['element','layer'],function(){
+var table;
+layui.use(['element','layer','table'],function(){
     element = layui.element;
+    table = layui.table;
 });
 
 /**
@@ -38,6 +40,9 @@ window.Frame = window.Frame || {
     err: function(content){
         this.Layer.err(content);
     },
+    info: function(){
+        this.Layer.info(content);
+    },
     confirm: function(title,doFunc){
       this.Layer.confirm(title,doFunc);
     },
@@ -54,6 +59,10 @@ window.Frame = window.Frame || {
     },
     loadPage: function(id,url,params,title,width,height){
         this.Layer.loadPage(id,url,params,title,width,height);
+    },
+
+    exportExcel: function(layId,url,queryParams,title){
+        this.DataGrid.exportExcel(layId,url,queryParams,title)
     }
 
 }
@@ -252,6 +261,15 @@ Frame.Layer = {
             content: WebUtils.fmtStr(content)
         })
     },
+    info: function(content){
+        layer.alert(content,{
+            shade:0,
+            icon:5,
+            offset:'rb',
+            time:3000,
+            anim:2
+        });
+    },
     confirm: function(title,doFunc){
         layer.confirm(title,{icon:3,title:WebUtils.getMessage('com.layer.title1')},function(index){
             if(typeof doFunc == 'function'){
@@ -290,4 +308,100 @@ Frame.Layer = {
             }
         })
     }
+}
+
+/**
+ * layUI表格相关操作
+ * @type {{}}
+ */
+Frame.DataGrid = {
+
+    defColspan:"1",
+    defRowspan:"1",
+
+    exportExcel: function(layId,url,queryParams,title){
+        var headers = this.getHeaders(layId);
+
+        var pageNo = 1;
+        var pageSize = -1;
+
+        // 获取导出表单
+        var form = $('<form></form>');
+        form.append($('<input type="text" name="exportTitle" value="' + title + '"/>'))
+            .append($('<input type="text" name="page" value="' + pageNo + '"/>'))
+            .append($('<input type="text" name="limit" value="' + pageSize + '"/>'))
+            .append($('<input type="text" value="1" name="isDownload"/>'));
+        for (var key in queryParams) {
+            if (queryParams[key] == undefined || queryParams[key] == 'undefined') {
+                queryParams[key] = '';
+            }
+            form.append($('<input type="text" name="' + key + '" value="' + queryParams[key] + '"/>'));
+        }
+
+        // 设置特殊参数
+        var params = form.serialize();
+        if (params) {
+            params += '&exportHeaders=' + encodeURIComponent(JSON.stringify(headers)); //json参数特殊处理
+        }
+        $.ajax({
+            type: 'post',
+            url: url,
+            data: params,
+            dataType: 'json',
+            beforeSend: function(){
+                Frame.load();
+            },
+            success: function (data) {
+                Frame.closeLayer();
+                if (data.guid) {
+                    Frame.DataGrid.defFilterCols = 0;
+                    window.self.location = APP_ENV + '/global/datagrid/download?guid='+data.guid;
+                }
+            }
+        });
+        // 清理导出表单
+        form.remove();
+        form = null;
+    },
+
+    /**
+     * 获取表头
+     */
+    getHeaders: function(layId){
+        //需要过滤的表头列
+        var filterFieldMap = new DataMap();
+        filterFieldMap.put('oper','');//手动添加的按钮处理列，约定
+
+        var columns = [];//表头属性，二维数组
+
+        $('div[lay-id="'+layId+'"] table thead tr').each(function(){
+            var cols = [];
+            $(this).find('th').each(function(){
+                var name = $(this).attr('data-field');
+                if(name == '')return true;//过滤
+                if(WebUtils.isNum(name))return true;//过滤，数字默认是layui自动生成的属性
+                if(filterFieldMap.containsKey(name)){
+                   return true;//跳出当前循环，执行下一次循环
+                }
+                var text = $(this).find('span:eq(0)').html();
+                var attrAlign = $($(this)[0]).find('div:eq(0)').attr('align');
+                var align = attrAlign != null ? attrAlign : 'left';
+                var rowspan = $(this).attr('rowspan') != null ? $(this).attr('rowspan') : Frame.DataGrid.defRowspan;
+                var colspan = $(this).attr('colspan') != null ? $(this).attr('colspan') : Frame.DataGrid.defColspan;
+                var field = {
+                    name : name,
+                    text: text,
+                    align : align,
+                    rowspan : rowspan,
+                    colspan : colspan
+                }
+                cols.push(field);
+            });
+            if(cols.length > 0){
+                columns.push(cols);
+            }
+        });
+        return columns;
+    }
+
 }

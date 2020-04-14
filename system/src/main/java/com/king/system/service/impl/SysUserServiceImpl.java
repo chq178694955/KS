@@ -46,4 +46,16 @@ public class SysUserServiceImpl implements ISysUserService {
         criteria.put("password",password);
         return sysUserDao.get("findByNameAndPass",criteria);
     }
+
+    @Override
+    public PageInfo<SysUser> find(PageInfo<SysUser> page, Criteria criteria, Boolean isDownload) {
+        if(!isDownload){
+            PageHelper.startPage(page.getPageNum(),page.getPageSize());
+        }
+        List<SysUser> users = sysUserDao.find(criteria);
+        PageInfo<SysUser> pageInfo = new PageInfo<>(users);
+        pageInfo.setPageNum(page.getPageNum());
+        pageInfo.setPageSize(page.getPageSize());
+        return pageInfo;
+    }
 }

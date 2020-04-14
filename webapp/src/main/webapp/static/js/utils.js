@@ -13,6 +13,22 @@ var APP_ENV = null;
 
 window.WebUtils = window.WebUtils || {
 
+    /**
+     * 包含字符串数字
+     * 是否数字，true：是 false：否
+     * @param value
+     * @returns {boolean}
+     */
+    isNum: function(value){
+        return !isNaN(value);
+        //return typeof value === 'number' && !isNaN(value);
+    },
+
+    /**
+     * 格式化字符串
+     * @param content
+     * @returns {*}
+     */
     fmtStr: function(content){
         if(typeof content == undefined){
             return '';
