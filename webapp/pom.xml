@@ -148,6 +148,11 @@
             <artifactId>system</artifactId>
             <version>${platform.version}</version>
         </dependency>
+        <dependency>
+            <groupId>com.king</groupId>
+            <artifactId>game</artifactId>
+            <version>${platform.version}</version>
+        </dependency>
     </dependencies>
 
     <build>

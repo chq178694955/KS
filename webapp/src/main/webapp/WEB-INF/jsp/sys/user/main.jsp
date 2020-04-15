@@ -38,7 +38,7 @@
                                 <button id="add_${menuId}" type="button" class="layui-btn layui-btn-warm" title="<spring:message code="com.btn.add"/>">
                                     <i class="layui-icon layui-icon-add-1"></i>
                                 </button>
-                                <button type="button" class="layui-btn" title="<spring:message code="com.btn.excel"/>">
+                                <button id="excel_${menuId}" type="button" class="layui-btn" title="<spring:message code="com.btn.excel"/>">
                                     <i class="iconfont layui-icon-excel"></i>
                                 </button>
                             </div>
@@ -86,7 +86,7 @@
 
         table.init('sysUserList_${menuId}',{
             id: 'sysUserList_${menuId}',
-            url: '${ctx}/sys/dict/find',
+            url: '${ctx}/sys/user/find',
             page: true
         });
 
@@ -94,6 +94,7 @@
 
         $('#query_${menuId}').bind('click',table,query);
         $('#add_${menuId}').bind('click',toAdd);
+        $('#excel_${menuId}').bind('click',exportExcel);
 
         form.on('switch(stateFilter)',function(obj){
             var stateObj = obj.othis;
@@ -152,6 +153,14 @@
 
     function toAdd(){
         Frame.loadPage('${menuId}','sys/dict/toAdd?menuId=${menuId}',{},WebUtils.getMessage('com.btn.add'),400);
+    }
+
+    function exportExcel(){
+        var layId = 'sysUserList_${menuId}';
+        Frame.exportExcel(layId,'${ctx}/sys/user/find',{
+            state: WebUtils.fmtStr($('#state_${menuId}').val()),
+            searchKey: WebUtils.fmtStr($('#searchKey_${menuId}').val())
+        },'用户列表');
     }
 
 </script>

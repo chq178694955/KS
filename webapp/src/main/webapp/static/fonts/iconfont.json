@@ -6,6 +6,41 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "1240755",
+      "name": "投票",
+      "font_class": "toupiao",
+      "unicode": "e60e",
+      "unicode_decimal": 58894
+    },
+    {
+      "icon_id": "1279407",
+      "name": "投票",
+      "font_class": "toupiao1",
+      "unicode": "e653",
+      "unicode_decimal": 58963
+    },
+    {
+      "icon_id": "5924471",
+      "name": "投票",
+      "font_class": "toupiao2",
+      "unicode": "e61d",
+      "unicode_decimal": 58909
+    },
+    {
+      "icon_id": "5925264",
+      "name": "我要投票",
+      "font_class": "woyaotoupiao",
+      "unicode": "e635",
+      "unicode_decimal": 58933
+    },
+    {
+      "icon_id": "6216461",
+      "name": "未投票",
+      "font_class": "weitoupiao",
+      "unicode": "e660",
+      "unicode_decimal": 58976
+    },
+    {
       "icon_id": "1320054",
       "name": "用户管理",
       "font_class": "yonghuguanli",

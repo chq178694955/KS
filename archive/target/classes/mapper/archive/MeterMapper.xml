@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.king.archive.dao.MeterDao">
+  <resultMap id="BaseResultMap" type="com.king.archive.entity.Meter">
+    <result column="id" jdbcType="BIGINT" property="id" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+  </resultMap>
+
+  <sql id="Base_Column_List">
+    id, name
+  </sql>
+  <insert id="insert" parameterType="com.king.archive.entity.Meter">
+    insert into meter(id,name) values (#{id,jdbcType=BIGINT},#{name,jdbcType=VARCHAR})
+  </insert>
+  <select id="findAll" resultMap="BaseResultMap">
+    select * from meter
+  </select>
+
+  <select id="get" resultMap="BaseResultMap" parameterType="java.lang.Long">
+      select * from meter where id = #{id,jdbcType=BIGINT}
+  </select>
+
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long">
+    select * from meter where id = #{id,jdbcType=BIGINT}
+  </select>
+
+</mapper>

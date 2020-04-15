@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="archive" />
         <module name="framework" />
+        <module name="game" />
         <module name="system" />
         <module name="webapp" />
       </profile>

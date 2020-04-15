@@ -184,30 +184,14 @@
 
     function toAdd(){
         Frame.loadPage('${menuId}','sys/dict/toAdd?menuId=${menuId}',{},WebUtils.getMessage('com.btn.add'),400);
-        <%--Frame.tips('只是测试一下','dictDesc_${menuId}')--%>
-        // Frame.load();
-        // setTimeout(function(){
-        //     Frame.closeLoad();
-        // },5000);
-        // Frame.confirm('确认执行吗？',function(){
-        //     Frame.alert('收到，准备执行');
-        // })
-        //Frame.loadPage('${menuId}','sys/dict/toAdd','新增字典',400,600);
-        // Frame.alert('在线调试');
-        // Frame.warn('在线调试');
-        // Frame.err('在线调试');
-        //Frame.addMainTab({id:'${menuId}_01',title:{icon:'&#xe68e;',name:'新增字典'},url:APP_ENV + '/sys/dict/toAdd'});
     }
 
     function exportExcel(){
         var layId = 'sysDictList_${menuId}';
-        Frame.DataGrid.defFilterCols = 2;
         Frame.exportExcel(layId,'${ctx}/sys/dict/find',{
             classNo: WebUtils.fmtStr($('#classNo_${menuId}').val()),
             dictDesc: WebUtils.fmtStr($('#dictDesc_${menuId}').val())
         },'字典列表');
-        // var columns = Frame.getHeaders(layId);
-        // console.log(columns);
     }
 
 </script>

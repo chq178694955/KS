@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.king.game.dao.VoteItemGroupMapper">
+  <resultMap id="BaseResultMap" type="com.king.game.entity.VoteItemGroup">
+    <result column="id" jdbcType="BIGINT" property="id" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="type" jdbcType="INTEGER" property="type" />
+  </resultMap>
+  <insert id="insert" parameterType="com.king.game.entity.VoteItemGroup">
+    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Long">
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into vote_item_group (name, type)
+    values (#{name,jdbcType=VARCHAR}, #{type,jdbcType=BIT})
+  </insert>
+  <update id="update" parameterType="com.king.game.entity.VoteItemGroup">
+    update vote_item_group
+    <set>
+      <if test="name != null and name != ''">
+        name = #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="type != null">
+        type = #{type,jdbcType=INTEGER}
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <delete id="delete" parameterType="java.lang.Long">
+    delete from vote_item_group where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select id, name, type
+    from vote_item_group
+  </select>
+
+  <select id="find" resultMap="BaseResultMap" parameterType="java.util.Map">
+    select id, name, type
+    from vote_item_group
+    <where>
+      <if test="name != null and name != ''">
+        and name like concat('%',#{name,jdbcType=VARCHAR},'%')
+      </if>
+      <if test="type != null and type != ''">
+        and type = #{type,jdbcType=INTEGER}
+      </if>
+    </where>
+  </select>
+</mapper>
