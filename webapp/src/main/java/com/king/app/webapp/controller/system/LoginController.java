@@ -10,10 +10,12 @@ import com.king.system.conts.DictConts;
 import com.king.system.entity.SysResources;
 import com.king.system.entity.SysRole;
 import com.king.system.entity.SysUser;
+import com.king.system.po.UserInfo;
 import com.king.system.service.ISysResourcesService;
 import com.king.system.service.ISysRoleService;
 import com.king.system.service.ISysUserService;
 import com.king.system.shiro.CustomerShiroRealm;
+import com.king.system.utils.AuthUtils;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.IncorrectCredentialsException;
 import org.apache.shiro.authc.UnknownAccountException;
@@ -72,8 +74,6 @@ public class LoginController extends BaseController {
     @ResponseBody
     @RequestMapping(value = "/login", method = RequestMethod.POST)
     public Object login(String username, String password) {
-        clearSession(username);
-
         JSONObject result = new JSONObject();
         //添加用户认证信息
         Subject subject = SecurityUtils.getSubject();
@@ -106,7 +106,9 @@ public class LoginController extends BaseController {
             if (session != null) {
                 SimplePrincipalCollection simplePrincipal = (SimplePrincipalCollection) session.getAttribute("shiro_redis_session");
                 if (simplePrincipal != null) {
-                    String account = simplePrincipal.getPrimaryPrincipal().toString();
+                    Object obj = simplePrincipal.getPrimaryPrincipal();
+                    UserInfo userInfo = AuthUtils.obj2Bean(obj);
+                    String account = userInfo.getUsername();
                     if (account != null && username.equals(account)) {
                         sessionManager.getSessionDAO().delete(session);
                     }
@@ -115,28 +117,16 @@ public class LoginController extends BaseController {
         }
     }
 
-    @RequestMapping("/")
-    public ModelAndView indexMain(HttpServletRequest request){
-        logger.info("********************登录成功，进入首页！********************");
-
-        ModelAndView mv = new ModelAndView("index");
-        JSONArray i18nKeys = super.loadI18nData();
-        mv.addObject("i18nKeys",i18nKeys);
-
-        DictCache.getDict(DictConts.SYS_RES_TYPE);
-
-        //获取用户角色和权限
-        bindPermissionResources(request);
-        return mv;
-    }
-
     @RequestMapping("index")
     public ModelAndView index(HttpServletRequest request){
         logger.info("********************登录成功，进入首页！********************");
 
+        UserInfo userInfo = AuthUtils.getUserInfo();
+
         ModelAndView mv = new ModelAndView("index");
         JSONArray i18nKeys = super.loadI18nData();
         mv.addObject("i18nKeys",i18nKeys);
+        mv.addObject("userInfo",userInfo);
 
         DictCache.getDict(DictConts.SYS_RES_TYPE);
 
@@ -179,11 +169,10 @@ public class LoginController extends BaseController {
     public Object loadMenus(){
         Subject subject = SecurityUtils.getSubject();
         if(subject.isAuthenticated()){
-            String account = subject.getPrincipal().toString();
-            SysUser user = sysUserService.findByUserName(account);
+            UserInfo userInfo = AuthUtils.getUserInfo();
             Criteria criteria = new Criteria();
             criteria.put("type",0);//菜单
-            criteria.put("userId",user.getId());
+            criteria.put("userId",userInfo.getId());
             List<SysResources> resources = sysResourcesService.findResources(criteria);
 
             //循环顶级节点，将其子节点拼装成树形结构
@@ -240,11 +229,11 @@ public class LoginController extends BaseController {
     @RequestMapping("logout")
     public ResultResp logout(){
         Subject subject = SecurityUtils.getSubject();
-        String username = subject.getPrincipal().toString();
+        UserInfo userInfo = AuthUtils.getUserInfo();
 
         subject.logout();//退出
 
-        clearSession(username);//清空session
+        clearSession(userInfo.getUsername());//清空session
         return ResultResp.ok();
     }
 

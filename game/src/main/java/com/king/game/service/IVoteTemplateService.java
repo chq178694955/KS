@@ -19,4 +19,6 @@ public interface IVoteTemplateService {
 
     PageInfo<VoteTemplate> find(PageInfo<VoteTemplate> page, Criteria criteria,Boolean isDownload);
 
+    VoteTemplate getTemplate(Long templateId);
+
 }

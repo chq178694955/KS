@@ -18,11 +18,11 @@
         <div class="layui-col-md12">
             <div class="layui-card">
                 <div class="layui-card-header">
-                    <form class="layui-form" lay-filter="searchFormVoteItemGroup">
+                    <form class="layui-form" lay-filter="searchFormVoteItem">
                         <div class="layui-form-item">
                             <div class="layui-inline">
                                 <div class="layui-input-inline">
-                                    <input id="name_${menuId}" type="text" name="name"  placeholder="<spring:message code="vote.itemGroup.name.tip"/>" autocomplete="off" class="layui-input">
+                                    <select id="groupId_${menuId}" name="groupId" lay-verify=""></select>
                                 </div>
                             </div>
                             <div class="layui-inline">
@@ -40,24 +40,22 @@
                     </form>
                 </div>
                 <div class="layui-card-body ">
-                    <table class="layui-table" lay-filter="voteItemGroupList_${menuId}" lay-data="{
-                        url:'${ctx}/game/voteItemGroup/find',
-                        id:'voteItemGroupList_${menuId}',
+                    <table class="layui-table" lay-filter="voteItemList_${menuId}" lay-data="{
+                        url:'${ctx}/game/voteItem/find',
+                        id:'voteItemList_${menuId}',
                         page:true,
                         }">
                         <thead>
                         <tr>
                             <th lay-data="{checkbox:true}"></th>
-                            <th lay-data="{field:'id',width:100,align:'center'}"><spring:message code="vote.itemGroup.field.id"/></th>
-                            <th lay-data="{field:'name',width:500,align:'center'}"><spring:message code="vote.itemGroup.field.name"/></th>
-                            <th lay-data="{field:'useFlag',width:100,align:'center',templet:'#switchTpl_${menuId}'}"><spring:message code="sys.dict.field.useFlag"/></th>
+                            <th lay-data="{field:'id',width:100,align:'center'}"><spring:message code="vote.item.field.id"/></th>
+                            <th lay-data="{field:'name',width:150,align:'center'}"><spring:message code="vote.item.field.name"/></th>
+                            <th lay-data="{field:'value',width:100,align:'center'}"><spring:message code="vote.item.field.value"/></th>
+                            <th lay-data="{field:'description',width:200,align:'center'}"><spring:message code="vote.item.field.description"/></th>
+                            <th lay-data="{field:'groupName',width:200,align:'center'}"><spring:message code="vote.item.field.groupName"/></th>
                             <th lay-data="{field:'oper',fixed:'right',width:180,align:'center',toolbar:'#operBar_${menuId}'}"><spring:message code="com.btn.oper"/></th>
                         </thead>
                     </table>
-
-                    <script type="text/html" id="switchTpl_${menuId}">
-                        <input type = "checkbox" name = "type" value = "{{d.type}}" lay-skin = "switch" lay-text = "<spring:message code="vote.itemGroup.field.type.single"/>|<spring:message code="vote.itemGroup.field.type.multiple"/>" lay-filter = "typeFilter" {{ d.type == 0 ? 'checked': ''}} >
-                    </script>
 
                     <script type="text/html" id="operBar_${menuId}">
                         <a class="layui-btn layui-btn-normal layui-btn-xs" lay-event="edit" title="<spring:message code="com.btn.edit"/>">
@@ -81,9 +79,13 @@
         var element = layui.element;
         var table = layui.table;
 
-        table.init('voteItemGroupList_${menuId}',{
-            id: 'voteItemGroupList_${menuId}',
-            url: '${ctx}/game/voteItemGroup/find',
+        list(function(){
+            form.render('select','searchFormVoteItem');
+        });
+
+        table.init('voteItemList_${menuId}',{
+            id: 'voteItemList_${menuId}',
+            url: '${ctx}/game/voteItem/find',
             page: true
         });
 
@@ -93,14 +95,14 @@
         $('#add_${menuId}').bind('click',toAdd);
         $('#excel_${menuId}').bind('click',exportExcel);
 
-        table.on('tool(voteItemGroupList_${menuId})',function(obj){
+        table.on('tool(voteItemList_${menuId})',function(obj){
             var data = obj.data;
             data.menuId = '${menuId}';
             switch(obj.event){
                 case 'del':
-                    Frame.confirm(WebUtils.getMessage('vote.itemGroup.tip.delSure'),function(){
+                    Frame.confirm(WebUtils.getMessage('vote.item.tip.delSure'),function(){
                         $.ajax({
-                            url: APP_ENV + '/game/voteItemGroup/delete',
+                            url: APP_ENV + '/game/voteItem/delete',
                             data:{id: data.id},
                             dataType:'json',
                             success:function (result) {
@@ -113,8 +115,7 @@
                     });
                     break;
                 case 'edit':
-                    var title = WebUtils.getMessage('com.btn.update');
-                    Frame.loadPage('${menuId}','game/voteItemGroup/toUpdate?menuId=${menuId}',data,WebUtils.getMessage('com.btn.modify'),400);
+                    Frame.loadPage('${menuId}','game/voteItem/toUpdate?menuId=${menuId}',data,WebUtils.getMessage('com.btn.modify'),400);
                     break;
             };
         });
@@ -122,9 +123,9 @@
 
     function query(event){
         var table = event.data;
-        table.reload('voteItemGroupList_${menuId}',{
+        table.reload('voteItemList_${menuId}',{
             where:{
-                name: WebUtils.fmtStr($('#name_${menuId}').val())
+                groupId: WebUtils.fmtStr($('#groupId_${menuId}').val())
             },
             page:{
                 curr:1
@@ -133,14 +134,32 @@
     }
 
     function toAdd(){
-        Frame.loadPage('${menuId}','game/voteItemGroup/toAdd?menuId=${menuId}',{},WebUtils.getMessage('com.btn.add'),400);
+        Frame.loadPage('${menuId}','game/voteItem/toAdd?menuId=${menuId}',{},WebUtils.getMessage('com.btn.add'),400);
     }
 
     function exportExcel(){
-        var layId = 'voteItemGroupList_${menuId}';
-        Frame.exportExcel(layId,'${ctx}/game/voteItemGroup/find',{
+        var layId = 'voteItemList_${menuId}';
+        Frame.exportExcel(layId,'${ctx}/game/voteItem/find',{
             name: WebUtils.fmtStr($('#name_${menuId}').val())
-        },'投票分组列表');
+        },'投票项列表');
+    }
+
+    function list(callback){
+        $.ajax({
+            url: APP_ENV + '/game/voteItemGroup/list?flag=1',
+            dataType: 'json',
+            success: function(datas){
+                if(datas){
+                    for(var i=0;i<datas.length;i++){
+                        var group = datas[i];
+                        $('#groupId_${menuId}').append('<option value="'+group.id+'">'+group.name+'</option>')
+                    }
+                    if(typeof callback == 'function'){
+                        callback();
+                    }
+                }
+            }
+        });
     }
 
 </script>

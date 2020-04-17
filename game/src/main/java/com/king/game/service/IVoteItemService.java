@@ -3,6 +3,9 @@ package com.king.game.service;
 import com.github.pagehelper.PageInfo;
 import com.king.framework.model.Criteria;
 import com.king.game.entity.VoteItem;
+import com.king.game.vo.VoteItemVO;
+
+import java.util.List;
 
 /**
  * @创建人 chq
@@ -17,6 +20,8 @@ public interface IVoteItemService {
 
     int delItem(Long id);
 
-    PageInfo<VoteItem> find(PageInfo<VoteItem> page, Criteria criteria, Boolean isDownload);
+    PageInfo<VoteItemVO> find(PageInfo<VoteItem> page, Criteria criteria, Boolean isDownload);
+
+    List<VoteItemVO> getItemByGroupIds(List<Long> groupIds);
 
 }

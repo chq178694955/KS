@@ -23,4 +23,6 @@ public interface IVoteItemGroupService {
 
     List<VoteItemGroup> selectAll();
 
+    List<VoteItemGroup> getGroupsByTemplate(Long templateId);
+
 }

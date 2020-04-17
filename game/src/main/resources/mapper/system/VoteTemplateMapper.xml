@@ -24,6 +24,9 @@
   <delete id="delete" parameterType="java.lang.Long">
     delete from vote_template where id = #{id,jdbcType=BIGINT}
   </delete>
+  <select id="selectOne" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select id, name from vote_template where id = #{templateId,jdbcType=BIGINT}
+  </select>
   <select id="selectAll" resultMap="BaseResultMap">
     select id, name
     from vote_template
@@ -37,4 +40,17 @@
       </if>
     </where>
   </select>
+  <select id="findTemplateByGroupId" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select a.id, a.name
+    from vote_template a, vote_template_group rel
+    where a.id = rel.temp_id
+    and rel.group_id = #{groupId,jdbcType=BIGINT}
+  </select>
+
+  <insert id="insertTemplateGroupRel" parameterType="java.util.Map">
+    insert into vote_template_group(temp_id,group_id) values(#{templateId,jdbcType=BIGINT},#{groupId,jdbcType=BIGINT})
+  </insert>
+  <delete id="deleteTemplateGroupRel" parameterType="java.lang.Long">
+    delete from vote_template_group where temp_id = #{templateId,jdbcType=BIGINT}
+  </delete>
 </mapper>

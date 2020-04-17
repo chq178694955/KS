@@ -6,6 +6,7 @@ import com.king.framework.model.Criteria;
 import com.king.game.dao.VoteItemMapper;
 import com.king.game.entity.VoteItem;
 import com.king.game.service.IVoteItemService;
+import com.king.game.vo.VoteItemVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -38,14 +39,19 @@ public class VoteItemServiceImpl implements IVoteItemService {
     }
 
     @Override
-    public PageInfo<VoteItem> find(PageInfo<VoteItem> page, Criteria criteria, Boolean isDownload) {
+    public PageInfo<VoteItemVO> find(PageInfo<VoteItem> page, Criteria criteria, Boolean isDownload) {
         if(!isDownload){
             PageHelper.startPage(page.getPageNum(),page.getPageSize());
         }
-        List<VoteItem> items = voteItemMapper.find(criteria);
-        PageInfo<VoteItem> pageInfo = new PageInfo<VoteItem>(items);
+        List<VoteItemVO> items = voteItemMapper.find(criteria);
+        PageInfo<VoteItemVO> pageInfo = new PageInfo<VoteItemVO>(items);
         pageInfo.setPageNum(page.getPageNum());
         pageInfo.setPageSize(page.getPageSize());
         return pageInfo;
+    }
+
+    @Override
+    public List<VoteItemVO> getItemByGroupIds(List<Long> groupIds) {
+        return voteItemMapper.selectItemByGroupIds(groupIds);
     }
 }

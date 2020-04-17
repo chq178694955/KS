@@ -28,6 +28,12 @@
   <delete id="delete" parameterType="java.lang.Long">
     delete from vote_item_group where id = #{id,jdbcType=BIGINT}
   </delete>
+  <select id="selectByTemplateId" resultMap="BaseResultMap" parameterType="java.lang.Long">
+    select a.id, a.name, a.type
+    from vote_item_group a, vote_template_group b
+    where a.id = b.group_id
+    and b.temp_id = #{templateId,jdbcType=BIGINT}
+  </select>
   <select id="selectAll" resultMap="BaseResultMap">
     select id, name, type
     from vote_item_group

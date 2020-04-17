@@ -20,7 +20,7 @@ public class Vote implements Serializable {
 
     private Date createTime;
 
-    private Boolean status;
+    private Integer status;
 
     private static final long serialVersionUID = 1L;
 
@@ -88,11 +88,11 @@ public class Vote implements Serializable {
         this.createTime = createTime;
     }
 
-    public Boolean getStatus() {
+    public Integer getStatus() {
         return status;
     }
 
-    public void setStatus(Boolean status) {
+    public void setStatus(Integer status) {
         this.status = status;
     }
 }

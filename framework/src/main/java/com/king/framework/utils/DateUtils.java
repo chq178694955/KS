@@ -1,5 +1,6 @@
 package com.king.framework.utils;
 
+import org.apache.xmlbeans.impl.jam.xml.TunnelledException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.util.StringUtils;
@@ -20,6 +21,28 @@ public class DateUtils {
 
     private static final long STANDARD_TIME = STANDARD_DATE.getTime();
 
+    public static final String YMD = "yyyy-MM-dd";
+    public static final String YMDHMS = "yyyy-MM-dd HH:mm:ss";
+    public static final String YM = "yyyy-MM";
+
+    /**
+     * 字符串转成时间
+     */
+    public synchronized static Date parse(String strTime, String pattern) {
+        if (strTime == null)
+            return null;
+        if(pattern == null)pattern = YMD;
+        SimpleDateFormat sdf = new SimpleDateFormat(pattern);
+        Date date = null;
+        try {
+            date = sdf.parse(strTime);
+        } catch (ParseException e) {
+            e.printStackTrace();
+            return null;
+        }
+        return date;
+    }
+
     /**
      * 把秒数转成时间
      */
@@ -37,6 +60,19 @@ public class DateUtils {
             return null;
         long l = date.getTime() / 1000;
         return Long.valueOf(l);
+    }
+
+    /**
+     * d1 大于  d2 返回 true,其余全部返回false
+     * @param d1
+     * @param d2
+     * @return
+     */
+    public static boolean compareDate(Date d1,Date d2){
+        if(d1 == null)return false;
+        if(d2 == null)return false;
+        if(d1.after(d2))return true;
+        return false;
     }
 
     /**
@@ -91,6 +127,11 @@ public class DateUtils {
 
     public static String formatSeconds(Long seconds, String pattern) {
         return format(seconds != null ? seconds * 1000l : null, pattern);
+    }
+
+    public static String format(Date time, String pattern){
+        SimpleDateFormat dateFormat = new SimpleDateFormat(pattern);
+        return dateFormat.format(time);
     }
 
     public static String format(Long timeMillis, String pattern) {

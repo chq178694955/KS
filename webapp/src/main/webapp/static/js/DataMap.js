@@ -99,7 +99,7 @@ function DataMap(){
 
     this.containsKey = function(_key){
         try{
-            for(i=0;i<this.elements.length;i++){
+            for(var i=0;i<this.elements.length;i++){
                 if(this.elements[i].key == _key){
                     return true;
                 }

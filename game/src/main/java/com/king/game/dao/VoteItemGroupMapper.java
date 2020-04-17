@@ -15,6 +15,8 @@ public interface VoteItemGroupMapper {
 
     int delete(Long id);
 
+    List<VoteItemGroup> selectByTemplateId(Long templateId);
+
     List<VoteItemGroup> selectAll();
 
     List<VoteItemGroup> find(Criteria criteria);

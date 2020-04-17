@@ -27,6 +27,10 @@ window.Frame = window.Frame || {
         this.Tabs.addTab(opts);
     },
 
+    modMainTab: function(opts){
+        this.Tabs.updateTab(opts)
+    },
+
     delMainTab: function(layId){
         this.Tabs.delTab(layId);
     },
@@ -40,7 +44,7 @@ window.Frame = window.Frame || {
     err: function(content){
         this.Layer.err(content);
     },
-    info: function(){
+    info: function(content){
         this.Layer.info(content);
     },
     confirm: function(title,doFunc){
@@ -75,7 +79,7 @@ Frame.Tabs = {
 
     mainId: 'mainFrameTab',
     prefixMainId: 'mainFrameMenu_',
-    mainContentId: 'mainFrameContent',
+    mainContentId: 'mainFrameContent_',
 
     createTitle: function(opts){
         opts = opts || {};
@@ -124,17 +128,34 @@ Frame.Tabs = {
         });
     },
 
+    updateTab: function(opts){
+        if(Frame.Tabs.existTab(opts.id)){
+            Frame.load();
+            var that = this;
+            $.ajax({
+                url: opts.url,
+                data: opts.params,
+                success: function(html){
+                    $('#' + that.mainContentId + opts.id).html(html);
+                    Frame.closeLayer();
+                }
+            });
+        }
+    },
+
     addTab: function(opts){
         opts = typeof(opts) == "undefined" ? {} : opts;
         if(Frame.Tabs.existTab(opts.id)){
             Frame.Tabs.tabChange(opts.id)
         }else{
             if(!WebUtils.isEmpty(opts.url)){
+                Frame.load();
+                var that = this;
                 $.ajax({
                     url: opts.url,
                     async: true,
                     success: function(html){
-                        opts.content = "<div style='height: 100%;overflow-y: auto'>"+html+"</div>";
+                        opts.content = "<div style='height: 100%;overflow-y: auto' id='"+that.mainContentId + opts.id+"'>"+html+"</div>";
                         var newTitle = Frame.Tabs.createTitle(opts.title);
                         // opts.content = $("<div>").css({height:'100%','overflow-y':'auto'}).append(html).toString();
                         element.tabAdd(Frame.Tabs.mainId,{
@@ -142,16 +163,17 @@ Frame.Tabs = {
                             // title:'<i class="layui-icon">'+opts.title.icon+'</i>' + opts.title.name,
                             title:newTitle,
                             content:opts.content,
-                            id:'mainFrameMenu_' + opts.id
+                            id:Frame.Tabs.prefixMainId + opts.id
                         });
                         Frame.Tabs.tabChange(opts.id);
+                        Frame.closeLayer();
                     }
                 });
             }else if(!WebUtils.isEmpty(opts.content)){
                 element.tabAdd(Frame.Tabs.mainId,{
                     title:opts.title,
                     content:opts.content,
-                    id:'mainFrameMenu_' + opts.id
+                    id:Frame.Tabs.prefixMainId + opts.id
                 })
             }
         }

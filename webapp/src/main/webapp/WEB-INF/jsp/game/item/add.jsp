@@ -19,23 +19,32 @@
         <div class="layui-col-md12">
             <div class="layui-card">
                 <div class="layui-card-body">
-                    <form class="layui-form" action="${ctx}/game/voteItemGroup/add">
+                    <form class="layui-form" action="${ctx}/game/voteItem/add" lay-filter="addVoteItemForm">
                         <div class="layui-form-item">
                             <div class="layui-inline">
-                                <label class="layui-form-label"><spring:message code="vote.itemGroup.field.name"/></label>
+                                <label class="layui-form-label"><spring:message code="vote.item.field.name"/></label>
                                 <div class="layui-input-inline">
                                     <input type="text" name="name" class="layui-input" lay-verify="required" lay-verType="tips">
+                                </div>
+                            </div>
+                            <div class="layui-inline">
+                                <label class="layui-form-label"><spring:message code="vote.item.field.value"/></label>
+                                <div class="layui-input-inline">
+                                    <input type="text" name="value" class="layui-input" lay-verify="required" lay-verType="tips">
                                 </div>
                             </div>
                         </div>
                         <div class="layui-form-item">
                             <div class="layui-inline">
-                                <label class="layui-form-label"><spring:message code="vote.itemGroup.field.type"/></label>
+                                <label class="layui-form-label"><spring:message code="vote.item.field.description"/></label>
                                 <div class="layui-input-inline">
-                                    <select id="type" name="type">
-                                        <option value="0" selected><spring:message code="vote.itemGroup.field.type.single"/></option>
-                                        <option value="1"><spring:message code="vote.itemGroup.field.type.multiple"/></option>
-                                    </select>
+                                    <input type="text" name="description" class="layui-input" lay-verify="required" lay-verType="tips">
+                                </div>
+                            </div>
+                            <div class="layui-inline">
+                                <label class="layui-form-label"><spring:message code="vote.item.field.groupName"/></label>
+                                <div class="layui-input-inline">
+                                    <select id="groupId" name="groupId"></select>
                                 </div>
                             </div>
                         </div>
@@ -58,6 +67,11 @@
         var form = layui.form;
         element.render('breadcrumb');
 
+        list(function(){
+            form.render('select');
+            // form.render('select','addVoteItemForm');
+        });
+
         form.on('submit(addForm)',function(data){
             console.log(data.elem);
             console.log(data.form);
@@ -78,4 +92,22 @@
         });
         form.render();
     });
+
+    function list(callback){
+        $.ajax({
+            url: APP_ENV + '/game/voteItemGroup/list',
+            dataType: 'json',
+            success: function(datas){
+                if(datas){
+                    for(var i=0;i<datas.length;i++){
+                        var group = datas[i];
+                        $('#groupId').append('<option value="'+group.id+'">'+group.name+'</option>')
+                    }
+                    if(typeof callback == 'function'){
+                        callback();
+                    }
+                }
+            }
+        });
+    }
 </script>

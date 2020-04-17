@@ -57,7 +57,9 @@
         <!--<table tableName="vote_template" domainObjectName="VoteTemplate">-->
         <!--<table tableName="vote_item_group" domainObjectName="VoteItemGroup">-->
         <!--<table tableName="vote_item" domainObjectName="VoteItem">-->
-        <table tableName="vote" domainObjectName="Vote">
+        <!--<table tableName="vote" domainObjectName="Vote">-->
+        <!--<table tableName="vote_record" domainObjectName="VoteRecord">-->
+        <table tableName="vote_record_detail" domainObjectName="VoteRecordDetail">
             <!--<generatedKey column="id" sqlStatement="JDBC" identity="true"/>-->
             <!-- Mysql 配置 -->
             <generatedKey column="id" sqlStatement="Mysql" identity="true" />

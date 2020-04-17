@@ -49,4 +49,8 @@ public class VoteTemplateServiceImpl implements IVoteTemplateService {
         return pageInfo;
     }
 
+    @Override
+    public VoteTemplate getTemplate(Long templateId) {
+        return voteTemplateMapper.selectOne(templateId);
+    }
 }

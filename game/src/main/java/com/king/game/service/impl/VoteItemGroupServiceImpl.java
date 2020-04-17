@@ -53,4 +53,9 @@ public class VoteItemGroupServiceImpl implements IVoteItemGroupService {
     public List<VoteItemGroup> selectAll() {
         return voteItemGroupMapper.selectAll();
     }
+
+    @Override
+    public List<VoteItemGroup> getGroupsByTemplate(Long templateId) {
+        return voteItemGroupMapper.selectByTemplateId(templateId);
+    }
 }

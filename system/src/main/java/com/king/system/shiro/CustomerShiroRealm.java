@@ -3,6 +3,7 @@ package com.king.system.shiro;
 import com.king.system.entity.SysResources;
 import com.king.system.entity.SysRole;
 import com.king.system.entity.SysUser;
+import com.king.system.po.UserInfo;
 import com.king.system.service.ISysResourcesService;
 import com.king.system.service.ISysRoleService;
 import com.king.system.service.ISysUserService;
@@ -72,14 +73,24 @@ public class CustomerShiroRealm extends AuthorizingRealm {
             //这里返回会报出对应异常
             throw new UnknownAccountException();//没找到帐号
         }else{
+            UserInfo userInfo = createUserInfo(user);
             //这里验证authenticationToken和simpleAuthenticationInfo的信息
             SimpleAuthenticationInfo simpleAuthenticationInfo=new SimpleAuthenticationInfo(
-                    account,
+                    userInfo,
                     user.getPassword(),
                     //ByteSource.Util.bytes(user.getSalt()),//salt=username+salt
                     getName());
             return simpleAuthenticationInfo;
         }
+    }
+
+    private UserInfo createUserInfo(SysUser user){
+        UserInfo userInfo = new UserInfo();
+        userInfo.setId(user.getId());
+        userInfo.setUsername(user.getUsername());
+        userInfo.setName(user.getName());
+        userInfo.setState(user.getState());
+        return userInfo;
     }
 
     /**

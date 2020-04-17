@@ -124,7 +124,7 @@
         </li>
         <li class="layui-nav-item">
             <a href="javascript:;">
-                <cite>欢迎[<shiro:principal/>]登录</cite>
+                <cite>[${userInfo != null && userInfo.name != null ? userInfo.name : ''}]</cite>
                 <span class="layui-nav-more"></span>
             </a>
             <dl class="layui-nav-child">

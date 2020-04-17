@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.king.game.dao.VoteRecordDetailMapper">
+  <resultMap id="BaseResultMap" type="com.king.game.entity.VoteRecordDetail">
+    <result column="id" jdbcType="BIGINT" property="id" />
+    <result column="group_id" jdbcType="BIGINT" property="groupId" />
+    <result column="item_ids" jdbcType="VARCHAR" property="itemIds" />
+    <result column="record_id" jdbcType="BIGINT" property="recordId" />
+  </resultMap>
+  <insert id="insert" parameterType="com.king.game.entity.VoteRecordDetail">
+    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Long">
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into vote_record_detail (group_id, item_ids, record_id
+      )
+    values (#{groupId,jdbcType=BIGINT}, #{itemIds,jdbcType=VARCHAR}, #{recordId,jdbcType=BIGINT}
+      )
+  </insert>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select id, group_id, item_ids, record_id
+    from vote_record_detail
+  </select>
+  <select id="selectDetails" resultMap="BaseResultMap" parameterType="java.lang.Long">
+    select id, group_id, item_ids, record_id
+    from vote_record_detail
+    where record_id = #{recordId,jdbcType=BIGINT}
+  </select>
+</mapper>

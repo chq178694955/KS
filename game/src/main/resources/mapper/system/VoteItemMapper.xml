@@ -8,6 +8,16 @@
     <result column="description" jdbcType="VARCHAR" property="description" />
     <result column="group_id" jdbcType="BIGINT" property="groupId" />
   </resultMap>
+
+  <resultMap id="BaseResultMap2" type="com.king.game.vo.VoteItemVO">
+    <result column="id" jdbcType="BIGINT" property="id" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="value" jdbcType="VARCHAR" property="value" />
+    <result column="description" jdbcType="VARCHAR" property="description" />
+    <result column="group_id" jdbcType="BIGINT" property="groupId" />
+    <result column="group_name" jdbcType="VARCHAR" property="groupName" />
+  </resultMap>
+
   <insert id="insert" parameterType="com.king.game.entity.VoteItem">
     <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Long">
       SELECT LAST_INSERT_ID()
@@ -36,28 +46,41 @@
     where id = #{id,jdbcType=BIGINT}
   </update>
   <delete id="delete" parameterType="java.lang.Long">
-    delete from vote_item wehre id = #{id,jdbcType=BIGINT}
+    delete from vote_item where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <delete id="deleteByGroupId" parameterType="java.lang.Long">
+    delete from vote_item where group_id = #{groupId,jdbcType=BIGINT}
   </delete>
   <select id="selectAll" resultMap="BaseResultMap">
     select id, name, value, description, group_id
     from vote_item
   </select>
-  <select id="find" resultMap="BaseResultMap" parameterType="java.util.Map">
-    select id, name, value, description, group_id
-    from vote_item
+  <select id="find" resultMap="BaseResultMap2" parameterType="java.util.Map">
+    select a.id, a.name, a.value, a.description, a.group_id, b.name as group_name
+    from vote_item a,vote_item_group b
     <where>
+      and a.group_id = b.id
       <if test="name != null and name != ''">
-         and name = #{name,jdbcType=VARCHAR}
+         and a.name = #{name,jdbcType=VARCHAR}
       </if>
       <if test="value != null and value != ''">
-        and value = #{value,jdbcType=VARCHAR}
+        and a.value = #{value,jdbcType=VARCHAR}
       </if>
       <if test="description != null and description != ''">
-        and description = #{description,jdbcType=VARCHAR}
+        and a.description = #{description,jdbcType=VARCHAR}
       </if>
-      <if test="groupId != null">
-        and group_id = #{groupId,jdbcType=BIGINT}
+      <if test="groupId != null and groupId > 0">
+        and a.group_id = #{groupId,jdbcType=BIGINT}
       </if>
     </where>
+  </select>
+
+  <select id="selectItemByGroupIds" parameterType="java.util.List" resultMap="BaseResultMap2">
+    select id, name, value, description, group_id
+    from vote_item
+    where group_id in 
+    <foreach collection="list" item="item" open="(" close=")" separator=",">
+      #{item,jdbcType=BIGINT}
+    </foreach>
   </select>
 </mapper>

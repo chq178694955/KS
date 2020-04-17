@@ -1,9 +1,11 @@
 package com.king.app.webapp.controller.game;
 
 import com.github.pagehelper.PageInfo;
+import com.github.pagehelper.StringUtil;
 import com.king.app.webapp.dto.ResultResp;
 import com.king.framework.base.BaseController;
 import com.king.framework.model.Criteria;
+import com.king.framework.utils.I18nUtils;
 import com.king.game.entity.VoteItemGroup;
 import com.king.game.service.IVoteItemGroupService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,6 +15,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -88,7 +91,16 @@ public class VoteItemGroupController extends BaseController {
 
     @RequestMapping("list")
     @ResponseBody
-    public List<VoteItemGroup> list(){
-        return voteItemGroupService.selectAll();
+    public List<VoteItemGroup> list(HttpServletRequest request){
+        String flag = super.getParam("flag");
+        List<VoteItemGroup> datas = voteItemGroupService.selectAll();
+        if(datas == null)datas = new ArrayList<>();
+        if(StringUtil.isNotEmpty(flag) && flag.equals("1")){
+            VoteItemGroup group = new VoteItemGroup();
+            group.setId(0L);
+            group.setName(I18nUtils.get("com.select.all"));
+            datas.add(0,group);
+        }
+        return datas;
     }
 }

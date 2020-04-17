@@ -17,5 +17,13 @@ public interface VoteTemplateMapper {
 
     List<VoteTemplate> selectAll();
 
+    VoteTemplate selectOne(Long templateId);
+
     List<VoteTemplate> find(Criteria criteria);
+
+    List<VoteTemplate> findTemplateByGroupId(Long groupId);
+
+    int insertTemplateGroupRel(Criteria criteria);
+
+    int deleteTemplateGroupRel(Long templateId);
 }

@@ -2,6 +2,7 @@ package com.king.game.dao;
 
 import com.king.framework.model.Criteria;
 import com.king.game.entity.VoteItem;
+import com.king.game.vo.VoteItemVO;
 import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;
@@ -15,7 +16,11 @@ public interface VoteItemMapper {
 
     int delete(Long id);
 
+    int deleteByGroupId(Long groupId);
+
     List<VoteItem> selectAll();
 
-    List<VoteItem> find(Criteria criteria);
+    List<VoteItemVO> find(Criteria criteria);
+
+    List<VoteItemVO> selectItemByGroupIds(List<Long> groupIds);
 }

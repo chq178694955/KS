@@ -1,0 +1,327 @@
+2020-04-18 03:26:14,593 INFO (StartupInfoLogger.java:55)- Starting Startup on LAPTOP-3H9KE96D with PID 8308 (D:\projects\KS\webapp\target\classes started by 17869 in D:\projects\KS)
+2020-04-18 03:26:14,600 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2020-04-18 03:26:14,601 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
+2020-04-18 03:26:21,123 INFO (StartupInfoLogger.java:61)- Started Startup in 7.301 seconds (JVM running for 9.946)
+2020-04-18 03:26:21,124 INFO (InitApplicationRun.java:26)- King System already started ...
+2020-04-18 03:26:21,148 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select dict_sn, class_no, dict_no, dict_desc, disp_order, parent_sn, use_flag from sys_dict 
+2020-04-18 03:26:21,242 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-04-18 03:26:21,264 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 13
+2020-04-18 03:26:21,267 INFO (InitApplicationRun.java:28)- Initialization data complete ...
+2020-04-18 03:26:36,503 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select * from sys_user where username = ? 
+2020-04-18 03:26:36,529 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: admin(String)
+2020-04-18 03:26:36,531 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-04-18 03:26:36,623 INFO (LoginController.java:122)- ********************登录成功，进入首页！********************
+2020-04-18 03:26:36,629 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select * from sys_user where username = ? 
+2020-04-18 03:26:36,630 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: com.king.system.po.UserInfo@ba9de0f(String)
+2020-04-18 03:26:36,631 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 0
+2020-04-18 03:26:37,071 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select a.id, a.name, a.url, a.type, a.pid, a.permission, icon from sys_resources a, sys_role_resources b, sys_user_role c where a.id = b.res_id and b.role_id = c.rid and c.uid = ? order by a.id 
+2020-04-18 03:26:37,080 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 1(Long)
+2020-04-18 03:26:37,089 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 19
+2020-04-18 03:26:39,856 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT count(0) FROM vote a, sys_user b, vote_template c WHERE a.create_id = b.id AND a.template_id = c.id 
+2020-04-18 03:26:39,859 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-04-18 03:26:39,861 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-04-18 03:26:39,863 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select a.id, a.title, a.sub_title, a.start_time, a.end_time, a.template_id, a.create_id, a.create_time, a.status , b.name creator, c.name template_name from vote a, sys_user b, vote_template c where a.create_id = b.id and a.template_id = c.id limit ?,? 
+2020-04-18 03:26:39,869 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 0(Integer), 10(Integer)
+2020-04-18 03:26:39,872 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-04-18 03:26:40,932 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, title, sub_title, start_time, end_time, template_id, create_id, create_time, status from vote where id = ? 
+2020-04-18 03:26:40,933 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 4(Long)
+2020-04-18 03:26:40,935 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-04-18 03:29:05,720 INFO (LoginController.java:122)- ********************登录成功，进入首页！********************
+2020-04-18 03:29:05,730 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select * from sys_user where username = ? 
+2020-04-18 03:29:05,731 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: com.king.system.po.UserInfo@569284b3(String)
+2020-04-18 03:29:05,734 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 0
+2020-04-18 03:29:05,868 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select a.id, a.name, a.url, a.type, a.pid, a.permission, icon from sys_resources a, sys_role_resources b, sys_user_role c where a.id = b.res_id and b.role_id = c.rid and c.uid = ? order by a.id 
+2020-04-18 03:29:05,870 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 1(Long)
+2020-04-18 03:29:05,876 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 19
+2020-04-18 03:29:08,985 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT count(0) FROM vote a, sys_user b, vote_template c WHERE a.create_id = b.id AND a.template_id = c.id 
+2020-04-18 03:29:08,985 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-04-18 03:29:08,987 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-04-18 03:29:08,989 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select a.id, a.title, a.sub_title, a.start_time, a.end_time, a.template_id, a.create_id, a.create_time, a.status , b.name creator, c.name template_name from vote a, sys_user b, vote_template c where a.create_id = b.id and a.template_id = c.id limit ?,? 
+2020-04-18 03:29:08,990 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 0(Integer), 10(Integer)
+2020-04-18 03:29:08,994 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-04-18 03:29:11,632 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, title, sub_title, start_time, end_time, template_id, create_id, create_time, status from vote where id = ? 
+2020-04-18 03:29:11,633 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 4(Long)
+2020-04-18 03:29:11,636 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-04-18 03:29:11,637 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name from vote_template where id = ? 
+2020-04-18 03:29:11,639 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 9(Long)
+2020-04-18 03:29:11,640 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-04-18 03:29:11,641 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select a.id, a.name, a.type from vote_item_group a, vote_template_group b where a.id = b.group_id and b.temp_id = ? 
+2020-04-18 03:29:11,643 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 9(Long)
+2020-04-18 03:29:11,644 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 2
+2020-04-18 03:29:11,647 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name, value, description, group_id from vote_item where group_id in ( ? , ? ) 
+2020-04-18 03:29:11,648 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 12(Long), 13(Long)
+2020-04-18 03:29:11,650 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 7
+2020-04-18 03:29:11,662 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, title, sub_title, start_time, end_time, template_id, create_id, create_time, status from vote where id = ? 
+2020-04-18 03:29:11,663 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 4(Long)
+2020-04-18 03:29:11,666 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-04-18 03:29:11,668 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name from vote_template where id = ? 
+2020-04-18 03:29:11,669 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 9(Long)
+2020-04-18 03:29:11,670 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-04-18 03:29:11,671 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select a.id, a.name, a.type from vote_item_group a, vote_template_group b where a.id = b.group_id and b.temp_id = ? 
+2020-04-18 03:29:11,671 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 9(Long)
+2020-04-18 03:29:11,676 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 2
+2020-04-18 03:29:11,678 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name, value, description, group_id from vote_item where group_id in ( ? , ? ) 
+2020-04-18 03:29:11,679 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 12(Long), 13(Long)
+2020-04-18 03:29:11,681 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 7
+2020-04-18 03:29:11,686 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, vote_id, user_id, vote_time from vote_record where user_id = ? and vote_id = ? 
+2020-04-18 03:29:11,687 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 1(Long), 4(Long)
+2020-04-18 03:29:11,689 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-04-18 03:29:11,694 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, group_id, item_ids, record_id from vote_record_detail where record_id = ? 
+2020-04-18 03:29:11,695 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 2(Long)
+2020-04-18 03:29:11,696 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 2
+2020-04-18 03:53:24,786 INFO (StartupInfoLogger.java:55)- Starting Startup on LAPTOP-3H9KE96D with PID 11680 (D:\projects\KS\webapp\target\classes started by 17869 in D:\projects\KS)
+2020-04-18 03:53:24,791 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2020-04-18 03:53:24,792 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
+2020-04-18 03:53:29,623 INFO (StartupInfoLogger.java:61)- Started Startup in 5.629 seconds (JVM running for 7.009)
+2020-04-18 03:53:29,625 INFO (InitApplicationRun.java:26)- King System already started ...
+2020-04-18 03:53:29,641 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select dict_sn, class_no, dict_no, dict_desc, disp_order, parent_sn, use_flag from sys_dict 
+2020-04-18 03:53:29,718 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-04-18 03:53:29,737 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 13
+2020-04-18 03:53:29,740 INFO (InitApplicationRun.java:28)- Initialization data complete ...
+2020-04-18 03:53:35,287 INFO (LoginController.java:122)- ********************登录成功，进入首页！********************
+2020-04-18 03:53:35,298 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select * from sys_user where username = ? 
+2020-04-18 03:53:35,329 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: com.king.system.po.UserInfo@99d59f2(String)
+2020-04-18 03:53:35,331 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 0
+2020-04-18 03:53:36,213 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select a.id, a.name, a.url, a.type, a.pid, a.permission, icon from sys_resources a, sys_role_resources b, sys_user_role c where a.id = b.res_id and b.role_id = c.rid and c.uid = ? order by a.id 
+2020-04-18 03:53:36,221 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 1(Long)
+2020-04-18 03:53:36,229 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 19
+2020-04-18 03:53:38,504 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT count(0) FROM vote a, sys_user b, vote_template c WHERE a.create_id = b.id AND a.template_id = c.id 
+2020-04-18 03:53:38,508 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-04-18 03:53:38,509 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-04-18 03:53:38,512 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select a.id, a.title, a.sub_title, a.start_time, a.end_time, a.template_id, a.create_id, a.create_time, a.status , b.name creator, c.name template_name from vote a, sys_user b, vote_template c where a.create_id = b.id and a.template_id = c.id limit ?,? 
+2020-04-18 03:53:38,517 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 0(Integer), 10(Integer)
+2020-04-18 03:53:38,520 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-04-18 03:53:39,603 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, title, sub_title, start_time, end_time, template_id, create_id, create_time, status from vote where id = ? 
+2020-04-18 03:53:39,604 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 4(Long)
+2020-04-18 03:53:39,605 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-04-18 03:53:39,607 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name from vote_template where id = ? 
+2020-04-18 03:53:39,607 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 9(Long)
+2020-04-18 03:53:39,608 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-04-18 03:53:39,609 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select a.id, a.name, a.type from vote_item_group a, vote_template_group b where a.id = b.group_id and b.temp_id = ? 
+2020-04-18 03:53:39,610 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 9(Long)
+2020-04-18 03:53:39,612 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 2
+2020-04-18 03:53:39,615 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name, value, description, group_id from vote_item where group_id in ( ? , ? ) 
+2020-04-18 03:53:39,617 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 12(Long), 13(Long)
+2020-04-18 03:53:39,619 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 7
+2020-04-18 03:53:39,633 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, title, sub_title, start_time, end_time, template_id, create_id, create_time, status from vote where id = ? 
+2020-04-18 03:53:39,634 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 4(Long)
+2020-04-18 03:53:39,636 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-04-18 03:53:39,637 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name from vote_template where id = ? 
+2020-04-18 03:53:39,638 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 9(Long)
+2020-04-18 03:53:39,639 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-04-18 03:53:39,639 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select a.id, a.name, a.type from vote_item_group a, vote_template_group b where a.id = b.group_id and b.temp_id = ? 
+2020-04-18 03:53:39,640 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 9(Long)
+2020-04-18 03:53:39,641 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 2
+2020-04-18 03:53:39,642 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name, value, description, group_id from vote_item where group_id in ( ? , ? ) 
+2020-04-18 03:53:39,643 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 12(Long), 13(Long)
+2020-04-18 03:53:39,647 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 7
+2020-04-18 03:53:39,654 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, vote_id, user_id, vote_time from vote_record where user_id = ? and vote_id = ? 
+2020-04-18 03:53:39,655 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 1(Long), 4(Long)
+2020-04-18 03:53:39,656 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-04-18 03:53:39,658 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, group_id, item_ids, record_id from vote_record_detail where record_id = ? 
+2020-04-18 03:53:39,658 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 2(Long)
+2020-04-18 03:53:39,660 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 2
+2020-04-18 03:54:08,282 INFO (StartupInfoLogger.java:55)- Starting Startup on LAPTOP-3H9KE96D with PID 13804 (D:\projects\KS\webapp\target\classes started by 17869 in D:\projects\KS)
+2020-04-18 03:54:08,287 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2020-04-18 03:54:08,288 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
+2020-04-18 03:54:13,366 INFO (StartupInfoLogger.java:61)- Started Startup in 5.914 seconds (JVM running for 6.966)
+2020-04-18 03:54:13,367 INFO (InitApplicationRun.java:26)- King System already started ...
+2020-04-18 03:54:13,388 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select dict_sn, class_no, dict_no, dict_desc, disp_order, parent_sn, use_flag from sys_dict 
+2020-04-18 03:54:13,477 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-04-18 03:54:13,501 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 13
+2020-04-18 03:54:13,506 INFO (InitApplicationRun.java:28)- Initialization data complete ...
+2020-04-18 03:54:25,591 INFO (LoginController.java:122)- ********************登录成功，进入首页！********************
+2020-04-18 03:54:25,600 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select * from sys_user where username = ? 
+2020-04-18 03:54:25,624 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: com.king.system.po.UserInfo@2237f28f(String)
+2020-04-18 03:54:25,625 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 0
+2020-04-18 03:54:26,520 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select a.id, a.name, a.url, a.type, a.pid, a.permission, icon from sys_resources a, sys_role_resources b, sys_user_role c where a.id = b.res_id and b.role_id = c.rid and c.uid = ? order by a.id 
+2020-04-18 03:54:26,529 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 1(Long)
+2020-04-18 03:54:26,536 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 19
+2020-04-18 03:54:32,922 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT count(0) FROM vote a, sys_user b, vote_template c WHERE a.create_id = b.id AND a.template_id = c.id 
+2020-04-18 03:54:32,927 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-04-18 03:54:32,928 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-04-18 03:54:32,930 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select a.id, a.title, a.sub_title, a.start_time, a.end_time, a.template_id, a.create_id, a.create_time, a.status , b.name creator, c.name template_name from vote a, sys_user b, vote_template c where a.create_id = b.id and a.template_id = c.id limit ?,? 
+2020-04-18 03:54:32,933 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 0(Integer), 10(Integer)
+2020-04-18 03:54:32,938 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-04-18 03:54:34,148 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, title, sub_title, start_time, end_time, template_id, create_id, create_time, status from vote where id = ? 
+2020-04-18 03:54:34,150 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 4(Long)
+2020-04-18 03:54:34,152 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-04-18 03:54:34,154 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name from vote_template where id = ? 
+2020-04-18 03:54:34,155 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 9(Long)
+2020-04-18 03:54:34,156 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-04-18 03:54:34,157 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select a.id, a.name, a.type from vote_item_group a, vote_template_group b where a.id = b.group_id and b.temp_id = ? 
+2020-04-18 03:54:34,158 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 9(Long)
+2020-04-18 03:54:34,159 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 2
+2020-04-18 03:54:34,162 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name, value, description, group_id from vote_item where group_id in ( ? , ? ) 
+2020-04-18 03:54:34,163 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 12(Long), 13(Long)
+2020-04-18 03:54:34,165 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 7
+2020-04-18 03:54:34,178 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, title, sub_title, start_time, end_time, template_id, create_id, create_time, status from vote where id = ? 
+2020-04-18 03:54:34,179 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 4(Long)
+2020-04-18 03:54:34,181 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-04-18 03:54:34,182 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name from vote_template where id = ? 
+2020-04-18 03:54:34,182 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 9(Long)
+2020-04-18 03:54:34,184 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-04-18 03:54:34,184 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select a.id, a.name, a.type from vote_item_group a, vote_template_group b where a.id = b.group_id and b.temp_id = ? 
+2020-04-18 03:54:34,185 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 9(Long)
+2020-04-18 03:54:34,187 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 2
+2020-04-18 03:54:34,188 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name, value, description, group_id from vote_item where group_id in ( ? , ? ) 
+2020-04-18 03:54:34,189 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 12(Long), 13(Long)
+2020-04-18 03:54:34,191 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 7
+2020-04-18 03:54:34,195 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, vote_id, user_id, vote_time from vote_record where user_id = ? and vote_id = ? 
+2020-04-18 03:54:34,196 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 1(Long), 4(Long)
+2020-04-18 03:54:34,197 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-04-18 03:54:34,199 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, group_id, item_ids, record_id from vote_record_detail where record_id = ? 
+2020-04-18 03:54:34,200 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 2(Long)
+2020-04-18 03:54:34,205 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 2
+2020-04-18 03:55:37,914 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT count(0) FROM vote a, sys_user b, vote_template c WHERE a.create_id = b.id AND a.template_id = c.id 
+2020-04-18 03:55:37,915 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-04-18 03:55:37,917 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-04-18 03:55:37,920 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select a.id, a.title, a.sub_title, a.start_time, a.end_time, a.template_id, a.create_id, a.create_time, a.status , b.name creator, c.name template_name from vote a, sys_user b, vote_template c where a.create_id = b.id and a.template_id = c.id limit ?,? 
+2020-04-18 03:55:37,922 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 0(Integer), 10(Integer)
+2020-04-18 03:55:37,925 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-04-18 03:55:39,621 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, title, sub_title, start_time, end_time, template_id, create_id, create_time, status from vote where id = ? 
+2020-04-18 03:55:39,622 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 4(Long)
+2020-04-18 03:55:39,623 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-04-18 03:55:39,625 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name from vote_template where id = ? 
+2020-04-18 03:55:39,625 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 9(Long)
+2020-04-18 03:55:39,626 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-04-18 03:55:39,627 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select a.id, a.name, a.type from vote_item_group a, vote_template_group b where a.id = b.group_id and b.temp_id = ? 
+2020-04-18 03:55:39,627 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 9(Long)
+2020-04-18 03:55:39,628 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 2
+2020-04-18 03:55:39,629 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name, value, description, group_id from vote_item where group_id in ( ? , ? ) 
+2020-04-18 03:55:39,630 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 12(Long), 13(Long)
+2020-04-18 03:55:39,632 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 7
+2020-04-18 03:55:39,643 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, title, sub_title, start_time, end_time, template_id, create_id, create_time, status from vote where id = ? 
+2020-04-18 03:55:39,643 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 4(Long)
+2020-04-18 03:55:39,644 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-04-18 03:55:39,646 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name from vote_template where id = ? 
+2020-04-18 03:55:39,646 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 9(Long)
+2020-04-18 03:55:39,647 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-04-18 03:55:39,648 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select a.id, a.name, a.type from vote_item_group a, vote_template_group b where a.id = b.group_id and b.temp_id = ? 
+2020-04-18 03:55:39,648 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 9(Long)
+2020-04-18 03:55:39,649 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 2
+2020-04-18 03:55:39,650 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name, value, description, group_id from vote_item where group_id in ( ? , ? ) 
+2020-04-18 03:55:39,650 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 12(Long), 13(Long)
+2020-04-18 03:55:39,653 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 7
+2020-04-18 03:55:39,656 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, vote_id, user_id, vote_time from vote_record where user_id = ? and vote_id = ? 
+2020-04-18 03:55:39,656 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 1(Long), 4(Long)
+2020-04-18 03:55:39,657 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-04-18 03:55:43,011 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, group_id, item_ids, record_id from vote_record_detail where record_id = ? 
+2020-04-18 03:55:43,012 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 2(Long)
+2020-04-18 03:55:43,015 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 2
+2020-04-18 03:59:54,087 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT count(0) FROM vote a, sys_user b, vote_template c WHERE a.create_id = b.id AND a.template_id = c.id 
+2020-04-18 03:59:54,088 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-04-18 03:59:54,090 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-04-18 03:59:54,092 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select a.id, a.title, a.sub_title, a.start_time, a.end_time, a.template_id, a.create_id, a.create_time, a.status , b.name creator, c.name template_name from vote a, sys_user b, vote_template c where a.create_id = b.id and a.template_id = c.id limit ?,? 
+2020-04-18 03:59:54,094 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 0(Integer), 10(Integer)
+2020-04-18 03:59:54,096 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-04-18 03:59:55,176 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, title, sub_title, start_time, end_time, template_id, create_id, create_time, status from vote where id = ? 
+2020-04-18 03:59:55,177 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 4(Long)
+2020-04-18 03:59:55,178 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-04-18 03:59:55,179 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name from vote_template where id = ? 
+2020-04-18 03:59:55,180 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 9(Long)
+2020-04-18 03:59:55,181 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-04-18 03:59:55,182 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select a.id, a.name, a.type from vote_item_group a, vote_template_group b where a.id = b.group_id and b.temp_id = ? 
+2020-04-18 03:59:55,182 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 9(Long)
+2020-04-18 03:59:55,183 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 2
+2020-04-18 03:59:55,185 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name, value, description, group_id from vote_item where group_id in ( ? , ? ) 
+2020-04-18 03:59:55,185 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 12(Long), 13(Long)
+2020-04-18 03:59:55,186 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 7
+2020-04-18 03:59:55,197 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, title, sub_title, start_time, end_time, template_id, create_id, create_time, status from vote where id = ? 
+2020-04-18 03:59:55,197 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 4(Long)
+2020-04-18 03:59:55,198 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-04-18 03:59:55,200 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name from vote_template where id = ? 
+2020-04-18 03:59:55,201 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 9(Long)
+2020-04-18 03:59:55,203 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-04-18 03:59:55,205 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select a.id, a.name, a.type from vote_item_group a, vote_template_group b where a.id = b.group_id and b.temp_id = ? 
+2020-04-18 03:59:55,206 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 9(Long)
+2020-04-18 03:59:55,207 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 2
+2020-04-18 03:59:55,207 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name, value, description, group_id from vote_item where group_id in ( ? , ? ) 
+2020-04-18 03:59:55,208 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 12(Long), 13(Long)
+2020-04-18 03:59:55,209 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 7
+2020-04-18 03:59:55,210 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, vote_id, user_id, vote_time from vote_record where user_id = ? and vote_id = ? 
+2020-04-18 03:59:55,210 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 1(Long), 4(Long)
+2020-04-18 03:59:55,211 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-04-18 03:59:58,773 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, group_id, item_ids, record_id from vote_record_detail where record_id = ? 
+2020-04-18 03:59:58,775 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 2(Long)
+2020-04-18 03:59:58,778 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 2
+2020-04-18 04:01:45,737 INFO (StartupInfoLogger.java:55)- Starting Startup on LAPTOP-3H9KE96D with PID 11292 (D:\projects\KS\webapp\target\classes started by 17869 in D:\projects\KS)
+2020-04-18 04:01:45,741 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2020-04-18 04:01:45,742 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
+2020-04-18 04:01:50,515 INFO (StartupInfoLogger.java:61)- Started Startup in 5.556 seconds (JVM running for 6.725)
+2020-04-18 04:01:50,517 INFO (InitApplicationRun.java:26)- King System already started ...
+2020-04-18 04:01:50,533 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select dict_sn, class_no, dict_no, dict_desc, disp_order, parent_sn, use_flag from sys_dict 
+2020-04-18 04:01:50,613 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-04-18 04:01:50,631 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 13
+2020-04-18 04:01:50,634 INFO (InitApplicationRun.java:28)- Initialization data complete ...
+2020-04-18 04:02:03,981 INFO (LoginController.java:122)- ********************登录成功，进入首页！********************
+2020-04-18 04:02:03,992 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select * from sys_user where username = ? 
+2020-04-18 04:02:04,013 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: com.king.system.po.UserInfo@4b4b463e(String)
+2020-04-18 04:02:04,014 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 0
+2020-04-18 04:02:04,839 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select a.id, a.name, a.url, a.type, a.pid, a.permission, icon from sys_resources a, sys_role_resources b, sys_user_role c where a.id = b.res_id and b.role_id = c.rid and c.uid = ? order by a.id 
+2020-04-18 04:02:04,848 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 1(Long)
+2020-04-18 04:02:04,862 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 19
+2020-04-18 04:02:07,222 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT count(0) FROM vote a, sys_user b, vote_template c WHERE a.create_id = b.id AND a.template_id = c.id 
+2020-04-18 04:02:07,226 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-04-18 04:02:07,227 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-04-18 04:02:07,229 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select a.id, a.title, a.sub_title, a.start_time, a.end_time, a.template_id, a.create_id, a.create_time, a.status , b.name creator, c.name template_name from vote a, sys_user b, vote_template c where a.create_id = b.id and a.template_id = c.id limit ?,? 
+2020-04-18 04:02:07,233 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 0(Integer), 10(Integer)
+2020-04-18 04:02:07,238 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-04-18 04:02:08,472 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, title, sub_title, start_time, end_time, template_id, create_id, create_time, status from vote where id = ? 
+2020-04-18 04:02:08,473 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 4(Long)
+2020-04-18 04:02:08,475 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-04-18 04:02:08,476 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name from vote_template where id = ? 
+2020-04-18 04:02:08,477 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 9(Long)
+2020-04-18 04:02:08,478 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-04-18 04:02:08,479 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select a.id, a.name, a.type from vote_item_group a, vote_template_group b where a.id = b.group_id and b.temp_id = ? 
+2020-04-18 04:02:08,480 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 9(Long)
+2020-04-18 04:02:08,481 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 2
+2020-04-18 04:02:08,485 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name, value, description, group_id from vote_item where group_id in ( ? , ? ) 
+2020-04-18 04:02:08,487 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 12(Long), 13(Long)
+2020-04-18 04:02:08,489 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 7
+2020-04-18 04:02:08,503 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, title, sub_title, start_time, end_time, template_id, create_id, create_time, status from vote where id = ? 
+2020-04-18 04:02:08,504 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 4(Long)
+2020-04-18 04:02:08,506 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-04-18 04:02:08,507 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name from vote_template where id = ? 
+2020-04-18 04:02:08,508 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 9(Long)
+2020-04-18 04:02:08,509 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-04-18 04:02:08,509 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select a.id, a.name, a.type from vote_item_group a, vote_template_group b where a.id = b.group_id and b.temp_id = ? 
+2020-04-18 04:02:08,510 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 9(Long)
+2020-04-18 04:02:08,511 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 2
+2020-04-18 04:02:08,512 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name, value, description, group_id from vote_item where group_id in ( ? , ? ) 
+2020-04-18 04:02:08,512 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 12(Long), 13(Long)
+2020-04-18 04:02:08,514 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 7
+2020-04-18 04:02:08,522 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, vote_id, user_id, vote_time from vote_record where user_id = ? and vote_id = ? 
+2020-04-18 04:02:08,524 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 1(Long), 4(Long)
+2020-04-18 04:02:08,525 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-04-18 04:02:08,527 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, group_id, item_ids, record_id from vote_record_detail where record_id = ? 
+2020-04-18 04:02:08,527 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 2(Long)
+2020-04-18 04:02:08,529 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 2
+2020-04-18 04:06:46,191 INFO (StartupInfoLogger.java:55)- Starting Startup on LAPTOP-3H9KE96D with PID 8280 (D:\projects\KS\webapp\target\classes started by 17869 in D:\projects\KS)
+2020-04-18 04:06:46,197 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2020-04-18 04:06:46,198 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
+2020-04-18 04:06:51,492 INFO (StartupInfoLogger.java:61)- Started Startup in 6.171 seconds (JVM running for 7.23)
+2020-04-18 04:06:51,494 INFO (InitApplicationRun.java:26)- King System already started ...
+2020-04-18 04:06:51,511 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select dict_sn, class_no, dict_no, dict_desc, disp_order, parent_sn, use_flag from sys_dict 
+2020-04-18 04:06:51,594 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-04-18 04:06:51,613 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 13
+2020-04-18 04:06:51,616 INFO (InitApplicationRun.java:28)- Initialization data complete ...
+2020-04-18 04:07:03,973 INFO (LoginController.java:122)- ********************登录成功，进入首页！********************
+2020-04-18 04:07:03,983 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select * from sys_user where username = ? 
+2020-04-18 04:07:04,006 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: com.king.system.po.UserInfo@63dca700(String)
+2020-04-18 04:07:04,007 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 0
+2020-04-18 04:07:04,923 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select a.id, a.name, a.url, a.type, a.pid, a.permission, icon from sys_resources a, sys_role_resources b, sys_user_role c where a.id = b.res_id and b.role_id = c.rid and c.uid = ? order by a.id 
+2020-04-18 04:07:04,932 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 1(Long)
+2020-04-18 04:07:04,949 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 20
+2020-04-18 04:07:07,803 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT count(0) FROM vote a, sys_user b, vote_template c WHERE a.create_id = b.id AND a.template_id = c.id 
+2020-04-18 04:07:07,805 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-04-18 04:07:07,810 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-04-18 04:07:07,813 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select a.id, a.title, a.sub_title, a.start_time, a.end_time, a.template_id, a.create_id, a.create_time, a.status , b.name creator, c.name template_name from vote a, sys_user b, vote_template c where a.create_id = b.id and a.template_id = c.id limit ?,? 
+2020-04-18 04:07:07,816 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 0(Integer), 10(Integer)
+2020-04-18 04:07:07,819 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-04-18 04:07:31,414 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT count(0) FROM sys_user 
+2020-04-18 04:07:31,415 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-04-18 04:07:31,416 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-04-18 04:07:31,418 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id,username,password,name,id_card_num,state from sys_user limit ?,? 
+2020-04-18 04:07:31,419 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 0(Integer), 10(Integer)
+2020-04-18 04:07:31,422 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 2
