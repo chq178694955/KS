@@ -4,6 +4,7 @@ package com.king.system.service;
 import com.github.pagehelper.PageInfo;
 import com.king.framework.model.Criteria;
 import com.king.system.entity.SysUser;
+import com.king.system.vo.SysUserVO;
 
 import java.util.List;
 
@@ -14,12 +15,14 @@ import java.util.List;
  */
 public interface ISysUserService {
 
-    List<SysUser> findAll();
-
     SysUser findByUserName(String username);
 
-    SysUser findByNameAndPass(String username, String password);
+    PageInfo<SysUserVO> find(PageInfo<SysUser> page, Criteria criteria, Boolean isDownload);
 
-    PageInfo<SysUser> find(PageInfo<SysUser> page, Criteria criteria, Boolean isDownload);
+    int addUser(SysUser user);
+
+    int updateUser(SysUserVO user);
+
+    int delUser(Long userId);
 
 }

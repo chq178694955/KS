@@ -1,5 +1,7 @@
 package com.king.system.service;
 
+import com.github.pagehelper.PageInfo;
+import com.king.framework.model.Criteria;
 import com.king.system.entity.SysRole;
 
 import java.util.List;
@@ -16,5 +18,7 @@ public interface ISysRoleService {
     List<SysRole> findAll();
 
     List<SysRole> getRolesByUserId(Long userId);
+
+    PageInfo<SysRole> find(PageInfo<SysRole> page, Criteria criteria, Boolean isDownload);
 
 }

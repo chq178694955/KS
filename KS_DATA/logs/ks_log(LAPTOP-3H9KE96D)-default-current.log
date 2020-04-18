@@ -325,3 +325,845 @@
 2020-04-18 04:07:31,418 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id,username,password,name,id_card_num,state from sys_user limit ?,? 
 2020-04-18 04:07:31,419 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 0(Integer), 10(Integer)
 2020-04-18 04:07:31,422 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 2
+2020-04-18 04:39:06,932 INFO (StartupInfoLogger.java:55)- Starting Startup on LAPTOP-3H9KE96D with PID 9948 (D:\projects\KS\webapp\target\classes started by 17869 in D:\projects\KS)
+2020-04-18 04:39:06,936 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2020-04-18 04:39:06,937 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
+2020-04-18 04:39:19,723 INFO (StartupInfoLogger.java:61)- Started Startup in 14.011 seconds (JVM running for 15.931)
+2020-04-18 04:39:19,724 INFO (InitApplicationRun.java:26)- King System already started ...
+2020-04-18 04:39:19,745 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select dict_sn, class_no, dict_no, dict_desc, disp_order, parent_sn, use_flag from sys_dict 
+2020-04-18 04:39:19,922 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-04-18 04:39:19,965 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 13
+2020-04-18 04:39:19,971 INFO (InitApplicationRun.java:28)- Initialization data complete ...
+2020-04-18 04:39:29,197 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select * from sys_user where username = ? 
+2020-04-18 04:39:29,246 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: admin(String)
+2020-04-18 04:39:29,249 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-04-18 04:39:29,395 INFO (LoginController.java:122)- ********************登录成功，进入首页！********************
+2020-04-18 04:39:29,405 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select * from sys_user where username = ? 
+2020-04-18 04:39:29,406 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: com.king.system.po.UserInfo@5b447691(String)
+2020-04-18 04:39:29,408 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 0
+2020-04-18 04:39:30,102 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select a.id, a.name, a.url, a.type, a.pid, a.permission, icon from sys_resources a, sys_role_resources b, sys_user_role c where a.id = b.res_id and b.role_id = c.rid and c.uid = ? order by a.id 
+2020-04-18 04:39:30,118 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 1(Long)
+2020-04-18 04:39:30,131 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 20
+2020-04-18 04:39:32,083 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT count(0) FROM sys_user a, sys_user_role b, sys_role c WHERE a.id = b.uid AND b.rid = c.id 
+2020-04-18 04:39:32,086 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-04-18 04:39:32,088 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-04-18 04:39:32,090 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select a.id, a.username, a.password, a.name, a.id_card_num, a.state, c.id as role_id, c.name as role_name from sys_user a, sys_user_role b, sys_role c WHERE a.id = b.uid and b.rid = c.id limit ?,? 
+2020-04-18 04:39:32,095 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 0(Integer), 10(Integer)
+2020-04-18 04:39:32,097 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-04-18 04:42:59,201 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select a.id, a.username, a.password, a.name, a.id_card_num, a.state, c.id as role_id, c.name as role_name from sys_user a, sys_user_role b, sys_role c WHERE a.id = b.uid and b.rid = c.id 
+2020-04-18 04:42:59,205 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-04-18 04:42:59,210 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-04-18 04:42:59,564 DEBUG (NativeAssetsCacheManager.java:25)- Get NativeCache instance which name is : grid_export_cache
+2020-04-18 04:42:59,568 DEBUG (NativeAssetsCache.java:65)- Put object into redis, the key is [87d1de11-9c06-4ad3-aba4-aaf9c7998294]
+2020-04-18 04:42:59,600 DEBUG (NativeAssetsCacheManager.java:25)- Get NativeCache instance which name is : grid_export_cache
+2020-04-18 04:42:59,601 DEBUG (NativeAssetsCache.java:39)- Get object from memory, the key is [87d1de11-9c06-4ad3-aba4-aaf9c7998294]
+2020-04-18 04:42:59,605 DEBUG (NativeAssetsCacheManager.java:25)- Get NativeCache instance which name is : grid_export_cache
+2020-04-18 04:42:59,605 DEBUG (NativeAssetsCache.java:77)- Remove object from redis, the key is [87d1de11-9c06-4ad3-aba4-aaf9c7998294]
+2020-04-18 04:42:59,606 DEBUG (NativeAssetsCache.java:39)- Get object from memory, the key is [87d1de11-9c06-4ad3-aba4-aaf9c7998294]
+2020-04-18 04:43:23,932 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT count(0) FROM sys_user a, sys_user_role b, sys_role c WHERE a.id = b.uid AND b.rid = c.id 
+2020-04-18 04:43:23,933 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-04-18 04:43:23,935 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-04-18 04:43:23,937 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select a.id, a.username, a.password, a.name, a.id_card_num, a.state, c.id as role_id, c.name as role_name from sys_user a, sys_user_role b, sys_role c WHERE a.id = b.uid and b.rid = c.id limit ?,? 
+2020-04-18 04:43:23,938 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 0(Integer), 10(Integer)
+2020-04-18 04:43:23,940 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-04-18 05:04:20,233 INFO (StartupInfoLogger.java:55)- Starting Startup on LAPTOP-3H9KE96D with PID 4316 (D:\projects\KS\webapp\target\classes started by 17869 in D:\projects\KS)
+2020-04-18 05:04:20,238 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2020-04-18 05:04:20,239 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
+2020-04-18 05:04:25,261 INFO (StartupInfoLogger.java:61)- Started Startup in 6.07 seconds (JVM running for 7.301)
+2020-04-18 05:04:25,262 INFO (InitApplicationRun.java:26)- King System already started ...
+2020-04-18 05:04:25,282 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select dict_sn, class_no, dict_no, dict_desc, disp_order, parent_sn, use_flag from sys_dict 
+2020-04-18 05:04:25,373 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-04-18 05:04:25,392 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 13
+2020-04-18 05:04:25,396 INFO (InitApplicationRun.java:28)- Initialization data complete ...
+2020-04-18 05:04:38,144 INFO (LoginController.java:122)- ********************登录成功，进入首页！********************
+2020-04-18 05:04:38,157 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select * from sys_user where username = ? 
+2020-04-18 05:04:38,183 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: com.king.system.po.UserInfo@d54db02(String)
+2020-04-18 05:04:38,184 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 0
+2020-04-18 05:04:39,190 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select a.id, a.name, a.url, a.type, a.pid, a.permission, icon from sys_resources a, sys_role_resources b, sys_user_role c where a.id = b.res_id and b.role_id = c.rid and c.uid = ? order by a.id 
+2020-04-18 05:04:39,201 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 1(Long)
+2020-04-18 05:04:39,229 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 20
+2020-04-18 05:04:41,452 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT count(0) FROM sys_user a, sys_user_role b, sys_role c WHERE a.id = b.uid AND b.rid = c.id 
+2020-04-18 05:04:41,458 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-04-18 05:04:41,460 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-04-18 05:04:41,462 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select a.id, a.username, a.password, a.name, a.id_card_num, a.state, c.id as role_id, c.name as role_name from sys_user a, sys_user_role b, sys_role c WHERE a.id = b.uid and b.rid = c.id limit ?,? 
+2020-04-18 05:04:41,465 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 0(Integer), 10(Integer)
+2020-04-18 05:04:41,467 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-04-18 05:04:43,327 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select dict_sn, class_no, dict_no, dict_desc, disp_order, parent_sn, use_flag from sys_dict where parent_sn = 0 
+2020-04-18 05:04:43,329 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-04-18 05:04:43,337 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 4
+2020-04-18 05:05:45,741 INFO (StartupInfoLogger.java:55)- Starting Startup on LAPTOP-3H9KE96D with PID 17336 (D:\projects\KS\webapp\target\classes started by 17869 in D:\projects\KS)
+2020-04-18 05:05:45,747 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2020-04-18 05:05:45,748 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
+2020-04-18 05:05:55,318 INFO (StartupInfoLogger.java:61)- Started Startup in 10.634 seconds (JVM running for 12.535)
+2020-04-18 05:05:55,320 INFO (InitApplicationRun.java:26)- King System already started ...
+2020-04-18 05:05:55,340 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select dict_sn, class_no, dict_no, dict_desc, disp_order, parent_sn, use_flag from sys_dict 
+2020-04-18 05:05:55,426 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-04-18 05:05:55,445 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 13
+2020-04-18 05:05:55,448 INFO (InitApplicationRun.java:28)- Initialization data complete ...
+2020-04-18 05:06:01,161 INFO (LoginController.java:122)- ********************登录成功，进入首页！********************
+2020-04-18 05:06:01,172 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select * from sys_user where username = ? 
+2020-04-18 05:06:01,207 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: com.king.system.po.UserInfo@5f17b2b8(String)
+2020-04-18 05:06:01,210 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 0
+2020-04-18 05:06:02,852 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select a.id, a.name, a.url, a.type, a.pid, a.permission, icon from sys_resources a, sys_role_resources b, sys_user_role c where a.id = b.res_id and b.role_id = c.rid and c.uid = ? order by a.id 
+2020-04-18 05:06:02,864 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 1(Long)
+2020-04-18 05:06:02,878 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 20
+2020-04-18 05:06:05,289 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT count(0) FROM sys_user a, sys_user_role b, sys_role c WHERE a.id = b.uid AND b.rid = c.id 
+2020-04-18 05:06:05,292 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-04-18 05:06:05,293 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-04-18 05:06:05,295 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select a.id, a.username, a.password, a.name, a.id_card_num, a.state, c.id as role_id, c.name as role_name from sys_user a, sys_user_role b, sys_role c WHERE a.id = b.uid and b.rid = c.id limit ?,? 
+2020-04-18 05:06:05,300 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 0(Integer), 10(Integer)
+2020-04-18 05:06:05,302 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-04-18 05:14:57,262 INFO (StartupInfoLogger.java:55)- Starting Startup on LAPTOP-3H9KE96D with PID 5608 (D:\projects\KS\webapp\target\classes started by 17869 in D:\projects\KS)
+2020-04-18 05:14:57,269 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2020-04-18 05:14:57,271 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
+2020-04-18 05:15:02,381 INFO (StartupInfoLogger.java:61)- Started Startup in 6.123 seconds (JVM running for 7.389)
+2020-04-18 05:15:02,382 INFO (InitApplicationRun.java:26)- King System already started ...
+2020-04-18 05:15:02,398 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select dict_sn, class_no, dict_no, dict_desc, disp_order, parent_sn, use_flag from sys_dict 
+2020-04-18 05:15:02,482 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-04-18 05:15:02,503 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 13
+2020-04-18 05:15:02,506 INFO (InitApplicationRun.java:28)- Initialization data complete ...
+2020-04-18 05:15:07,674 INFO (LoginController.java:122)- ********************登录成功，进入首页！********************
+2020-04-18 05:15:07,685 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select * from sys_user where username = ? 
+2020-04-18 05:15:07,707 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: com.king.system.po.UserInfo@1756346b(String)
+2020-04-18 05:15:07,708 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 0
+2020-04-18 05:15:08,660 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select a.id, a.name, a.url, a.type, a.pid, a.permission, icon from sys_resources a, sys_role_resources b, sys_user_role c where a.id = b.res_id and b.role_id = c.rid and c.uid = ? order by a.id 
+2020-04-18 05:15:08,671 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 1(Long)
+2020-04-18 05:15:08,681 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 20
+2020-04-18 05:15:11,461 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT count(0) FROM sys_user a, sys_user_role b, sys_role c WHERE a.id = b.uid AND b.rid = c.id 
+2020-04-18 05:15:11,464 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-04-18 05:15:11,467 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-04-18 05:15:11,471 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select a.id, a.username, a.password, a.name, a.id_card_num, a.state, c.id as role_id, c.name as role_name from sys_user a, sys_user_role b, sys_role c WHERE a.id = b.uid and b.rid = c.id limit ?,? 
+2020-04-18 05:15:11,475 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 0(Integer), 10(Integer)
+2020-04-18 05:15:11,477 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-04-18 05:15:12,711 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name from sys_role 
+2020-04-18 05:15:12,712 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-04-18 05:15:12,715 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 3
+2020-04-18 05:18:42,790 INFO (StartupInfoLogger.java:55)- Starting Startup on LAPTOP-3H9KE96D with PID 11248 (D:\projects\KS\webapp\target\classes started by 17869 in D:\projects\KS)
+2020-04-18 05:18:42,796 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2020-04-18 05:18:42,797 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
+2020-04-18 05:18:47,896 INFO (StartupInfoLogger.java:61)- Started Startup in 6.024 seconds (JVM running for 7.426)
+2020-04-18 05:18:47,898 INFO (InitApplicationRun.java:26)- King System already started ...
+2020-04-18 05:18:47,915 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select dict_sn, class_no, dict_no, dict_desc, disp_order, parent_sn, use_flag from sys_dict 
+2020-04-18 05:18:47,995 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-04-18 05:18:48,013 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 13
+2020-04-18 05:18:48,016 INFO (InitApplicationRun.java:28)- Initialization data complete ...
+2020-04-18 05:18:59,967 INFO (LoginController.java:122)- ********************登录成功，进入首页！********************
+2020-04-18 05:18:59,980 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select * from sys_user where username = ? 
+2020-04-18 05:19:00,007 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: com.king.system.po.UserInfo@700427f4(String)
+2020-04-18 05:19:00,010 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 0
+2020-04-18 05:19:01,212 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select a.id, a.name, a.url, a.type, a.pid, a.permission, icon from sys_resources a, sys_role_resources b, sys_user_role c where a.id = b.res_id and b.role_id = c.rid and c.uid = ? order by a.id 
+2020-04-18 05:19:01,222 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 1(Long)
+2020-04-18 05:19:01,235 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 20
+2020-04-18 05:19:03,031 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT count(0) FROM sys_user a, sys_user_role b, sys_role c WHERE a.id = b.uid AND b.rid = c.id 
+2020-04-18 05:19:03,037 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-04-18 05:19:03,040 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-04-18 05:19:03,042 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select a.id, a.username, a.password, a.name, a.id_card_num, a.state, c.id as role_id, c.name as role_name from sys_user a, sys_user_role b, sys_role c WHERE a.id = b.uid and b.rid = c.id limit ?,? 
+2020-04-18 05:19:03,046 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 0(Integer), 10(Integer)
+2020-04-18 05:19:03,047 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-04-18 05:19:04,123 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name from sys_role 
+2020-04-18 05:19:04,127 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-04-18 05:19:04,133 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 3
+2020-04-18 05:19:26,434 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select * from sys_user where username = ? 
+2020-04-18 05:19:26,436 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: zhouzq(String)
+2020-04-18 05:19:26,438 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 0
+2020-04-18 05:19:26,441 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: insert into sys_user (username, password, name, id_card_num, state) values (?, ?, ?, ?, ?) 
+2020-04-18 05:19:26,499 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: zhouzq(String), null, 周泽强(String), null, 0(Integer)
+2020-04-18 05:19:26,504 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==    Updates: 1
+2020-04-18 05:19:26,505 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT LAST_INSERT_ID() 
+2020-04-18 05:19:26,510 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-04-18 05:19:26,513 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-04-18 05:19:26,541 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT count(0) FROM sys_user a, sys_user_role b, sys_role c WHERE a.id = b.uid AND b.rid = c.id 
+2020-04-18 05:19:26,542 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-04-18 05:19:26,544 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-04-18 05:19:26,546 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select a.id, a.username, a.password, a.name, a.id_card_num, a.state, c.id as role_id, c.name as role_name from sys_user a, sys_user_role b, sys_role c WHERE a.id = b.uid and b.rid = c.id limit ?,? 
+2020-04-18 05:19:26,547 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 0(Integer), 10(Integer)
+2020-04-18 05:19:26,549 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-04-18 05:19:29,143 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT count(0) FROM sys_user a, sys_user_role b, sys_role c WHERE a.id = b.uid AND b.rid = c.id 
+2020-04-18 05:19:29,144 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-04-18 05:19:29,146 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-04-18 05:19:29,148 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select a.id, a.username, a.password, a.name, a.id_card_num, a.state, c.id as role_id, c.name as role_name from sys_user a, sys_user_role b, sys_role c WHERE a.id = b.uid and b.rid = c.id limit ?,? 
+2020-04-18 05:19:29,149 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 0(Integer), 10(Integer)
+2020-04-18 05:19:29,151 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-04-18 05:20:11,156 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT count(0) FROM sys_user a, sys_user_role b, sys_role c WHERE a.id = b.uid AND b.rid = c.id 
+2020-04-18 05:20:11,157 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-04-18 05:20:11,159 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-04-18 05:20:11,161 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select a.id, a.username, a.password, a.name, a.id_card_num, a.state, c.id as role_id, c.name as role_name from sys_user a, sys_user_role b, sys_role c WHERE a.id = b.uid and b.rid = c.id limit ?,? 
+2020-04-18 05:20:11,161 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 0(Integer), 10(Integer)
+2020-04-18 05:20:11,163 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-04-18 05:20:11,975 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT count(0) FROM sys_user a, sys_user_role b, sys_role c WHERE a.id = b.uid AND b.rid = c.id 
+2020-04-18 05:20:11,977 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-04-18 05:20:11,981 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-04-18 05:20:11,985 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select a.id, a.username, a.password, a.name, a.id_card_num, a.state, c.id as role_id, c.name as role_name from sys_user a, sys_user_role b, sys_role c WHERE a.id = b.uid and b.rid = c.id limit ?,? 
+2020-04-18 05:20:11,986 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 0(Integer), 10(Integer)
+2020-04-18 05:20:11,990 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-04-18 05:21:52,658 INFO (StartupInfoLogger.java:55)- Starting Startup on LAPTOP-3H9KE96D with PID 2092 (D:\projects\KS\webapp\target\classes started by 17869 in D:\projects\KS)
+2020-04-18 05:21:52,665 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2020-04-18 05:21:52,666 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
+2020-04-18 05:22:02,178 INFO (StartupInfoLogger.java:61)- Started Startup in 10.513 seconds (JVM running for 12.321)
+2020-04-18 05:22:02,180 INFO (InitApplicationRun.java:26)- King System already started ...
+2020-04-18 05:22:02,196 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select dict_sn, class_no, dict_no, dict_desc, disp_order, parent_sn, use_flag from sys_dict 
+2020-04-18 05:22:02,290 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-04-18 05:22:02,311 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 13
+2020-04-18 05:22:02,314 INFO (InitApplicationRun.java:28)- Initialization data complete ...
+2020-04-18 05:22:27,161 INFO (LoginController.java:122)- ********************登录成功，进入首页！********************
+2020-04-18 05:22:27,182 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select * from sys_user where username = ? 
+2020-04-18 05:22:27,231 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: com.king.system.po.UserInfo@3702f938(String)
+2020-04-18 05:22:27,233 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 0
+2020-04-18 05:22:28,808 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select a.id, a.name, a.url, a.type, a.pid, a.permission, icon from sys_resources a, sys_role_resources b, sys_user_role c where a.id = b.res_id and b.role_id = c.rid and c.uid = ? order by a.id 
+2020-04-18 05:22:28,816 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 1(Long)
+2020-04-18 05:22:28,830 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 20
+2020-04-18 05:22:31,685 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT count(0) FROM sys_user a, sys_user_role b, sys_role c WHERE a.id = b.uid AND b.rid = c.id 
+2020-04-18 05:22:31,689 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-04-18 05:22:31,691 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-04-18 05:22:31,693 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select a.id, a.username, a.password, a.name, a.id_card_num, a.state, c.id as role_id, c.name as role_name from sys_user a, sys_user_role b, sys_role c WHERE a.id = b.uid and b.rid = c.id limit ?,? 
+2020-04-18 05:22:31,696 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 0(Integer), 10(Integer)
+2020-04-18 05:22:31,698 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-04-18 05:24:42,544 INFO (StartupInfoLogger.java:55)- Starting Startup on LAPTOP-3H9KE96D with PID 14776 (D:\projects\KS\webapp\target\classes started by 17869 in D:\projects\KS)
+2020-04-18 05:24:42,550 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2020-04-18 05:24:42,551 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
+2020-04-18 05:24:47,822 INFO (StartupInfoLogger.java:61)- Started Startup in 6.279 seconds (JVM running for 7.55)
+2020-04-18 05:24:47,824 INFO (InitApplicationRun.java:26)- King System already started ...
+2020-04-18 05:24:47,849 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select dict_sn, class_no, dict_no, dict_desc, disp_order, parent_sn, use_flag from sys_dict 
+2020-04-18 05:24:47,940 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-04-18 05:24:47,965 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 13
+2020-04-18 05:24:47,968 INFO (InitApplicationRun.java:28)- Initialization data complete ...
+2020-04-18 05:24:58,103 INFO (LoginController.java:122)- ********************登录成功，进入首页！********************
+2020-04-18 05:24:58,126 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select * from sys_user where username = ? 
+2020-04-18 05:24:58,176 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: com.king.system.po.UserInfo@76d71170(String)
+2020-04-18 05:24:58,179 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 0
+2020-04-18 05:24:59,678 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select a.id, a.name, a.url, a.type, a.pid, a.permission, icon from sys_resources a, sys_role_resources b, sys_user_role c where a.id = b.res_id and b.role_id = c.rid and c.uid = ? order by a.id 
+2020-04-18 05:24:59,691 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 1(Long)
+2020-04-18 05:24:59,703 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 20
+2020-04-18 05:25:01,786 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT count(0) FROM sys_user a LEFT JOIN sys_user_role b ON a.id = b.uid LEFT JOIN sys_role c ON b.rid = c.id 
+2020-04-18 05:25:01,793 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-04-18 05:25:01,795 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-04-18 05:25:01,799 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select a.id, a.username, a.password, a.name, a.id_card_num, a.state, c.id as role_id, c.name as role_name from sys_user a left join sys_user_role b on a.id = b.uid left join sys_role c on b.rid = c.id limit ?,? 
+2020-04-18 05:25:01,801 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 0(Integer), 10(Integer)
+2020-04-18 05:25:01,852 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 3
+2020-04-18 05:25:47,762 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name from sys_role 
+2020-04-18 05:25:47,763 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-04-18 05:25:47,766 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 3
+2020-04-18 05:25:58,602 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select * from sys_user where username = ? 
+2020-04-18 05:25:58,604 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: zhouzq(String)
+2020-04-18 05:25:58,606 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-04-18 05:26:15,498 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select * from sys_user where username = ? 
+2020-04-18 05:26:15,502 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: zhouzq(String)
+2020-04-18 05:26:15,508 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-04-18 05:26:48,128 INFO (StartupInfoLogger.java:55)- Starting Startup on LAPTOP-3H9KE96D with PID 16264 (D:\projects\KS\webapp\target\classes started by 17869 in D:\projects\KS)
+2020-04-18 05:26:48,136 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2020-04-18 05:26:48,137 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
+2020-04-18 05:26:53,043 INFO (StartupInfoLogger.java:61)- Started Startup in 5.862 seconds (JVM running for 7.134)
+2020-04-18 05:26:53,044 INFO (InitApplicationRun.java:26)- King System already started ...
+2020-04-18 05:26:53,061 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select dict_sn, class_no, dict_no, dict_desc, disp_order, parent_sn, use_flag from sys_dict 
+2020-04-18 05:26:53,142 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-04-18 05:26:53,163 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 13
+2020-04-18 05:26:53,166 INFO (InitApplicationRun.java:28)- Initialization data complete ...
+2020-04-18 05:26:58,384 INFO (LoginController.java:122)- ********************登录成功，进入首页！********************
+2020-04-18 05:26:58,395 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select * from sys_user where username = ? 
+2020-04-18 05:26:58,417 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: com.king.system.po.UserInfo@4d26013c(String)
+2020-04-18 05:26:58,418 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 0
+2020-04-18 05:26:59,480 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select a.id, a.name, a.url, a.type, a.pid, a.permission, icon from sys_resources a, sys_role_resources b, sys_user_role c where a.id = b.res_id and b.role_id = c.rid and c.uid = ? order by a.id 
+2020-04-18 05:26:59,488 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 1(Long)
+2020-04-18 05:26:59,499 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 20
+2020-04-18 05:27:01,452 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT count(0) FROM sys_user a LEFT JOIN sys_user_role b ON a.id = b.uid LEFT JOIN sys_role c ON b.rid = c.id 
+2020-04-18 05:27:01,456 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-04-18 05:27:01,459 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-04-18 05:27:01,465 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select a.id, a.username, a.password, a.name, a.id_card_num, a.state, c.id as role_id, c.name as role_name from sys_user a left join sys_user_role b on a.id = b.uid left join sys_role c on b.rid = c.id limit ?,? 
+2020-04-18 05:27:01,471 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 0(Integer), 10(Integer)
+2020-04-18 05:27:01,474 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-04-18 05:27:03,657 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name from sys_role 
+2020-04-18 05:27:03,658 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-04-18 05:27:03,660 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 3
+2020-04-18 05:27:21,629 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select * from sys_user where username = ? 
+2020-04-18 05:27:21,630 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: zhouzq(String)
+2020-04-18 05:27:21,632 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 0
+2020-04-18 05:27:21,635 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: insert into sys_user (username, password, name, id_card_num, state) values (?, ?, ?, ?, ?) 
+2020-04-18 05:27:21,647 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: zhouzq(String), e10adc3949ba59abbe56e057f20f883e(String), 周泽强(String), null, 0(Integer)
+2020-04-18 05:27:21,698 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==    Updates: 1
+2020-04-18 05:27:21,700 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT LAST_INSERT_ID() 
+2020-04-18 05:27:21,708 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-04-18 05:27:21,713 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-04-18 05:27:21,747 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT count(0) FROM sys_user a LEFT JOIN sys_user_role b ON a.id = b.uid LEFT JOIN sys_role c ON b.rid = c.id 
+2020-04-18 05:27:21,747 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-04-18 05:27:21,749 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-04-18 05:27:21,750 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select a.id, a.username, a.password, a.name, a.id_card_num, a.state, c.id as role_id, c.name as role_name from sys_user a left join sys_user_role b on a.id = b.uid left join sys_role c on b.rid = c.id limit ?,? 
+2020-04-18 05:27:21,751 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 0(Integer), 10(Integer)
+2020-04-18 05:27:21,753 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 2
+2020-04-18 05:27:40,459 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name from sys_role 
+2020-04-18 05:27:40,460 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-04-18 05:27:40,462 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 3
+2020-04-18 05:28:02,280 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select * from sys_user where username = ? 
+2020-04-18 05:28:02,281 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: yangtw(String)
+2020-04-18 05:28:02,282 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 0
+2020-04-18 05:28:02,284 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: insert into sys_user (username, password, name, id_card_num, state) values (?, ?, ?, ?, ?) 
+2020-04-18 05:28:02,285 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: yangtw(String), e10adc3949ba59abbe56e057f20f883e(String), 杨廷伟(String), null, 0(Integer)
+2020-04-18 05:28:02,336 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==    Updates: 1
+2020-04-18 05:28:02,338 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT LAST_INSERT_ID() 
+2020-04-18 05:28:02,340 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-04-18 05:28:02,345 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-04-18 05:28:02,382 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT count(0) FROM sys_user a LEFT JOIN sys_user_role b ON a.id = b.uid LEFT JOIN sys_role c ON b.rid = c.id 
+2020-04-18 05:28:02,384 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-04-18 05:28:02,386 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-04-18 05:28:02,389 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select a.id, a.username, a.password, a.name, a.id_card_num, a.state, c.id as role_id, c.name as role_name from sys_user a left join sys_user_role b on a.id = b.uid left join sys_role c on b.rid = c.id limit ?,? 
+2020-04-18 05:28:02,390 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 0(Integer), 10(Integer)
+2020-04-18 05:28:02,393 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 3
+2020-04-18 05:34:32,150 INFO (StartupInfoLogger.java:55)- Starting Startup on LAPTOP-3H9KE96D with PID 15276 (D:\projects\KS\webapp\target\classes started by 17869 in D:\projects\KS)
+2020-04-18 05:34:32,156 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2020-04-18 05:34:32,157 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
+2020-04-18 05:34:37,803 INFO (StartupInfoLogger.java:61)- Started Startup in 6.651 seconds (JVM running for 7.895)
+2020-04-18 05:34:37,809 INFO (InitApplicationRun.java:26)- King System already started ...
+2020-04-18 05:34:37,834 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select dict_sn, class_no, dict_no, dict_desc, disp_order, parent_sn, use_flag from sys_dict 
+2020-04-18 05:34:37,935 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-04-18 05:34:37,960 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 13
+2020-04-18 05:34:37,964 INFO (InitApplicationRun.java:28)- Initialization data complete ...
+2020-04-18 05:34:43,945 INFO (LoginController.java:122)- ********************登录成功，进入首页！********************
+2020-04-18 05:34:43,958 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select * from sys_user where username = ? 
+2020-04-18 05:34:43,979 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: com.king.system.po.UserInfo@db19a97(String)
+2020-04-18 05:34:43,981 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 0
+2020-04-18 05:34:45,021 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select a.id, a.name, a.url, a.type, a.pid, a.permission, icon from sys_resources a, sys_role_resources b, sys_user_role c where a.id = b.res_id and b.role_id = c.rid and c.uid = ? order by a.id 
+2020-04-18 05:34:45,030 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 1(Long)
+2020-04-18 05:34:45,039 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 20
+2020-04-18 05:34:47,534 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT count(0) FROM sys_user a LEFT JOIN sys_user_role b ON a.id = b.uid LEFT JOIN sys_role c ON b.rid = c.id 
+2020-04-18 05:34:47,538 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-04-18 05:34:47,540 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-04-18 05:34:47,544 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select a.id, a.username, a.password, a.name, a.id_card_num, a.state, c.id as role_id, c.name as role_name from sys_user a left join sys_user_role b on a.id = b.uid left join sys_role c on b.rid = c.id limit ?,? 
+2020-04-18 05:34:47,548 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 0(Integer), 10(Integer)
+2020-04-18 05:34:47,550 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 3
+2020-04-18 05:35:58,883 INFO (StartupInfoLogger.java:55)- Starting Startup on LAPTOP-3H9KE96D with PID 1732 (D:\projects\KS\webapp\target\classes started by 17869 in D:\projects\KS)
+2020-04-18 05:35:58,889 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2020-04-18 05:35:58,890 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
+2020-04-18 05:36:03,868 INFO (StartupInfoLogger.java:61)- Started Startup in 5.937 seconds (JVM running for 7.244)
+2020-04-18 05:36:03,869 INFO (InitApplicationRun.java:26)- King System already started ...
+2020-04-18 05:36:03,888 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select dict_sn, class_no, dict_no, dict_desc, disp_order, parent_sn, use_flag from sys_dict 
+2020-04-18 05:36:03,984 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-04-18 05:36:04,007 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 13
+2020-04-18 05:36:04,010 INFO (InitApplicationRun.java:28)- Initialization data complete ...
+2020-04-18 05:36:07,260 INFO (LoginController.java:122)- ********************登录成功，进入首页！********************
+2020-04-18 05:36:07,270 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select * from sys_user where username = ? 
+2020-04-18 05:36:07,293 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: com.king.system.po.UserInfo@3c931f21(String)
+2020-04-18 05:36:07,295 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 0
+2020-04-18 05:36:08,293 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select a.id, a.name, a.url, a.type, a.pid, a.permission, icon from sys_resources a, sys_role_resources b, sys_user_role c where a.id = b.res_id and b.role_id = c.rid and c.uid = ? order by a.id 
+2020-04-18 05:36:08,301 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 1(Long)
+2020-04-18 05:36:08,313 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 20
+2020-04-18 05:36:09,951 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT count(0) FROM sys_user a LEFT JOIN sys_user_role b ON a.id = b.uid LEFT JOIN sys_role c ON b.rid = c.id 
+2020-04-18 05:36:09,954 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-04-18 05:36:09,956 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-04-18 05:36:09,961 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select a.id, a.username, a.password, a.name, a.id_card_num, a.state, c.id as role_id, c.name as role_name from sys_user a left join sys_user_role b on a.id = b.uid left join sys_role c on b.rid = c.id limit ?,? 
+2020-04-18 05:36:09,966 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 0(Integer), 10(Integer)
+2020-04-18 05:36:09,967 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 3
+2020-04-18 05:36:31,446 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name from sys_role 
+2020-04-18 05:36:31,448 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-04-18 05:36:31,450 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 3
+2020-04-18 05:37:24,537 INFO (StartupInfoLogger.java:55)- Starting Startup on LAPTOP-3H9KE96D with PID 7704 (D:\projects\KS\webapp\target\classes started by 17869 in D:\projects\KS)
+2020-04-18 05:37:24,543 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2020-04-18 05:37:24,544 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
+2020-04-18 05:37:30,281 INFO (StartupInfoLogger.java:61)- Started Startup in 6.687 seconds (JVM running for 7.981)
+2020-04-18 05:37:30,282 INFO (InitApplicationRun.java:26)- King System already started ...
+2020-04-18 05:37:30,298 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select dict_sn, class_no, dict_no, dict_desc, disp_order, parent_sn, use_flag from sys_dict 
+2020-04-18 05:37:30,377 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-04-18 05:37:30,397 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 13
+2020-04-18 05:37:30,399 INFO (InitApplicationRun.java:28)- Initialization data complete ...
+2020-04-18 05:37:30,956 INFO (LoginController.java:122)- ********************登录成功，进入首页！********************
+2020-04-18 05:37:30,968 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select * from sys_user where username = ? 
+2020-04-18 05:37:30,997 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: com.king.system.po.UserInfo@d3c55bc(String)
+2020-04-18 05:37:30,999 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 0
+2020-04-18 05:37:32,184 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select a.id, a.name, a.url, a.type, a.pid, a.permission, icon from sys_resources a, sys_role_resources b, sys_user_role c where a.id = b.res_id and b.role_id = c.rid and c.uid = ? order by a.id 
+2020-04-18 05:37:32,193 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 1(Long)
+2020-04-18 05:37:32,207 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 20
+2020-04-18 05:37:33,643 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT count(0) FROM sys_user a LEFT JOIN sys_user_role b ON a.id = b.uid LEFT JOIN sys_role c ON b.rid = c.id 
+2020-04-18 05:37:33,646 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-04-18 05:37:33,647 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-04-18 05:37:33,651 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select a.id, a.username, a.password, a.name, a.id_card_num, a.state, c.id as role_id, c.name as role_name from sys_user a left join sys_user_role b on a.id = b.uid left join sys_role c on b.rid = c.id limit ?,? 
+2020-04-18 05:37:33,656 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 0(Integer), 10(Integer)
+2020-04-18 05:37:33,657 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 3
+2020-04-18 05:37:43,057 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name from sys_role 
+2020-04-18 05:37:43,058 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-04-18 05:37:43,060 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 3
+2020-04-18 05:38:02,083 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT count(0) FROM sys_user a LEFT JOIN sys_user_role b ON a.id = b.uid LEFT JOIN sys_role c ON b.rid = c.id 
+2020-04-18 05:38:02,084 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-04-18 05:38:02,086 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-04-18 05:38:02,087 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select a.id, a.username, a.password, a.name, a.id_card_num, a.state, c.id as role_id, c.name as role_name from sys_user a left join sys_user_role b on a.id = b.uid left join sys_role c on b.rid = c.id limit ?,? 
+2020-04-18 05:38:02,089 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 0(Integer), 10(Integer)
+2020-04-18 05:38:02,092 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 3
+2020-04-18 05:38:41,310 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name from sys_role 
+2020-04-18 05:38:41,311 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-04-18 05:38:41,313 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 3
+2020-04-18 05:38:54,659 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name from sys_role 
+2020-04-18 05:38:54,660 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-04-18 05:38:54,662 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 3
+2020-04-18 05:39:36,824 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name from sys_role 
+2020-04-18 05:39:36,825 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-04-18 05:39:36,828 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 3
+2020-04-18 05:51:00,026 INFO (StartupInfoLogger.java:55)- Starting Startup on LAPTOP-3H9KE96D with PID 8928 (D:\projects\KS\webapp\target\classes started by 17869 in D:\projects\KS)
+2020-04-18 05:51:00,032 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2020-04-18 05:51:00,033 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
+2020-04-18 05:51:05,134 INFO (StartupInfoLogger.java:61)- Started Startup in 6.092 seconds (JVM running for 7.345)
+2020-04-18 05:51:05,136 INFO (InitApplicationRun.java:26)- King System already started ...
+2020-04-18 05:51:05,153 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select dict_sn, class_no, dict_no, dict_desc, disp_order, parent_sn, use_flag from sys_dict 
+2020-04-18 05:51:05,235 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-04-18 05:51:05,257 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 13
+2020-04-18 05:51:05,260 INFO (InitApplicationRun.java:28)- Initialization data complete ...
+2020-04-18 05:51:08,853 INFO (LoginController.java:122)- ********************登录成功，进入首页！********************
+2020-04-18 05:51:08,864 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select * from sys_user where username = ? 
+2020-04-18 05:51:08,886 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: com.king.system.po.UserInfo@55558de5(String)
+2020-04-18 05:51:08,887 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 0
+2020-04-18 05:51:09,879 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select a.id, a.name, a.url, a.type, a.pid, a.permission, icon from sys_resources a, sys_role_resources b, sys_user_role c where a.id = b.res_id and b.role_id = c.rid and c.uid = ? order by a.id 
+2020-04-18 05:51:09,890 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 1(Long)
+2020-04-18 05:51:09,906 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 20
+2020-04-18 05:51:13,663 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT count(0) FROM sys_user a LEFT JOIN sys_user_role b ON a.id = b.uid LEFT JOIN sys_role c ON b.rid = c.id 
+2020-04-18 05:51:13,667 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-04-18 05:51:13,669 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-04-18 05:51:13,674 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select a.id, a.username, a.password, a.name, a.id_card_num, a.state, c.id as role_id, c.name as role_name from sys_user a left join sys_user_role b on a.id = b.uid left join sys_role c on b.rid = c.id limit ?,? 
+2020-04-18 05:51:13,677 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 0(Integer), 10(Integer)
+2020-04-18 05:51:13,680 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 3
+2020-04-18 05:51:16,042 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name from sys_role 
+2020-04-18 05:51:16,043 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-04-18 05:51:16,045 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 3
+2020-04-18 05:51:21,973 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select * from sys_user where username = ? 
+2020-04-18 05:51:21,975 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: null
+2020-04-18 05:51:21,977 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 0
+2020-04-18 05:51:21,978 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: insert into sys_user (username, password, name, id_card_num, state) values (?, ?, ?, ?, ?) 
+2020-04-18 05:51:21,986 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: null, null, 周泽强(String), 565675675(String), 0(Integer)
+2020-04-18 05:51:21,988 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==    Updates: 1
+2020-04-18 05:51:21,989 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT LAST_INSERT_ID() 
+2020-04-18 05:51:21,991 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-04-18 05:51:21,993 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-04-18 05:51:22,019 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT count(0) FROM sys_user a LEFT JOIN sys_user_role b ON a.id = b.uid LEFT JOIN sys_role c ON b.rid = c.id 
+2020-04-18 05:51:22,020 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-04-18 05:51:22,023 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-04-18 05:51:22,024 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select a.id, a.username, a.password, a.name, a.id_card_num, a.state, c.id as role_id, c.name as role_name from sys_user a left join sys_user_role b on a.id = b.uid left join sys_role c on b.rid = c.id limit ?,? 
+2020-04-18 05:51:22,025 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 0(Integer), 10(Integer)
+2020-04-18 05:51:22,027 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 4
+2020-04-18 05:52:27,648 INFO (StartupInfoLogger.java:55)- Starting Startup on LAPTOP-3H9KE96D with PID 15356 (D:\projects\KS\webapp\target\classes started by 17869 in D:\projects\KS)
+2020-04-18 05:52:27,654 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2020-04-18 05:52:27,655 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
+2020-04-18 05:52:33,066 INFO (StartupInfoLogger.java:61)- Started Startup in 6.371 seconds (JVM running for 7.63)
+2020-04-18 05:52:33,067 INFO (InitApplicationRun.java:26)- King System already started ...
+2020-04-18 05:52:33,084 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select dict_sn, class_no, dict_no, dict_desc, disp_order, parent_sn, use_flag from sys_dict 
+2020-04-18 05:52:33,166 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-04-18 05:52:33,186 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 13
+2020-04-18 05:52:33,190 INFO (InitApplicationRun.java:28)- Initialization data complete ...
+2020-04-18 05:52:45,110 INFO (LoginController.java:122)- ********************登录成功，进入首页！********************
+2020-04-18 05:52:45,134 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select * from sys_user where username = ? 
+2020-04-18 05:52:45,179 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: com.king.system.po.UserInfo@99d59f2(String)
+2020-04-18 05:52:45,181 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 0
+2020-04-18 05:52:46,788 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select a.id, a.name, a.url, a.type, a.pid, a.permission, icon from sys_resources a, sys_role_resources b, sys_user_role c where a.id = b.res_id and b.role_id = c.rid and c.uid = ? order by a.id 
+2020-04-18 05:52:46,804 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 1(Long)
+2020-04-18 05:52:46,820 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 20
+2020-04-18 05:52:48,243 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT count(0) FROM sys_user a LEFT JOIN sys_user_role b ON a.id = b.uid LEFT JOIN sys_role c ON b.rid = c.id 
+2020-04-18 05:52:48,250 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-04-18 05:52:48,252 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-04-18 05:52:48,253 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select a.id, a.username, a.password, a.name, a.id_card_num, a.state, c.id as role_id, c.name as role_name from sys_user a left join sys_user_role b on a.id = b.uid left join sys_role c on b.rid = c.id limit ?,? 
+2020-04-18 05:52:48,257 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 0(Integer), 10(Integer)
+2020-04-18 05:52:48,259 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 3
+2020-04-18 05:52:50,439 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name from sys_role 
+2020-04-18 05:52:50,439 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-04-18 05:52:50,441 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 3
+2020-04-18 05:52:55,734 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: delete from sys_user_role where uid = ? 
+2020-04-18 05:52:55,742 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: null
+2020-04-18 05:52:55,745 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==    Updates: 0
+2020-04-18 05:52:55,746 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: insert into sys_user_role(uid,rid) values(?,?) 
+2020-04-18 05:52:55,755 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: null, 2(Long)
+2020-04-18 05:52:55,904 ERROR (GlobalExceptionHandler.java:88)- *****服务器异常*****
+### Error updating database.  Cause: java.sql.SQLIntegrityConstraintViolationException: Column 'uid' cannot be null
+### The error may exist in file [D:\projects\KS\system\target\classes\mapper\system\SysUserMapper.xml]
+### The error may involve com.king.system.dao.SysUserDao.addUserRole-Inline
+### The error occurred while setting parameters
+### SQL: insert into sys_user_role(uid,rid) values(?,?)
+### Cause: java.sql.SQLIntegrityConstraintViolationException: Column 'uid' cannot be null
+; Column 'uid' cannot be null; nested exception is java.sql.SQLIntegrityConstraintViolationException: Column 'uid' cannot be null
+2020-04-18 05:52:55,905 ERROR (GlobalExceptionHandler.java:89)- RequestFail[/sys/user/update][name=周泽强,idCardNum=45645645,state=0,roleId=2]
+2020-04-18 05:53:35,338 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: delete from sys_user_role where uid = ? 
+2020-04-18 05:53:35,340 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: null
+2020-04-18 05:53:35,342 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==    Updates: 0
+2020-04-18 05:53:35,342 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: insert into sys_user_role(uid,rid) values(?,?) 
+2020-04-18 05:53:35,343 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: null, 2(Long)
+2020-04-18 05:53:35,346 ERROR (GlobalExceptionHandler.java:88)- *****服务器异常*****
+### Error updating database.  Cause: java.sql.SQLIntegrityConstraintViolationException: Column 'uid' cannot be null
+### The error may exist in file [D:\projects\KS\system\target\classes\mapper\system\SysUserMapper.xml]
+### The error may involve com.king.system.dao.SysUserDao.addUserRole-Inline
+### The error occurred while setting parameters
+### SQL: insert into sys_user_role(uid,rid) values(?,?)
+### Cause: java.sql.SQLIntegrityConstraintViolationException: Column 'uid' cannot be null
+; Column 'uid' cannot be null; nested exception is java.sql.SQLIntegrityConstraintViolationException: Column 'uid' cannot be null
+2020-04-18 05:53:35,347 ERROR (GlobalExceptionHandler.java:89)- RequestFail[/sys/user/update][name=周泽强,idCardNum=45645645,state=0,roleId=2]
+2020-04-18 05:54:01,329 INFO (StartupInfoLogger.java:55)- Starting Startup on LAPTOP-3H9KE96D with PID 9276 (D:\projects\KS\webapp\target\classes started by 17869 in D:\projects\KS)
+2020-04-18 05:54:01,335 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2020-04-18 05:54:01,337 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
+2020-04-18 05:54:06,306 INFO (StartupInfoLogger.java:61)- Started Startup in 5.932 seconds (JVM running for 7.2)
+2020-04-18 05:54:06,308 INFO (InitApplicationRun.java:26)- King System already started ...
+2020-04-18 05:54:06,325 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select dict_sn, class_no, dict_no, dict_desc, disp_order, parent_sn, use_flag from sys_dict 
+2020-04-18 05:54:06,438 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-04-18 05:54:06,473 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 13
+2020-04-18 05:54:06,477 INFO (InitApplicationRun.java:28)- Initialization data complete ...
+2020-04-18 05:54:11,907 INFO (LoginController.java:122)- ********************登录成功，进入首页！********************
+2020-04-18 05:54:11,918 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select * from sys_user where username = ? 
+2020-04-18 05:54:11,941 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: com.king.system.po.UserInfo@591d8c1a(String)
+2020-04-18 05:54:11,943 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 0
+2020-04-18 05:54:12,967 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select a.id, a.name, a.url, a.type, a.pid, a.permission, icon from sys_resources a, sys_role_resources b, sys_user_role c where a.id = b.res_id and b.role_id = c.rid and c.uid = ? order by a.id 
+2020-04-18 05:54:12,975 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 1(Long)
+2020-04-18 05:54:12,989 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 20
+2020-04-18 05:54:14,962 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT count(0) FROM sys_user a LEFT JOIN sys_user_role b ON a.id = b.uid LEFT JOIN sys_role c ON b.rid = c.id 
+2020-04-18 05:54:14,968 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-04-18 05:54:14,972 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-04-18 05:54:14,974 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select a.id, a.username, a.password, a.name, a.id_card_num, a.state, c.id as role_id, c.name as role_name from sys_user a left join sys_user_role b on a.id = b.uid left join sys_role c on b.rid = c.id limit ?,? 
+2020-04-18 05:54:14,978 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 0(Integer), 10(Integer)
+2020-04-18 05:54:14,980 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 3
+2020-04-18 05:54:17,506 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name from sys_role 
+2020-04-18 05:54:17,507 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-04-18 05:54:17,510 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 3
+2020-04-18 05:54:21,115 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: delete from sys_user_role where uid = ? 
+2020-04-18 05:54:21,123 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 7(Long)
+2020-04-18 05:54:21,126 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==    Updates: 0
+2020-04-18 05:54:21,128 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: insert into sys_user_role(uid,rid) values(?,?) 
+2020-04-18 05:54:21,135 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 7(Long), 1(Long)
+2020-04-18 05:54:21,186 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==    Updates: 1
+2020-04-18 05:54:21,189 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: update sys_user SET name = ?, id_card_num = ? where id = ? 
+2020-04-18 05:54:21,195 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 周泽强(String), 4546546(String), 7(Long)
+2020-04-18 05:54:21,199 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==    Updates: 1
+2020-04-18 05:54:21,233 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT count(0) FROM sys_user a LEFT JOIN sys_user_role b ON a.id = b.uid LEFT JOIN sys_role c ON b.rid = c.id 
+2020-04-18 05:54:21,234 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-04-18 05:54:21,236 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-04-18 05:54:21,237 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select a.id, a.username, a.password, a.name, a.id_card_num, a.state, c.id as role_id, c.name as role_name from sys_user a left join sys_user_role b on a.id = b.uid left join sys_role c on b.rid = c.id limit ?,? 
+2020-04-18 05:54:21,239 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 0(Integer), 10(Integer)
+2020-04-18 05:54:21,242 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 3
+2020-04-18 05:54:25,045 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name from sys_role 
+2020-04-18 05:54:25,046 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-04-18 05:54:25,047 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 3
+2020-04-18 05:54:27,566 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: delete from sys_user_role where uid = ? 
+2020-04-18 05:54:27,567 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 7(Long)
+2020-04-18 05:54:27,619 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==    Updates: 1
+2020-04-18 05:54:27,620 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: insert into sys_user_role(uid,rid) values(?,?) 
+2020-04-18 05:54:27,621 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 7(Long), 2(Long)
+2020-04-18 05:54:27,625 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==    Updates: 1
+2020-04-18 05:54:27,627 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: update sys_user SET name = ?, id_card_num = ? where id = ? 
+2020-04-18 05:54:27,628 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 周泽强(String), 4546546(String), 7(Long)
+2020-04-18 05:54:27,631 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==    Updates: 1
+2020-04-18 05:54:27,663 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT count(0) FROM sys_user a LEFT JOIN sys_user_role b ON a.id = b.uid LEFT JOIN sys_role c ON b.rid = c.id 
+2020-04-18 05:54:27,664 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-04-18 05:54:27,666 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-04-18 05:54:27,670 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select a.id, a.username, a.password, a.name, a.id_card_num, a.state, c.id as role_id, c.name as role_name from sys_user a left join sys_user_role b on a.id = b.uid left join sys_role c on b.rid = c.id limit ?,? 
+2020-04-18 05:54:27,671 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 0(Integer), 10(Integer)
+2020-04-18 05:54:27,673 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 3
+2020-04-18 05:54:30,555 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name from sys_role 
+2020-04-18 05:54:30,556 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-04-18 05:54:30,558 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 3
+2020-04-18 05:54:35,263 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: delete from sys_user_role where uid = ? 
+2020-04-18 05:54:35,264 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 8(Long)
+2020-04-18 05:54:35,266 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==    Updates: 0
+2020-04-18 05:54:35,269 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: insert into sys_user_role(uid,rid) values(?,?) 
+2020-04-18 05:54:35,270 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 8(Long), 2(Long)
+2020-04-18 05:54:35,321 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==    Updates: 1
+2020-04-18 05:54:35,324 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: update sys_user SET name = ?, id_card_num = ? where id = ? 
+2020-04-18 05:54:35,325 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 杨廷伟(String), 4546546(String), 8(Long)
+2020-04-18 05:54:35,435 ERROR (GlobalExceptionHandler.java:88)- *****服务器异常*****
+### Error updating database.  Cause: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '4546546' for key 'id_card_num'
+### The error may exist in file [D:\projects\KS\system\target\classes\mapper\system\SysUserMapper.xml]
+### The error may involve com.king.system.dao.SysUserDao.update-Inline
+### The error occurred while setting parameters
+### SQL: update sys_user      SET name = ?,                       id_card_num = ?      where id = ?
+### Cause: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '4546546' for key 'id_card_num'
+; Duplicate entry '4546546' for key 'id_card_num'; nested exception is java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '4546546' for key 'id_card_num'
+2020-04-18 05:54:35,436 ERROR (GlobalExceptionHandler.java:89)- RequestFail[/sys/user/update][id=8,name=杨廷伟,idCardNum=4546546,state=0,roleId=2]
+2020-04-18 05:54:49,623 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: delete from sys_user_role where uid = ? 
+2020-04-18 05:54:49,624 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 8(Long)
+2020-04-18 05:54:49,674 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==    Updates: 1
+2020-04-18 05:54:49,676 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: insert into sys_user_role(uid,rid) values(?,?) 
+2020-04-18 05:54:49,677 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 8(Long), 2(Long)
+2020-04-18 05:54:49,680 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==    Updates: 1
+2020-04-18 05:54:49,682 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: update sys_user SET name = ?, id_card_num = ? where id = ? 
+2020-04-18 05:54:49,684 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 杨廷伟(String), 4546546555(String), 8(Long)
+2020-04-18 05:54:49,687 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==    Updates: 1
+2020-04-18 05:54:49,715 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT count(0) FROM sys_user a LEFT JOIN sys_user_role b ON a.id = b.uid LEFT JOIN sys_role c ON b.rid = c.id 
+2020-04-18 05:54:49,716 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-04-18 05:54:49,717 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-04-18 05:54:49,719 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select a.id, a.username, a.password, a.name, a.id_card_num, a.state, c.id as role_id, c.name as role_name from sys_user a left join sys_user_role b on a.id = b.uid left join sys_role c on b.rid = c.id limit ?,? 
+2020-04-18 05:54:49,720 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 0(Integer), 10(Integer)
+2020-04-18 05:54:49,722 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 3
+2020-04-18 05:55:27,478 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: delete from sys_user where id = ? 
+2020-04-18 05:55:27,481 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: null
+2020-04-18 05:55:27,483 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==    Updates: 0
+2020-04-18 05:56:06,140 INFO (StartupInfoLogger.java:55)- Starting Startup on LAPTOP-3H9KE96D with PID 14188 (D:\projects\KS\webapp\target\classes started by 17869 in D:\projects\KS)
+2020-04-18 05:56:06,147 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2020-04-18 05:56:06,148 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
+2020-04-18 05:56:11,798 INFO (StartupInfoLogger.java:61)- Started Startup in 6.639 seconds (JVM running for 7.852)
+2020-04-18 05:56:11,800 INFO (InitApplicationRun.java:26)- King System already started ...
+2020-04-18 05:56:11,818 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select dict_sn, class_no, dict_no, dict_desc, disp_order, parent_sn, use_flag from sys_dict 
+2020-04-18 05:56:11,915 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-04-18 05:56:11,937 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 13
+2020-04-18 05:56:11,943 INFO (InitApplicationRun.java:28)- Initialization data complete ...
+2020-04-18 05:56:13,759 INFO (LoginController.java:122)- ********************登录成功，进入首页！********************
+2020-04-18 05:56:13,783 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select * from sys_user where username = ? 
+2020-04-18 05:56:13,831 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: com.king.system.po.UserInfo@7ae136ac(String)
+2020-04-18 05:56:13,834 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 0
+2020-04-18 05:56:15,498 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select a.id, a.name, a.url, a.type, a.pid, a.permission, icon from sys_resources a, sys_role_resources b, sys_user_role c where a.id = b.res_id and b.role_id = c.rid and c.uid = ? order by a.id 
+2020-04-18 05:56:15,508 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 1(Long)
+2020-04-18 05:56:15,526 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 20
+2020-04-18 05:56:17,008 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT count(0) FROM sys_user a LEFT JOIN sys_user_role b ON a.id = b.uid LEFT JOIN sys_role c ON b.rid = c.id 
+2020-04-18 05:56:17,012 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-04-18 05:56:17,013 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-04-18 05:56:17,017 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select a.id, a.username, a.password, a.name, a.id_card_num, a.state, c.id as role_id, c.name as role_name from sys_user a left join sys_user_role b on a.id = b.uid left join sys_role c on b.rid = c.id limit ?,? 
+2020-04-18 05:56:17,024 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 0(Integer), 10(Integer)
+2020-04-18 05:56:17,026 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 3
+2020-04-18 05:56:19,415 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: delete from sys_user where id = ? 
+2020-04-18 05:56:19,422 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: null
+2020-04-18 05:56:19,425 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==    Updates: 0
+2020-04-18 05:56:54,258 INFO (StartupInfoLogger.java:55)- Starting Startup on LAPTOP-3H9KE96D with PID 10824 (D:\projects\KS\webapp\target\classes started by 17869 in D:\projects\KS)
+2020-04-18 05:56:54,265 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2020-04-18 05:56:54,266 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
+2020-04-18 05:56:59,547 INFO (StartupInfoLogger.java:61)- Started Startup in 6.251 seconds (JVM running for 7.459)
+2020-04-18 05:56:59,549 INFO (InitApplicationRun.java:26)- King System already started ...
+2020-04-18 05:56:59,566 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select dict_sn, class_no, dict_no, dict_desc, disp_order, parent_sn, use_flag from sys_dict 
+2020-04-18 05:56:59,645 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-04-18 05:56:59,664 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 13
+2020-04-18 05:56:59,667 INFO (InitApplicationRun.java:28)- Initialization data complete ...
+2020-04-18 05:57:00,281 INFO (LoginController.java:122)- ********************登录成功，进入首页！********************
+2020-04-18 05:57:00,294 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select * from sys_user where username = ? 
+2020-04-18 05:57:00,326 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: com.king.system.po.UserInfo@5efd0476(String)
+2020-04-18 05:57:00,328 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 0
+2020-04-18 05:57:01,551 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select a.id, a.name, a.url, a.type, a.pid, a.permission, icon from sys_resources a, sys_role_resources b, sys_user_role c where a.id = b.res_id and b.role_id = c.rid and c.uid = ? order by a.id 
+2020-04-18 05:57:01,563 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 1(Long)
+2020-04-18 05:57:01,600 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 20
+2020-04-18 05:57:03,121 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT count(0) FROM sys_user a LEFT JOIN sys_user_role b ON a.id = b.uid LEFT JOIN sys_role c ON b.rid = c.id 
+2020-04-18 05:57:03,128 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-04-18 05:57:03,131 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-04-18 05:57:03,134 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select a.id, a.username, a.password, a.name, a.id_card_num, a.state, c.id as role_id, c.name as role_name from sys_user a left join sys_user_role b on a.id = b.uid left join sys_role c on b.rid = c.id limit ?,? 
+2020-04-18 05:57:03,141 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 0(Integer), 10(Integer)
+2020-04-18 05:57:03,145 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 3
+2020-04-18 05:57:05,123 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: delete from sys_user where id = ? 
+2020-04-18 05:57:05,130 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 7(Long)
+2020-04-18 05:57:05,182 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==    Updates: 1
+2020-04-18 05:57:05,233 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT count(0) FROM sys_user a LEFT JOIN sys_user_role b ON a.id = b.uid LEFT JOIN sys_role c ON b.rid = c.id 
+2020-04-18 05:57:05,234 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-04-18 05:57:05,236 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-04-18 05:57:05,237 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select a.id, a.username, a.password, a.name, a.id_card_num, a.state, c.id as role_id, c.name as role_name from sys_user a left join sys_user_role b on a.id = b.uid left join sys_role c on b.rid = c.id limit ?,? 
+2020-04-18 05:57:05,238 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 0(Integer), 10(Integer)
+2020-04-18 05:57:05,240 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 2
+2020-04-18 06:15:58,103 INFO (StartupInfoLogger.java:55)- Starting Startup on LAPTOP-3H9KE96D with PID 11196 (D:\projects\KS\webapp\target\classes started by 17869 in D:\projects\KS)
+2020-04-18 06:15:58,114 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2020-04-18 06:15:58,115 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
+2020-04-18 06:16:03,077 INFO (StartupInfoLogger.java:61)- Started Startup in 6.025 seconds (JVM running for 7.334)
+2020-04-18 06:16:03,078 INFO (InitApplicationRun.java:26)- King System already started ...
+2020-04-18 06:16:03,095 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select dict_sn, class_no, dict_no, dict_desc, disp_order, parent_sn, use_flag from sys_dict 
+2020-04-18 06:16:03,177 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-04-18 06:16:03,195 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 13
+2020-04-18 06:16:03,199 INFO (InitApplicationRun.java:28)- Initialization data complete ...
+2020-04-18 06:16:23,735 INFO (LoginController.java:122)- ********************登录成功，进入首页！********************
+2020-04-18 06:16:23,748 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select * from sys_user where username = ? 
+2020-04-18 06:16:23,774 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: com.king.system.po.UserInfo@433bf728(String)
+2020-04-18 06:16:23,775 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 0
+2020-04-18 06:16:24,679 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select a.id, a.name, a.url, a.type, a.pid, a.permission, icon from sys_resources a, sys_role_resources b, sys_user_role c where a.id = b.res_id and b.role_id = c.rid and c.uid = ? order by a.id 
+2020-04-18 06:16:24,692 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 1(Long)
+2020-04-18 06:16:24,706 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 20
+2020-04-18 06:16:27,910 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT count(0) FROM sys_role 
+2020-04-18 06:16:27,914 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-04-18 06:16:27,916 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-04-18 06:16:27,919 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name from sys_role limit ?,? 
+2020-04-18 06:16:27,923 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 0(Integer), 10(Integer)
+2020-04-18 06:16:27,926 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 3
+2020-04-18 08:26:19,755 INFO (StartupInfoLogger.java:55)- Starting Startup on LAPTOP-3H9KE96D with PID 1224 (D:\projects\KS\webapp\target\classes started by 17869 in D:\projects\KS)
+2020-04-18 08:26:19,760 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2020-04-18 08:26:19,760 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
+2020-04-18 08:26:28,962 INFO (StartupInfoLogger.java:61)- Started Startup in 10.074 seconds (JVM running for 12.91)
+2020-04-18 08:26:28,968 INFO (InitApplicationRun.java:26)- King System already started ...
+2020-04-18 08:26:29,012 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select dict_sn, class_no, dict_no, dict_desc, disp_order, parent_sn, use_flag from sys_dict 
+2020-04-18 08:26:29,181 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-04-18 08:26:29,223 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 13
+2020-04-18 08:26:29,229 INFO (InitApplicationRun.java:28)- Initialization data complete ...
+2020-04-18 08:26:38,119 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select * from sys_user where username = ? 
+2020-04-18 08:26:38,176 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: admin(String)
+2020-04-18 08:26:38,180 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-04-18 08:26:38,364 INFO (LoginController.java:122)- ********************登录成功，进入首页！********************
+2020-04-18 08:26:38,381 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select * from sys_user where username = ? 
+2020-04-18 08:26:38,382 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: com.king.system.po.UserInfo@7da7c551(String)
+2020-04-18 08:26:38,384 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 0
+2020-04-18 08:26:39,151 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select a.id, a.name, a.url, a.type, a.pid, a.permission, icon from sys_resources a, sys_role_resources b, sys_user_role c where a.id = b.res_id and b.role_id = c.rid and c.uid = ? order by a.id 
+2020-04-18 08:26:39,165 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 1(Long)
+2020-04-18 08:26:39,178 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 20
+2020-04-18 08:26:44,124 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT count(0) FROM sys_role 
+2020-04-18 08:26:44,128 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-04-18 08:26:44,130 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-04-18 08:26:44,132 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name from sys_role limit ?,? 
+2020-04-18 08:26:44,136 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 0(Integer), 10(Integer)
+2020-04-18 08:26:44,140 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 3
+2020-04-18 08:26:48,988 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT count(0) FROM sys_role WHERE name LIKE concat('%', ?, '%') 
+2020-04-18 08:26:48,994 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 小区(String)
+2020-04-18 08:26:49,001 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-04-18 08:26:49,003 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name from sys_role WHERE name like concat('%',?,'%') limit ?,? 
+2020-04-18 08:26:49,007 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 小区(String), 0(Integer), 10(Integer)
+2020-04-18 08:26:49,008 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-04-18 08:26:52,056 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT count(0) FROM sys_role 
+2020-04-18 08:26:52,057 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-04-18 08:26:52,059 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-04-18 08:26:52,061 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name from sys_role limit ?,? 
+2020-04-18 08:26:52,062 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 0(Integer), 10(Integer)
+2020-04-18 08:26:52,065 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 3
+2020-04-18 08:28:12,161 INFO (StartupInfoLogger.java:55)- Starting Startup on LAPTOP-3H9KE96D with PID 15768 (D:\projects\KS\webapp\target\classes started by 17869 in D:\projects\KS)
+2020-04-18 08:28:12,169 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2020-04-18 08:28:12,171 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
+2020-04-18 08:28:17,377 INFO (StartupInfoLogger.java:61)- Started Startup in 6.201 seconds (JVM running for 7.701)
+2020-04-18 08:28:17,378 INFO (InitApplicationRun.java:26)- King System already started ...
+2020-04-18 08:28:17,393 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select dict_sn, class_no, dict_no, dict_desc, disp_order, parent_sn, use_flag from sys_dict 
+2020-04-18 08:28:17,475 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-04-18 08:28:17,493 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 13
+2020-04-18 08:28:17,497 INFO (InitApplicationRun.java:28)- Initialization data complete ...
+2020-04-18 08:28:23,059 INFO (LoginController.java:122)- ********************登录成功，进入首页！********************
+2020-04-18 08:28:23,069 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select * from sys_user where username = ? 
+2020-04-18 08:28:23,089 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: com.king.system.po.UserInfo@5346d92b(String)
+2020-04-18 08:28:23,091 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 0
+2020-04-18 08:28:24,063 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select a.id, a.name, a.url, a.type, a.pid, a.permission, icon from sys_resources a, sys_role_resources b, sys_user_role c where a.id = b.res_id and b.role_id = c.rid and c.uid = ? order by a.id 
+2020-04-18 08:28:24,070 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 1(Long)
+2020-04-18 08:28:24,080 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 20
+2020-04-18 08:28:30,708 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT count(0) FROM sys_role 
+2020-04-18 08:28:30,712 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-04-18 08:28:30,715 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-04-18 08:28:30,718 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name from sys_role limit ?,? 
+2020-04-18 08:28:30,723 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 0(Integer), 10(Integer)
+2020-04-18 08:28:30,725 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 3
+2020-04-18 08:33:25,534 INFO (StartupInfoLogger.java:55)- Starting Startup on LAPTOP-3H9KE96D with PID 13452 (D:\projects\KS\webapp\target\classes started by 17869 in D:\projects\KS)
+2020-04-18 08:33:25,546 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2020-04-18 08:33:25,548 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
+2020-04-18 08:33:32,372 INFO (StartupInfoLogger.java:61)- Started Startup in 8.115 seconds (JVM running for 10.626)
+2020-04-18 08:33:32,373 INFO (InitApplicationRun.java:26)- King System already started ...
+2020-04-18 08:33:32,390 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select dict_sn, class_no, dict_no, dict_desc, disp_order, parent_sn, use_flag from sys_dict 
+2020-04-18 08:33:32,477 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-04-18 08:33:32,502 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 13
+2020-04-18 08:33:32,507 INFO (InitApplicationRun.java:28)- Initialization data complete ...
+2020-04-18 08:33:32,731 INFO (LoginController.java:122)- ********************登录成功，进入首页！********************
+2020-04-18 08:33:32,744 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select * from sys_user where username = ? 
+2020-04-18 08:33:32,778 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: com.king.system.po.UserInfo@7224eabc(String)
+2020-04-18 08:33:32,780 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 0
+2020-04-18 08:33:34,025 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select a.id, a.name, a.url, a.type, a.pid, a.permission, icon from sys_resources a, sys_role_resources b, sys_user_role c where a.id = b.res_id and b.role_id = c.rid and c.uid = ? order by a.id 
+2020-04-18 08:33:34,039 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 1(Long)
+2020-04-18 08:33:34,056 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 20
+2020-04-18 08:33:36,145 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT count(0) FROM sys_role 
+2020-04-18 08:33:36,150 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-04-18 08:33:36,151 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-04-18 08:33:36,155 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name from sys_role limit ?,? 
+2020-04-18 08:33:36,159 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 0(Integer), 10(Integer)
+2020-04-18 08:33:36,161 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 3
+2020-04-18 08:34:49,969 INFO (StartupInfoLogger.java:55)- Starting Startup on LAPTOP-3H9KE96D with PID 17316 (D:\projects\KS\webapp\target\classes started by 17869 in D:\projects\KS)
+2020-04-18 08:34:49,977 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2020-04-18 08:34:49,979 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
+2020-04-18 08:34:59,655 INFO (StartupInfoLogger.java:61)- Started Startup in 11.076 seconds (JVM running for 13.075)
+2020-04-18 08:34:59,657 INFO (InitApplicationRun.java:26)- King System already started ...
+2020-04-18 08:34:59,695 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select dict_sn, class_no, dict_no, dict_desc, disp_order, parent_sn, use_flag from sys_dict 
+2020-04-18 08:34:59,876 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-04-18 08:34:59,920 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 13
+2020-04-18 08:34:59,927 INFO (InitApplicationRun.java:28)- Initialization data complete ...
+2020-04-18 08:41:29,874 INFO (StartupInfoLogger.java:55)- Starting Startup on LAPTOP-3H9KE96D with PID 4092 (D:\projects\KS\webapp\target\classes started by 17869 in D:\projects\KS)
+2020-04-18 08:41:29,881 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2020-04-18 08:41:29,882 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
+2020-04-18 08:41:35,778 INFO (StartupInfoLogger.java:61)- Started Startup in 7.061 seconds (JVM running for 8.452)
+2020-04-18 08:41:35,780 INFO (InitApplicationRun.java:26)- King System already started ...
+2020-04-18 08:41:35,795 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select dict_sn, class_no, dict_no, dict_desc, disp_order, parent_sn, use_flag from sys_dict 
+2020-04-18 08:41:35,875 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-04-18 08:41:35,892 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 13
+2020-04-18 08:41:35,896 INFO (InitApplicationRun.java:28)- Initialization data complete ...
+2020-04-18 08:41:59,961 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select * from sys_user where username = ? 
+2020-04-18 08:42:00,017 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: admin(String)
+2020-04-18 08:42:00,021 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-04-18 08:42:00,187 INFO (LoginController.java:122)- ********************登录成功，进入首页！********************
+2020-04-18 08:42:00,204 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select * from sys_user where username = ? 
+2020-04-18 08:42:00,205 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: com.king.system.po.UserInfo@4042f9e4(String)
+2020-04-18 08:42:00,208 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 0
+2020-04-18 08:42:00,785 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select a.id, a.name, a.url, a.type, a.pid, a.permission, icon from sys_resources a, sys_role_resources b, sys_user_role c where a.id = b.res_id and b.role_id = c.rid and c.uid = ? order by a.id 
+2020-04-18 08:42:00,795 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 1(Long)
+2020-04-18 08:42:00,805 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 20
+2020-04-18 08:42:07,274 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT count(0) FROM sys_role 
+2020-04-18 08:42:07,277 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-04-18 08:42:07,279 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-04-18 08:42:07,282 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name from sys_role limit ?,? 
+2020-04-18 08:42:07,288 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 0(Integer), 10(Integer)
+2020-04-18 08:42:07,290 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 3
+2020-04-18 08:43:00,134 INFO (StartupInfoLogger.java:55)- Starting Startup on LAPTOP-3H9KE96D with PID 14196 (D:\projects\KS\webapp\target\classes started by 17869 in D:\projects\KS)
+2020-04-18 08:43:00,141 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2020-04-18 08:43:00,142 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
+2020-04-18 08:43:05,264 INFO (StartupInfoLogger.java:61)- Started Startup in 6.369 seconds (JVM running for 7.646)
+2020-04-18 08:43:05,265 INFO (InitApplicationRun.java:26)- King System already started ...
+2020-04-18 08:43:05,283 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select dict_sn, class_no, dict_no, dict_desc, disp_order, parent_sn, use_flag from sys_dict 
+2020-04-18 08:43:05,364 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-04-18 08:43:05,386 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 13
+2020-04-18 08:43:05,390 INFO (InitApplicationRun.java:28)- Initialization data complete ...
+2020-04-18 08:43:12,867 INFO (LoginController.java:122)- ********************登录成功，进入首页！********************
+2020-04-18 08:43:12,887 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select * from sys_user where username = ? 
+2020-04-18 08:43:12,936 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: com.king.system.po.UserInfo@db19a97(String)
+2020-04-18 08:43:12,939 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 0
+2020-04-18 08:43:14,632 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select a.id, a.name, a.url, a.type, a.pid, a.permission, icon from sys_resources a, sys_role_resources b, sys_user_role c where a.id = b.res_id and b.role_id = c.rid and c.uid = ? order by a.id 
+2020-04-18 08:43:14,644 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 1(Long)
+2020-04-18 08:43:14,661 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 20
+2020-04-18 08:43:48,244 INFO (StartupInfoLogger.java:55)- Starting Startup on LAPTOP-3H9KE96D with PID 3364 (D:\projects\KS\webapp\target\classes started by 17869 in D:\projects\KS)
+2020-04-18 08:43:48,252 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2020-04-18 08:43:48,253 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
+2020-04-18 08:43:58,128 INFO (StartupInfoLogger.java:61)- Started Startup in 11.011 seconds (JVM running for 12.864)
+2020-04-18 08:43:58,129 INFO (InitApplicationRun.java:26)- King System already started ...
+2020-04-18 08:43:58,145 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select dict_sn, class_no, dict_no, dict_desc, disp_order, parent_sn, use_flag from sys_dict 
+2020-04-18 08:43:58,220 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-04-18 08:43:58,238 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 13
+2020-04-18 08:43:58,242 INFO (InitApplicationRun.java:28)- Initialization data complete ...
+2020-04-18 08:44:02,533 INFO (LoginController.java:122)- ********************登录成功，进入首页！********************
+2020-04-18 08:44:02,544 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select * from sys_user where username = ? 
+2020-04-18 08:44:02,567 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: com.king.system.po.UserInfo@e45aa9f(String)
+2020-04-18 08:44:02,569 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 0
+2020-04-18 08:44:03,694 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select a.id, a.name, a.url, a.type, a.pid, a.permission, icon from sys_resources a, sys_role_resources b, sys_user_role c where a.id = b.res_id and b.role_id = c.rid and c.uid = ? order by a.id 
+2020-04-18 08:44:03,701 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 1(Long)
+2020-04-18 08:44:03,709 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 20
+2020-04-18 08:45:53,589 INFO (StartupInfoLogger.java:55)- Starting Startup on LAPTOP-3H9KE96D with PID 2956 (D:\projects\KS\webapp\target\classes started by 17869 in D:\projects\KS)
+2020-04-18 08:45:53,596 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2020-04-18 08:45:53,597 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
+2020-04-18 08:45:58,760 INFO (StartupInfoLogger.java:61)- Started Startup in 6.141 seconds (JVM running for 7.386)
+2020-04-18 08:45:58,761 INFO (InitApplicationRun.java:26)- King System already started ...
+2020-04-18 08:45:58,777 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select dict_sn, class_no, dict_no, dict_desc, disp_order, parent_sn, use_flag from sys_dict 
+2020-04-18 08:45:58,856 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-04-18 08:45:58,873 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 13
+2020-04-18 08:45:58,877 INFO (InitApplicationRun.java:28)- Initialization data complete ...
+2020-04-18 08:46:05,612 INFO (LoginController.java:122)- ********************登录成功，进入首页！********************
+2020-04-18 08:46:05,635 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select * from sys_user where username = ? 
+2020-04-18 08:46:05,684 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: com.king.system.po.UserInfo@1654aa67(String)
+2020-04-18 08:46:05,687 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 0
+2020-04-18 08:46:07,585 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select a.id, a.name, a.url, a.type, a.pid, a.permission, icon from sys_resources a, sys_role_resources b, sys_user_role c where a.id = b.res_id and b.role_id = c.rid and c.uid = ? order by a.id 
+2020-04-18 08:46:07,596 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 1(Long)
+2020-04-18 08:46:07,609 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 20
+2020-04-18 08:46:27,565 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select * from sys_user where username = ? 
+2020-04-18 08:46:27,567 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: admin(String)
+2020-04-18 08:46:27,570 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-04-18 08:46:27,626 INFO (LoginController.java:122)- ********************登录成功，进入首页！********************
+2020-04-18 08:46:27,629 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select * from sys_user where username = ? 
+2020-04-18 08:46:27,629 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: com.king.system.po.UserInfo@643c4188(String)
+2020-04-18 08:46:27,631 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 0
+2020-04-18 08:46:27,824 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select a.id, a.name, a.url, a.type, a.pid, a.permission, icon from sys_resources a, sys_role_resources b, sys_user_role c where a.id = b.res_id and b.role_id = c.rid and c.uid = ? order by a.id 
+2020-04-18 08:46:27,826 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 1(Long)
+2020-04-18 08:46:27,836 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 20
+2020-04-18 08:50:29,306 INFO (StartupInfoLogger.java:55)- Starting Startup on LAPTOP-3H9KE96D with PID 12112 (D:\projects\KS\webapp\target\classes started by 17869 in D:\projects\KS)
+2020-04-18 08:50:29,313 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2020-04-18 08:50:29,314 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
+2020-04-18 08:50:34,375 INFO (StartupInfoLogger.java:61)- Started Startup in 6.001 seconds (JVM running for 7.301)
+2020-04-18 08:50:34,376 INFO (InitApplicationRun.java:26)- King System already started ...
+2020-04-18 08:50:34,394 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select dict_sn, class_no, dict_no, dict_desc, disp_order, parent_sn, use_flag from sys_dict 
+2020-04-18 08:50:34,470 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-04-18 08:50:34,489 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 13
+2020-04-18 08:50:34,492 INFO (InitApplicationRun.java:28)- Initialization data complete ...
+2020-04-18 08:50:43,019 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select * from sys_user where username = ? 
+2020-04-18 08:50:43,076 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: admin(String)
+2020-04-18 08:50:43,080 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-04-18 08:50:43,104 ERROR (GlobalExceptionHandler.java:76)- *****用户名或密码错误*****Submitted credentials for token [org.apache.shiro.authc.UsernamePasswordToken - admin, rememberMe=true] did not match the expected credentials.
+2020-04-18 08:50:43,105 ERROR (GlobalExceptionHandler.java:77)- RequestFail[/login][username=admin,password=]
+2020-04-18 08:52:49,717 INFO (StartupInfoLogger.java:55)- Starting Startup on LAPTOP-3H9KE96D with PID 3388 (D:\projects\KS\webapp\target\classes started by 17869 in D:\projects\KS)
+2020-04-18 08:52:49,722 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2020-04-18 08:52:49,723 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
+2020-04-18 08:52:55,482 INFO (StartupInfoLogger.java:61)- Started Startup in 6.802 seconds (JVM running for 8.082)
+2020-04-18 08:52:55,484 INFO (InitApplicationRun.java:26)- King System already started ...
+2020-04-18 08:52:55,504 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select dict_sn, class_no, dict_no, dict_desc, disp_order, parent_sn, use_flag from sys_dict 
+2020-04-18 08:52:55,591 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-04-18 08:52:55,610 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 13
+2020-04-18 08:52:55,614 INFO (InitApplicationRun.java:28)- Initialization data complete ...
+2020-04-18 08:53:03,426 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select * from sys_user where username = ? 
+2020-04-18 08:53:03,482 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: admin(String)
+2020-04-18 08:53:03,486 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-04-18 08:53:03,658 INFO (LoginController.java:122)- ********************登录成功，进入首页！********************
+2020-04-18 08:53:03,668 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select * from sys_user where username = ? 
+2020-04-18 08:53:03,669 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: com.king.system.po.UserInfo@75a23990(String)
+2020-04-18 08:53:03,671 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 0
+2020-04-18 08:53:04,329 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select a.id, a.name, a.url, a.type, a.pid, a.permission, icon from sys_resources a, sys_role_resources b, sys_user_role c where a.id = b.res_id and b.role_id = c.rid and c.uid = ? order by a.id 
+2020-04-18 08:53:04,342 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 1(Long)
+2020-04-18 08:53:04,355 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 20

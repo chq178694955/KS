@@ -16,6 +16,15 @@
     select id, name
     from sys_role
   </select>
+  <select id="find" resultMap="BaseResultMap" parameterType="java.util.Map">
+    select id, name
+    from sys_role
+    <where>
+      <if test="searchKey != null and searchKey != ''">
+        and name like concat('%',#{searchKey},'%')
+      </if>
+    </where>
+  </select>
   <select id="getRolesByUserId" resultMap="BaseResultMap" parameterType="java.lang.Long">
     select a.id, a.name
     from sys_role a,sys_user_role b

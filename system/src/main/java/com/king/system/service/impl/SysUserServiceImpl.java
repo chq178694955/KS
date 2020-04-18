@@ -3,9 +3,12 @@ package com.king.system.service.impl;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.king.framework.model.Criteria;
+import com.king.framework.utils.MD5Util;
+import com.king.system.conts.UserStateEnum;
 import com.king.system.dao.SysUserDao;
 import com.king.system.entity.SysUser;
 import com.king.system.service.ISysUserService;
+import com.king.system.vo.SysUserVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -23,16 +26,6 @@ public class SysUserServiceImpl implements ISysUserService {
     private SysUserDao sysUserDao;
 
     @Override
-    public List<SysUser> findAll() {
-        //分页设置放在查询之前
-        PageHelper.startPage(1, 1);
-        List<SysUser> list = sysUserDao.findAll();//sysUserMapper.findAll();
-//        Long totalCount = sysUserMapper.findCount(params);
-        PageInfo<SysUser> pageInfo = new PageInfo<SysUser>(list);
-        return list;
-    }
-
-    @Override
     public SysUser findByUserName(String username) {
         Criteria criteria = new Criteria();
         criteria.put("username",username);
@@ -40,22 +33,47 @@ public class SysUserServiceImpl implements ISysUserService {
     }
 
     @Override
-    public SysUser findByNameAndPass(String username, String password) {
-        Criteria criteria = new Criteria();
-        criteria.put("username",username);
-        criteria.put("password",password);
-        return sysUserDao.get("findByNameAndPass",criteria);
-    }
-
-    @Override
-    public PageInfo<SysUser> find(PageInfo<SysUser> page, Criteria criteria, Boolean isDownload) {
+    public PageInfo<SysUserVO> find(PageInfo<SysUser> page, Criteria criteria, Boolean isDownload) {
         if(!isDownload){
             PageHelper.startPage(page.getPageNum(),page.getPageSize());
         }
-        List<SysUser> users = sysUserDao.find(criteria);
-        PageInfo<SysUser> pageInfo = new PageInfo<>(users);
+        List<SysUserVO> users = sysUserDao.find(criteria);
+        if(null != users && users.size() > 0){
+            for(SysUserVO vo : users){
+                vo.setStateDesc(UserStateEnum.fromValue(vo.getState()));
+            }
+        }
+        PageInfo<SysUserVO> pageInfo = new PageInfo<>(users);
         pageInfo.setPageNum(page.getPageNum());
         pageInfo.setPageSize(page.getPageSize());
         return pageInfo;
+    }
+
+    @Override
+    public int addUser(SysUser user) {
+        user.setPassword(MD5Util.encode(user.getPassword()));
+        return sysUserDao.insert("insert", user);
+    }
+
+    @Override
+    public int updateUser(SysUserVO user) {
+        SysUser u = new SysUser();
+        u.setId(user.getId());
+        u.setName(user.getName());
+        u.setIdCardNum(user.getIdCardNum());
+        if(user.getRoleId() > 0){
+            //修改用户角色关系
+            sysUserDao.delete("delUserRole",user.getId());
+            Criteria criteria = new Criteria();
+            criteria.put("userId",user.getId());
+            criteria.put("roleId",user.getRoleId());
+            sysUserDao.insert("addUserRole",user);
+        }
+        return sysUserDao.update("update", u);
+    }
+
+    @Override
+    public int delUser(Long userId) {
+        return sysUserDao.delete("delete", userId);
     }
 }

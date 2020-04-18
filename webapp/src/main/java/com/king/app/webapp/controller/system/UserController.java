@@ -1,10 +1,13 @@
 package com.king.app.webapp.controller.system;
 
 import com.github.pagehelper.PageInfo;
+import com.king.app.webapp.dto.ResultResp;
 import com.king.framework.base.BaseController;
 import com.king.framework.model.Criteria;
+import com.king.framework.utils.I18nUtils;
 import com.king.system.entity.SysUser;
 import com.king.system.service.ISysUserService;
+import com.king.system.vo.SysUserVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -38,8 +41,56 @@ public class UserController extends BaseController {
         Criteria criteria = new Criteria();
         criteria.put("state",super.getIntegerParam("state"));
         criteria.put("searchKey",super.getParam("searchKey"));
-        PageInfo<SysUser> pageInfo = sysUserService.find(page,criteria,isDownloadReq());
+        PageInfo<SysUserVO> pageInfo = sysUserService.find(page,criteria,isDownloadReq());
         return getGridData(pageInfo);
+    }
+
+    @RequestMapping("toAdd")
+    public ModelAndView toAdd(){
+        ModelAndView mv = new ModelAndView("sys/user/add");
+        return mv;
+    }
+
+    @RequestMapping("add")
+    @ResponseBody
+    public Object add(HttpServletRequest request, SysUser user){
+        SysUser oldUser = sysUserService.findByUserName(user.getUsername());
+        if(oldUser != null){
+            return new ResultResp(I18nUtils.get("sys.user.tip.existsUser",user.getUsername()));
+        }else{
+            if(sysUserService.addUser(user) > 0){
+                return ResultResp.ok();
+            }else{
+                return ResultResp.fail();
+            }
+        }
+    }
+
+    @RequestMapping("toUpdate")
+    public ModelAndView toUpdate(HttpServletRequest request,SysUserVO user){
+        ModelAndView mv = new ModelAndView("sys/user/update");
+        mv.addObject("user",user);
+        return mv;
+    }
+
+    @RequestMapping("update")
+    @ResponseBody
+    public Object update(HttpServletRequest request,SysUserVO user){
+        if(sysUserService.updateUser(user) > 0){
+            return ResultResp.ok();
+        }else{
+            return ResultResp.fail();
+        }
+    }
+
+    @RequestMapping("delete")
+    @ResponseBody
+    public Object delete(HttpServletRequest request,Long userId){
+        if(sysUserService.delUser(userId) > 0){
+            return ResultResp.ok();
+        }else{
+            return ResultResp.fail();
+        }
     }
 
 }

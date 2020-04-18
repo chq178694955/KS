@@ -1,5 +1,6 @@
 package com.king.system.dao;
 
+import com.king.framework.model.Criteria;
 import com.king.system.entity.SysRole;
 import org.apache.ibatis.annotations.Mapper;
 
@@ -12,4 +13,6 @@ public interface SysRoleMapper {
     List<SysRole> selectAll();
 
     List<SysRole> getRolesByUserId(Long userId);
+
+    List<SysRole> find(Criteria criteria);
 }
