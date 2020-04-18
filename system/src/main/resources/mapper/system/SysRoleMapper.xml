@@ -12,6 +12,24 @@
     insert into sys_role (name)
     values (#{name,jdbcType=VARCHAR})
   </insert>
+  <update id="update" parameterType="com.king.system.entity.SysRole">
+    update sys_role
+    <set>
+      <if test="name != null and name != ''">
+        name = #{name},
+      </if>
+    </set>
+    where id = #{id}
+  </update>
+  <delete id="delete" parameterType="java.lang.Long">
+    delete from sys_role where id = #{roleId}
+  </delete>
+  <select id="selectOne" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select id, name from sys_role where id = #{roleId}
+  </select>
+  <select id="findByName" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select id, name from sys_role where name = #{roleName}
+  </select>
   <select id="selectAll" resultMap="BaseResultMap">
     select id, name
     from sys_role
@@ -30,4 +48,15 @@
     from sys_role a,sys_user_role b
     where a.id = b.rid and b.uid = #{userId,jdbcType=BIGINT}
   </select>
+  <delete id="deleteAuthorizationByRoleId" parameterType="java.lang.Long">
+    delete from sys_role_resources where role_id = #{roleId}
+  </delete>
+  <insert id="insertAuthorization">
+    insert into sys_role_resources(role_id,res_id)
+    values
+    <foreach collection="resIds" item="resId" separator=",">
+      (#{roleId},#{resId})
+    </foreach>
+  </insert>
+
 </mapper>

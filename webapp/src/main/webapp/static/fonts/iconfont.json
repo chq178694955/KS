@@ -6,6 +6,34 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "736503",
+      "name": "权限",
+      "font_class": "quanxian",
+      "unicode": "e612",
+      "unicode_decimal": 58898
+    },
+    {
+      "icon_id": "1601871",
+      "name": "权限",
+      "font_class": "quanxian1",
+      "unicode": "e663",
+      "unicode_decimal": 58979
+    },
+    {
+      "icon_id": "4933404",
+      "name": "授权",
+      "font_class": "shouquan",
+      "unicode": "e758",
+      "unicode_decimal": 59224
+    },
+    {
+      "icon_id": "12548446",
+      "name": "权限管理",
+      "font_class": "quanxianguanli-",
+      "unicode": "e61c",
+      "unicode_decimal": 58908
+    },
+    {
       "icon_id": "796979",
       "name": "返回",
       "font_class": "fanhui",

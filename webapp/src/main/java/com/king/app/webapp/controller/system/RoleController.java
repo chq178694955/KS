@@ -1,8 +1,10 @@
 package com.king.app.webapp.controller.system;
 
 import com.github.pagehelper.PageInfo;
+import com.king.app.webapp.dto.ResultResp;
 import com.king.framework.base.BaseController;
 import com.king.framework.model.Criteria;
+import com.king.framework.utils.I18nUtils;
 import com.king.system.entity.SysRole;
 import com.king.system.service.ISysRoleService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -47,6 +49,54 @@ public class RoleController extends BaseController {
         criteria.put("searchKey",searchKey);
         PageInfo<SysRole> pageInfo = sysRoleService.find(page,criteria,isDownloadReq());
         return super.getGridData(pageInfo);
+    }
+
+    @RequestMapping("save")
+    @ResponseBody
+    public Object save(SysRole role){
+        SysRole oldRole = sysRoleService.findByName(role.getName());
+        int result = 0;
+        if(role.getId() != null){
+            if(oldRole != null){
+                if(!role.getId().equals(oldRole.getId())){
+                    return new ResultResp(I18nUtils.get("sys.role.tip.existsName"));
+                }
+            }
+            result = sysRoleService.updateRole(role);
+        }else{
+            if(oldRole != null){
+                return new ResultResp(I18nUtils.get("sys.role.tip.existsName"));
+            }else{
+                result = sysRoleService.addRole(role);
+            }
+        }
+        if(result > 0){
+            return ResultResp.ok();
+        }else{
+            return ResultResp.fail();
+        }
+    }
+
+    @RequestMapping("delete")
+    @ResponseBody
+    public Object delete(Long roleId){
+        int result = sysRoleService.delRole(roleId);
+        if(result > 0){
+            return ResultResp.ok();
+        }else{
+            return ResultResp.fail();
+        }
+    }
+
+    @RequestMapping("authorization")
+    @ResponseBody
+    public Object authorization(Long roleId,String ids){
+        int result = sysRoleService.authorization(roleId,ids);
+        if(result > 0){
+            return ResultResp.ok();
+        }else{
+            return ResultResp.fail();
+        }
     }
 
 }

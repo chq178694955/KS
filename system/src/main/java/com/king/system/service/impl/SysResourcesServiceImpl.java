@@ -29,4 +29,9 @@ public class SysResourcesServiceImpl implements ISysResourcesService {
     public List<SysResources> findResources(Criteria criteria) {
         return sysResourcesMapper.findResources(criteria);
     }
+
+    @Override
+    public List<SysResources> findAll() {
+        return sysResourcesMapper.selectAll();
+    }
 }

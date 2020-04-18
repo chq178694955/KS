@@ -9,6 +9,7 @@ import com.king.system.service.ISysRoleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -47,5 +48,36 @@ public class SysRoleServiceImpl implements ISysRoleService {
         pageInfo.setPageNum(page.getPageNum());
         pageInfo.setPageSize(page.getPageSize());
         return pageInfo;
+    }
+
+    @Override
+    public int updateRole(SysRole role) {
+        return sysRoleMapper.update(role);
+    }
+
+    @Override
+    public int delRole(Long roleId) {
+        return sysRoleMapper.delete(roleId);
+    }
+
+    @Override
+    public SysRole findById(Long roleId) {
+        return sysRoleMapper.selectOne(roleId);
+    }
+
+    @Override
+    public SysRole findByName(String roleName) {
+        return sysRoleMapper.findByName(roleName);
+    }
+
+    @Override
+    public int authorization(Long roleId, String ids) {
+        sysRoleMapper.deleteAuthorizationByRoleId(roleId);
+        List<Long> resIds = new ArrayList<>();
+        String[] strs = ids.split(",");
+        for(String s : strs){
+            resIds.add(Long.valueOf(s));
+        }
+        return sysRoleMapper.insertAuthorization(roleId,resIds);
     }
 }

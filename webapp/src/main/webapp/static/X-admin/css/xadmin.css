@@ -329,6 +329,12 @@ body{
     height: 100%;
 
 }
+
+.layui-table-cell .layui-form-checkbox[lay-skin=primary] {
+    top: 5px;
+    padding: 0;
+}
+
 .x-admin-carousel,.layui-carousel,.x-admin-carousel>[carousel-item]>* {
     background-color:#fff
 }

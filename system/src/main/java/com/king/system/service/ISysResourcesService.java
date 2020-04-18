@@ -16,4 +16,6 @@ public interface ISysResourcesService {
 
     List<SysResources> findResources(Criteria criteria);
 
+    List<SysResources> findAll();
+
 }
