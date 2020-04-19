@@ -7,6 +7,7 @@ import com.king.system.po.UserInfo;
 import com.king.system.service.ISysResourcesService;
 import com.king.system.service.ISysRoleService;
 import com.king.system.service.ISysUserService;
+import com.king.system.utils.AuthUtils;
 import org.apache.shiro.authc.*;
 import org.apache.shiro.authz.AuthorizationInfo;
 import org.apache.shiro.authz.SimpleAuthorizationInfo;
@@ -35,7 +36,8 @@ public class CustomerShiroRealm extends AuthorizingRealm {
     @Override
     protected AuthorizationInfo doGetAuthorizationInfo(PrincipalCollection principalCollection) {
         //获取登录的用户名
-        String account = (String)principalCollection.getPrimaryPrincipal();
+        UserInfo userInfo = AuthUtils.getUserInfo();
+        String account = userInfo.getUsername();
         //到数据库里查询要授权的内容
         SysUser user = sysUserService.findByUserName(account);
         if(user != null){

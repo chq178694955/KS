@@ -7,6 +7,7 @@
 --%>
 <%@ page pageEncoding="UTF-8" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
+<%@ taglib prefix="shiro" uri="http://shiro.apache.org/tags" %>
 <div class="x-nav">
     <span class="layui-breadcrumb">
         <a href="javascript:;"><spring:message code="sys.menu.sysMgr"/></a>
@@ -29,9 +30,11 @@
                                 <button id="query_${menuId}" type="button" class="layui-btn layui-btn-normal" title="<spring:message code="com.btn.query"/>">
                                     <i class="layui-icon layui-icon-search"></i>
                                 </button>
-                                <button id="add_${menuId}" type="button" class="layui-btn layui-btn-warm" title="<spring:message code="com.btn.add"/>">
-                                    <i class="layui-icon layui-icon-add-1"></i>
-                                </button>
+                                <shiro:hasPermission name="sys_role_add">
+                                    <button id="add_${menuId}" type="button" class="layui-btn layui-btn-warm" title="<spring:message code="com.btn.add"/>">
+                                        <i class="layui-icon layui-icon-add-1"></i>
+                                    </button>
+                                </shiro:hasPermission>
                                 <button id="excel_${menuId}" type="button" class="layui-btn" title="<spring:message code="com.btn.excel"/>">
                                     <i class="iconfont layui-icon-excel"></i>
                                 </button>
@@ -51,18 +54,24 @@
                     </table>
 
                     <script type="text/html" id="operBar_${menuId}">
-                        <a class="layui-btn layui-btn-normal layui-btn-xs" lay-event="edit" title="<spring:message code="com.btn.edit"/>">
-                            <i class="layui-icon layui-icon-edit"></i>
-                            <cite><spring:message code="com.btn.edit"/></cite>
-                        </a>
-                        <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del" title="<spring:message code="com.btn.del"/>">
-                            <i class="layui-icon layui-icon-delete"></i>
-                            <cite><spring:message code="com.btn.del"/></cite>
-                        </a>
-                        <a class="layui-btn layui-btn-warm layui-btn-xs" lay-event="auth" title="<spring:message code="com.btn.auth"/>">
-                            <i class="iconfont">&#xe612;</i>
-                            <cite><spring:message code="com.btn.auth"/></cite>
-                        </a>
+                        <shiro:hasPermission name="sys_role_update">
+                            <a class="layui-btn layui-btn-normal layui-btn-xs" lay-event="edit" title="<spring:message code="com.btn.edit"/>">
+                                <i class="layui-icon layui-icon-edit"></i>
+                                <cite><spring:message code="com.btn.edit"/></cite>
+                            </a>
+                        </shiro:hasPermission>
+                        <shiro:hasPermission name="sys_role_delete">
+                            <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del" title="<spring:message code="com.btn.del"/>">
+                                <i class="layui-icon layui-icon-delete"></i>
+                                <cite><spring:message code="com.btn.del"/></cite>
+                            </a>
+                        </shiro:hasPermission>
+                        <shiro:hasPermission name="sys_role_auth">
+                            <a class="layui-btn layui-btn-warm layui-btn-xs" lay-event="auth" title="<spring:message code="com.btn.auth"/>">
+                                <i class="iconfont">&#xe612;</i>
+                                <cite><spring:message code="com.btn.auth"/></cite>
+                            </a>
+                        </shiro:hasPermission>
                     </script>
                 </div>
             </div>

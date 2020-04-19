@@ -2,7 +2,9 @@ package com.king.app.webapp.controller.system;
 
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
+import com.king.app.webapp.dto.ResultResp;
 import com.king.framework.base.BaseController;
+import com.king.framework.utils.I18nUtils;
 import com.king.system.entity.SysResources;
 import com.king.system.service.ISysResourcesService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -80,6 +82,39 @@ public class ResourcesController extends BaseController {
     public Object ownerResources(@PathVariable("roleId")Long roleId){
         List<SysResources> resources = sysResourcesService.getResourceByRoleId(roleId);
         return resources;
+    }
+
+    @RequestMapping("get/{resId}")
+    @ResponseBody
+    public Object getById(@PathVariable("resId")Long resId){
+        return sysResourcesService.findById(resId);
+    }
+
+    @RequestMapping("save")
+    @ResponseBody
+    public Object save(SysResources res){
+        int result = 0;
+        if(res.getId() != null){
+            result = sysResourcesService.updateResource(res);
+        }else{
+            result = sysResourcesService.addResource(res);
+        }
+        if(result > 0){
+            return ResultResp.ok();
+        }else{
+            return ResultResp.fail();
+        }
+    }
+
+    @RequestMapping("del/{resId}")
+    @ResponseBody
+    public Object delete(@PathVariable("resId")Long resId){
+        int result = sysResourcesService.delResource(resId);
+        if(result > 0){
+            return ResultResp.ok();
+        }else{
+            return ResultResp.fail();
+        }
     }
 
 }

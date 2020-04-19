@@ -10,6 +10,16 @@
     <result column="permission" jdbcType="VARCHAR" property="permission" />
     <result column="icon" jdbcType="VARCHAR" property="icon" />
   </resultMap>
+  <resultMap id="BaseResultMap2" type="com.king.system.vo.SysResourcesVO">
+    <result column="id" jdbcType="BIGINT" property="id" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="url" jdbcType="VARCHAR" property="url" />
+    <result column="type" jdbcType="TINYINT" property="type" />
+    <result column="pid" jdbcType="BIGINT" property="pid" />
+    <result column="permission" jdbcType="VARCHAR" property="permission" />
+    <result column="icon" jdbcType="VARCHAR" property="icon" />
+    <result column="parent_name" jdbcType="VARCHAR" property="parentName" />
+  </resultMap>
   <insert id="insert" parameterType="com.king.system.entity.SysResources">
     <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Long">
       SELECT LAST_INSERT_ID()
@@ -19,6 +29,44 @@
     values (#{name,jdbcType=VARCHAR}, #{url,jdbcType=VARCHAR}, #{type,jdbcType=TINYINT}, 
       #{pid,jdbcType=BIGINT}, #{permission,jdbcType=VARCHAR}, #{icon,jdbcType=VARCHAR})
   </insert>
+  <update id="update" parameterType="com.king.system.entity.SysResources">
+    update sys_resources
+    <set>
+      <if test="name != null and name != ''">
+        name = #{name},
+      </if>
+      <if test="url != null and url != ''">
+        url = #{url},
+      </if>
+      <if test="type != null and type != ''">
+        type = #{type},
+      </if>
+      <if test="pid != null and pid != ''">
+        pid = #{pid},
+      </if>
+      <if test="permission != null and permission != ''">
+        permission = #{permission},
+      </if>
+      <if test="icon != null and icon != ''">
+        icon = #{icon},
+      </if>
+    </set>
+    where id = #{id}
+  </update>
+  <delete id="delete" parameterType="java.lang.Long">
+    delete from sys_resources where id = #{resId}
+  </delete>
+  <select id="selectOne" resultMap="BaseResultMap2" parameterType="java.lang.Long">
+    select a.id, a.name, a.url, a.type, a.pid, a.permission, a.icon, b.name as parent_name
+    from sys_resources a
+    left join sys_resources b on a.pid = b.id
+    where a.id = #{resId}
+  </select>
+  <select id="selectByName" resultMap="BaseResultMap" parameterType="java.lang.String">
+    select id, name, url, type, pid, permission, icon
+    from sys_resources
+    where name = #{name}
+  </select>
   <select id="selectAll" resultMap="BaseResultMap">
     select id, name, url, type, pid, permission, icon
     from sys_resources

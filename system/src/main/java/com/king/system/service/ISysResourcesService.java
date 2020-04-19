@@ -2,6 +2,7 @@ package com.king.system.service;
 
 import com.king.framework.model.Criteria;
 import com.king.system.entity.SysResources;
+import com.king.system.vo.SysResourcesVO;
 
 import java.util.List;
 
@@ -17,5 +18,15 @@ public interface ISysResourcesService {
     List<SysResources> findResources(Criteria criteria);
 
     List<SysResources> findAll();
+
+    SysResourcesVO findById(Long resId);
+
+    int addResource(SysResources res);
+
+    int updateResource(SysResources res);
+
+    int delResource(Long resId);
+
+    SysResources findByName(String name);
 
 }
