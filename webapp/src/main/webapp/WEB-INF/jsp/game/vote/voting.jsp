@@ -64,6 +64,9 @@
                         <div class="layui-form-item">
                             <div class="layui-input-block">
                                 <c:choose>
+                                    <c:when test="${isVoting == false}">
+                                        <button class="layui-btn layui-btn-disabled"><spring:message code="vote.btn.voting"/></button>
+                                    </c:when>
                                     <c:when test="${record != null}">
                                         <button class="layui-btn layui-btn-disabled"><spring:message code="vote.btn.voting"/></button>
                                     </c:when>

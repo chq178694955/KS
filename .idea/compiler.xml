@@ -9,6 +9,7 @@
         <module name="archive" />
         <module name="framework" />
         <module name="game" />
+        <module name="keke" />
         <module name="system" />
         <module name="webapp" />
       </profile>

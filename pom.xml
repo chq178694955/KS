@@ -169,6 +169,7 @@
         <module>archive</module>
         <module>system</module>
         <module>game</module>
+        <module>keke</module>
     </modules>
 
     <profiles>

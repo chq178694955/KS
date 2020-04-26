@@ -116,10 +116,6 @@ public class VoteController extends BaseController {
     @ResponseBody
     public Object validVote(HttpServletRequest request,Long voteId){
         Vote vote = voteService.getVote(voteId);
-        boolean flag = DateUtils.compareDate(vote.getEndTime(),new Date());
-        if(!flag){
-            return new ResultResp(I18nUtils.get("vote.tip.finishVote"));
-        }
         VoteTemplate template = voteTemplateService.getTemplate(vote.getTemplateId());
         List<VoteItemGroup> groups = voteItemGroupService.getGroupsByTemplate(template.getId());
         if(groups == null || groups.size() == 0)return new ResultResp(I18nUtils.get("vote.tip.dataIncomplet"));
@@ -140,6 +136,17 @@ public class VoteController extends BaseController {
         //获取投票明细
         Vote vote = voteService.getVote(voteId);
         mv.addObject("vote",vote);
+
+        boolean flag = DateUtils.compareDate(vote.getEndTime(),new Date());
+        boolean flag2 = DateUtils.compareDate(vote.getStartTime(),new Date());
+        if(!flag || flag2){
+            //超出时间范围，不能投票
+            //return new ResultResp(I18nUtils.get("vote.tip.finishVote"));
+            mv.addObject("isVoting",false);
+        }else{
+            mv.addObject("isVoting",true);
+        }
+
         VoteTemplate template = voteTemplateService.getTemplate(vote.getTemplateId());
         List<VoteItemGroup> groups = voteItemGroupService.getGroupsByTemplate(template.getId());
         mv.addObject("groups",groups);

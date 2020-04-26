@@ -36,12 +36,12 @@
             <property name="forceBigDecimals" value="true"/>
         </javaTypeResolver>
         <!-- 生成模型的包名和位置-->
-        <javaModelGenerator targetPackage="com.king.system.entity" targetProject="src/main/java">
+        <javaModelGenerator targetPackage="com.king.keke.entity" targetProject="src/main/java">
             <property name="enableSubPackages" value="true"/>
             <property name="trimStrings" value="true"/>
         </javaModelGenerator>
         <!-- 生成映射文件的包名和位置-->
-        <sqlMapGenerator targetPackage="mapper.system" targetProject="src/main/resources">
+        <sqlMapGenerator targetPackage="mapper.keke" targetProject="src/main/resources">
             <property name="enableSubPackages" value="true"/>
         </sqlMapGenerator>
         <!--
@@ -50,11 +50,16 @@
             type="MIXEDMAPPER", 生成基于注解的Java Model 和相应的Mapper对象
             type="XMLMAPPER", 生成SQLMap XML文件和独立的Mapper接口
         -->
-        <javaClientGenerator type="XMLMAPPER" targetPackage="com.king.system.dao" targetProject="src/main/java">
+        <javaClientGenerator type="XMLMAPPER" targetPackage="com.king.keke.dao" targetProject="src/main/java">
             <property name="enableSubPackages" value="true"/>
         </javaClientGenerator>
         <!-- 要生成的表 tableName是数据库中的表名或视图名 domainObjectName是实体类名-->
-        <table tableName="sys_config" domainObjectName="SysConfig">
+        <!--<table tableName="vote_template" domainObjectName="VoteTemplate">-->
+        <!--<table tableName="vote_item_group" domainObjectName="VoteItemGroup">-->
+        <!--<table tableName="vote_item" domainObjectName="VoteItem">-->
+        <!--<table tableName="vote" domainObjectName="Vote">-->
+        <!--<table tableName="vote_record" domainObjectName="VoteRecord">-->
+        <table tableName="kk_resident" domainObjectName="Resident">
             <!--<generatedKey column="id" sqlStatement="JDBC" identity="true"/>-->
             <!-- Mysql 配置 -->
             <generatedKey column="id" sqlStatement="Mysql" identity="true" />
