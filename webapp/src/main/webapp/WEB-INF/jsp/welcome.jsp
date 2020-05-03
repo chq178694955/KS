@@ -12,7 +12,7 @@
             <div class="layui-card">
                 <div class="layui-card-body ">
                     <blockquote class="layui-elem-quote">欢迎管理员：
-                        <span class="x-red">test</span>！当前时间:2018-04-25 20:50:53
+                        <span class="x-red">test</span>当前时间:2018-04-25 20:50:53
                     </blockquote>
                 </div>
             </div>
@@ -23,45 +23,39 @@
                 <div class="layui-card-body ">
                     <ul class="layui-row layui-col-space10 layui-this x-admin-carousel x-admin-backlog">
                         <li class="layui-col-md2 layui-col-xs6">
-                            <a href="javascript:;" class="x-admin-backlog-body layui-bg-blue" style="transition:all .3s;-webkit-transition:all .3s">
+                            <a href="javascript:;" class="x-admin-backlog-body" style="transition:all .3s;-webkit-transition:all .3s">
                                 <h3>文章数</h3>
-                                <p>
-                                    <cite class="king-font-normal">66</cite></p>
+                                <p><cite class="king-font-normal">66</cite></p>
                             </a>
                         </li>
                         <li class="layui-col-md2 layui-col-xs6">
                             <a href="javascript:;" class="x-admin-backlog-body">
                                 <h3>会员数</h3>
-                                <p>
-                                    <cite class="king-font-normal">12</cite></p>
+                                <p><cite class="king-font-normal">12</cite></p>
                             </a>
                         </li>
                         <li class="layui-col-md2 layui-col-xs6">
                             <a href="javascript:;" class="x-admin-backlog-body">
                                 <h3>回复数</h3>
-                                <p>
-                                    <cite class="king-font-normal">99</cite></p>
+                                <p><cite class="king-font-normal">99</cite></p>
                             </a>
                         </li>
                         <li class="layui-col-md2 layui-col-xs6">
                             <a href="javascript:;" class="x-admin-backlog-body">
                                 <h3>商品数</h3>
-                                <p>
-                                    <cite class="king-font-normal">67</cite></p>
+                                <p><cite class="king-font-normal">67</cite></p>
                             </a>
                         </li>
                         <li class="layui-col-md2 layui-col-xs6">
                             <a href="javascript:;" class="x-admin-backlog-body">
                                 <h3>文章数</h3>
-                                <p>
-                                    <cite class="king-font-normal">67</cite></p>
+                                <p><cite class="king-font-normal">67</cite></p>
                             </a>
                         </li>
                         <li class="layui-col-md2 layui-col-xs6 ">
                             <a href="javascript:;" class="x-admin-backlog-body">
                                 <h3>文章数</h3>
-                                <p>
-                                    <cite class="king-font-normal">6766</cite></p>
+                                <p><cite class="king-font-normal">6766</cite></p>
                             </a>
                         </li>
                     </ul>

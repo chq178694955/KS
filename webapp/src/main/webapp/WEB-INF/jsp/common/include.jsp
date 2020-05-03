@@ -13,6 +13,7 @@
 <link rel="stylesheet" href="${ctx}/static/X-admin/css/xadmin.css">
 <script src="${ctx}/static/X-admin/js/jquery.min.js" charset="utf-8"></script>
 <script src="${ctx}/static/X-admin/lib/layui/layui.js" charset="utf-8"></script>
+<script src="${ctx}/static/echarts-2.2.7/build/dist/echarts-all.js"></script>
 <script type="text/javascript" src="${ctx}/static/X-admin/js/xadmin.js"></script>
 <script type="text/javascript" src="${ctx}/static/js/DataMap.js"></script>
 <script type="text/javascript" src="${ctx}/static/js/DateUtils.js"></script>

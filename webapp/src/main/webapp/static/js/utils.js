@@ -144,3 +144,35 @@ WebUtils.Permission = {
         }
     }
 }
+
+WebUtils.Chart = {
+
+    theme:['macarons','infographic','blue','green','red','helianthus'],
+
+    createChart: function(divId,option){
+        var myChart = echarts.init(document.getElementById(divId),this.theme[5]);
+        myChart.showLoading();
+        myChart.setOption(option);
+        myChart.hideLoading();
+    },
+
+    createRemoteChart: function(divId,url,params){
+        var instance = this;
+        var myChart = echarts.init(document.getElementById(divId),instance.theme[5]);
+        myChart.showLoading();
+        $.ajax({
+            url: url,
+            data: params,
+            dataType: 'json',
+            success: function(option){
+                myChart.hideLoading();
+                myChart.setOption(option);
+            },
+            error: function(){
+                myChart.hideLoading();
+                Frame.info("create chart error!")
+            }
+        });
+    }
+
+}
