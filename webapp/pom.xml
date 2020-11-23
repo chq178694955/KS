@@ -20,7 +20,7 @@
     <properties>
         <filter.relativePath>../</filter.relativePath>
         <mybatis.generator.version>1.3.5</mybatis.generator.version>
-        <fastjson.databind.version>2.9.5</fastjson.databind.version>
+        <fastjson.databind.version>2.9.10.5</fastjson.databind.version>
     </properties>
 
     <dependencies>
