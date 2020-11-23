@@ -15,6 +15,16 @@ import org.springframework.stereotype.Service;
  */
 @Service("meterMgrService")
 public class MeterMgrServiceImpl extends ArchiveMgrServiceImpl<Meter> {
+
+    private void testInsert(){
+        super.insert(1L, new ArchiveDto(ArchiveType.METER), new Callback() {
+            @Override
+            public void execute(Object... args) {
+                System.out.println("插入成功");
+            }
+        });
+    }
+
     @Override
     public ArchiveType getArchiveType() {
         return ArchiveType.METER;

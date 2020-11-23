@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.king.em.dao.EmIndexDetailDao">
+  <resultMap id="BaseResultMap" type="com.king.em.entity.EmIndexDetail">
+    <result column="id" jdbcType="BIGINT" property="id" />
+    <result column="index_id" jdbcType="BIGINT" property="indexId" />
+    <result column="val" jdbcType="DECIMAL" property="val" />
+    <result column="weight" jdbcType="DECIMAL" property="weight" />
+    <result column="group_id" jdbcType="BIGINT" property="groupId" />
+  </resultMap>
+
+  <sql id="Base_Column_List">
+    id, index_id, val, weight, group_id
+  </sql>
+  <select id="find" parameterType="java.util.Map" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from em_index_detail
+    <where>
+      <if test="groupId != null">
+        and group_id = #{groupId,jdbcType=VARCHAR}
+      </if>
+    </where>
+    order by id asc
+  </select>
+
+  <select id="get" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from em_index_detail where id = #{id,jdbcType=BIGINT}
+    order by id asc
+  </select>
+
+  <delete id="delete" parameterType="java.lang.Long">
+    delete from em_index_detail where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.king.em.entity.EmIndexDetail">
+    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Long">
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into em_index_detail (index_id, val, weight, 
+      group_id)
+    values (#{indexId,jdbcType=BIGINT}, #{val,jdbcType=DECIMAL}, #{weight,jdbcType=DECIMAL}, 
+      #{groupId,jdbcType=BIGINT})
+  </insert>
+  
+  <update id="update" parameterType="com.king.em.entity.EmIndexDetail">
+    update em_index_detail
+    <set>
+      <if test="indexId != null">
+        index_id = #{indexId,jdbcType=BIGINT},
+      </if>
+      <if test="val != null">
+        val = #{val,jdbcType=DECIMAL},
+      </if>
+      <if test="weight != null">
+        weight = #{weight,jdbcType=DECIMAL},
+      </if>
+      <if test="groupId != null">
+        group_id = #{groupId,jdbcType=BIGINT},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+
+</mapper>

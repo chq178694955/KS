@@ -1,144 +1,602 @@
-2020-05-03 09:43:50,940 INFO (StartupInfoLogger.java:55)- Starting Startup on LAPTOP-3H9KE96D with PID 18332 (D:\projects\KS\webapp\target\classes started by 17869 in D:\projects\KS)
-2020-05-03 09:43:50,947 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
-2020-05-03 09:43:50,948 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
-2020-05-03 09:43:59,938 INFO (StartupInfoLogger.java:61)- Started Startup in 9.908 seconds (JVM running for 11.727)
-2020-05-03 09:43:59,939 INFO (InitApplicationRun.java:26)- King System already started ...
-2020-05-03 09:43:59,962 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select dict_sn, class_no, dict_no, dict_desc, disp_order, parent_sn, use_flag from sys_dict 
-2020-05-03 09:44:00,095 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
-2020-05-03 09:44:00,130 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 13
-2020-05-03 09:44:00,134 INFO (InitApplicationRun.java:28)- Initialization data complete ...
-2020-05-03 09:44:07,551 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select * from sys_user where username = ? 
-2020-05-03 09:44:07,604 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: admin(String)
-2020-05-03 09:44:07,613 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
-2020-05-03 09:44:07,768 INFO (LoginController.java:122)- ********************登录成功，进入首页！********************
-2020-05-03 09:44:07,780 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select * from sys_user where username = ? 
-2020-05-03 09:44:07,782 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: com.king.system.po.UserInfo@5fea6f9e(String)
-2020-05-03 09:44:07,785 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 0
-2020-05-03 09:44:08,685 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select a.id, a.name, a.url, a.type, a.pid, a.permission, icon from sys_resources a, sys_role_resources b, sys_user_role c where a.id = b.res_id and b.role_id = c.rid and c.uid = ? order by a.id 
-2020-05-03 09:44:08,693 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 1(Long)
-2020-05-03 09:44:08,716 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 31
-2020-05-03 09:45:50,751 INFO (StartupInfoLogger.java:55)- Starting Startup on LAPTOP-3H9KE96D with PID 19924 (D:\projects\KS\webapp\target\classes started by 17869 in D:\projects\KS)
-2020-05-03 09:45:50,757 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
-2020-05-03 09:45:50,758 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
-2020-05-03 09:45:57,426 INFO (StartupInfoLogger.java:61)- Started Startup in 7.63 seconds (JVM running for 8.885)
-2020-05-03 09:45:57,428 INFO (InitApplicationRun.java:26)- King System already started ...
-2020-05-03 09:45:57,465 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select dict_sn, class_no, dict_no, dict_desc, disp_order, parent_sn, use_flag from sys_dict 
-2020-05-03 09:45:57,597 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
-2020-05-03 09:45:57,628 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 13
-2020-05-03 09:45:57,633 INFO (InitApplicationRun.java:28)- Initialization data complete ...
-2020-05-03 09:45:57,782 INFO (LoginController.java:122)- ********************登录成功，进入首页！********************
-2020-05-03 09:45:57,796 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select * from sys_user where username = ? 
-2020-05-03 09:45:57,835 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: com.king.system.po.UserInfo@6878e751(String)
-2020-05-03 09:45:57,837 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 0
-2020-05-03 09:45:59,569 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select a.id, a.name, a.url, a.type, a.pid, a.permission, icon from sys_resources a, sys_role_resources b, sys_user_role c where a.id = b.res_id and b.role_id = c.rid and c.uid = ? order by a.id 
-2020-05-03 09:45:59,578 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 1(Long)
-2020-05-03 09:45:59,593 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 31
-2020-05-03 09:47:52,573 INFO (StartupInfoLogger.java:55)- Starting Startup on LAPTOP-3H9KE96D with PID 6536 (D:\projects\KS\webapp\target\classes started by 17869 in D:\projects\KS)
-2020-05-03 09:47:52,579 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
-2020-05-03 09:47:52,580 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
-2020-05-03 09:47:58,874 INFO (StartupInfoLogger.java:61)- Started Startup in 7.398 seconds (JVM running for 8.802)
-2020-05-03 09:47:58,877 INFO (InitApplicationRun.java:26)- King System already started ...
-2020-05-03 09:47:58,922 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select dict_sn, class_no, dict_no, dict_desc, disp_order, parent_sn, use_flag from sys_dict 
-2020-05-03 09:47:59,155 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
-2020-05-03 09:47:59,256 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 13
-2020-05-03 09:47:59,263 INFO (InitApplicationRun.java:28)- Initialization data complete ...
-2020-05-03 09:47:59,448 INFO (LoginController.java:122)- ********************登录成功，进入首页！********************
-2020-05-03 09:47:59,469 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select * from sys_user where username = ? 
-2020-05-03 09:47:59,512 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: com.king.system.po.UserInfo@20b9c138(String)
-2020-05-03 09:47:59,512 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 0
-2020-05-03 09:48:01,297 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select a.id, a.name, a.url, a.type, a.pid, a.permission, icon from sys_resources a, sys_role_resources b, sys_user_role c where a.id = b.res_id and b.role_id = c.rid and c.uid = ? order by a.id 
-2020-05-03 09:48:01,308 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 1(Long)
-2020-05-03 09:48:01,324 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 31
-2020-05-03 09:48:04,862 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT count(0) FROM sys_config WHERE use_flag = 1 
-2020-05-03 09:48:04,871 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
-2020-05-03 09:48:04,875 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
-2020-05-03 09:48:04,878 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select project_name, value, text, remarks, content, use_flag from sys_config WHERE use_flag = 1 limit ?,? 
-2020-05-03 09:48:04,887 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 0(Integer), 10(Integer)
-2020-05-03 09:48:04,890 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
-2020-05-03 09:51:29,078 INFO (StartupInfoLogger.java:55)- Starting Startup on LAPTOP-3H9KE96D with PID 18420 (D:\projects\KS\webapp\target\classes started by 17869 in D:\projects\KS)
-2020-05-03 09:51:29,085 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
-2020-05-03 09:51:29,085 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
-2020-05-03 09:51:34,295 INFO (StartupInfoLogger.java:61)- Started Startup in 6.16 seconds (JVM running for 7.404)
-2020-05-03 09:51:34,297 INFO (InitApplicationRun.java:26)- King System already started ...
-2020-05-03 09:51:34,321 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select dict_sn, class_no, dict_no, dict_desc, disp_order, parent_sn, use_flag from sys_dict 
-2020-05-03 09:51:34,427 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
-2020-05-03 09:51:34,451 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 13
-2020-05-03 09:51:34,455 INFO (InitApplicationRun.java:28)- Initialization data complete ...
-2020-05-03 09:51:35,789 INFO (LoginController.java:122)- ********************登录成功，进入首页！********************
-2020-05-03 09:51:35,799 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select * from sys_user where username = ? 
-2020-05-03 09:51:35,821 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: com.king.system.po.UserInfo@75a9326d(String)
-2020-05-03 09:51:35,822 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 0
-2020-05-03 09:51:36,913 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select a.id, a.name, a.url, a.type, a.pid, a.permission, icon from sys_resources a, sys_role_resources b, sys_user_role c where a.id = b.res_id and b.role_id = c.rid and c.uid = ? order by a.id 
-2020-05-03 09:51:36,922 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 1(Long)
-2020-05-03 09:51:36,934 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 31
-2020-05-03 09:52:19,282 INFO (LoginController.java:122)- ********************登录成功，进入首页！********************
-2020-05-03 09:52:19,287 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select * from sys_user where username = ? 
-2020-05-03 09:52:19,288 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: com.king.system.po.UserInfo@1be7c466(String)
-2020-05-03 09:52:19,289 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 0
-2020-05-03 09:52:19,540 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select a.id, a.name, a.url, a.type, a.pid, a.permission, icon from sys_resources a, sys_role_resources b, sys_user_role c where a.id = b.res_id and b.role_id = c.rid and c.uid = ? order by a.id 
-2020-05-03 09:52:19,543 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 1(Long)
-2020-05-03 09:52:19,554 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 31
-2020-05-03 09:53:53,201 INFO (EchartsUtil.java:87)- {"yAxis":{"name":"值","show":true,"type":"value"},"xAxis":{"data":["周一","周二","周三","周四"],"name":"时间","show":true,"type":"category"},"legend":{"data":["中国","美国"],"orient":"horizontal","show":true,"x":"center","y":"top"},"series":[{"data":["100","88","105","125"],"name":"中国","type":"line"},{"data":["66","-","99","99"],"name":"美国","type":"line"}],"tooltip":{"show":true,"axisPointer":{"color":"#48b","width":2,"type":"solid"},"trigger":"item"},"title":{"show":false,"x":"left","y":"top","text":"人口"}}
-2020-05-03 09:55:11,306 INFO (EchartsUtil.java:86)- {"yAxis":{"name":"值","show":true,"type":"value"},"xAxis":{"data":["周一","周二","周三","周四"],"name":"时间","show":true,"type":"category"},"legend":{"data":["中国","美国"],"orient":"horizontal","show":true,"x":"center","y":"top"},"series":[{"data":["100","88","105","125"],"name":"中国","type":"line"},{"data":["66","-","99","99"],"name":"美国","type":"line"}],"tooltip":{"show":true,"axisPointer":{"color":"#48b","width":2,"type":"solid"},"trigger":"axis"},"title":{"show":false,"x":"left","y":"top","text":"人口"}}
-2020-05-03 10:06:49,336 INFO (StartupInfoLogger.java:55)- Starting Startup on LAPTOP-3H9KE96D with PID 15448 (D:\projects\KS\webapp\target\classes started by 17869 in D:\projects\KS)
-2020-05-03 10:06:49,342 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
-2020-05-03 10:06:49,343 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
-2020-05-03 10:06:55,658 INFO (StartupInfoLogger.java:61)- Started Startup in 7.179 seconds (JVM running for 8.443)
-2020-05-03 10:06:55,659 INFO (InitApplicationRun.java:26)- King System already started ...
-2020-05-03 10:06:55,675 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select dict_sn, class_no, dict_no, dict_desc, disp_order, parent_sn, use_flag from sys_dict 
-2020-05-03 10:06:55,751 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
-2020-05-03 10:06:55,772 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 13
-2020-05-03 10:06:55,776 INFO (InitApplicationRun.java:28)- Initialization data complete ...
-2020-05-03 10:06:59,718 INFO (LoginController.java:122)- ********************登录成功，进入首页！********************
-2020-05-03 10:06:59,743 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select * from sys_user where username = ? 
-2020-05-03 10:06:59,795 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: com.king.system.po.UserInfo@7a30cf07(String)
-2020-05-03 10:06:59,797 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 0
-2020-05-03 10:07:01,505 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select a.id, a.name, a.url, a.type, a.pid, a.permission, icon from sys_resources a, sys_role_resources b, sys_user_role c where a.id = b.res_id and b.role_id = c.rid and c.uid = ? order by a.id 
-2020-05-03 10:07:01,517 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 1(Long)
-2020-05-03 10:07:01,532 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 31
-2020-05-03 10:07:03,947 INFO (EchartsUtil.java:84)- {"yAxis":{"name":"值","show":true,"type":"value"},"xAxis":{"data":["周一","周二","周三","周四"],"name":"时间","show":true,"type":"category"},"legend":{"data":["中国","美国"],"orient":"horizontal","show":true,"x":"center","y":"top"},"series":[{"data":["100","88","105","125"],"name":"中国","type":"line"},{"data":["66","-","99","99"],"name":"美国","type":"line"}],"tooltip":{"show":true,"axisPointer":{"lineStyle":{"color":"#48b","width":2,"type":"solid"},"type":"line"},"trigger":"item"},"title":{"show":false,"x":"left","y":"top","text":"人口"}}
-2020-05-03 10:07:50,683 INFO (EchartsUtil.java:84)- {"yAxis":{"name":"值","show":true,"type":"value"},"xAxis":{"data":["周一","周二","周三","周四"],"name":"时间","show":true,"type":"category"},"legend":{"data":["中国","美国"],"orient":"horizontal","show":true,"x":"center","y":"top"},"series":[{"data":["100","88","105","125"],"name":"中国","type":"line"},{"data":["66","-","99","99"],"name":"美国","type":"line"}],"tooltip":{"show":true,"axisPointer":{"lineStyle":{"color":"#48b","width":2,"type":"solid"},"type":"line"},"trigger":"axis"},"title":{"show":false,"x":"left","y":"top","text":"人口"}}
-2020-05-03 11:31:54,356 INFO (StartupInfoLogger.java:55)- Starting Startup on LAPTOP-3H9KE96D with PID 8896 (D:\projects\KS\webapp\target\classes started by 17869 in D:\projects\KS)
-2020-05-03 11:31:54,361 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
-2020-05-03 11:31:54,362 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
-2020-05-03 11:32:00,982 INFO (StartupInfoLogger.java:61)- Started Startup in 7.509 seconds (JVM running for 8.949)
-2020-05-03 11:32:00,984 INFO (InitApplicationRun.java:26)- King System already started ...
-2020-05-03 11:32:01,001 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select dict_sn, class_no, dict_no, dict_desc, disp_order, parent_sn, use_flag from sys_dict 
-2020-05-03 11:32:01,097 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
-2020-05-03 11:32:01,117 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 13
-2020-05-03 11:32:01,121 INFO (InitApplicationRun.java:28)- Initialization data complete ...
-2020-05-03 11:32:10,259 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select * from sys_user where username = ? 
-2020-05-03 11:32:10,313 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: admin(String)
-2020-05-03 11:32:10,316 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
-2020-05-03 11:32:10,405 INFO (LoginController.java:122)- ********************登录成功，进入首页！********************
-2020-05-03 11:32:10,412 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select * from sys_user where username = ? 
-2020-05-03 11:32:10,414 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: com.king.system.po.UserInfo@59f97373(String)
-2020-05-03 11:32:10,414 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 0
-2020-05-03 11:32:10,878 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select a.id, a.name, a.url, a.type, a.pid, a.permission, icon from sys_resources a, sys_role_resources b, sys_user_role c where a.id = b.res_id and b.role_id = c.rid and c.uid = ? order by a.id 
-2020-05-03 11:32:10,893 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 1(Long)
-2020-05-03 11:32:10,906 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 31
-2020-05-03 11:32:12,909 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT count(0) FROM sys_config WHERE use_flag = 1 
-2020-05-03 11:32:12,911 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
-2020-05-03 11:32:12,913 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
-2020-05-03 11:32:12,914 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select project_name, value, text, remarks, content, use_flag from sys_config WHERE use_flag = 1 limit ?,? 
-2020-05-03 11:32:12,920 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 0(Integer), 10(Integer)
-2020-05-03 11:32:12,922 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
-2020-05-03 11:32:13,742 INFO (EchartsUtil.java:45)- {"yAxis":{"name":"值","show":true,"type":"value"},"xAxis":{"data":["周一","周二","周三","周四"],"name":"时间","show":true,"type":"category"},"legend":{"data":["中国","美国"],"orient":"horizontal","show":true,"x":"center","y":"top"},"series":[{"data":["100","88","105","125"],"name":"中国","type":"line"},{"data":["66","-","99","99"],"name":"美国","type":"line"}],"tooltip":{"show":true,"axisPointer":{"lineStyle":{"color":"#48b","width":2,"type":"solid"},"type":"line"},"trigger":"axis"},"title":{"show":false,"x":"left","y":"top","text":"人口"}}
-2020-05-03 11:34:18,075 INFO (StartupInfoLogger.java:55)- Starting Startup on LAPTOP-3H9KE96D with PID 18952 (D:\projects\KS\webapp\target\classes started by 17869 in D:\projects\KS)
-2020-05-03 11:34:18,080 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
-2020-05-03 11:34:18,081 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
-2020-05-03 11:34:23,737 INFO (StartupInfoLogger.java:61)- Started Startup in 6.445 seconds (JVM running for 7.53)
-2020-05-03 11:34:23,739 INFO (InitApplicationRun.java:26)- King System already started ...
-2020-05-03 11:34:23,756 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select dict_sn, class_no, dict_no, dict_desc, disp_order, parent_sn, use_flag from sys_dict 
-2020-05-03 11:34:23,840 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
-2020-05-03 11:34:23,860 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 13
-2020-05-03 11:34:23,863 INFO (InitApplicationRun.java:28)- Initialization data complete ...
-2020-05-03 11:34:26,740 INFO (LoginController.java:122)- ********************登录成功，进入首页！********************
-2020-05-03 11:34:26,750 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select * from sys_user where username = ? 
-2020-05-03 11:34:26,776 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: com.king.system.po.UserInfo@37efdb6(String)
-2020-05-03 11:34:26,777 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 0
-2020-05-03 11:34:27,723 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select a.id, a.name, a.url, a.type, a.pid, a.permission, icon from sys_resources a, sys_role_resources b, sys_user_role c where a.id = b.res_id and b.role_id = c.rid and c.uid = ? order by a.id 
-2020-05-03 11:34:27,731 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 1(Long)
-2020-05-03 11:34:27,745 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 31
-2020-05-03 11:34:29,709 INFO (EchartsUtil.java:66)- {"yAxis":{"name":"值","show":true,"type":"value"},"xAxis":{"data":["周一","周二","周三","周四"],"name":"时间","show":true,"type":"category"},"legend":{"data":["中国","美国"],"orient":"horizontal","show":true,"x":"center","y":"top"},"series":[{"data":["100","88","105","125"],"name":"中国","type":"line"},{"data":["66","-","99","99"],"name":"美国","type":"line"}],"tooltip":{"show":true,"axisPointer":{"lineStyle":{"color":"#48b","width":2,"type":"solid"},"type":"line"},"trigger":"axis"},"title":{"show":false,"x":"left","y":"top","text":"人口"}}
-2020-05-03 11:35:06,539 INFO (EchartsUtil.java:66)- {"yAxis":{"name":"值","show":true,"type":"value"},"xAxis":{"data":["周一","周二","周三","周四"],"name":"时间","show":true,"type":"category"},"legend":{"data":["中国","美国"],"orient":"horizontal","show":true,"x":"center","y":"top"},"series":[{"data":["100","88","105","125"],"name":"中国","type":"bar"},{"data":["66","-","99","99"],"name":"美国","type":"bar"}],"tooltip":{"show":true,"axisPointer":{"lineStyle":{"color":"#48b","width":2,"type":"solid"},"type":"line"},"trigger":"axis"},"title":{"show":false,"x":"left","y":"top","text":"人口"}}
+2020-11-23 04:19:09,771 INFO (StartupInfoLogger.java:55)- Starting Startup on LAPTOP-3H9KE96D with PID 18876 (D:\projects\KS\webapp\target\classes started by 17869 in D:\projects\KS)
+2020-11-23 04:19:09,778 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2020-11-23 04:19:09,779 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
+2020-11-23 04:19:20,812 INFO (SpringBeanUtil.java:26)- ========ApplicationContext配置成功,在普通类可以通过调用SpringUtils.getAppContext()获取applicationContext对象,applicationContext=org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@5df8d229, started on Mon Nov 23 04:19:09 GMT+08:00 2020
+2020-11-23 04:19:24,636 INFO (StartupInfoLogger.java:61)- Started Startup in 15.754 seconds (JVM running for 18.957)
+2020-11-23 04:19:24,640 INFO (InitApplicationRun.java:26)- King System already started ...
+2020-11-23 04:19:25,118 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select dict_sn, class_no, dict_no, dict_desc, disp_order, parent_sn, use_flag from sys_dict 
+2020-11-23 04:19:26,077 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-23 04:19:26,317 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 13
+2020-11-23 04:19:26,387 INFO (InitApplicationRun.java:28)- Initialization data complete ...
+2020-11-23 04:19:34,984 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select * from sys_user where username = ? 
+2020-11-23 04:19:35,115 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: admin(String)
+2020-11-23 04:19:35,120 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-11-23 04:19:35,331 INFO (LoginController.java:122)- ********************登录成功，进入首页！********************
+2020-11-23 04:19:35,348 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select * from sys_user where username = ? 
+2020-11-23 04:19:35,350 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: com.king.system.po.UserInfo@75986591(String)
+2020-11-23 04:19:35,353 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 0
+2020-11-23 04:19:36,090 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select a.id, a.name, a.url, a.type, a.pid, a.permission, icon from sys_resources a, sys_role_resources b, sys_user_role c where a.id = b.res_id and b.role_id = c.rid and c.uid = ? order by a.id 
+2020-11-23 04:19:36,115 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 1(Long)
+2020-11-23 04:19:36,135 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 25
+2020-11-23 04:19:42,733 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name, url, type, pid, permission, icon from sys_resources 
+2020-11-23 04:19:42,735 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-23 04:19:42,742 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 34
+2020-11-23 04:19:47,771 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select a.id, a.name, a.url, a.type, a.pid, a.permission, a.icon, b.name as parent_name from sys_resources a left join sys_resources b on a.pid = b.id where a.id = ? 
+2020-11-23 04:19:47,775 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 46(Long)
+2020-11-23 04:19:47,778 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-11-23 04:19:51,399 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select a.id, a.name, a.url, a.type, a.pid, a.permission, a.icon, b.name as parent_name from sys_resources a left join sys_resources b on a.pid = b.id where a.id = ? 
+2020-11-23 04:19:51,400 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 47(Long)
+2020-11-23 04:19:51,402 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-11-23 04:20:17,521 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: update sys_resources SET name = ?, url = ?, pid = ?, icon = ? where id = ? 
+2020-11-23 04:20:17,582 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 指标管理(String), #(String), 45(Long), &#xe607;(String), 47(Long)
+2020-11-23 04:20:17,588 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==    Updates: 1
+2020-11-23 04:20:17,611 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name, url, type, pid, permission, icon from sys_resources 
+2020-11-23 04:20:17,612 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-23 04:20:17,618 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 34
+2020-11-23 04:20:28,041 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select a.id, a.name, a.url, a.type, a.pid, a.permission, a.icon, b.name as parent_name from sys_resources a left join sys_resources b on a.pid = b.id where a.id = ? 
+2020-11-23 04:20:28,042 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 48(Long)
+2020-11-23 04:20:28,045 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-11-23 04:20:35,600 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: update sys_resources SET name = ?, url = ?, pid = ?, icon = ? where id = ? 
+2020-11-23 04:20:35,602 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 我的指标(String), #(String), 45(Long), &#xe607;(String), 48(Long)
+2020-11-23 04:20:35,653 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==    Updates: 1
+2020-11-23 04:20:35,675 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name, url, type, pid, permission, icon from sys_resources 
+2020-11-23 04:20:35,675 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-23 04:20:35,688 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 34
+2020-11-23 04:21:08,412 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select * from sys_user where username = ? 
+2020-11-23 04:21:08,412 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: admin(String)
+2020-11-23 04:21:08,415 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-11-23 04:21:08,444 INFO (LoginController.java:122)- ********************登录成功，进入首页！********************
+2020-11-23 04:21:08,451 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select * from sys_user where username = ? 
+2020-11-23 04:21:08,452 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: com.king.system.po.UserInfo@25cf6cd3(String)
+2020-11-23 04:21:08,455 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 0
+2020-11-23 04:21:08,647 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select a.id, a.name, a.url, a.type, a.pid, a.permission, icon from sys_resources a, sys_role_resources b, sys_user_role c where a.id = b.res_id and b.role_id = c.rid and c.uid = ? order by a.id 
+2020-11-23 04:21:08,648 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 1(Long)
+2020-11-23 04:21:08,657 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 25
+2020-11-23 04:26:47,375 INFO (StartupInfoLogger.java:55)- Starting Startup on LAPTOP-3H9KE96D with PID 10892 (D:\projects\KS\webapp\target\classes started by 17869 in D:\projects\KS)
+2020-11-23 04:26:47,380 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2020-11-23 04:26:47,381 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
+2020-11-23 04:26:51,972 INFO (SpringBeanUtil.java:26)- ========ApplicationContext配置成功,在普通类可以通过调用SpringUtils.getAppContext()获取applicationContext对象,applicationContext=org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@63d0cd1d, started on Mon Nov 23 04:26:47 GMT+08:00 2020
+2020-11-23 04:26:53,327 INFO (StartupInfoLogger.java:61)- Started Startup in 7.046 seconds (JVM running for 9.175)
+2020-11-23 04:26:53,328 INFO (InitApplicationRun.java:26)- King System already started ...
+2020-11-23 04:26:53,538 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select dict_sn, class_no, dict_no, dict_desc, disp_order, parent_sn, use_flag from sys_dict 
+2020-11-23 04:26:53,681 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-23 04:26:53,948 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 13
+2020-11-23 04:26:53,953 INFO (InitApplicationRun.java:28)- Initialization data complete ...
+2020-11-23 04:27:01,818 INFO (LoginController.java:122)- ********************登录成功，进入首页！********************
+2020-11-23 04:27:01,829 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select * from sys_user where username = ? 
+2020-11-23 04:27:01,874 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: com.king.system.po.UserInfo@251ad857(String)
+2020-11-23 04:27:01,876 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 0
+2020-11-23 04:27:02,893 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select a.id, a.name, a.url, a.type, a.pid, a.permission, icon from sys_resources a, sys_role_resources b, sys_user_role c where a.id = b.res_id and b.role_id = c.rid and c.uid = ? order by a.id 
+2020-11-23 04:27:02,909 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 1(Long)
+2020-11-23 04:27:02,925 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 25
+2020-11-23 04:27:05,734 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name, url, type, pid, permission, icon from sys_resources 
+2020-11-23 04:27:05,736 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-23 04:27:05,747 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 34
+2020-11-23 04:27:07,746 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select a.id, a.name, a.url, a.type, a.pid, a.permission, a.icon, b.name as parent_name from sys_resources a left join sys_resources b on a.pid = b.id where a.id = ? 
+2020-11-23 04:27:07,749 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 47(Long)
+2020-11-23 04:27:07,753 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-11-23 04:27:17,298 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: update sys_resources SET name = ?, url = ?, pid = ?, icon = ? where id = ? 
+2020-11-23 04:27:17,309 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 指标管理(String), em/indexMgr/toMain(String), 45(Long), &#xe607;(String), 47(Long)
+2020-11-23 04:27:17,360 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==    Updates: 1
+2020-11-23 04:27:17,389 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name, url, type, pid, permission, icon from sys_resources 
+2020-11-23 04:27:17,390 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-23 04:27:17,402 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 34
+2020-11-23 04:27:21,984 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select a.id, a.name, a.url, a.type, a.pid, a.permission, a.icon, b.name as parent_name from sys_resources a left join sys_resources b on a.pid = b.id where a.id = ? 
+2020-11-23 04:27:21,985 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 48(Long)
+2020-11-23 04:27:21,988 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-11-23 04:27:31,637 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: update sys_resources SET name = ?, url = ?, pid = ?, icon = ? where id = ? 
+2020-11-23 04:27:31,639 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 我的指标(String), em/myIndex/toMain(String), 45(Long), &#xe607;(String), 48(Long)
+2020-11-23 04:27:31,644 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==    Updates: 1
+2020-11-23 04:27:31,670 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name, url, type, pid, permission, icon from sys_resources 
+2020-11-23 04:27:31,671 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-23 04:27:31,685 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 34
+2020-11-23 04:27:35,539 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select * from sys_user where username = ? 
+2020-11-23 04:27:35,540 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: admin(String)
+2020-11-23 04:27:35,542 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-11-23 04:27:35,544 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select a.id, a.name from sys_role a,sys_user_role b where a.id = b.rid and b.uid = ? 
+2020-11-23 04:27:35,546 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 1(Long)
+2020-11-23 04:27:35,548 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-11-23 04:27:35,549 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select a.id, a.name, a.url, a.type, a.pid, a.permission, icon from sys_resources a ,sys_role_resources b where a.id = b.res_id and b.role_id = ? 
+2020-11-23 04:27:35,551 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 1(Long)
+2020-11-23 04:27:35,556 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 25
+2020-11-23 04:27:35,684 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT count(0) FROM sys_user a LEFT JOIN sys_user_role b ON a.id = b.uid LEFT JOIN sys_role c ON b.rid = c.id 
+2020-11-23 04:27:35,692 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-23 04:27:35,695 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-11-23 04:27:35,701 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select a.id, a.username, a.password, a.name, a.id_card_num, a.state, c.id as role_id, c.name as role_name from sys_user a left join sys_user_role b on a.id = b.uid left join sys_role c on b.rid = c.id limit ?,? 
+2020-11-23 04:27:35,709 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 0(Integer), 10(Integer)
+2020-11-23 04:27:35,714 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 3
+2020-11-23 04:28:13,909 INFO (StartupInfoLogger.java:55)- Starting Startup on LAPTOP-3H9KE96D with PID 10892 (D:\projects\KS\webapp\target\classes started by 17869 in D:\projects\KS)
+2020-11-23 04:28:13,910 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2020-11-23 04:28:13,910 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
+2020-11-23 04:28:16,357 INFO (SpringBeanUtil.java:26)- ========ApplicationContext配置成功,在普通类可以通过调用SpringUtils.getAppContext()获取applicationContext对象,applicationContext=org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@edf796e, started on Mon Nov 23 04:28:13 GMT+08:00 2020
+2020-11-23 04:28:17,409 INFO (StartupInfoLogger.java:61)- Started Startup in 3.591 seconds (JVM running for 93.258)
+2020-11-23 04:28:17,410 INFO (InitApplicationRun.java:26)- King System already started ...
+2020-11-23 04:28:17,427 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select dict_sn, class_no, dict_no, dict_desc, disp_order, parent_sn, use_flag from sys_dict 
+2020-11-23 04:28:17,428 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-23 04:28:17,431 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 13
+2020-11-23 04:28:17,433 INFO (InitApplicationRun.java:28)- Initialization data complete ...
+2020-11-23 04:28:25,195 INFO (StartupInfoLogger.java:55)- Starting Startup on LAPTOP-3H9KE96D with PID 10892 (D:\projects\KS\webapp\target\classes started by 17869 in D:\projects\KS)
+2020-11-23 04:28:25,196 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2020-11-23 04:28:25,197 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
+2020-11-23 04:28:26,960 INFO (SpringBeanUtil.java:26)- ========ApplicationContext配置成功,在普通类可以通过调用SpringUtils.getAppContext()获取applicationContext对象,applicationContext=org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@6ae94c77, started on Mon Nov 23 04:28:25 GMT+08:00 2020
+2020-11-23 04:28:28,001 INFO (StartupInfoLogger.java:61)- Started Startup in 2.899 seconds (JVM running for 103.85)
+2020-11-23 04:28:28,002 INFO (InitApplicationRun.java:26)- King System already started ...
+2020-11-23 04:28:28,015 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select dict_sn, class_no, dict_no, dict_desc, disp_order, parent_sn, use_flag from sys_dict 
+2020-11-23 04:28:28,016 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-23 04:28:28,018 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 13
+2020-11-23 04:28:28,019 INFO (InitApplicationRun.java:28)- Initialization data complete ...
+2020-11-23 04:28:58,981 INFO (StartupInfoLogger.java:55)- Starting Startup on LAPTOP-3H9KE96D with PID 15256 (D:\projects\KS\webapp\target\classes started by 17869 in D:\projects\KS)
+2020-11-23 04:28:58,987 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2020-11-23 04:28:58,988 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
+2020-11-23 04:29:04,168 INFO (SpringBeanUtil.java:26)- ========ApplicationContext配置成功,在普通类可以通过调用SpringUtils.getAppContext()获取applicationContext对象,applicationContext=org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@53ebe1c3, started on Mon Nov 23 04:28:59 GMT+08:00 2020
+2020-11-23 04:29:05,511 INFO (StartupInfoLogger.java:61)- Started Startup in 7.572 seconds (JVM running for 8.991)
+2020-11-23 04:29:05,512 INFO (InitApplicationRun.java:26)- King System already started ...
+2020-11-23 04:29:05,673 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select dict_sn, class_no, dict_no, dict_desc, disp_order, parent_sn, use_flag from sys_dict 
+2020-11-23 04:29:05,816 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-23 04:29:06,048 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 13
+2020-11-23 04:29:06,052 INFO (InitApplicationRun.java:28)- Initialization data complete ...
+2020-11-23 04:29:18,085 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select * from sys_user where username = ? 
+2020-11-23 04:29:18,206 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: admin(String)
+2020-11-23 04:29:18,211 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-11-23 04:29:18,409 INFO (LoginController.java:122)- ********************登录成功，进入首页！********************
+2020-11-23 04:29:18,425 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select * from sys_user where username = ? 
+2020-11-23 04:29:18,426 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: com.king.system.po.UserInfo@5a069777(String)
+2020-11-23 04:29:18,430 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 0
+2020-11-23 04:29:18,969 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select a.id, a.name, a.url, a.type, a.pid, a.permission, icon from sys_resources a, sys_role_resources b, sys_user_role c where a.id = b.res_id and b.role_id = c.rid and c.uid = ? order by a.id 
+2020-11-23 04:29:18,987 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 1(Long)
+2020-11-23 04:29:19,008 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 25
+2020-11-23 04:29:22,878 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT count(0) FROM em_base_params 
+2020-11-23 04:29:22,887 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-23 04:29:22,890 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-11-23 04:29:22,895 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, fixed_current, fixed_voltage, fixed_speed, fixed_torque, overload_capacity, machine_length, machine_height, machine_width, rotor_length, machine_weight, is_default from em_base_params limit ?,? 
+2020-11-23 04:29:22,904 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 0(Integer), 10(Integer)
+2020-11-23 04:29:22,907 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-11-23 04:29:30,713 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT count(0) FROM em_base_params 
+2020-11-23 04:29:30,713 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-23 04:29:30,716 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-11-23 04:29:30,717 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, fixed_current, fixed_voltage, fixed_speed, fixed_torque, overload_capacity, machine_length, machine_height, machine_width, rotor_length, machine_weight, is_default from em_base_params limit ?,? 
+2020-11-23 04:29:30,718 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 0(Integer), 10(Integer)
+2020-11-23 04:29:30,721 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-11-23 04:33:05,493 INFO (StartupInfoLogger.java:55)- Starting Startup on LAPTOP-3H9KE96D with PID 15256 (D:\projects\KS\webapp\target\classes started by 17869 in D:\projects\KS)
+2020-11-23 04:33:05,493 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2020-11-23 04:33:05,494 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
+2020-11-23 04:33:07,620 INFO (SpringBeanUtil.java:26)- ========ApplicationContext配置成功,在普通类可以通过调用SpringUtils.getAppContext()获取applicationContext对象,applicationContext=org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@7d37c106, started on Mon Nov 23 04:33:05 GMT+08:00 2020
+2020-11-23 04:33:09,278 INFO (StartupInfoLogger.java:61)- Started Startup in 3.854 seconds (JVM running for 252.758)
+2020-11-23 04:33:09,279 INFO (InitApplicationRun.java:26)- King System already started ...
+2020-11-23 04:33:09,292 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select dict_sn, class_no, dict_no, dict_desc, disp_order, parent_sn, use_flag from sys_dict 
+2020-11-23 04:33:09,293 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-23 04:33:09,296 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 13
+2020-11-23 04:33:09,297 INFO (InitApplicationRun.java:28)- Initialization data complete ...
+2020-11-23 04:34:44,984 INFO (StartupInfoLogger.java:55)- Starting Startup on LAPTOP-3H9KE96D with PID 15256 (D:\projects\KS\webapp\target\classes started by 17869 in D:\projects\KS)
+2020-11-23 04:34:44,984 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2020-11-23 04:34:44,985 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
+2020-11-23 04:34:50,135 INFO (StartupInfoLogger.java:55)- Starting Startup on LAPTOP-3H9KE96D with PID 15256 (D:\projects\KS\webapp\target\classes started by 17869 in D:\projects\KS)
+2020-11-23 04:34:50,136 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2020-11-23 04:34:50,136 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
+2020-11-23 04:35:08,031 INFO (StartupInfoLogger.java:55)- Starting Startup on LAPTOP-3H9KE96D with PID 15256 (D:\projects\KS\webapp\target\classes started by 17869 in D:\projects\KS)
+2020-11-23 04:35:08,031 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2020-11-23 04:35:08,031 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
+2020-11-23 04:36:53,163 INFO (StartupInfoLogger.java:55)- Starting Startup on LAPTOP-3H9KE96D with PID 15256 (D:\projects\KS\webapp\target\classes started by 17869 in D:\projects\KS)
+2020-11-23 04:36:53,163 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2020-11-23 04:36:53,164 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
+2020-11-23 04:36:55,827 INFO (SpringBeanUtil.java:26)- ========ApplicationContext配置成功,在普通类可以通过调用SpringUtils.getAppContext()获取applicationContext对象,applicationContext=org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@dfacdf6, started on Mon Nov 23 04:36:53 GMT+08:00 2020
+2020-11-23 04:36:56,732 INFO (StartupInfoLogger.java:61)- Started Startup in 3.642 seconds (JVM running for 480.212)
+2020-11-23 04:36:56,733 INFO (InitApplicationRun.java:26)- King System already started ...
+2020-11-23 04:36:56,745 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select dict_sn, class_no, dict_no, dict_desc, disp_order, parent_sn, use_flag from sys_dict 
+2020-11-23 04:36:56,746 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-23 04:36:56,749 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 13
+2020-11-23 04:36:56,750 INFO (InitApplicationRun.java:28)- Initialization data complete ...
+2020-11-23 04:37:01,329 INFO (StartupInfoLogger.java:55)- Starting Startup on LAPTOP-3H9KE96D with PID 15256 (D:\projects\KS\webapp\target\classes started by 17869 in D:\projects\KS)
+2020-11-23 04:37:01,330 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2020-11-23 04:37:01,330 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
+2020-11-23 04:37:03,264 INFO (SpringBeanUtil.java:26)- ========ApplicationContext配置成功,在普通类可以通过调用SpringUtils.getAppContext()获取applicationContext对象,applicationContext=org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@597da9f7, started on Mon Nov 23 04:37:01 GMT+08:00 2020
+2020-11-23 04:37:04,175 INFO (StartupInfoLogger.java:61)- Started Startup in 2.903 seconds (JVM running for 487.655)
+2020-11-23 04:37:04,176 INFO (InitApplicationRun.java:26)- King System already started ...
+2020-11-23 04:37:04,187 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select dict_sn, class_no, dict_no, dict_desc, disp_order, parent_sn, use_flag from sys_dict 
+2020-11-23 04:37:04,188 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-23 04:37:04,190 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 13
+2020-11-23 04:37:04,191 INFO (InitApplicationRun.java:28)- Initialization data complete ...
+2020-11-23 04:38:00,901 INFO (StartupInfoLogger.java:55)- Starting Startup on LAPTOP-3H9KE96D with PID 15256 (D:\projects\KS\webapp\target\classes started by 17869 in D:\projects\KS)
+2020-11-23 04:38:00,902 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2020-11-23 04:38:00,902 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
+2020-11-23 04:38:02,781 INFO (SpringBeanUtil.java:26)- ========ApplicationContext配置成功,在普通类可以通过调用SpringUtils.getAppContext()获取applicationContext对象,applicationContext=org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@24470af1, started on Mon Nov 23 04:38:00 GMT+08:00 2020
+2020-11-23 04:38:03,746 INFO (StartupInfoLogger.java:61)- Started Startup in 2.974 seconds (JVM running for 547.225)
+2020-11-23 04:38:03,746 INFO (InitApplicationRun.java:26)- King System already started ...
+2020-11-23 04:38:03,769 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select dict_sn, class_no, dict_no, dict_desc, disp_order, parent_sn, use_flag from sys_dict 
+2020-11-23 04:38:03,769 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-23 04:38:03,771 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 13
+2020-11-23 04:38:03,773 INFO (InitApplicationRun.java:28)- Initialization data complete ...
+2020-11-23 04:38:42,959 INFO (StartupInfoLogger.java:55)- Starting Startup on LAPTOP-3H9KE96D with PID 15256 (D:\projects\KS\webapp\target\classes started by 17869 in D:\projects\KS)
+2020-11-23 04:38:42,960 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2020-11-23 04:38:42,960 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
+2020-11-23 04:38:45,310 INFO (SpringBeanUtil.java:26)- ========ApplicationContext配置成功,在普通类可以通过调用SpringUtils.getAppContext()获取applicationContext对象,applicationContext=org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@4ce283b3, started on Mon Nov 23 04:38:42 GMT+08:00 2020
+2020-11-23 04:38:46,866 INFO (StartupInfoLogger.java:61)- Started Startup in 3.962 seconds (JVM running for 590.346)
+2020-11-23 04:38:46,868 INFO (InitApplicationRun.java:26)- King System already started ...
+2020-11-23 04:38:46,887 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select dict_sn, class_no, dict_no, dict_desc, disp_order, parent_sn, use_flag from sys_dict 
+2020-11-23 04:38:46,888 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-23 04:38:46,890 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 13
+2020-11-23 04:38:46,891 INFO (InitApplicationRun.java:28)- Initialization data complete ...
+2020-11-23 04:38:53,785 INFO (StartupInfoLogger.java:55)- Starting Startup on LAPTOP-3H9KE96D with PID 15256 (D:\projects\KS\webapp\target\classes started by 17869 in D:\projects\KS)
+2020-11-23 04:38:53,785 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2020-11-23 04:38:53,786 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
+2020-11-23 04:38:55,719 INFO (SpringBeanUtil.java:26)- ========ApplicationContext配置成功,在普通类可以通过调用SpringUtils.getAppContext()获取applicationContext对象,applicationContext=org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@5a5166ab, started on Mon Nov 23 04:38:53 GMT+08:00 2020
+2020-11-23 04:38:57,727 INFO (StartupInfoLogger.java:61)- Started Startup in 4.035 seconds (JVM running for 601.206)
+2020-11-23 04:38:57,727 INFO (InitApplicationRun.java:26)- King System already started ...
+2020-11-23 04:38:57,739 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select dict_sn, class_no, dict_no, dict_desc, disp_order, parent_sn, use_flag from sys_dict 
+2020-11-23 04:38:57,740 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-23 04:38:57,742 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 13
+2020-11-23 04:38:57,743 INFO (InitApplicationRun.java:28)- Initialization data complete ...
+2020-11-23 04:39:02,390 INFO (StartupInfoLogger.java:55)- Starting Startup on LAPTOP-3H9KE96D with PID 15256 (D:\projects\KS\webapp\target\classes started by 17869 in D:\projects\KS)
+2020-11-23 04:39:02,390 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2020-11-23 04:39:02,390 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
+2020-11-23 04:39:18,235 INFO (StartupInfoLogger.java:55)- Starting Startup on LAPTOP-3H9KE96D with PID 15256 (D:\projects\KS\webapp\target\classes started by 17869 in D:\projects\KS)
+2020-11-23 04:39:18,236 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2020-11-23 04:39:18,236 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
+2020-11-23 04:39:41,833 INFO (StartupInfoLogger.java:55)- Starting Startup on LAPTOP-3H9KE96D with PID 15256 (D:\projects\KS\webapp\target\classes started by 17869 in D:\projects\KS)
+2020-11-23 04:39:41,833 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2020-11-23 04:39:41,833 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
+2020-11-23 04:39:58,986 INFO (StartupInfoLogger.java:55)- Starting Startup on LAPTOP-3H9KE96D with PID 15256 (D:\projects\KS\webapp\target\classes started by 17869 in D:\projects\KS)
+2020-11-23 04:39:58,986 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2020-11-23 04:39:58,986 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
+2020-11-23 04:40:30,967 INFO (StartupInfoLogger.java:55)- Starting Startup on LAPTOP-3H9KE96D with PID 15256 (D:\projects\KS\webapp\target\classes started by 17869 in D:\projects\KS)
+2020-11-23 04:40:30,967 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2020-11-23 04:40:30,968 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
+2020-11-23 04:41:07,068 INFO (StartupInfoLogger.java:55)- Starting Startup on LAPTOP-3H9KE96D with PID 15256 (D:\projects\KS\webapp\target\classes started by 17869 in D:\projects\KS)
+2020-11-23 04:41:07,068 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2020-11-23 04:41:07,068 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
+2020-11-23 04:41:29,613 INFO (StartupInfoLogger.java:55)- Starting Startup on LAPTOP-3H9KE96D with PID 15256 (D:\projects\KS\webapp\target\classes started by 17869 in D:\projects\KS)
+2020-11-23 04:41:29,615 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2020-11-23 04:41:29,615 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
+2020-11-23 04:43:25,295 INFO (StartupInfoLogger.java:55)- Starting Startup on LAPTOP-3H9KE96D with PID 15256 (D:\projects\KS\webapp\target\classes started by 17869 in D:\projects\KS)
+2020-11-23 04:43:25,296 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2020-11-23 04:43:25,296 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
+2020-11-23 04:43:28,728 INFO (SpringBeanUtil.java:26)- ========ApplicationContext配置成功,在普通类可以通过调用SpringUtils.getAppContext()获取applicationContext对象,applicationContext=org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@363ddf52, started on Mon Nov 23 04:43:25 GMT+08:00 2020
+2020-11-23 04:43:31,771 INFO (StartupInfoLogger.java:61)- Started Startup in 6.537 seconds (JVM running for 875.251)
+2020-11-23 04:43:31,773 INFO (InitApplicationRun.java:26)- King System already started ...
+2020-11-23 04:43:31,801 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select dict_sn, class_no, dict_no, dict_desc, disp_order, parent_sn, use_flag from sys_dict 
+2020-11-23 04:43:31,802 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-23 04:43:31,807 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 13
+2020-11-23 04:43:31,809 INFO (InitApplicationRun.java:28)- Initialization data complete ...
+2020-11-23 04:50:17,426 INFO (StartupInfoLogger.java:55)- Starting Startup on LAPTOP-3H9KE96D with PID 15256 (D:\projects\KS\webapp\target\classes started by 17869 in D:\projects\KS)
+2020-11-23 04:50:17,427 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2020-11-23 04:50:17,427 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
+2020-11-23 04:50:19,702 INFO (SpringBeanUtil.java:26)- ========ApplicationContext配置成功,在普通类可以通过调用SpringUtils.getAppContext()获取applicationContext对象,applicationContext=org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@6f024486, started on Mon Nov 23 04:50:17 GMT+08:00 2020
+2020-11-23 04:50:21,034 INFO (StartupInfoLogger.java:61)- Started Startup in 3.69 seconds (JVM running for 1284.514)
+2020-11-23 04:50:21,036 INFO (InitApplicationRun.java:26)- King System already started ...
+2020-11-23 04:50:21,050 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select dict_sn, class_no, dict_no, dict_desc, disp_order, parent_sn, use_flag from sys_dict 
+2020-11-23 04:50:21,051 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-23 04:50:21,055 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 13
+2020-11-23 04:50:21,057 INFO (InitApplicationRun.java:28)- Initialization data complete ...
+2020-11-23 04:51:24,467 INFO (StartupInfoLogger.java:55)- Starting Startup on LAPTOP-3H9KE96D with PID 15256 (D:\projects\KS\webapp\target\classes started by 17869 in D:\projects\KS)
+2020-11-23 04:51:24,468 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2020-11-23 04:51:24,468 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
+2020-11-23 05:36:09,331 INFO (StartupInfoLogger.java:55)- Starting Startup on LAPTOP-3H9KE96D with PID 17448 (D:\projects\KS\webapp\target\classes started by 17869 in D:\projects\KS)
+2020-11-23 05:36:09,338 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2020-11-23 05:36:09,339 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
+2020-11-23 05:36:14,402 INFO (SpringBeanUtil.java:26)- ========ApplicationContext配置成功,在普通类可以通过调用SpringUtils.getAppContext()获取applicationContext对象,applicationContext=org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@18bf4985, started on Mon Nov 23 05:36:09 GMT+08:00 2020
+2020-11-23 05:36:15,781 INFO (StartupInfoLogger.java:61)- Started Startup in 7.506 seconds (JVM running for 8.978)
+2020-11-23 05:36:15,782 INFO (InitApplicationRun.java:26)- King System already started ...
+2020-11-23 05:37:08,058 INFO (StartupInfoLogger.java:55)- Starting Startup on LAPTOP-3H9KE96D with PID 3064 (D:\projects\KS\webapp\target\classes started by 17869 in D:\projects\KS)
+2020-11-23 05:37:08,063 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2020-11-23 05:37:08,064 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
+2020-11-23 05:37:12,190 INFO (SpringBeanUtil.java:26)- ========ApplicationContext配置成功,在普通类可以通过调用SpringUtils.getAppContext()获取applicationContext对象,applicationContext=org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@783542a0, started on Mon Nov 23 05:37:08 GMT+08:00 2020
+2020-11-23 05:37:13,625 INFO (StartupInfoLogger.java:61)- Started Startup in 6.717 seconds (JVM running for 8.075)
+2020-11-23 05:37:13,626 INFO (InitApplicationRun.java:26)- King System already started ...
+2020-11-23 05:37:13,788 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select dict_sn, class_no, dict_no, dict_desc, disp_order, parent_sn, use_flag from sys_dict 
+2020-11-23 05:37:14,163 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-23 05:37:14,208 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 13
+2020-11-23 05:37:14,212 INFO (InitApplicationRun.java:28)- Initialization data complete ...
+2020-11-23 05:37:22,023 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select * from sys_user where username = ? 
+2020-11-23 05:37:22,141 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: admin(String)
+2020-11-23 05:37:22,146 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-11-23 05:37:22,310 INFO (LoginController.java:122)- ********************登录成功，进入首页！********************
+2020-11-23 05:37:22,324 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select * from sys_user where username = ? 
+2020-11-23 05:37:22,326 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: com.king.system.po.UserInfo@1dadc6e0(String)
+2020-11-23 05:37:22,329 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 0
+2020-11-23 05:37:22,968 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select a.id, a.name, a.url, a.type, a.pid, a.permission, icon from sys_resources a, sys_role_resources b, sys_user_role c where a.id = b.res_id and b.role_id = c.rid and c.uid = ? order by a.id 
+2020-11-23 05:37:22,986 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 1(Long)
+2020-11-23 05:37:23,007 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 25
+2020-11-23 05:37:25,505 ERROR (GlobalExceptionHandler.java:88)- *****服务器异常*****nested exception is org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: java.lang.IllegalArgumentException: Mapped Statements collection does not contain value for com.king.em.dao.EmIndexCategoryDao.find
+### Cause: java.lang.IllegalArgumentException: Mapped Statements collection does not contain value for com.king.em.dao.EmIndexCategoryDao.find
+2020-11-23 05:37:25,505 ERROR (GlobalExceptionHandler.java:89)- RequestFail[/em/indexMgr/findCategory][page=1,limit=10]
+2020-11-23 05:40:55,194 INFO (StartupInfoLogger.java:55)- Starting Startup on LAPTOP-3H9KE96D with PID 4396 (D:\projects\KS\webapp\target\classes started by 17869 in D:\projects\KS)
+2020-11-23 05:40:55,199 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2020-11-23 05:40:55,200 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
+2020-11-23 05:41:00,315 INFO (SpringBeanUtil.java:26)- ========ApplicationContext配置成功,在普通类可以通过调用SpringUtils.getAppContext()获取applicationContext对象,applicationContext=org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@740b3412, started on Mon Nov 23 05:40:55 GMT+08:00 2020
+2020-11-23 05:41:01,715 INFO (StartupInfoLogger.java:61)- Started Startup in 7.633 seconds (JVM running for 8.987)
+2020-11-23 05:41:01,716 INFO (InitApplicationRun.java:26)- King System already started ...
+2020-11-23 05:41:01,910 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select dict_sn, class_no, dict_no, dict_desc, disp_order, parent_sn, use_flag from sys_dict 
+2020-11-23 05:41:02,305 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-23 05:41:02,344 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 13
+2020-11-23 05:41:02,350 INFO (InitApplicationRun.java:28)- Initialization data complete ...
+2020-11-23 05:41:05,757 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT count(0) FROM em_index_category 
+2020-11-23 05:41:05,765 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-23 05:41:05,766 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-11-23 05:41:05,768 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name from em_index_category order by id asc limit ?,? 
+2020-11-23 05:41:05,776 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 0(Integer), 10(Integer)
+2020-11-23 05:41:05,816 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 3
+2020-11-23 05:41:26,961 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT count(0) FROM em_index_category 
+2020-11-23 05:41:26,962 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-23 05:41:26,966 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-11-23 05:41:26,967 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name from em_index_category order by id asc limit ?,? 
+2020-11-23 05:41:26,968 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 0(Integer), 10(Integer)
+2020-11-23 05:41:26,969 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 3
+2020-11-23 05:49:18,801 INFO (StartupInfoLogger.java:55)- Starting Startup on LAPTOP-3H9KE96D with PID 14104 (D:\projects\KS\webapp\target\classes started by 17869 in D:\projects\KS)
+2020-11-23 05:49:18,807 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2020-11-23 05:49:18,809 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
+2020-11-23 05:49:24,459 INFO (SpringBeanUtil.java:26)- ========ApplicationContext配置成功,在普通类可以通过调用SpringUtils.getAppContext()获取applicationContext对象,applicationContext=org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@3fd45b79, started on Mon Nov 23 05:49:18 GMT+08:00 2020
+2020-11-23 05:49:25,874 INFO (StartupInfoLogger.java:61)- Started Startup in 8.148 seconds (JVM running for 9.722)
+2020-11-23 05:49:25,875 INFO (InitApplicationRun.java:26)- King System already started ...
+2020-11-23 05:49:26,030 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select dict_sn, class_no, dict_no, dict_desc, disp_order, parent_sn, use_flag from sys_dict 
+2020-11-23 05:49:26,395 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-23 05:49:26,452 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 13
+2020-11-23 05:49:26,457 INFO (InitApplicationRun.java:28)- Initialization data complete ...
+2020-11-23 05:50:10,781 INFO (StartupInfoLogger.java:55)- Starting Startup on LAPTOP-3H9KE96D with PID 18668 (D:\projects\KS\webapp\target\classes started by 17869 in D:\projects\KS)
+2020-11-23 05:50:10,787 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2020-11-23 05:50:10,787 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
+2020-11-23 05:50:15,985 INFO (SpringBeanUtil.java:26)- ========ApplicationContext配置成功,在普通类可以通过调用SpringUtils.getAppContext()获取applicationContext对象,applicationContext=org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@7224c94b, started on Mon Nov 23 05:50:10 GMT+08:00 2020
+2020-11-23 05:50:17,333 INFO (StartupInfoLogger.java:61)- Started Startup in 7.617 seconds (JVM running for 8.978)
+2020-11-23 05:50:17,334 INFO (InitApplicationRun.java:26)- King System already started ...
+2020-11-23 05:50:17,491 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select dict_sn, class_no, dict_no, dict_desc, disp_order, parent_sn, use_flag from sys_dict 
+2020-11-23 05:50:17,841 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-23 05:50:17,874 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 13
+2020-11-23 05:50:17,878 INFO (InitApplicationRun.java:28)- Initialization data complete ...
+2020-11-23 05:50:35,657 INFO (LoginController.java:122)- ********************登录成功，进入首页！********************
+2020-11-23 05:50:35,667 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select * from sys_user where username = ? 
+2020-11-23 05:50:35,716 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: com.king.system.po.UserInfo@2553ce99(String)
+2020-11-23 05:50:35,718 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 0
+2020-11-23 05:50:36,802 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select a.id, a.name, a.url, a.type, a.pid, a.permission, icon from sys_resources a, sys_role_resources b, sys_user_role c where a.id = b.res_id and b.role_id = c.rid and c.uid = ? order by a.id 
+2020-11-23 05:50:36,819 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 1(Long)
+2020-11-23 05:50:36,834 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 25
+2020-11-23 05:50:39,936 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT count(0) FROM em_index_category 
+2020-11-23 05:50:39,944 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-23 05:50:39,947 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-11-23 05:50:39,952 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name from em_index_category order by id asc limit ?,? 
+2020-11-23 05:50:39,960 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 0(Integer), 10(Integer)
+2020-11-23 05:50:39,963 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 3
+2020-11-23 05:50:41,492 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name from em_index_category where id = ? order by id asc 
+2020-11-23 05:50:41,494 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 1(Integer)
+2020-11-23 05:50:41,497 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-11-23 05:50:43,506 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: update em_index_category SET name = ? WHERE id = ? 
+2020-11-23 05:50:43,521 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 动态控制性能1(String), 1(Integer)
+2020-11-23 05:50:43,526 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==    Updates: 1
+2020-11-23 05:50:46,217 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT count(0) FROM em_index_category 
+2020-11-23 05:50:46,219 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-23 05:50:46,222 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-11-23 05:50:46,224 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name from em_index_category order by id asc limit ?,? 
+2020-11-23 05:50:46,225 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 0(Integer), 10(Integer)
+2020-11-23 05:50:46,227 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 3
+2020-11-23 05:50:47,545 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name from em_index_category where id = ? order by id asc 
+2020-11-23 05:50:47,547 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 1(Integer)
+2020-11-23 05:50:47,550 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-11-23 05:50:50,071 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: update em_index_category SET name = ? WHERE id = ? 
+2020-11-23 05:50:50,073 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 动态控制性能(String), 1(Integer)
+2020-11-23 05:50:50,081 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==    Updates: 1
+2020-11-23 05:50:53,377 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT count(0) FROM em_index_category 
+2020-11-23 05:50:53,378 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-23 05:50:53,381 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-11-23 05:50:53,383 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name from em_index_category order by id asc limit ?,? 
+2020-11-23 05:50:53,385 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 0(Integer), 10(Integer)
+2020-11-23 05:50:53,387 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 3
+2020-11-23 05:50:58,345 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: insert into em_index_category (name) values (?) 
+2020-11-23 05:50:58,420 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 1231232(String)
+2020-11-23 05:50:58,428 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==    Updates: 1
+2020-11-23 05:50:58,430 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT LAST_INSERT_ID() 
+2020-11-23 05:50:58,438 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-23 05:50:58,445 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-11-23 05:51:01,189 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT count(0) FROM em_index_category 
+2020-11-23 05:51:01,190 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-23 05:51:01,194 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-11-23 05:51:01,196 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name from em_index_category order by id asc limit ?,? 
+2020-11-23 05:51:01,197 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 0(Integer), 10(Integer)
+2020-11-23 05:51:01,201 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 4
+2020-11-23 05:51:03,349 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: delete from em_index_category where id = ? 
+2020-11-23 05:51:03,400 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 4(Integer)
+2020-11-23 05:51:03,409 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==    Updates: 1
+2020-11-23 05:51:03,443 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT count(0) FROM em_index_category 
+2020-11-23 05:51:03,444 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-23 05:51:03,446 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-11-23 05:51:03,451 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name from em_index_category order by id asc limit ?,? 
+2020-11-23 05:51:03,452 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 0(Integer), 10(Integer)
+2020-11-23 05:51:03,459 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 3
+2020-11-23 05:51:47,217 INFO (LoginController.java:122)- ********************登录成功，进入首页！********************
+2020-11-23 05:51:47,225 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select * from sys_user where username = ? 
+2020-11-23 05:51:47,228 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: com.king.system.po.UserInfo@1959a356(String)
+2020-11-23 05:51:47,231 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 0
+2020-11-23 05:51:47,476 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select a.id, a.name, a.url, a.type, a.pid, a.permission, icon from sys_resources a, sys_role_resources b, sys_user_role c where a.id = b.res_id and b.role_id = c.rid and c.uid = ? order by a.id 
+2020-11-23 05:51:47,479 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 1(Long)
+2020-11-23 05:51:47,540 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 25
+2020-11-23 05:51:49,410 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT count(0) FROM em_index_category 
+2020-11-23 05:51:49,410 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-23 05:51:49,412 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-11-23 05:51:49,413 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name from em_index_category order by id asc limit ?,? 
+2020-11-23 05:51:49,415 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 0(Integer), 10(Integer)
+2020-11-23 05:51:49,416 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 3
+2020-11-23 06:09:58,764 INFO (StartupInfoLogger.java:55)- Starting Startup on LAPTOP-3H9KE96D with PID 5152 (D:\projects\KS\webapp\target\classes started by 17869 in D:\projects\KS)
+2020-11-23 06:09:58,769 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2020-11-23 06:09:58,771 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
+2020-11-23 06:10:02,962 INFO (SpringBeanUtil.java:26)- ========ApplicationContext配置成功,在普通类可以通过调用SpringUtils.getAppContext()获取applicationContext对象,applicationContext=org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@67f9ac1f, started on Mon Nov 23 06:09:58 GMT+08:00 2020
+2020-11-23 06:10:04,358 INFO (StartupInfoLogger.java:61)- Started Startup in 6.735 seconds (JVM running for 8.375)
+2020-11-23 06:10:04,360 INFO (InitApplicationRun.java:26)- King System already started ...
+2020-11-23 06:10:04,571 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select dict_sn, class_no, dict_no, dict_desc, disp_order, parent_sn, use_flag from sys_dict 
+2020-11-23 06:10:04,934 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-23 06:10:04,976 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 13
+2020-11-23 06:10:04,980 INFO (InitApplicationRun.java:28)- Initialization data complete ...
+2020-11-23 06:10:10,793 INFO (LoginController.java:122)- ********************登录成功，进入首页！********************
+2020-11-23 06:10:10,803 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select * from sys_user where username = ? 
+2020-11-23 06:10:10,848 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: com.king.system.po.UserInfo@19c5e91e(String)
+2020-11-23 06:10:10,849 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 0
+2020-11-23 06:10:11,965 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select a.id, a.name, a.url, a.type, a.pid, a.permission, icon from sys_resources a, sys_role_resources b, sys_user_role c where a.id = b.res_id and b.role_id = c.rid and c.uid = ? order by a.id 
+2020-11-23 06:10:11,981 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 1(Long)
+2020-11-23 06:10:11,994 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 25
+2020-11-23 06:10:14,425 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name from em_index_category order by id asc 
+2020-11-23 06:10:14,428 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-23 06:10:14,432 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 3
+2020-11-23 06:10:14,518 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT count(0) FROM em_index_category 
+2020-11-23 06:10:14,526 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-23 06:10:14,530 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-11-23 06:10:14,535 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name from em_index_category order by id asc limit ?,? 
+2020-11-23 06:10:14,543 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 0(Integer), 10(Integer)
+2020-11-23 06:10:14,548 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 3
+2020-11-23 06:10:23,881 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: insert into em_index_category (name) values (?) 
+2020-11-23 06:10:23,900 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 222(String)
+2020-11-23 06:10:23,952 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==    Updates: 1
+2020-11-23 06:10:23,953 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT LAST_INSERT_ID() 
+2020-11-23 06:10:23,959 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-23 06:10:23,963 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-11-23 06:10:27,313 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT count(0) FROM em_index_category 
+2020-11-23 06:10:27,314 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-23 06:10:27,316 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-11-23 06:10:27,318 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name from em_index_category order by id asc limit ?,? 
+2020-11-23 06:10:27,320 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 0(Integer), 10(Integer)
+2020-11-23 06:10:27,324 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 4
+2020-11-23 06:10:27,326 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name from em_index_category order by id asc 
+2020-11-23 06:10:27,326 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-23 06:10:27,331 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 4
+2020-11-23 06:10:32,582 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: delete from em_index_category where id = ? 
+2020-11-23 06:10:32,589 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 5(Integer)
+2020-11-23 06:10:32,641 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==    Updates: 1
+2020-11-23 06:10:32,677 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT count(0) FROM em_index_category 
+2020-11-23 06:10:32,679 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-23 06:10:32,681 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name from em_index_category order by id asc 
+2020-11-23 06:10:32,681 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-11-23 06:10:32,682 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-23 06:10:32,683 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name from em_index_category order by id asc limit ?,? 
+2020-11-23 06:10:32,685 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 0(Integer), 10(Integer)
+2020-11-23 06:10:32,685 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 3
+2020-11-23 06:10:32,687 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 3
+2020-11-23 06:14:19,963 INFO (StartupInfoLogger.java:55)- Starting Startup on LAPTOP-3H9KE96D with PID 5152 (D:\projects\KS\webapp\target\classes started by 17869 in D:\projects\KS)
+2020-11-23 06:14:19,965 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2020-11-23 06:14:19,965 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
+2020-11-23 06:14:22,041 INFO (SpringBeanUtil.java:26)- ========ApplicationContext配置成功,在普通类可以通过调用SpringUtils.getAppContext()获取applicationContext对象,applicationContext=org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@2832adc1, started on Mon Nov 23 06:14:19 GMT+08:00 2020
+2020-11-23 06:14:23,021 INFO (StartupInfoLogger.java:61)- Started Startup in 3.189 seconds (JVM running for 267.037)
+2020-11-23 06:14:23,022 INFO (InitApplicationRun.java:26)- King System already started ...
+2020-11-23 06:14:23,090 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select dict_sn, class_no, dict_no, dict_desc, disp_order, parent_sn, use_flag from sys_dict 
+2020-11-23 06:14:23,093 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-23 06:14:23,101 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 13
+2020-11-23 06:14:23,102 INFO (InitApplicationRun.java:28)- Initialization data complete ...
+2020-11-23 06:16:11,642 INFO (StartupInfoLogger.java:55)- Starting Startup on LAPTOP-3H9KE96D with PID 5252 (D:\projects\KS\webapp\target\classes started by 17869 in D:\projects\KS)
+2020-11-23 06:16:11,647 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2020-11-23 06:16:11,648 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
+2020-11-23 06:16:16,059 INFO (SpringBeanUtil.java:26)- ========ApplicationContext配置成功,在普通类可以通过调用SpringUtils.getAppContext()获取applicationContext对象,applicationContext=org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@8d41df5, started on Mon Nov 23 06:16:11 GMT+08:00 2020
+2020-11-23 06:16:17,433 INFO (StartupInfoLogger.java:61)- Started Startup in 6.85 seconds (JVM running for 8.306)
+2020-11-23 06:16:17,435 INFO (InitApplicationRun.java:26)- King System already started ...
+2020-11-23 06:16:17,686 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select dict_sn, class_no, dict_no, dict_desc, disp_order, parent_sn, use_flag from sys_dict 
+2020-11-23 06:16:18,034 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-23 06:16:18,067 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 13
+2020-11-23 06:16:18,071 INFO (InitApplicationRun.java:28)- Initialization data complete ...
+2020-11-23 06:16:21,832 INFO (LoginController.java:122)- ********************登录成功，进入首页！********************
+2020-11-23 06:16:21,860 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select * from sys_user where username = ? 
+2020-11-23 06:16:21,982 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: com.king.system.po.UserInfo@3ec81827(String)
+2020-11-23 06:16:21,985 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 0
+2020-11-23 06:16:23,779 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select a.id, a.name, a.url, a.type, a.pid, a.permission, icon from sys_resources a, sys_role_resources b, sys_user_role c where a.id = b.res_id and b.role_id = c.rid and c.uid = ? order by a.id 
+2020-11-23 06:16:23,805 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 1(Long)
+2020-11-23 06:16:23,835 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 25
+2020-11-23 06:16:26,340 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name from em_index_category order by id asc 
+2020-11-23 06:16:26,342 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-23 06:16:26,344 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 3
+2020-11-23 06:16:26,444 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT count(0) FROM em_index_category 
+2020-11-23 06:16:26,451 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-23 06:16:26,455 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-11-23 06:16:26,459 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name from em_index_category order by id asc limit ?,? 
+2020-11-23 06:16:26,469 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 0(Integer), 10(Integer)
+2020-11-23 06:16:26,472 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 3
+2020-11-23 06:16:26,473 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT count(0) FROM em_index_template 
+2020-11-23 06:16:26,476 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-23 06:16:26,482 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-11-23 06:16:26,486 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name, best_val, min_val, max_val, weight, unit, category_id from em_index_template order by id asc limit ?,? 
+2020-11-23 06:16:26,491 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 0(Integer), 10(Integer)
+2020-11-23 06:16:26,501 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 10
+2020-11-23 06:21:13,056 INFO (StartupInfoLogger.java:55)- Starting Startup on LAPTOP-3H9KE96D with PID 20240 (D:\projects\KS\webapp\target\classes started by 17869 in D:\projects\KS)
+2020-11-23 06:21:13,064 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2020-11-23 06:21:13,065 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
+2020-11-23 06:21:18,190 INFO (SpringBeanUtil.java:26)- ========ApplicationContext配置成功,在普通类可以通过调用SpringUtils.getAppContext()获取applicationContext对象,applicationContext=org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@7e24de28, started on Mon Nov 23 06:21:13 GMT+08:00 2020
+2020-11-23 06:21:19,550 INFO (StartupInfoLogger.java:61)- Started Startup in 7.595 seconds (JVM running for 8.977)
+2020-11-23 06:21:19,552 INFO (InitApplicationRun.java:26)- King System already started ...
+2020-11-23 06:21:19,756 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select dict_sn, class_no, dict_no, dict_desc, disp_order, parent_sn, use_flag from sys_dict 
+2020-11-23 06:21:20,120 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-23 06:21:20,149 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 13
+2020-11-23 06:21:20,153 INFO (InitApplicationRun.java:28)- Initialization data complete ...
+2020-11-23 06:21:24,250 INFO (LoginController.java:122)- ********************登录成功，进入首页！********************
+2020-11-23 06:21:24,278 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select * from sys_user where username = ? 
+2020-11-23 06:21:24,396 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: com.king.system.po.UserInfo@573a0f34(String)
+2020-11-23 06:21:24,400 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 0
+2020-11-23 06:21:26,034 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select a.id, a.name, a.url, a.type, a.pid, a.permission, icon from sys_resources a, sys_role_resources b, sys_user_role c where a.id = b.res_id and b.role_id = c.rid and c.uid = ? order by a.id 
+2020-11-23 06:21:26,053 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 1(Long)
+2020-11-23 06:21:26,123 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 25
+2020-11-23 06:21:28,471 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name from em_index_category order by id asc 
+2020-11-23 06:21:28,475 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-23 06:21:28,478 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 3
+2020-11-23 06:21:28,544 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT count(0) FROM em_index_category 
+2020-11-23 06:21:28,554 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-23 06:21:28,557 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-11-23 06:21:28,560 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name from em_index_category order by id asc limit ?,? 
+2020-11-23 06:21:28,566 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT count(0) FROM em_index_template 
+2020-11-23 06:21:28,568 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 0(Integer), 10(Integer)
+2020-11-23 06:21:28,570 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-23 06:21:28,572 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 3
+2020-11-23 06:21:28,572 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-11-23 06:21:28,574 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name, best_val, min_val, max_val, weight, unit, category_id from em_index_template order by id asc limit ?,? 
+2020-11-23 06:21:28,576 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 0(Integer), 10(Integer)
+2020-11-23 06:21:28,581 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 10
+2020-11-23 06:21:31,149 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT count(0) FROM em_index_template 
+2020-11-23 06:21:31,151 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-23 06:21:31,154 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-11-23 06:21:31,156 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name, best_val, min_val, max_val, weight, unit, category_id from em_index_template order by id asc limit ?,? 
+2020-11-23 06:21:31,158 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 0(Integer), 10(Integer)
+2020-11-23 06:21:31,171 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 10
+2020-11-23 06:21:32,745 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT count(0) FROM em_index_template 
+2020-11-23 06:21:32,746 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-23 06:21:32,747 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-11-23 06:21:32,749 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name, best_val, min_val, max_val, weight, unit, category_id from em_index_template order by id asc limit ?,? 
+2020-11-23 06:21:32,750 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 0(Integer), 10(Integer)
+2020-11-23 06:21:32,754 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 10
+2020-11-23 06:25:37,497 INFO (StartupInfoLogger.java:55)- Starting Startup on LAPTOP-3H9KE96D with PID 100 (D:\projects\KS\webapp\target\classes started by 17869 in D:\projects\KS)
+2020-11-23 06:25:37,504 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2020-11-23 06:25:37,505 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
+2020-11-23 06:25:42,163 INFO (SpringBeanUtil.java:26)- ========ApplicationContext配置成功,在普通类可以通过调用SpringUtils.getAppContext()获取applicationContext对象,applicationContext=org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@17aee516, started on Mon Nov 23 06:25:37 GMT+08:00 2020
+2020-11-23 06:25:43,642 INFO (StartupInfoLogger.java:61)- Started Startup in 7.278 seconds (JVM running for 8.727)
+2020-11-23 06:25:43,643 INFO (InitApplicationRun.java:26)- King System already started ...
+2020-11-23 06:25:43,797 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select dict_sn, class_no, dict_no, dict_desc, disp_order, parent_sn, use_flag from sys_dict 
+2020-11-23 06:25:44,226 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-23 06:25:44,282 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 13
+2020-11-23 06:25:44,286 INFO (InitApplicationRun.java:28)- Initialization data complete ...
+2020-11-23 06:25:49,118 INFO (LoginController.java:122)- ********************登录成功，进入首页！********************
+2020-11-23 06:25:49,148 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select * from sys_user where username = ? 
+2020-11-23 06:25:49,338 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: com.king.system.po.UserInfo@1ccceed7(String)
+2020-11-23 06:25:49,343 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 0
+2020-11-23 06:25:51,821 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select a.id, a.name, a.url, a.type, a.pid, a.permission, icon from sys_resources a, sys_role_resources b, sys_user_role c where a.id = b.res_id and b.role_id = c.rid and c.uid = ? order by a.id 
+2020-11-23 06:25:51,844 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 1(Long)
+2020-11-23 06:25:51,862 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 25
+2020-11-23 06:25:53,933 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name from em_index_category order by id asc 
+2020-11-23 06:25:53,936 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-23 06:25:53,940 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 3
+2020-11-23 06:25:54,025 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT count(0) FROM em_index_category 
+2020-11-23 06:25:54,032 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-23 06:25:54,035 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-11-23 06:25:54,042 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name from em_index_category order by id asc limit ?,? 
+2020-11-23 06:25:54,048 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 0(Integer), 10(Integer)
+2020-11-23 06:25:54,051 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 3
+2020-11-23 06:25:54,052 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT count(0) FROM em_index_template a, em_index_category b WHERE a.category_id = b.id 
+2020-11-23 06:25:54,058 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-23 06:25:54,061 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-11-23 06:25:54,063 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select a.id,a.name,a.best_val,a.min_val,a.max_val,a.weight,a.unit,a.category_id,b.name as category_name from em_index_template a,em_index_category b WHERE a.category_id = b.id order by id asc limit ?,? 
+2020-11-23 06:25:54,068 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 0(Integer), 10(Integer)
+2020-11-23 06:25:54,077 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 10
+2020-11-23 06:25:59,618 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT count(0) FROM em_index_template a, em_index_category b WHERE a.category_id = b.id 
+2020-11-23 06:25:59,620 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-23 06:25:59,622 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-11-23 06:25:59,624 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select a.id,a.name,a.best_val,a.min_val,a.max_val,a.weight,a.unit,a.category_id,b.name as category_name from em_index_template a,em_index_category b WHERE a.category_id = b.id order by id asc limit ?,? 
+2020-11-23 06:25:59,625 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 10(Integer), 10(Integer)
+2020-11-23 06:25:59,634 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 6
+2020-11-23 06:26:26,829 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT count(0) FROM em_base_params 
+2020-11-23 06:26:26,831 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-23 06:26:26,832 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-11-23 06:26:26,833 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, fixed_current, fixed_voltage, fixed_speed, fixed_torque, overload_capacity, machine_length, machine_height, machine_width, rotor_length, machine_weight, is_default from em_base_params limit ?,? 
+2020-11-23 06:26:26,834 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 0(Integer), 10(Integer)
+2020-11-23 06:26:26,836 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-11-23 08:40:05,468 INFO (StartupInfoLogger.java:55)- Starting Startup on LAPTOP-3H9KE96D with PID 18684 (D:\projects\KS\webapp\target\classes started by 17869 in D:\projects\KS)
+2020-11-23 08:40:05,472 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2020-11-23 08:40:05,472 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
+2020-11-23 08:40:10,132 INFO (SpringBeanUtil.java:26)- ========ApplicationContext配置成功,在普通类可以通过调用SpringUtils.getAppContext()获取applicationContext对象,applicationContext=org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@172ba270, started on Mon Nov 23 08:40:05 GMT+08:00 2020

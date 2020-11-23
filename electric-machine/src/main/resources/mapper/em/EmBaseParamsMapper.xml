@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.king.em.dao.EmBaseParamsMapper">
+  <resultMap id="BaseResultMap" type="com.king.em.entity.EmBaseParams">
+    <result column="id" jdbcType="INTEGER" property="id" />
+    <result column="fixed_current" jdbcType="DECIMAL" property="fixedCurrent" />
+    <result column="fixed_voltage" jdbcType="DECIMAL" property="fixedVoltage" />
+    <result column="fixed_speed" jdbcType="DECIMAL" property="fixedSpeed" />
+    <result column="fixed_torque" jdbcType="DECIMAL" property="fixedTorque" />
+    <result column="overload_capacity" jdbcType="DECIMAL" property="overloadCapacity" />
+    <result column="machine_length" jdbcType="DECIMAL" property="machineLength" />
+    <result column="machine_height" jdbcType="DECIMAL" property="machineHeight" />
+    <result column="machine_width" jdbcType="DECIMAL" property="machineWidth" />
+    <result column="rotor_length" jdbcType="DECIMAL" property="rotorLength" />
+    <result column="machine_weight" jdbcType="DECIMAL" property="machineWeight" />
+    <result column="is_default" jdbcType="INTEGER" property="isDefault" />
+  </resultMap>
+
+  <sql id="Base_Column_List">
+    id, fixed_current, fixed_voltage, fixed_speed, fixed_torque, overload_capacity, machine_length, 
+    machine_height, machine_width, rotor_length, machine_weight, is_default
+  </sql>
+  <select id="find" parameterType="java.util.Map" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from em_base_params
+    <where>
+        <if test="isDefault != null and isDefault > 0">
+            and is_default = #{isDefault,jdbcType=INTEGER}
+        </if>
+    </where>
+  </select>
+  <select id="selectOne" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from em_base_params
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="delete" parameterType="java.lang.Integer">
+    delete from em_base_params where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.king.em.entity.EmBaseParams">
+    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Integer">
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into em_base_params (fixed_current, fixed_voltage, fixed_speed, 
+      fixed_torque, overload_capacity, machine_length, 
+      machine_height, machine_width, rotor_length, 
+      machine_weight, is_default)
+    values (#{fixedCurrent,jdbcType=DECIMAL}, #{fixedVoltage,jdbcType=DECIMAL}, #{fixedSpeed,jdbcType=DECIMAL}, 
+      #{fixedTorque,jdbcType=DECIMAL}, #{overloadCapacity,jdbcType=DECIMAL}, #{machineLength,jdbcType=DECIMAL}, 
+      #{machineHeight,jdbcType=DECIMAL}, #{machineWidth,jdbcType=DECIMAL}, #{rotorLength,jdbcType=DECIMAL}, 
+      #{machineWeight,jdbcType=DECIMAL}, #{isDefault,jdbcType=INTEGER})
+  </insert>
+
+  <update id="update" parameterType="com.king.em.entity.EmBaseParams">
+    update em_base_params
+    <set>
+      <if test="record.id != null">
+        id = #{record.id,jdbcType=INTEGER},
+      </if>
+      <if test="record.fixedCurrent != null">
+        fixed_current = #{record.fixedCurrent,jdbcType=DECIMAL},
+      </if>
+      <if test="record.fixedVoltage != null">
+        fixed_voltage = #{record.fixedVoltage,jdbcType=DECIMAL},
+      </if>
+      <if test="record.fixedSpeed != null">
+        fixed_speed = #{record.fixedSpeed,jdbcType=DECIMAL},
+      </if>
+      <if test="record.fixedTorque != null">
+        fixed_torque = #{record.fixedTorque,jdbcType=DECIMAL},
+      </if>
+      <if test="record.overloadCapacity != null">
+        overload_capacity = #{record.overloadCapacity,jdbcType=DECIMAL},
+      </if>
+      <if test="record.machineLength != null">
+        machine_length = #{record.machineLength,jdbcType=DECIMAL},
+      </if>
+      <if test="record.machineHeight != null">
+        machine_height = #{record.machineHeight,jdbcType=DECIMAL},
+      </if>
+      <if test="record.machineWidth != null">
+        machine_width = #{record.machineWidth,jdbcType=DECIMAL},
+      </if>
+      <if test="record.rotorLength != null">
+        rotor_length = #{record.rotorLength,jdbcType=DECIMAL},
+      </if>
+      <if test="record.machineWeight != null">
+        machine_weight = #{record.machineWeight,jdbcType=DECIMAL},
+      </if>
+      <if test="record.isDefault != null">
+        is_default = #{record.isDefault,jdbcType=INTEGER},
+      </if>
+    </set>
+    where id = #{record.id,jdbcType=INTEGER}
+  </update>
+
+</mapper>

@@ -15,7 +15,7 @@ import java.util.List;
  * @创建时间 2020/3/18
  * @描述
  */
-@Service
+//@Service
 public abstract class BaseServiceImpl<T> implements IBaseService<T>{
 
     protected Logger logger = LoggerFactory.getLogger(BaseServiceImpl.class);

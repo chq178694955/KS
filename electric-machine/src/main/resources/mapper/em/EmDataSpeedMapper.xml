@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.king.em.dao.EmDataSpeedDao">
+  <resultMap id="BaseResultMap" type="com.king.em.entity.EmDataSpeed">
+    <result column="id" jdbcType="BIGINT" property="id" />
+    <result column="product_id" jdbcType="INTEGER" property="productId" />
+    <result column="speed_max" jdbcType="DECIMAL" property="speedMax" />
+    <result column="speed_min" jdbcType="DECIMAL" property="speedMin" />
+  </resultMap>
+
+  <sql id="Base_Column_List">
+    id, product_id, speed_max, speed_min
+  </sql>
+  <select id="find" parameterType="java.util.Map" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from em_data_speed
+    <where>
+      <if test="productId != null">
+        and product_id = #{productId,jdbcType=INTEGER}
+      </if>
+    </where>
+  </select>
+  <select id="findAll" parameterType="java.util.Map" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from em_data_speed
+  </select>
+  <delete id="delete" parameterType="java.lang.Long">
+    delete from em_data_speed where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <delete id="deleteByProductId" parameterType="java.lang.Integer">
+    delete from em_data_speed where product_id = #{productId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.king.em.entity.EmDataSpeed">
+    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Long">
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into em_data_speed (product_id, speed_max, speed_min
+    )
+    values (#{productId,jdbcType=INTEGER}, #{speedMax,jdbcType=DECIMAL}, #{speedMin,jdbcType=DECIMAL}
+    )
+  </insert>
+
+  <update id="update" parameterType="com.king.em.entity.EmDataSpeed">
+    update em_data_speed
+    <set>
+      <if test="productId != null">
+        product_id = #{productId,jdbcType=INTEGER},
+      </if>
+      <if test="speedMax != null">
+        speed_max = #{speedMax,jdbcType=DECIMAL},
+      </if>
+      <if test="speedMin != null">
+        speed_min = #{speedMin,jdbcType=DECIMAL},
+      </if>
+    </set>
+    <where>
+      <if test="id != null">
+        and id = #{id,jdbcType=BIGINT},
+      </if>
+    </where>
+  </update>
+
+  <select id="findByProductId" parameterType="java.lang.Integer">
+    select
+    <include refid="Base_Column_List" />
+    from em_data_speed
+    where product_id = #{productId,jdbcType=INTEGER}
+  </select>
+</mapper>

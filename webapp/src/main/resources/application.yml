@@ -1,15 +1,14 @@
 server:
   # web端口
   port: 8080
+  servlet:
+    jsp:
+      init-parameters:
+        development: true
 logging:
   # 日志
   config: classpath:logback-boot.xml
 spring:
-  devtools:
-    restart:
-      enabled: false
-      additional-exclude: src/main/java
-      exclude: WEB-INF/**
   cache:
     ehcache:
       config: classpath:/ehcache.xml
@@ -19,15 +18,15 @@ spring:
       suffix: .jsp
   datasource:
     # jdbc连接
-    driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://127.0.0.1:3306/shopping_mall?characterEncoding=utf8&serverTimezone=GMT%2B8
-    username: root
-    password:
+    #driver-class-name: com.mysql.jdbc.Driver
+    #url: jdbc:mysql://127.0.0.1:3306/shopping_mall?characterEncoding=utf8&serverTimezone=GMT%2B8
+    #username: root
+    #password:
     # druid数据源
     type: com.alibaba.druid.pool.DruidDataSource
-    initialSize: 1
+    initialSize: 10
     minIdle: 3
-    maxActive: 20
+    maxActive: 100
     maxWait: 60000
     timeBetweenEvictionRunsMillis: 60000
     minEvictableIdleTimeMillis: 30000

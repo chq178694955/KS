@@ -155,18 +155,32 @@ Frame.Tabs = {
                     url: opts.url,
                     async: true,
                     success: function(html){
-                        opts.content = "<div style='height: 100%;overflow-y: auto' id='"+that.mainContentId + opts.id+"'>"+html+"</div>";
-                        var newTitle = Frame.Tabs.createTitle(opts.title);
-                        // opts.content = $("<div>").css({height:'100%','overflow-y':'auto'}).append(html).toString();
-                        element.tabAdd(Frame.Tabs.mainId,{
-                            //title:Frame.Tabs.createTitle(opts.title),
-                            // title:'<i class="layui-icon">'+opts.title.icon+'</i>' + opts.title.name,
-                            title:newTitle,
-                            content:opts.content,
-                            id:Frame.Tabs.prefixMainId + opts.id
-                        });
-                        Frame.Tabs.tabChange(opts.id);
+                        if(typeof html == 'string'){
+                            opts.content = "<div style='height: 100%;overflow-y: auto' id='"+that.mainContentId + opts.id+"'>"+html+"</div>";
+                            var newTitle = Frame.Tabs.createTitle(opts.title);
+                            // opts.content = $("<div>").css({height:'100%','overflow-y':'auto'}).append(html).toString();
+                            element.tabAdd(Frame.Tabs.mainId,{
+                                //title:Frame.Tabs.createTitle(opts.title),
+                                // title:'<i class="layui-icon">'+opts.title.icon+'</i>' + opts.title.name,
+                                title:newTitle,
+                                content:opts.content,
+                                id:Frame.Tabs.prefixMainId + opts.id
+                            });
+                            Frame.Tabs.tabChange(opts.id);
+                        }else{
+                            Frame.info(html.msg);
+                        }
                         Frame.closeLayer();
+                    },
+                    error: function(result){
+                        Frame.closeLayer();
+                        if(result.status == 404){
+                            Frame.info(WebUtils.getMessage("ks.global.exception.404"))
+                        }else if(result.status == 500){
+                            Frame.info(WebUtils.getMessage("ks.global.exception.500"))
+                        }else{
+                            Frame.info(WebUtils.getMessage("ks.global.exception.other"))
+                        }
                     }
                 });
             }else if(!WebUtils.isEmpty(opts.content)){

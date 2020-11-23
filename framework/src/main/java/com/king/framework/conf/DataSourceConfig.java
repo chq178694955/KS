@@ -2,9 +2,11 @@ package com.king.framework.conf;
 
 import com.alibaba.druid.pool.DruidDataSource;
 import com.github.pagehelper.PageHelper;
+import com.king.framework.ds.*;
 import org.apache.ibatis.plugin.Interceptor;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.mybatis.spring.SqlSessionFactoryBean;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
@@ -12,9 +14,13 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
 import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 import org.springframework.jdbc.datasource.DataSourceTransactionManager;
+import org.springframework.transaction.PlatformTransactionManager;
+import org.springframework.util.CollectionUtils;
 
 import javax.sql.DataSource;
 import java.sql.SQLException;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Properties;
 
 /**
@@ -26,13 +32,13 @@ import java.util.Properties;
 @Configuration
 public class DataSourceConfig {
 
-    @Value("${spring.datasource.url}")
+    //@Value("${spring.datasource.url}")
     private String dbUrl;
-    @Value("${spring.datasource.username}")
+    //@Value("${spring.datasource.username}")
     private String username;
-    @Value("${spring.datasource.password}")
+    //@Value("${spring.datasource.password}")
     private String password;
-    @Value("${spring.datasource.driver-class-name}")
+    //@Value("${spring.datasource.driver-class-name}")
     private String driverClassName;
     @Value("${spring.datasource.initialSize}")
     private int initialSize;
@@ -68,42 +74,73 @@ public class DataSourceConfig {
     @Value(("${mybatis.mapper-locations}"))
     private String mapperLocations;
 
-    @Bean     //声明其为Bean实例
-    @Primary  //在同样的DataSource中，首先使用被标注的DataSource
-    public DataSource dataSource(){
-        DruidDataSource datasource = new DruidDataSource();
-        datasource.setUrl(this.dbUrl);
-        datasource.setUsername(username);
-        datasource.setPassword(password);
-        datasource.setDriverClassName(driverClassName);
+    @Autowired
+    private DataSourceProps dataSourceProps;
 
-        //configuration
-        datasource.setInitialSize(initialSize);
-        datasource.setMinIdle(minIdle);
-        datasource.setMaxActive(maxActive);
-        datasource.setMaxWait(maxWait);
-        datasource.setTimeBetweenEvictionRunsMillis(timeBetweenEvictionRunsMillis);
-        datasource.setMinEvictableIdleTimeMillis(minEvictableIdleTimeMillis);
-        datasource.setValidationQuery(validationQuery);
-        datasource.setTestWhileIdle(testWhileIdle);
-        datasource.setTestOnBorrow(testOnBorrow);
-        datasource.setTestOnReturn(testOnReturn);
-        datasource.setPoolPreparedStatements(poolPreparedStatements);
-        datasource.setMaxPoolPreparedStatementPerConnectionSize(maxPoolPreparedStatementPerConnectionSize);
-        datasource.setUseGlobalDataSourceStat(useGlobalDataSourceStat);
+    @Bean(name = "dynamicDataSource")
+    @Primary
+    public DataSource dynamicDataSource(){
+        DynamicDataSource dynamicDataSource = new DynamicDataSource();
+        //配置多数据源
+        Map<Object,Object> dataSourceMap = new HashMap<>();
+        if(!CollectionUtils.isEmpty(dataSourceProps.getAttrs())){
+            for(DataSourceAttr attr : dataSourceProps.getAttrs()){
+                DataSource ds = initilDataSourceAttr(attr);
+                DataSourceType type = DataSourceType.getType(attr.getName());
+                dataSourceMap.put(type,ds);
+            }
+        }
+        //设置默认数据源
+        //dynamicDataSource.setDefaultTargetDataSource(dataSourceMap.get(DataSourceContextHolder.getDataSource()));
+        dynamicDataSource.setTargetDataSources(dataSourceMap);
+        return dynamicDataSource;
+    }
+    private DataSource initilDataSourceAttr(DataSourceAttr attr){
+        DruidDataSource ds = new DruidDataSource();
+        ds.setName(attr.getName());
+        ds.setDriverClassName(attr.getDriverClassName());
+        ds.setUrl(attr.getUrl());
+        ds.setUsername(attr.getUsername());
+        ds.setPassword(attr.getPassword());
+        //其他配置项
+        if(attr.getInitialSize() > 0){
+            ds.setInitialSize(attr.getInitialSize());
+        }else{
+            ds.setInitialSize(initialSize);
+        }
+        if(attr.getMaxActive() > 0){
+            ds.setMaxActive(attr.getMaxActive());
+        }else{
+            ds.setMaxActive(maxActive);
+        }
+        if(attr.getMinIdle() > 0){
+            ds.setMinIdle(attr.getMinIdle());
+        }else{
+            ds.setMinIdle(minIdle);
+        }
+
+        ds.setMaxWait(maxWait);
+        ds.setTimeBetweenEvictionRunsMillis(timeBetweenEvictionRunsMillis);
+        ds.setMinEvictableIdleTimeMillis(minEvictableIdleTimeMillis);
+        ds.setValidationQuery(validationQuery);
+        ds.setTestWhileIdle(testWhileIdle);
+        ds.setTestOnBorrow(testOnBorrow);
+        ds.setTestOnReturn(testOnReturn);
+        ds.setPoolPreparedStatements(poolPreparedStatements);
+        ds.setMaxPoolPreparedStatementPerConnectionSize(maxPoolPreparedStatementPerConnectionSize);
+        ds.setUseGlobalDataSourceStat(useGlobalDataSourceStat);
         try {
-            datasource.setFilters(filters);
+            ds.setFilters(filters);
         } catch (SQLException e) {
             System.err.println("druid configuration initialization filter: "+ e);
         }
-        datasource.setConnectionProperties(connectionProperties);
-        return datasource;
+        ds.setConnectionProperties(connectionProperties);
+        return ds;
     }
 
     @Bean(name = "transactionManager")
-    @Primary
-    public DataSourceTransactionManager transactionManager(){
-        return new DataSourceTransactionManager(dataSource());
+    public PlatformTransactionManager transactionManager(@Autowired @Qualifier("dynamicDataSource")DataSource dataSource){
+        return new DataSourceTransactionManager(dataSource);
     }
 
     @Bean
@@ -120,7 +157,7 @@ public class DataSourceConfig {
 
     @Bean(name = "sqlSessionFactory")
     @Primary
-    public SqlSessionFactory sqlSessionFactory(@Qualifier("dataSource") DataSource dataSource)
+    public SqlSessionFactory sqlSessionFactory(@Autowired @Qualifier("dynamicDataSource")DataSource dataSource)
         throws Exception{
         final SqlSessionFactoryBean sessionFactory = new SqlSessionFactoryBean();
         sessionFactory.setDataSource(dataSource);

@@ -1,10 +1,13 @@
 package com.king.framework.base;
 
 import com.github.pagehelper.PageInfo;
+import org.apache.ibatis.session.ExecutorType;
 import org.apache.ibatis.session.SqlSession;
+import org.apache.ibatis.session.SqlSessionFactory;
+import org.mybatis.spring.SqlSessionTemplate;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.stereotype.Repository;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import javax.annotation.Resource;
 import java.util.List;
@@ -15,7 +18,6 @@ import java.util.Map;
  * @创建时间 2020/3/18
  * @描述
  */
-@Repository
 public abstract class BaseDaoImpl<T> implements IBaseDao<T> {
 
     protected Logger logger = LoggerFactory.getLogger(BaseDaoImpl.class);
@@ -39,11 +41,15 @@ public abstract class BaseDaoImpl<T> implements IBaseDao<T> {
         return this.className;
     }
 
-    @Resource
-    private SqlSession sqlSessionTemplate;
+    @Autowired
+    private SqlSessionFactory sqlSessionFactory;
+
+    @Autowired
+    private SqlSessionTemplate sqlSessionTemplate;
 
     public SqlSession getSqlSessionTemplate() {
-        return this.sqlSessionTemplate;
+//        return sqlSessionFactory.openSession();
+        return sqlSessionTemplate;
     }
 
     public String getMapperMethod(String methodName) {
@@ -64,8 +70,14 @@ public abstract class BaseDaoImpl<T> implements IBaseDao<T> {
     }
 
     public int batchInsert(String mapperMethod, List<T> entityList) {
-//        return this.getSqlSessionTemplate().batchInsert(this.getMapperMethod(mapperMethod), entityList);
-        return 0;
+        SqlSession sqlSession = sqlSessionFactory.openSession(ExecutorType.BATCH,false);
+        int count = 0;
+        for(int i=0;i<entityList.size();i++){
+            this.insert(entityList.get(i));
+            count ++;
+        }
+        sqlSession.commit();
+        return count;
     }
 
     public int update(T entity) {
@@ -89,8 +101,14 @@ public abstract class BaseDaoImpl<T> implements IBaseDao<T> {
     }
 
     public int batchUpdate(String mapperMethod, List<T> entityList) {
-//        return this.getSqlSessionTemplate().batchUpdate(this.getMapperMethod(mapperMethod), entityList);
-        return 0;
+        SqlSession sqlSession = sqlSessionTemplate.getSqlSessionFactory().openSession(ExecutorType.BATCH,false);
+        int count = 0;
+        for(int i=0;i<entityList.size();i++){
+            this.update(entityList.get(i));
+            count ++;
+        }
+        sqlSession.commit();
+        return count;
     }
 
     public <I> int delete(I id) {
@@ -110,8 +128,14 @@ public abstract class BaseDaoImpl<T> implements IBaseDao<T> {
     }
 
     public <I> int batchDelete(String mapperMethod, List<I> ids) {
-//        return this.getSqlSessionTemplate().batchDelete(this.getMapperMethod(mapperMethod), ids);
-        return 0;
+        SqlSession sqlSession = sqlSessionTemplate.getSqlSessionFactory().openSession(ExecutorType.BATCH,false);
+        int count = 0;
+        for(int i=0;i<ids.size();i++){
+            this.delete(ids.get(i));
+            count ++;
+        }
+        sqlSession.commit();
+        return count;
     }
 
     public <I> I get(Object obj) {

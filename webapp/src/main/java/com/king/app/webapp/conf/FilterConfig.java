@@ -1,5 +1,6 @@
 package com.king.app.webapp.conf;
 
+import com.king.app.webapp.filter.ApiFilter;
 import com.king.app.webapp.filter.ParamFilter;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.context.annotation.Bean;
@@ -14,11 +15,12 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class FilterConfig {
 
-//    @Bean
-//    public FilterRegistrationBean registrationBean(){
-//        FilterRegistrationBean filterRegistrationBean = new FilterRegistrationBean(new ParamFilter());
-//        filterRegistrationBean.addUrlPatterns("/*");
-//        return filterRegistrationBean;
-//    }
+    @Bean
+    public FilterRegistrationBean registrationBean(){
+        FilterRegistrationBean filterRegistrationBean = new FilterRegistrationBean(new ApiFilter());
+        filterRegistrationBean.addUrlPatterns("/api/*");
+        filterRegistrationBean.setOrder(1);//优先级
+        return filterRegistrationBean;
+    }
 
 }

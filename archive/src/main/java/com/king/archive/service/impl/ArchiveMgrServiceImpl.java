@@ -39,7 +39,7 @@ public abstract class ArchiveMgrServiceImpl<T extends Archive> implements IArchi
     @Autowired
     private ArchiveObservable observable;
 
-    @Autowired(required = false)
+    //@Autowired
     private IBaseDao<T> baseDao;
 
     @Override

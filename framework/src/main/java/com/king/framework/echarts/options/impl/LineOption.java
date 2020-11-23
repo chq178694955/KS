@@ -3,6 +3,7 @@ package com.king.framework.echarts.options.impl;
 import com.alibaba.fastjson.JSONArray;
 import com.king.framework.echarts.code.EchartsType;
 import com.king.framework.echarts.code.Position;
+import com.king.framework.echarts.code.TriggerType;
 import com.king.framework.echarts.component.*;
 import com.king.framework.echarts.component.impl.LineAxisPointer;
 import com.king.framework.echarts.component.impl.XAxis;
@@ -36,12 +37,12 @@ public class LineOption extends AbstractOption {
         lineAxisPointer.setType(AxisPointer.AxisPointerType.LINE.getVal());
         lineAxisPointer.buildStyle();
         Tooltip tooltip = new Tooltip();
-        tooltip.setTrigger("axis") // item axis
+        tooltip.setTrigger(TriggerType.AXIS.getVal()) // item axis
                 .setAxisPointer(lineAxisPointer);
         this.setTooltip(tooltip);
 
         Legend<List<String>> legend = new Legend<>();
-        legend.setOrient("horizontal") // horizontal vertical
+        legend.setOrient(Position.H.getVal()) // horizontal vertical
                 .setX(Position.C.getVal())
                 .setY(Position.T.getVal())
                 .setData(legendData);

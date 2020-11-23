@@ -22,7 +22,9 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+import javax.servlet.Filter;
 import java.util.LinkedHashMap;
+import java.util.Map;
 
 /**
  * shiro配置
@@ -152,6 +154,7 @@ public class ShiroConfig {
         LinkedHashMap<String,String> filterChianMap = new LinkedHashMap<>();
         //设置免验证路径
         filterChianMap.put("/static/**","anon");
+        filterChianMap.put("/api/**","anon");//http接口放行
         filterChianMap.put("/403","anon");
         filterChianMap.put("/404","anon");
         filterChianMap.put("/500","anon");

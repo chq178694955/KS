@@ -7,49 +7,180 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fe042204-8736-438e-94f6-a48ebd7c8011" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/framework/src/main/java/com/king/framework/echarts/EchartsUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/framework/src/main/java/com/king/framework/echarts/code/EchartsType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/framework/src/main/java/com/king/framework/echarts/code/Position.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/framework/src/main/java/com/king/framework/echarts/component/Axis.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/framework/src/main/java/com/king/framework/echarts/component/AxisPointer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/framework/src/main/java/com/king/framework/echarts/component/Component.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/framework/src/main/java/com/king/framework/echarts/component/Legend.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/framework/src/main/java/com/king/framework/echarts/component/Style.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/framework/src/main/java/com/king/framework/echarts/component/Title.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/framework/src/main/java/com/king/framework/echarts/component/Tooltip.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/framework/src/main/java/com/king/framework/echarts/component/impl/LineAxisPointer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/framework/src/main/java/com/king/framework/echarts/component/impl/LineStyle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/framework/src/main/java/com/king/framework/echarts/component/impl/XAxis.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/framework/src/main/java/com/king/framework/echarts/component/impl/YAxis.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/framework/src/main/java/com/king/framework/echarts/factory/EchartsFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/framework/src/main/java/com/king/framework/echarts/options/AbstractOption.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/framework/src/main/java/com/king/framework/echarts/options/IOption.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/framework/src/main/java/com/king/framework/echarts/options/impl/BarOption.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/framework/src/main/java/com/king/framework/echarts/options/impl/LineOption.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/framework/src/main/java/com/king/framework/echarts/options/impl/PieOption.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/framework/src/main/java/com/king/framework/echarts/series/Series.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/framework/src/main/java/com/king/framework/echarts/series/SeriesStrategy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/framework/src/main/java/com/king/framework/echarts/series/impl/BarSeries.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/framework/src/main/java/com/king/framework/echarts/series/impl/LineSeries.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/framework/src/main/java/com/king/framework/echarts/series/impl/PieSeries.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webapp/src/main/java/com/king/app/webapp/controller/keke/CardHomeController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webapp/src/main/java/com/king/app/webapp/controller/system/EchartsController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/keke/car/home.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/sys/echarts/main.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webapp/src/main/webapp/static/echarts-2.2.7/extension/BMap/doc/BMap.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webapp/src/main/webapp/static/echarts-2.2.7/extension/BMap/doc/BMap.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webapp/src/main/webapp/static/echarts-2.2.7/extension/BMap/doc/doc.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webapp/src/main/webapp/static/echarts-2.2.7/extension/BMap/doc/example.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webapp/src/main/webapp/static/echarts-2.2.7/extension/BMap/doc/example.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webapp/src/main/webapp/static/echarts-2.2.7/extension/BMap/src/main.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webapp/src/main/webapp/static/echarts-2.2.7/extension/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/electric-machine/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/dao/EmAttrTypeMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/dao/EmBaseParamsMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/dao/EmDataConstantloadDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/dao/EmDataEmptyloadDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/dao/EmDataOverloadDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/dao/EmDataSinDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/dao/EmDataSpeedDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/dao/EmDataStepDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/dao/EmIndexCategoryDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/dao/EmIndexDetailDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/dao/EmIndexGroupDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/dao/EmIndexTemplateDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/dao/EmProductDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/dto/ExperimentType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/entity/EmAttrType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/entity/EmBaseParams.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/entity/EmDataConstantload.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/entity/EmDataEmptyload.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/entity/EmDataOverload.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/entity/EmDataSin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/entity/EmDataSpeed.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/entity/EmDataStep.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/entity/EmIndexCategory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/entity/EmIndexDetail.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/entity/EmIndexGroup.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/entity/EmIndexTemplate.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/entity/EmProduct.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/entity/Experiment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/factory/ExperimentDataServiceFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/service/IEmAttrTypeService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/service/IEmBaseParamsService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/service/IEmIndexCategoryService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/service/IEmIndexDetailService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/service/IEmIndexGroupService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/service/IEmIndexTemplateService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/service/IEmProductService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/service/IExperimentDataMgrService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/service/impl/EmAttrTypeServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/service/impl/EmBaseParamsServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/service/impl/EmDataConstantloadServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/service/impl/EmDataEmptyloadServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/service/impl/EmDataOverloadServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/service/impl/EmDataSinServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/service/impl/EmDataSpeedServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/service/impl/EmDataStepServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/service/impl/EmIndexCategoryServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/service/impl/EmIndexDetailServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/service/impl/EmIndexGroupServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/service/impl/EmIndexTemplateServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/service/impl/EmProductServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/electric-machine/src/main/resources/generatorConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/electric-machine/src/main/resources/i18n/em_en_US.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/electric-machine/src/main/resources/i18n/em_zh_CN.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/electric-machine/src/main/resources/mapper/em/EmAttrTypeMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/electric-machine/src/main/resources/mapper/em/EmBaseParamsMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/electric-machine/src/main/resources/mapper/em/EmDataConstantloadMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/electric-machine/src/main/resources/mapper/em/EmDataEmptyloadMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/electric-machine/src/main/resources/mapper/em/EmDataOverloadMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/electric-machine/src/main/resources/mapper/em/EmDataSinMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/electric-machine/src/main/resources/mapper/em/EmDataSpeedMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/electric-machine/src/main/resources/mapper/em/EmDataStepMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/electric-machine/src/main/resources/mapper/em/EmIndexCategoryMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/electric-machine/src/main/resources/mapper/em/EmIndexDetailMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/electric-machine/src/main/resources/mapper/em/EmIndexGroupMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/electric-machine/src/main/resources/mapper/em/EmIndexTemplateMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/electric-machine/src/main/resources/mapper/em/EmProductMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/framework/src/main/java/com/king/framework/ds/DataSourceAttr.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/framework/src/main/java/com/king/framework/ds/DataSourceContextHolder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/framework/src/main/java/com/king/framework/ds/DataSourceProps.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/framework/src/main/java/com/king/framework/ds/DataSourceSign.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/framework/src/main/java/com/king/framework/ds/DataSourceType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/framework/src/main/java/com/king/framework/ds/DynamicDataSource.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/framework/src/main/java/com/king/framework/ds/DynamicDataSourceAspect.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/framework/src/main/java/com/king/framework/echarts/code/TriggerType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/framework/src/main/java/com/king/framework/excel/ExcelBatchImportMain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/framework/src/main/java/com/king/framework/excel/ExcelEventModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/framework/src/main/java/com/king/framework/excel/ExcelParser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/framework/src/main/java/com/king/framework/excel/ExcelParserFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/framework/src/main/java/com/king/framework/excel/ExcelParserType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/framework/src/main/java/com/king/framework/excel/IExcelParserMgrService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/framework/src/main/java/com/king/framework/model/TokenStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/framework/src/main/java/com/king/framework/utils/HttpUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/framework/src/main/java/com/king/framework/utils/JwtUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/framework/src/main/java/com/king/framework/utils/NumberUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/framework/src/main/java/com/king/framework/utils/RSACoder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/framework/src/main/java/com/king/framework/utils/ShaCoder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/framework/src/main/java/com/king/framework/utils/SpringBeanUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/framework/src/main/resources/datasources.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/system/src/main/java/com/king/system/dao/DBInfoMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/system/src/main/java/com/king/system/dao/SysAppInfoMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/system/src/main/java/com/king/system/dao/SysAppMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/system/src/main/java/com/king/system/entity/DBInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/system/src/main/java/com/king/system/entity/SysApp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/system/src/main/java/com/king/system/entity/SysAppInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/system/src/main/java/com/king/system/parser/SysUserExcelParserServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/system/src/main/java/com/king/system/service/IDBInfoService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/system/src/main/java/com/king/system/service/impl/DBInfoServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webapp/src/main/java/com/king/app/webapp/controller/api/ApiController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webapp/src/main/java/com/king/app/webapp/controller/em/AttrTypeMgrController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webapp/src/main/java/com/king/app/webapp/controller/em/EmBaseParamsController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webapp/src/main/java/com/king/app/webapp/controller/em/EmHomeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webapp/src/main/java/com/king/app/webapp/controller/em/EmIndexMgrController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webapp/src/main/java/com/king/app/webapp/controller/em/EmMyIndexController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webapp/src/main/java/com/king/app/webapp/controller/em/ProductManagerController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webapp/src/main/java/com/king/app/webapp/controller/system/AppMgrController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webapp/src/main/java/com/king/app/webapp/filter/ApiFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webapp/src/main/resources/experimental-data.xlsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/em/baseParams/add.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/em/baseParams/main.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/em/baseParams/update.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/em/home/importExcelData.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/em/indexMgr/addCategory.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/em/indexMgr/addTemplate.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/em/indexMgr/main.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/em/indexMgr/updateCategory.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/em/indexMgr/updateTemplate.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/em/myIndex/main.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/em/product/main.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/em/product/type/add.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/em/product/type/main.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/em/product/type/update.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/sys/app/main.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/welcome_default.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/KS_DATA/logs/ks_log(LAPTOP-3H9KE96D)-default-current.log" beforeDir="false" afterPath="$PROJECT_DIR$/KS_DATA/logs/ks_log(LAPTOP-3H9KE96D)-default-current.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/archive/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/src/main/java/com/king/archive/service/impl/ArchiveMgrServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/archive/src/main/java/com/king/archive/service/impl/ArchiveMgrServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/src/main/java/com/king/archive/service/impl/MeterMgrServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/archive/src/main/java/com/king/archive/service/impl/MeterMgrServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/framework/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/framework/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/framework/src/main/java/com/king/framework/base/BaseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/framework/src/main/java/com/king/framework/base/BaseController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/framework/src/main/java/com/king/framework/base/BaseDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/framework/src/main/java/com/king/framework/base/BaseDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/framework/src/main/java/com/king/framework/base/BaseServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/framework/src/main/java/com/king/framework/base/BaseServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/framework/src/main/java/com/king/framework/cache/SystemCache.java" beforeDir="false" afterPath="$PROJECT_DIR$/framework/src/main/java/com/king/framework/cache/SystemCache.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/framework/src/main/java/com/king/framework/conf/DataSourceConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/framework/src/main/java/com/king/framework/conf/DataSourceConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/framework/src/main/java/com/king/framework/echarts/code/Position.java" beforeDir="false" afterPath="$PROJECT_DIR$/framework/src/main/java/com/king/framework/echarts/code/Position.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/framework/src/main/java/com/king/framework/echarts/options/impl/BarOption.java" beforeDir="false" afterPath="$PROJECT_DIR$/framework/src/main/java/com/king/framework/echarts/options/impl/BarOption.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/framework/src/main/java/com/king/framework/echarts/options/impl/LineOption.java" beforeDir="false" afterPath="$PROJECT_DIR$/framework/src/main/java/com/king/framework/echarts/options/impl/LineOption.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/framework/src/main/java/com/king/framework/utils/BeanLoader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/game/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/com/king/game/service/impl/VoteRecordServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/com/king/game/service/impl/VoteRecordServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/com/king/game/service/impl/VoteServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/com/king/game/service/impl/VoteServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/keke/keke.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/keke/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/keke/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/common/include.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/common/include.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/system/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/system/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/system/src/main/java/com/king/system/conf/ShiroConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/system/src/main/java/com/king/system/conf/ShiroConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/system/src/main/java/com/king/system/service/impl/SysConfigServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/system/src/main/java/com/king/system/service/impl/SysConfigServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/system/src/main/resources/generatorConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/system/src/main/resources/generatorConfig.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/system/src/main/resources/i18n/system_en_US.properties" beforeDir="false" afterPath="$PROJECT_DIR$/system/src/main/resources/i18n/system_en_US.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/system/src/main/resources/i18n/system_zh_CN.properties" beforeDir="false" afterPath="$PROJECT_DIR$/system/src/main/resources/i18n/system_zh_CN.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/system/system.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/src/main/java/com/king/app/webapp/conf/FilterConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/java/com/king/app/webapp/conf/FilterConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/src/main/resources/i18n/common_en_US.properties" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/resources/i18n/common_en_US.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/src/main/resources/i18n/common_zh_CN.properties" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/resources/i18n/common_zh_CN.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/sys/user/main.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/sys/user/main.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/welcome.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/welcome.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/src/main/webapp/static/js/utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/webapp/static/js/utils.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/src/main/webapp/static/fonts/iconfont.css" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/webapp/static/fonts/iconfont.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/src/main/webapp/static/fonts/iconfont.eot" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/webapp/static/fonts/iconfont.eot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/src/main/webapp/static/fonts/iconfont.js" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/webapp/static/fonts/iconfont.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/src/main/webapp/static/fonts/iconfont.json" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/webapp/static/fonts/iconfont.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/src/main/webapp/static/fonts/iconfont.svg" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/webapp/static/fonts/iconfont.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/src/main/webapp/static/fonts/iconfont.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/webapp/static/fonts/iconfont.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/src/main/webapp/static/fonts/iconfont.woff" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/webapp/static/fonts/iconfont.woff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/src/main/webapp/static/fonts/iconfont.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/webapp/static/fonts/iconfont.woff2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/src/main/webapp/static/js/frame.js" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/webapp/static/js/frame.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/framework/target/" />
@@ -59,6 +190,9 @@
     <ignored path="$PROJECT_DIR$/system/target/" />
     <ignored path="$PROJECT_DIR$/game/target/" />
     <ignored path="$PROJECT_DIR$/keke/target/" />
+    <ignored path="$PROJECT_DIR$/study/target/" />
+    <ignored path="$PROJECT_DIR$/test-client/target/" />
+    <ignored path="$PROJECT_DIR$/electric-machine/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,68 +207,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/framework/src/main/java/com/king/framework/echarts/EchartsUtil.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="109">
-              <caret line="15" column="6" lean-forward="true" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/webapp/src/main/java/com/king/app/webapp/controller/system/EchartsController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="206">
-              <caret line="51" column="31" lean-forward="true" selection-start-line="51" selection-start-column="31" selection-end-line="51" selection-end-column="31" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/framework/src/main/java/com/king/framework/echarts/options/impl/LineOption.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95">
-              <caret line="5" column="38" lean-forward="true" selection-start-line="5" selection-start-column="38" selection-end-line="5" selection-end-column="38" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/framework/src/main/java/com/king/framework/echarts/options/AbstractOption.java">
+        <entry file="file://$PROJECT_DIR$/archive/src/main/java/com/king/archive/service/impl/ArchiveMgrServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="206">
-              <caret line="90" column="29" selection-start-line="90" selection-start-column="29" selection-end-line="90" selection-end-column="29" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="218">
+              <caret line="48" selection-start-line="48" selection-end-line="48" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/framework/src/main/java/com/king/framework/echarts/options/impl/PieOption.java">
+        <entry file="file://$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/sys/user/add.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="15" selection-start-line="15" selection-end-line="15" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/framework/src/main/java/com/king/framework/echarts/options/impl/BarOption.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95">
-              <caret line="5" column="31" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
+            <state relative-caret-position="2451">
+              <caret line="129" column="5" selection-start-line="113" selection-start-column="4" selection-end-line="129" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -146,51 +232,55 @@
       <list>
         <option value="Kotlin Enum" />
         <option value="Jsp File" />
-        <option value="Interface" />
         <option value="Enum" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>vote.btn.label.delItem</find>
-      <find>vote.itemGroup.tip.nameEmpty</find>
-      <find>Login</find>
-      <find>AuthorizingRealm</find>
-      <find>clearSession</find>
-      <find>voteForm</find>
-      <find>selectMyRecord</find>
-      <find>selectItemByGroupIds</find>
-      <find>useFlagFilter</find>
-      <find>md5</find>
-      <find>idCardNum</find>
-      <find>state_</find>
-      <find>sys.dict.tip.delUser</find>
-      <find>dict</find>
-      <find>render</find>
-      <find>layui-table-cell .layui-form-checkbox[lay-skin=primary]</find>
-      <find>getResourceByRoleId</find>
-      <find>treeId</find>
-      <find>saveAuth</find>
-      <find>resourcesTree_</find>
-      <find>tips</find>
-      <find>debugger</find>
-      <find>user</find>
-      <find>disabled</find>
-      <find>findByKey</find>
-      <find>'</find>
-      <find>Tool</find>
-      <find>tool</find>
-      <find>getJws</find>
-      <find>tooltip</find>
+      <find>searchForm</find>
+      <find>edit</find>
+      <find>Example_Where_Clause</find>
+      <find>voteList_</find>
+      <find>150</find>
+      <find>form</find>
+      <find>layui-form</find>
+      <find>templet</find>
+      <find>switchTpl</find>
+      <find>usedFlagSwitchTpl_</find>
+      <find>usedFlagFilter</find>
+      <find>findByPage</find>
+      <find>update</find>
+      <find>Archive</find>
+      <find>ArchiveServiceFactory</find>
+      <find>extends BaseDao</find>
+      <find>emDataStepDao</find>
+      <find>Constructor</find>
+      <find>batchInsert</find>
+      <find>com.king.em.entity.EmDataOverload</find>
+      <find>like</find>
+      <find>druid</find>
+      <find>sqlSessionFactory</find>
+      <find>record.</find>
+      <find>EmIndexTemplate</find>
+      <find>EmIndexGroup</find>
+      <find>findAll</find>
+      <find>roleId</find>
+      <find>clear</find>
+      <find>dataListTemplate_</find>
     </findStrings>
     <replaceStrings>
       <replace />
       <replace>&quot;</replace>
+      <replace>170</replace>
+      <replace>EmIndexGroup</replace>
+      <replace>EmIndexDetail</replace>
     </replaceStrings>
     <dirStrings>
       <dir>D:\projects\KS\KS_DATA\cache</dir>
+      <dir>D:\projects\KS\webapp\src\main\webapp\WEB-INF\jsp</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -199,57 +289,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/framework/src/main/java/com/king/framework/echarts/axis/LineAxisPointer.java" />
-        <option value="$PROJECT_DIR$/framework/src/main/java/com/king/framework/echarts/axis/CrossAxisPointer.java" />
-        <option value="$PROJECT_DIR$/framework/src/main/java/com/king/framework/echarts/EchartsOption.java" />
-        <option value="$PROJECT_DIR$/framework/src/main/java/com/king/framework/utils/TokenUtils.java" />
-        <option value="$PROJECT_DIR$/framework/src/main/java/com/king/framework/utils/JwtUtil.java" />
+        <option value="$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/service/impl/EmProductServiceImpl.java" />
+        <option value="$PROJECT_DIR$/electric-machine/src/main/resources/mapper/em/EmDataStepMapper.xml" />
+        <option value="$PROJECT_DIR$/electric-machine/src/main/resources/mapper/em/EmDataSinMapper.xml" />
+        <option value="$PROJECT_DIR$/electric-machine/src/main/resources/mapper/em/EmDataOverloadMapper.xml" />
+        <option value="$PROJECT_DIR$/electric-machine/src/main/resources/mapper/em/EmDataEmptyloadMapper.xml" />
+        <option value="$PROJECT_DIR$/electric-machine/src/main/resources/mapper/em/EmDataConstantloadMapper.xml" />
+        <option value="$PROJECT_DIR$/electric-machine/src/main/resources/mapper/em/EmDataSpeedMapper.xml" />
+        <option value="$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/service/IExperimentDataMgrService.java" />
+        <option value="$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/service/impl/EmDataStepServiceImpl.java" />
+        <option value="$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/service/impl/EmDataSpeedServiceImpl.java" />
+        <option value="$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/service/impl/EmDataSinServiceImpl.java" />
+        <option value="$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/service/impl/EmDataOverloadServiceImpl.java" />
+        <option value="$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/service/impl/EmDataEmptyloadServiceImpl.java" />
+        <option value="$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/service/impl/EmDataConstantloadServiceImpl.java" />
+        <option value="$PROJECT_DIR$/webapp/src/main/java/com/king/app/webapp/controller/em/ProductManagerController.java" />
+        <option value="$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/entity/EmDataConstantload.java" />
+        <option value="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/em/product/main.jsp" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/framework/pom.xml" />
-        <option value="$PROJECT_DIR$/framework/src/main/java/com/king/framework/echarts/code/EchartsType.java" />
-        <option value="$PROJECT_DIR$/framework/src/main/java/com/king/framework/echarts/EchartsFactory.java" />
-        <option value="$PROJECT_DIR$/framework/src/main/java/com/king/framework/echarts/factory/PieOptionFactory.java" />
-        <option value="$PROJECT_DIR$/framework/src/main/java/com/king/framework/echarts/factory/LineOptionFactory.java" />
-        <option value="$PROJECT_DIR$/framework/src/main/java/com/king/framework/echarts/factory/BarOptionFactory.java" />
-        <option value="$PROJECT_DIR$/framework/src/main/java/com/king/framework/echarts/factory/OptionFactory.java" />
-        <option value="$PROJECT_DIR$/framework/src/main/java/com/king/framework/echarts/factory/impl/LineChart.java" />
-        <option value="$PROJECT_DIR$/framework/src/main/java/com/king/framework/echarts/factory/impl/BarChart.java" />
-        <option value="$PROJECT_DIR$/framework/src/main/java/com/king/framework/echarts/factory/impl/PieChart.java" />
-        <option value="$PROJECT_DIR$/framework/src/main/java/com/king/framework/echarts/factory/impl/EchartsFactoryImpl.java" />
-        <option value="$PROJECT_DIR$/framework/src/main/java/com/king/framework/echarts/options/impl/OptionLine.java" />
-        <option value="$PROJECT_DIR$/framework/src/main/java/com/king/framework/echarts/options/AbsOption.java" />
-        <option value="$PROJECT_DIR$/framework/src/main/java/com/king/framework/echarts/factory/EchartsFactory.java" />
-        <option value="$PROJECT_DIR$/framework/src/main/java/com/king/framework/echarts/component/IEchartsItem.java" />
-        <option value="$PROJECT_DIR$/framework/src/main/java/com/king/framework/echarts/component/AbstractEchartsItem.java" />
-        <option value="$PROJECT_DIR$/framework/src/main/java/com/king/framework/echarts/component/impl/Title.java" />
-        <option value="$PROJECT_DIR$/framework/src/main/java/com/king/framework/echarts/code/Position.java" />
-        <option value="$PROJECT_DIR$/framework/src/main/java/com/king/framework/echarts/component/Component.java" />
-        <option value="$PROJECT_DIR$/framework/src/main/java/com/king/framework/echarts/component/Title.java" />
-        <option value="$PROJECT_DIR$/framework/src/main/java/com/king/framework/echarts/component/Tooltip.java" />
-        <option value="$PROJECT_DIR$/framework/src/main/java/com/king/framework/echarts/component/Legend.java" />
-        <option value="$PROJECT_DIR$/framework/src/main/java/com/king/framework/echarts/EchartsTest.java" />
-        <option value="$PROJECT_DIR$/framework/src/main/java/com/king/framework/echarts/options/IOption.java" />
-        <option value="$PROJECT_DIR$/framework/src/main/java/com/king/framework/echarts/component/impl/XAxis.java" />
-        <option value="$PROJECT_DIR$/framework/src/main/java/com/king/framework/echarts/component/impl/YAxis.java" />
-        <option value="$PROJECT_DIR$/framework/src/main/java/com/king/framework/echarts/component/Axis.java" />
-        <option value="$PROJECT_DIR$/framework/src/main/java/com/king/framework/echarts/series/Series.java" />
-        <option value="$PROJECT_DIR$/framework/src/main/java/com/king/framework/echarts/code/SeriesType.java" />
-        <option value="$PROJECT_DIR$/framework/src/main/java/com/king/framework/echarts/series/impl/LineSeries.java" />
-        <option value="$PROJECT_DIR$/framework/src/main/java/com/king/framework/echarts/series/impl/BarSeries.java" />
-        <option value="$PROJECT_DIR$/framework/src/main/java/com/king/framework/echarts/series/impl/PieSeries.java" />
-        <option value="$PROJECT_DIR$/framework/src/main/java/com/king/framework/echarts/series/SeriesStrategy.java" />
-        <option value="$PROJECT_DIR$/framework/src/main/java/com/king/framework/echarts/component/AxisPointer.java" />
-        <option value="$PROJECT_DIR$/framework/src/main/java/com/king/framework/echarts/component/Style.java" />
-        <option value="$PROJECT_DIR$/framework/src/main/java/com/king/framework/echarts/component/impl/LIneStyle.java" />
-        <option value="$PROJECT_DIR$/framework/src/main/java/com/king/framework/echarts/component/impl/LineStyle.java" />
-        <option value="$PROJECT_DIR$/framework/src/main/java/com/king/framework/echarts/component/impl/LineAxisPointer.java" />
-        <option value="$PROJECT_DIR$/webapp/src/main/webapp/static/js/utils.js" />
-        <option value="$PROJECT_DIR$/framework/src/main/java/com/king/framework/echarts/options/impl/PieOption.java" />
-        <option value="$PROJECT_DIR$/webapp/src/main/java/com/king/app/webapp/controller/system/EchartsController.java" />
-        <option value="$PROJECT_DIR$/framework/src/main/java/com/king/framework/echarts/options/impl/BarOption.java" />
-        <option value="$PROJECT_DIR$/framework/src/main/java/com/king/framework/echarts/options/impl/LineOption.java" />
-        <option value="$PROJECT_DIR$/framework/src/main/java/com/king/framework/echarts/EchartsUtil.java" />
-        <option value="$PROJECT_DIR$/framework/src/main/java/com/king/framework/echarts/options/AbstractOption.java" />
+        <option value="$PROJECT_DIR$/framework/src/main/java/com/king/framework/conf/DataSourceConfig.java" />
+        <option value="$PROJECT_DIR$/webapp/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/framework/src/main/resources/datasources.properties" />
+        <option value="$PROJECT_DIR$/framework/src/main/java/com/king/framework/base/BaseDaoImpl.java" />
+        <option value="$PROJECT_DIR$/webapp/src/main/java/com/king/app/webapp/controller/em/EmMyIndexController.java" />
+        <option value="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/em/myIndex/main.jsp" />
+        <option value="$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/dao/EmIndexCategoryDao.java" />
+        <option value="$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/dao/EmIndexTemplateDao.java" />
+        <option value="$PROJECT_DIR$/electric-machine/src/main/resources/generatorConfig.xml" />
+        <option value="$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/dao/EmIndexGroupDao.java" />
+        <option value="$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/dao/EmIndexDetailDao.java" />
+        <option value="$PROJECT_DIR$/webapp/src/main/java/com/king/app/webapp/controller/em/AttrTypeMgrController.java" />
+        <option value="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/em/baseParams/update.jsp" />
+        <option value="$PROJECT_DIR$/electric-machine/src/main/resources/mapper/em/EmIndexGroupMapper.xml" />
+        <option value="$PROJECT_DIR$/electric-machine/src/main/resources/mapper/em/EmIndexDetailMapper.xml" />
+        <option value="$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/service/IEmIndexTemplateService.java" />
+        <option value="$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/service/IEmIndexGroupService.java" />
+        <option value="$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/service/IEmIndexDetailService.java" />
+        <option value="$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/service/impl/EmIndexGroupServiceImpl.java" />
+        <option value="$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/service/impl/EmIndexDetailServiceImpl.java" />
+        <option value="$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/service/impl/EmIndexTemplateServiceImpl.java" />
+        <option value="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/em/indexMgr/updateCategory.jsp" />
+        <option value="$PROJECT_DIR$/electric-machine/src/main/resources/mapper/em/EmIndexCategoryMapper.xml" />
+        <option value="$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/service/IEmIndexCategoryService.java" />
+        <option value="$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/service/impl/EmIndexCategoryServiceImpl.java" />
+        <option value="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/em/indexMgr/addCategory.jsp" />
+        <option value="$PROJECT_DIR$/webapp/src/main/java/com/king/app/webapp/controller/em/EmIndexMgrController.java" />
+        <option value="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/em/indexMgr/main.jsp" />
+        <option value="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/em/indexMgr/addTemplate.jsp" />
+        <option value="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/em/indexMgr/updateTemplate.jsp" />
+        <option value="$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/entity/EmIndexTemplate.java" />
+        <option value="$PROJECT_DIR$/electric-machine/src/main/resources/mapper/em/EmIndexTemplateMapper.xml" />
+        <option value="$PROJECT_DIR$/archive/src/main/java/com/king/archive/service/impl/ArchiveMgrServiceImpl.java" />
       </list>
     </option>
   </component>
@@ -285,10 +375,6 @@
       <expand>
         <path>
           <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="game" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-        </path>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
           <item name="KS" type="9519ce18:MavenProjectsStructure$ProjectNode" />
         </path>
         <path>
@@ -298,18 +384,7 @@
         </path>
         <path>
           <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="system" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-        </path>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="system" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-          <item name="Plugins" type="7aea1407:MavenProjectsStructure$PluginsNode" />
-        </path>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="system" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-          <item name="Plugins" type="7aea1407:MavenProjectsStructure$PluginsNode" />
-          <item name="mybatis-generator" type="36feed69:MavenProjectsStructure$PluginNode" />
+          <item name="webapp" type="9519ce18:MavenProjectsStructure$ProjectNode" />
         </path>
       </expand>
       <select />
@@ -326,8 +401,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -338,425 +411,25 @@
             <path>
               <item name="KS" type="b2602c69:ProjectViewProjectNode" />
               <item name="KS" type="462c0819:PsiDirectoryNode" />
-              <item name="framework" type="462c0819:PsiDirectoryNode" />
+              <item name="KS_DATA" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="KS" type="b2602c69:ProjectViewProjectNode" />
               <item name="KS" type="462c0819:PsiDirectoryNode" />
-              <item name="framework" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="KS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="KS" type="462c0819:PsiDirectoryNode" />
-              <item name="framework" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="KS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="KS" type="462c0819:PsiDirectoryNode" />
-              <item name="framework" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="KS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="KS" type="462c0819:PsiDirectoryNode" />
-              <item name="framework" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="framework" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="KS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="KS" type="462c0819:PsiDirectoryNode" />
-              <item name="framework" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="framework" type="462c0819:PsiDirectoryNode" />
-              <item name="echarts" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="KS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="KS" type="462c0819:PsiDirectoryNode" />
-              <item name="framework" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="framework" type="462c0819:PsiDirectoryNode" />
-              <item name="echarts" type="462c0819:PsiDirectoryNode" />
-              <item name="code" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="KS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="KS" type="462c0819:PsiDirectoryNode" />
-              <item name="framework" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="framework" type="462c0819:PsiDirectoryNode" />
-              <item name="echarts" type="462c0819:PsiDirectoryNode" />
-              <item name="component" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="KS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="KS" type="462c0819:PsiDirectoryNode" />
-              <item name="framework" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="framework" type="462c0819:PsiDirectoryNode" />
-              <item name="echarts" type="462c0819:PsiDirectoryNode" />
-              <item name="component" type="462c0819:PsiDirectoryNode" />
-              <item name="impl" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="KS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="KS" type="462c0819:PsiDirectoryNode" />
-              <item name="framework" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="framework" type="462c0819:PsiDirectoryNode" />
-              <item name="echarts" type="462c0819:PsiDirectoryNode" />
-              <item name="factory" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="KS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="KS" type="462c0819:PsiDirectoryNode" />
-              <item name="framework" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="framework" type="462c0819:PsiDirectoryNode" />
-              <item name="echarts" type="462c0819:PsiDirectoryNode" />
-              <item name="options" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="KS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="KS" type="462c0819:PsiDirectoryNode" />
-              <item name="framework" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="framework" type="462c0819:PsiDirectoryNode" />
-              <item name="echarts" type="462c0819:PsiDirectoryNode" />
-              <item name="options" type="462c0819:PsiDirectoryNode" />
-              <item name="impl" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="KS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="KS" type="462c0819:PsiDirectoryNode" />
-              <item name="framework" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="framework" type="462c0819:PsiDirectoryNode" />
-              <item name="echarts" type="462c0819:PsiDirectoryNode" />
-              <item name="series" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="KS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="KS" type="462c0819:PsiDirectoryNode" />
-              <item name="framework" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="framework" type="462c0819:PsiDirectoryNode" />
-              <item name="echarts" type="462c0819:PsiDirectoryNode" />
-              <item name="series" type="462c0819:PsiDirectoryNode" />
-              <item name="impl" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="KS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="KS" type="462c0819:PsiDirectoryNode" />
-              <item name="framework" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="framework" type="462c0819:PsiDirectoryNode" />
-              <item name="utils" type="462c0819:PsiDirectoryNode" />
+              <item name="KS_DATA" type="462c0819:PsiDirectoryNode" />
+              <item name="logs" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="KS" type="b2602c69:ProjectViewProjectNode" />
               <item name="KS" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="KS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="KS" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="KS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="KS" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="KS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="KS" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="KS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="KS" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="KS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="KS" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="KS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="KS" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-              <item name="keke" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="KS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="KS" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-              <item name="system" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="KS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="KS" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="KS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="KS" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="KS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="KS" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="echarts-2.2.7" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="KS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="KS" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="echarts-2.2.7" type="462c0819:PsiDirectoryNode" />
-              <item name="build" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="KS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="KS" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="echarts-2.2.7" type="462c0819:PsiDirectoryNode" />
-              <item name="build" type="462c0819:PsiDirectoryNode" />
-              <item name="dist" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="KS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="KS" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="echarts-2.2.7" type="462c0819:PsiDirectoryNode" />
-              <item name="extension" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="KS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="KS" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="echarts-2.2.7" type="462c0819:PsiDirectoryNode" />
-              <item name="extension" type="462c0819:PsiDirectoryNode" />
-              <item name="BMap" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="KS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="KS" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="echarts-2.2.7" type="462c0819:PsiDirectoryNode" />
-              <item name="extension" type="462c0819:PsiDirectoryNode" />
-              <item name="BMap" type="462c0819:PsiDirectoryNode" />
-              <item name="doc" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="KS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="KS" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="KS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="KS" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="X-admin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="KS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="KS" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="X-admin" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="KS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="KS" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="KS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="KS" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-              <item name="jsp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="KS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="KS" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-              <item name="jsp" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="KS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="KS" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-              <item name="jsp" type="462c0819:PsiDirectoryNode" />
-              <item name="keke" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="KS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="KS" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-              <item name="jsp" type="462c0819:PsiDirectoryNode" />
-              <item name="keke" type="462c0819:PsiDirectoryNode" />
-              <item name="car" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="KS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="KS" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-              <item name="jsp" type="462c0819:PsiDirectoryNode" />
-              <item name="sys" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="KS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="KS" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-              <item name="jsp" type="462c0819:PsiDirectoryNode" />
-              <item name="sys" type="462c0819:PsiDirectoryNode" />
-              <item name="echarts" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="KS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="KS" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-              <item name="jsp" type="462c0819:PsiDirectoryNode" />
-              <item name="sys" type="462c0819:PsiDirectoryNode" />
-              <item name="user" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -768,37 +441,37 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1588477323869" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/web.xml" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1606092757190" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ShoppingMall" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.1366782" />
     <property name="project.structure.side.proportion" value="0.248497" />
-    <property name="settings.editor.selected.configurable" value="Settings.JavaScript" />
+    <property name="settings.editor.selected.configurable" value="project.propCompiler" />
   </component>
   <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.king.framework.echarts" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\projects\KS\webapp\src\main\webapp\WEB-INF\jsp\sys\echarts" />
-      <recent name="D:\projects\KS\webapp\src\main\webapp\static\echarts-2.2.7" />
-      <recent name="D:\projects\KS\webapp\src\main\webapp\WEB-INF\jsp\sys\conf" />
-      <recent name="D:\projects\KS\keke\src\main\resources" />
-      <recent name="D:\projects\KS\webapp\src\main\webapp\WEB-INF\jsp\sys\res" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.king.framework.echarts.series.impl" />
-      <recent name="com.king.framework.echarts.dto" />
-      <recent name="com.king.framework.echarts.series" />
-      <recent name="com.king.framework.echarts.conts" />
-      <recent name="com.king.framework.echarts" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\projects\KS\webapp\src\main\webapp\WEB-INF\jsp\sys" />
       <recent name="D:\projects\KS\webapp\src\main\webapp\static" />
       <recent name="D:\projects\KS\framework\src\main\resources\i18n" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\projects\KS\webapp\src\main\webapp\WEB-INF\jsp\em\indexMgr" />
+      <recent name="D:\projects\KS\webapp\src\main\webapp\WEB-INF\jsp\em\myIndex" />
+      <recent name="D:\projects\KS\webapp\src\main\webapp\WEB-INF\jsp\em\baseParams" />
+      <recent name="D:\projects\KS\webapp\src\main\webapp\WEB-INF\jsp\em\home" />
+      <recent name="D:\projects\KS\webapp\src\main\resources" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.king.app.webapp.controller.em" />
+      <recent name="com.king.em.service.impl" />
+      <recent name="com.king.em.dao" />
+      <recent name="com.king.app.webapp.filter" />
+      <recent name="com.king.framework.echarts.series.impl" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.king.framework.echarts" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -814,19 +487,6 @@
     </option>
   </component>
   <component name="RunManager" selected="Spring Boot.Startup_web">
-    <configuration name="EchartsUtil" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.king.framework.echarts.EchartsUtil" />
-      <module name="framework" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.king.framework.echarts.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="FontConvertWindow" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.king.framework.applet.FontConvertWindow" />
       <module name="framework" />
@@ -850,12 +510,10 @@
     </configuration>
     <list>
       <item itemvalue="Application.FontConvertWindow" />
-      <item itemvalue="Application.EchartsUtil" />
       <item itemvalue="Spring Boot.Startup_web" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.EchartsUtil" />
         <item itemvalue="Application.FontConvertWindow" />
       </list>
     </recent_temporary>
@@ -943,7 +601,51 @@
       <workItem from="1588294620856" duration="3962000" />
       <workItem from="1588318162682" duration="9420000" />
       <workItem from="1588383019863" duration="4076000" />
-      <workItem from="1588466592535" duration="9366000" />
+      <workItem from="1588466592535" duration="22369000" />
+      <workItem from="1588556480451" duration="3081000" />
+      <workItem from="1588925309125" duration="3406000" />
+      <workItem from="1588941346908" duration="1248000" />
+      <workItem from="1588985071500" duration="181000" />
+      <workItem from="1591409547230" duration="541000" />
+      <workItem from="1591410647142" duration="2295000" />
+      <workItem from="1591415053364" duration="5754000" />
+      <workItem from="1591858052287" duration="3538000" />
+      <workItem from="1591874119517" duration="631000" />
+      <workItem from="1591948487748" duration="10000" />
+      <workItem from="1596012023613" duration="153000" />
+      <workItem from="1596017295397" duration="237000" />
+      <workItem from="1599200109607" duration="11683000" />
+      <workItem from="1599265142829" duration="6299000" />
+      <workItem from="1599442283719" duration="3402000" />
+      <workItem from="1600136697748" duration="145000" />
+      <workItem from="1600322649197" duration="28000" />
+      <workItem from="1600468319787" duration="1445000" />
+      <workItem from="1600647832858" duration="472000" />
+      <workItem from="1600757196803" duration="472000" />
+      <workItem from="1600757773384" duration="1110000" />
+      <workItem from="1600759003869" duration="479000" />
+      <workItem from="1603244641208" duration="15855000" />
+      <workItem from="1603271989938" duration="747000" />
+      <workItem from="1603332184104" duration="2684000" />
+      <workItem from="1603335570938" duration="218000" />
+      <workItem from="1603348701505" duration="7788000" />
+      <workItem from="1603357097777" duration="172000" />
+      <workItem from="1603520142531" duration="1527000" />
+      <workItem from="1604047280941" duration="610000" />
+      <workItem from="1605594271600" duration="146000" />
+      <workItem from="1605601819583" duration="1797000" />
+      <workItem from="1605680676883" duration="35000" />
+      <workItem from="1605687665258" duration="4088000" />
+      <workItem from="1605757740875" duration="9582000" />
+      <workItem from="1605838225075" duration="16699000" />
+      <workItem from="1605871033539" duration="5011000" />
+      <workItem from="1605881345631" duration="3664000" />
+      <workItem from="1605907318567" duration="6614000" />
+      <workItem from="1605933226008" duration="4517000" />
+      <workItem from="1605947176757" duration="16416000" />
+      <workItem from="1606004869143" duration="22821000" />
+      <workItem from="1606076319070" duration="7664000" />
+      <workItem from="1606091338999" duration="1196000" />
     </task>
     <task id="LOCAL-00001" summary="excel导出">
       <created>1586849513817</created>
@@ -994,17 +696,23 @@
       <option name="project" value="LOCAL" />
       <updated>1587902152342</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="echarts封装">
+      <created>1588477361075</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1588477361075</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="482750000" />
+    <option name="totallyTimeSpent" value="672391000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20442359" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16957104" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -1013,9 +721,9 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3489736" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.49932975" visible="true" weight="0.42961878" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32991204" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.33870968" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49932975" weight="0.38269794" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -1032,7 +740,7 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Maven" order="3" sideWeight="0.4974093" visible="true" weight="0.15281501" />
+      <window_info anchor="right" id="Maven" order="3" sideWeight="0.4974093" visible="true" weight="0.14812332" />
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
       <window_info anchor="right" id="Database" order="6" />
@@ -1051,431 +759,484 @@
     <MESSAGE value="权限" />
     <MESSAGE value="角色管理" />
     <MESSAGE value="1.系统配置&#10;2.中文转unicode小工具" />
-    <option name="LAST_COMMIT_MESSAGE" value="1.系统配置&#10;2.中文转unicode小工具" />
+    <MESSAGE value="echarts封装" />
+    <MESSAGE value="电机项目20201123" />
+    <option name="LAST_COMMIT_MESSAGE" value="电机项目20201123" />
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
       <expression>
+        <expression-string>attr</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>this.className</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>cell.getCellType()</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>row.getCell(2)</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>row.getCell(3)</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>row.getCell(1)</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>row.getCell(0)</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>DataSourceContextHolder</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
         <expression-string>super.getParam(&quot;groups&quot;)</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>request.getParameter(&quot;groups&quot;)</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>subject.getPrincipal()</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>json.getString(&quot;timeRange&quot;).replaceAll(&quot; &quot;,&quot;&quot;)</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>json.getString(&quot;timeRange&quot;).trim()</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>fieldIndex + f.getColspan()</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>f.getColspan()</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>value</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>f.getName()</expression-string>
         <language-id>JAVA</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/framework/src/main/java/com/king/framework/utils/JwtUtil.java" />
-    <entry file="file://$PROJECT_DIR$/framework/src/main/java/com/king/framework/utils/RedisUtil.java">
+    <entry file="file://$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/service/impl/EmDataOverloadServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-57">
-          <caret line="20" column="14" lean-forward="true" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
+        <state relative-caret-position="305">
+          <caret line="66" column="24" selection-start-line="59" selection-start-column="8" selection-end-line="66" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1474#1475#0" expanded="true" />
+            <element signature="e#1524#1525#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/framework/src/main/java/com/king/framework/utils/ReflectUtils.java">
+    <entry file="file://$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/service/impl/EmDataEmptyloadServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="127">
-          <caret line="14" column="29" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
+        <state relative-caret-position="305">
+          <caret line="66" column="24" selection-start-line="59" selection-start-column="8" selection-end-line="66" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1489#1490#0" expanded="true" />
+            <element signature="e#1540#1541#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/framework/pom.xml">
+    <entry file="file://$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/service/impl/EmDataConstantloadServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="35">
-          <caret line="112" column="11" selection-start-line="112" selection-start-column="11" selection-end-line="112" selection-end-column="11" />
+        <state relative-caret-position="229">
+          <caret line="64" column="53" selection-start-line="64" selection-start-column="53" selection-end-line="64" selection-end-column="53" />
+          <folding>
+            <element signature="e#1596#1597#0" expanded="true" />
+            <element signature="e#1650#1651#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapp/src/main/java/com/king/app/webapp/controller/em/ProductManagerController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="73">
+          <caret line="89" column="74" selection-start-line="89" selection-start-column="74" selection-end-line="89" selection-end-column="74" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/entity/EmDataConstantload.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="10" column="34" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="34" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="267">
-          <caret line="158" column="24" selection-start-line="158" selection-start-column="24" selection-end-line="158" selection-end-column="24" />
+        <state relative-caret-position="114">
+          <caret line="96" column="46" lean-forward="true" selection-start-line="96" selection-start-column="46" selection-end-line="96" selection-end-column="46" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/framework/src/main/java/com/king/framework/lock/ILock.java">
+    <entry file="file://$PROJECT_DIR$/framework/src/main/java/com/king/framework/conf/DataSourceConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="13" lean-forward="true" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/framework/src/main/java/com/king/framework/lock/impl/RedisLockImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3">
-          <caret line="21" column="19" selection-start-line="21" selection-start-column="19" selection-end-line="21" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/framework/src/main/java/com/king/framework/echarts/componets/ChartTooltip.java" />
-    <entry file="file://$PROJECT_DIR$/framework/src/main/java/com/king/framework/echarts/EchartsOption.java" />
-    <entry file="file://$PROJECT_DIR$/framework/src/main/java/com/king/framework/echarts/factory/PieOption.java" />
-    <entry file="file://$PROJECT_DIR$/framework/src/main/java/com/king/framework/echarts/factory/LineOption.java" />
-    <entry file="file://$PROJECT_DIR$/framework/src/main/java/com/king/framework/echarts/factory/BarOption.java" />
-    <entry file="file://$PROJECT_DIR$/framework/src/main/java/com/king/framework/echarts/factory/impl/LineChart.java" />
-    <entry file="file://$PROJECT_DIR$/framework/src/main/java/com/king/framework/echarts/factory/impl/PieChart.java" />
-    <entry file="file://$PROJECT_DIR$/framework/src/main/java/com/king/framework/echarts/factory/impl/EchartsFactoryImpl.java" />
-    <entry file="file://$PROJECT_DIR$/framework/src/main/java/com/king/framework/echarts/factory/impl/BarChart.java" />
-    <entry file="file://$PROJECT_DIR$/framework/src/main/java/com/king/framework/echarts/factory/Option.java" />
-    <entry file="file://$PROJECT_DIR$/framework/src/main/java/com/king/framework/echarts/options/impl/OptionLine.java" />
-    <entry file="file://$PROJECT_DIR$/framework/src/main/java/com/king/framework/echarts/options/AbsOption.java" />
-    <entry file="file://$PROJECT_DIR$/framework/src/main/java/com/king/framework/echarts/component/IEchartsItem.java" />
-    <entry file="file://$PROJECT_DIR$/framework/src/main/java/com/king/framework/echarts/component/AbstractEchartsItem.java" />
-    <entry file="file://$PROJECT_DIR$/framework/src/main/java/com/king/framework/echarts/code/Position.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" column="20" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/framework/src/main/java/com/king/framework/echarts/component/Title.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="589">
-          <caret line="46" column="33" selection-start-line="46" selection-start-column="33" selection-end-line="46" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/framework/src/main/java/com/king/framework/echarts/component/Component.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" column="18" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/framework/src/main/java/com/king/framework/echarts/component/impl/XAxis.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="15" column="5" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/framework/src/main/java/com/king/framework/echarts/component/impl/YAxis.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="18" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/framework/src/main/java/com/king/framework/echarts/component/Axis.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="267">
-          <caret line="70" selection-start-line="70" selection-end-line="70" />
-          <folding>
-            <element signature="e#352#353#0" expanded="true" />
-            <element signature="e#379#380#0" expanded="true" />
-            <element signature="e#419#420#0" expanded="true" />
-            <element signature="e#451#452#0" expanded="true" />
-            <element signature="e#486#487#0" expanded="true" />
-            <element signature="e#517#518#0" expanded="true" />
-            <element signature="e#565#566#0" expanded="true" />
-            <element signature="e#605#606#0" expanded="true" />
-            <element signature="e#636#637#0" expanded="true" />
-            <element signature="e#663#664#0" expanded="true" />
-            <element signature="e#703#704#0" expanded="true" />
-            <element signature="e#735#736#0" expanded="true" />
-            <element signature="e#774#775#0" expanded="true" />
-            <element signature="e#809#810#0" expanded="true" />
-            <element signature="e#865#866#0" expanded="true" />
-            <element signature="e#913#914#0" expanded="true" />
-            <element signature="e#940#941#0" expanded="true" />
-            <element signature="e#966#967#0" expanded="true" />
-            <element signature="e#1001#1002#0" expanded="true" />
-            <element signature="e#1031#1032#0" expanded="true" />
-            <element signature="e#1058#1059#0" expanded="true" />
-            <element signature="e#1084#1085#0" expanded="true" />
-            <element signature="e#1119#1120#0" expanded="true" />
-            <element signature="e#1149#1150#0" expanded="true" />
-            <element signature="e#1175#1176#0" expanded="true" />
-            <element signature="e#1202#1203#0" expanded="true" />
-            <element signature="e#1237#1238#0" expanded="true" />
-            <element signature="e#1269#1270#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/framework/src/main/java/com/king/framework/echarts/code/EchartsType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="21" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/framework/src/main/java/com/king/framework/echarts/code/SeriesType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="65" selection-start-line="9" selection-start-column="65" selection-end-line="9" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/framework/src/main/java/com/king/framework/echarts/series/impl/BarSeries.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="222">
-          <caret line="15" column="26" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/framework/src/main/java/com/king/framework/echarts/series/impl/PieSeries.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="13" column="31" lean-forward="true" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/framework/src/main/java/com/king/framework/echarts/series/impl/LineSeries.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="14" column="18" lean-forward="true" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
+        <state relative-caret-position="361">
+          <caret line="85" column="50" lean-forward="true" selection-start-line="85" selection-start-column="50" selection-end-line="85" selection-end-column="50" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/framework/src/main/java/com/king/framework/echarts/series/Series.java">
+    <entry file="file://$PROJECT_DIR$/framework/src/main/resources/datasources.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="229">
-          <caret line="31" column="17" selection-start-line="31" selection-start-column="17" selection-end-line="31" selection-end-column="17" />
-          <folding>
-            <element signature="e#225#226#0" expanded="true" />
-            <element signature="e#252#253#0" expanded="true" />
-            <element signature="e#292#293#0" expanded="true" />
-            <element signature="e#324#325#0" expanded="true" />
-            <element signature="e#355#356#0" expanded="true" />
-            <element signature="e#382#383#0" expanded="true" />
-            <element signature="e#422#423#0" expanded="true" />
-            <element signature="e#454#455#0" expanded="true" />
-            <element signature="e#480#481#0" expanded="true" />
-            <element signature="e#507#508#0" expanded="true" />
-            <element signature="e#542#543#0" expanded="true" />
-            <element signature="e#574#575#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="95">
+          <caret line="5" column="18" lean-forward="true" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/framework/src/main/java/com/king/framework/echarts/component/Tooltip.java">
+    <entry file="file://$PROJECT_DIR$/webapp/src/main/resources/application.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="101">
-          <caret line="13" column="18" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
-          <folding>
-            <element signature="e#263#264#0" expanded="true" />
-            <element signature="e#293#294#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="-412">
+          <caret line="39" column="33" selection-start-line="39" selection-start-column="33" selection-end-line="39" selection-end-column="33" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/framework/src/main/java/com/king/framework/echarts/component/AxisPointer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="35" column="5" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
-          <folding>
-            <element signature="e#583#584#0" expanded="true" />
-            <element signature="e#610#611#0" expanded="true" />
-            <element signature="e#650#651#0" expanded="true" />
-            <element signature="e#682#683#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/framework/src/main/java/com/king/framework/echarts/component/Style.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" column="15" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/framework/src/main/java/com/king/framework/echarts/component/impl/LineStyle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="18" column="28" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
-          <folding>
-            <element signature="e#295#296#0" expanded="true" />
-            <element signature="e#323#324#0" expanded="true" />
-            <element signature="e#365#366#0" expanded="true" />
-            <element signature="e#399#400#0" expanded="true" />
-            <element signature="e#428#429#0" expanded="true" />
-            <element signature="e#456#457#0" expanded="true" />
-            <element signature="e#495#496#0" expanded="true" />
-            <element signature="e#529#530#0" expanded="true" />
-            <element signature="e#560#561#0" expanded="true" />
-            <element signature="e#587#588#0" expanded="true" />
-            <element signature="e#627#628#0" expanded="true" />
-            <element signature="e#659#660#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/framework/src/main/java/com/king/framework/echarts/component/impl/LineAxisPointer.java">
+    <entry file="file://$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/em/product/main.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
-          <caret line="20" column="25" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#331#332#0" expanded="true" />
-            <element signature="e#373#374#0" expanded="true" />
-            <element signature="e#409#410#0" expanded="true" />
-            <element signature="e#441#442#0" expanded="true" />
-            <element signature="e#490#491#0" expanded="true" />
-            <element signature="e#532#533#0" expanded="true" />
-          </folding>
+          <caret line="182" column="32" lean-forward="true" selection-start-line="182" selection-start-column="32" selection-end-line="182" selection-end-column="32" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/webapp/src/main/webapp/static/js/utils.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="292">
-          <caret line="167" selection-start-line="167" selection-end-line="167" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webapp/src/main/webapp/static/js/frame.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="21" column="31" lean-forward="true" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="31" />
-          <folding>
-            <element signature="e#30#36#1" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/sys/echarts/main.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="16" column="25" lean-forward="true" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/framework/src/main/java/com/king/framework/echarts/factory/EchartsFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="263">
-          <caret line="18" column="35" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/framework/src/main/java/com/king/framework/echarts/component/Legend.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-115">
-          <caret line="7" column="22" lean-forward="true" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
-          <folding>
-            <element signature="e#292#293#0" expanded="true" />
-            <element signature="e#321#322#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/framework/src/main/java/com/king/framework/echarts/series/SeriesStrategy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="127">
-          <caret line="16" column="53" selection-start-line="16" selection-start-column="53" selection-end-line="16" selection-end-column="53" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/framework/src/main/java/com/king/framework/echarts/options/IOption.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webapp/src/main/java/com/king/app/webapp/controller/system/EchartsController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="51" column="31" lean-forward="true" selection-start-line="51" selection-start-column="31" selection-end-line="51" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/framework/src/main/java/com/king/framework/echarts/options/impl/LineOption.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" column="38" lean-forward="true" selection-start-line="5" selection-start-column="38" selection-end-line="5" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/framework/src/main/java/com/king/framework/echarts/EchartsUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="109">
-          <caret line="15" column="6" lean-forward="true" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/framework/src/main/java/com/king/framework/echarts/options/impl/PieOption.java">
+    <entry file="file://$PROJECT_DIR$/webapp/src/main/java/com/king/app/webapp/controller/em/EmHomeController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="228">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
+          <caret line="66" column="5" lean-forward="true" selection-start-line="62" selection-start-column="4" selection-end-line="66" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/framework/src/main/java/com/king/framework/echarts/options/impl/BarOption.java">
+    <entry file="file://$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/welcome.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" column="31" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
+        <state relative-caret-position="129">
+          <caret line="12" column="15" lean-forward="true" selection-start-line="10" selection-start-column="4" selection-end-line="12" selection-end-column="15" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/framework/src/main/java/com/king/framework/echarts/options/AbstractOption.java">
+    <entry file="file://$PROJECT_DIR$/webapp/src/main/java/com/king/app/webapp/controller/em/EmMyIndexController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="90" column="29" selection-start-line="90" selection-start-column="29" selection-end-line="90" selection-end-column="29" />
+        <state relative-caret-position="285">
+          <caret line="17" column="54" selection-start-line="17" selection-start-column="54" selection-end-line="17" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/em/myIndex/main.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-114">
+          <caret line="23" column="40" selection-start-line="23" selection-start-column="40" selection-end-line="23" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/entity/EmIndexCategory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/dao/EmIndexCategoryDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/dao/EmIndexTemplateDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="11" column="33" lean-forward="true" selection-start-line="11" selection-start-column="33" selection-end-line="11" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/electric-machine/src/main/resources/generatorConfig.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="59">
+          <caret line="62" column="41" selection-start-line="62" selection-start-column="37" selection-end-line="62" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/dao/EmIndexGroupDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="11" column="28" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/dao/EmIndexDetailDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="12" column="66" lean-forward="true" selection-start-line="12" selection-start-column="66" selection-end-line="12" selection-end-column="66" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/service/impl/EmDataSinServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="798">
+          <caret line="68" column="24" selection-start-line="61" selection-start-column="8" selection-end-line="68" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapp/src/main/java/com/king/app/webapp/controller/em/AttrTypeMgrController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" column="42" selection-start-line="8" selection-start-column="42" selection-end-line="8" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/em/baseParams/update.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-133">
+          <caret line="104" column="22" lean-forward="true" selection-start-line="104" selection-start-column="22" selection-end-line="104" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/electric-machine/src/main/resources/mapper/em/EmIndexGroupMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="23" column="23" selection-start-line="23" selection-start-column="23" selection-end-line="23" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/electric-machine/src/main/resources/mapper/em/EmIndexDetailMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="29" column="24" selection-start-line="29" selection-start-column="24" selection-end-line="29" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/service/IEmIndexTemplateService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/service/IEmIndexGroupService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/service/IEmIndexDetailService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/service/impl/EmIndexGroupServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="333">
+          <caret line="58" column="37" selection-start-line="58" selection-start-column="37" selection-end-line="58" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1630#1631#0" expanded="true" />
+            <element signature="e#1657#1658#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/service/impl/EmIndexDetailServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="57" column="38" selection-start-line="57" selection-start-column="38" selection-end-line="57" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1628#1629#0" expanded="true" />
+            <element signature="e#1655#1656#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/service/impl/EmIndexTemplateServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="950">
+          <caret line="56" column="13" lean-forward="true" selection-start-line="56" selection-start-column="13" selection-end-line="56" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#935#936#0" expanded="true" />
+            <element signature="e#1012#1013#0" expanded="true" />
+            <element signature="e#1699#1700#0" expanded="true" />
+            <element signature="e#1726#1727#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/em/indexMgr/updateCategory.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="67" column="44" lean-forward="true" selection-start-line="67" selection-start-column="44" selection-end-line="67" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/framework/src/main/java/com/king/framework/base/BaseDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="123">
+          <caret line="33" column="34" selection-start-line="33" selection-start-column="34" selection-end-line="33" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#4773#4774#0" expanded="true" />
+            <element signature="e#4821#4822#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/electric-machine/src/main/resources/mapper/em/EmIndexCategoryMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="181">
+          <caret line="25" column="22" lean-forward="true" selection-start-line="25" selection-start-column="22" selection-end-line="25" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/service/IEmIndexCategoryService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="27" column="6" lean-forward="true" selection-start-line="27" selection-start-column="6" selection-end-line="27" selection-end-column="6" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/sys/user/main.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-592">
+          <caret line="102" column="37" lean-forward="true" selection-start-line="102" selection-start-column="37" selection-end-line="102" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/mavenLocalRepository/org/springframework/spring-core/5.2.1.RELEASE/spring-core-5.2.1.RELEASE.jar!/org/springframework/util/StringUtils.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="131">
+          <caret line="37" column="26" selection-start-line="37" selection-start-column="26" selection-end-line="37" selection-end-column="26" />
+          <folding>
+            <element signature="e#1152#1153#0" expanded="true" />
+            <element signature="e#1204#1205#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapp/src/main/java/com/king/app/webapp/controller/em/EmIndexMgrController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1824">
+          <caret line="112" column="44" selection-start-line="112" selection-start-column="44" selection-end-line="112" selection-end-column="44" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/framework/src/main/java/com/king/framework/base/BaseController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="47" column="21" selection-start-line="47" selection-start-column="21" selection-end-line="47" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/em/indexMgr/main.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4674">
+          <caret line="246" column="47" selection-start-line="246" selection-start-column="47" selection-end-line="246" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/entity/EmIndexTemplate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1026">
+          <caret line="85" selection-start-line="85" selection-end-line="85" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/em/indexMgr/addTemplate.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="24" column="57" selection-start-line="24" selection-start-column="57" selection-end-line="24" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/em/indexMgr/updateTemplate.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="19" column="25" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/em/indexMgr/addCategory.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="665">
+          <caret line="35" column="59" selection-start-line="35" selection-start-column="59" selection-end-line="35" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/service/impl/EmIndexCategoryServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="817">
+          <caret line="63" column="43" selection-start-line="63" selection-start-column="43" selection-end-line="63" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1705#1706#0" expanded="true" />
+            <element signature="e#1754#1755#0" expanded="true" />
+            <element signature="e#1814#1815#0" expanded="true" />
+            <element signature="e#1865#1866#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/sys/user/add.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2451">
+          <caret line="129" column="5" selection-start-line="113" selection-start-column="4" selection-end-line="129" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/electric-machine/src/main/resources/mapper/em/EmIndexTemplateMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="17" column="8" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/archive/src/main/java/com/king/archive/service/impl/ArchiveMgrServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="48" selection-start-line="48" selection-end-line="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system/src/main/java/com/king/system/entity/DBInfo.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system/src/main/java/com/king/system/entity/SysApp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="10" column="27" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system/src/main/java/com/king/system/entity/SysAppInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
         </state>
       </provider>
     </entry>

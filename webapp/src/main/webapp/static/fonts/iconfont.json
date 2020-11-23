@@ -6,6 +6,48 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "1876364",
+      "name": "产品管理",
+      "font_class": "chanpinguanli",
+      "unicode": "e67e",
+      "unicode_decimal": 59006
+    },
+    {
+      "icon_id": "15077407",
+      "name": "我的产品",
+      "font_class": "wodechanpin",
+      "unicode": "e630",
+      "unicode_decimal": 58928
+    },
+    {
+      "icon_id": "1128805",
+      "name": "性能",
+      "font_class": "xingneng",
+      "unicode": "e7bf",
+      "unicode_decimal": 59327
+    },
+    {
+      "icon_id": "6278309",
+      "name": "能耗",
+      "font_class": "nenghao",
+      "unicode": "e636",
+      "unicode_decimal": 58934
+    },
+    {
+      "icon_id": "7045046",
+      "name": "节能",
+      "font_class": "jieneng-",
+      "unicode": "e607",
+      "unicode_decimal": 58887
+    },
+    {
+      "icon_id": "11464295",
+      "name": "电机",
+      "font_class": "dianji",
+      "unicode": "e606",
+      "unicode_decimal": 58886
+    },
+    {
       "icon_id": "736503",
       "name": "权限",
       "font_class": "quanxian",

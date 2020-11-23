@@ -7,7 +7,8 @@ package com.king.framework.echarts.code;
  */
 public enum Position {
 
-    L("left"),C("center"),R("right"),B("bottom"),T("top");
+    L("left"),C("center"),R("right"),B("bottom"),T("top"),
+    H("horizontal"),V("vertical");
 
     private String val;
 

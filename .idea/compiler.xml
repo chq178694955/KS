@@ -7,15 +7,19 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="archive" />
+        <module name="electric-machine" />
         <module name="framework" />
         <module name="game" />
         <module name="keke" />
         <module name="system" />
+        <module name="test-client" />
         <module name="webapp" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="realtime" target="1.8" />
+      <module name="study" target="1.8" />
+      <module name="test-client" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">

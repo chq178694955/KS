@@ -26,7 +26,7 @@
         </commentGenerator>
         <!--数据库链接URL，用户名、密码 -->
         <jdbcConnection driverClass="com.mysql.cj.jdbc.Driver"
-                        connectionURL="jdbc:mysql://127.0.0.1/shopping_mall?useSSL=false&amp;useUnicode=true&amp;characterEncoding=utf8&amp;autoReconnect=true&amp;rewriteBatchedStatements=TRUE&amp;serverTimezone=UTC"
+                        connectionURL="jdbc:mysql://127.0.0.1/king-master?useSSL=false&amp;useUnicode=true&amp;characterEncoding=utf8&amp;autoReconnect=true&amp;rewriteBatchedStatements=TRUE&amp;serverTimezone=UTC"
                         userId="root"
                         password="">
         </jdbcConnection>
@@ -54,7 +54,7 @@
             <property name="enableSubPackages" value="true"/>
         </javaClientGenerator>
         <!-- 要生成的表 tableName是数据库中的表名或视图名 domainObjectName是实体类名-->
-        <table tableName="sys_config" domainObjectName="SysConfig">
+        <table tableName="dbinfo" domainObjectName="DBInfo">
             <!--<generatedKey column="id" sqlStatement="JDBC" identity="true"/>-->
             <!-- Mysql 配置 -->
             <generatedKey column="id" sqlStatement="Mysql" identity="true" />

@@ -1,8 +1,5 @@
 package com.king.framework.cache;
 
-import com.king.framework.utils.BeanLoader;
-import org.apache.shiro.SecurityUtils;
-
 import java.util.TimerTask;
 
 /**

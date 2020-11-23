@@ -57,91 +57,91 @@
 <!-- 顶部开始 -->
 <div class="container">
     <div class="logo">
-        <a href="${ctx}/index" class="king-font-default"><spring:message code="com.king.website.version"/></a></div>
+        <a href="${ctx}/index" class="king-font-default" title="<spring:message code="com.login.title"/>"><spring:message code="com.login.title"/></a></div>
     <div class="left_open">
         <a><i title="展开左侧栏" class="iconfont">&#xe699;</i></a>
     </div>
     <ul class="layui-nav left fast-add" lay-filter="">
-        <li class="layui-nav-item">
-            <a href="javascript:;" layadmin-event="fullscreen">
-                <i class="layui-icon layui-icon-screen-full"></i>
-            </a>
-        </li>
-        <li class="layui-nav-item" lay-unselect="">
-            <a href="${ctx}/index" title="刷新">
-                <i class="layui-icon layui-icon-refresh-3"></i>
-            </a>
-        </li>
-        <li class="layui-nav-item layui-hide-xs" lay-unselect="">
-            <input type="text" placeholder="搜索..." autocomplete="off" class="layui-input layui-input-search" layadmin-event="serach" lay-action="template/search/keywords=">
-        </li>
-        <li class="layui-nav-item">
-            <a href="javascript:;"><i class="iconfont layui-icon-taobao"></i>+新增</a>
-            <dl class="layui-nav-child">
-                <!-- 二级菜单 -->
-                <dd>
-                    <a onclick="xadmin.open('最大化','http://www.baidu.com','','',true)">
-                        <i class="iconfont">&#xe6a2;</i>弹出最大化</a></dd>
-                <dd>
-                    <a onclick="xadmin.open('弹出自动宽高','http://www.baidu.com')">
-                        <i class="iconfont">&#xe6a8;</i>弹出自动宽高</a></dd>
-                <dd>
-                    <a onclick="xadmin.open('弹出指定宽高','http://www.baidu.com',500,300)">
-                        <i class="iconfont">&#xe6a8;</i>弹出指定宽高</a></dd>
-                <dd>
-                    <a onclick="xadmin.add_tab('在tab打开','member-list.html')">
-                        <i class="iconfont">&#xe6b8;</i>在tab打开</a></dd>
-                <dd>
-                    <a onclick="xadmin.add_tab('在tab打开刷新','member-del.html',true)">
-                        <i class="iconfont">&#xe6b8;</i>在tab打开刷新</a></dd>
-            </dl>
-        </li>
+        <%--<li class="layui-nav-item">--%>
+            <%--<a href="javascript:;" layadmin-event="fullscreen">--%>
+                <%--<i class="layui-icon layui-icon-screen-full"></i>--%>
+            <%--</a>--%>
+        <%--</li>--%>
+        <%--<li class="layui-nav-item" lay-unselect="">--%>
+            <%--<a href="${ctx}/index" title="刷新">--%>
+                <%--<i class="layui-icon layui-icon-refresh-3"></i>--%>
+            <%--</a>--%>
+        <%--</li>--%>
+        <%--<li class="layui-nav-item layui-hide-xs" lay-unselect="">--%>
+            <%--<input type="text" placeholder="搜索..." autocomplete="off" class="layui-input layui-input-search" layadmin-event="serach" lay-action="template/search/keywords=">--%>
+        <%--</li>--%>
+        <%--<li class="layui-nav-item">--%>
+            <%--<a href="javascript:;"><i class="iconfont layui-icon-taobao"></i>+新增</a>--%>
+            <%--<dl class="layui-nav-child">--%>
+                <%--<!-- 二级菜单 -->--%>
+                <%--<dd>--%>
+                    <%--<a onclick="xadmin.open('最大化','http://www.baidu.com','','',true)">--%>
+                        <%--<i class="iconfont">&#xe6a2;</i>弹出最大化</a></dd>--%>
+                <%--<dd>--%>
+                    <%--<a onclick="xadmin.open('弹出自动宽高','http://www.baidu.com')">--%>
+                        <%--<i class="iconfont">&#xe6a8;</i>弹出自动宽高</a></dd>--%>
+                <%--<dd>--%>
+                    <%--<a onclick="xadmin.open('弹出指定宽高','http://www.baidu.com',500,300)">--%>
+                        <%--<i class="iconfont">&#xe6a8;</i>弹出指定宽高</a></dd>--%>
+                <%--<dd>--%>
+                    <%--<a onclick="xadmin.add_tab('在tab打开','member-list.html')">--%>
+                        <%--<i class="iconfont">&#xe6b8;</i>在tab打开</a></dd>--%>
+                <%--<dd>--%>
+                    <%--<a onclick="xadmin.add_tab('在tab打开刷新','member-del.html',true)">--%>
+                        <%--<i class="iconfont">&#xe6b8;</i>在tab打开刷新</a></dd>--%>
+            <%--</dl>--%>
+        <%--</li>--%>
         <%--<span class="layui-nav-bar" style="left: 198px; top: 48px; width: 0px; opacity: 0;"></span>--%>
     </ul>
     <ul class="layui-nav right" lay-filter="">
-        <li class="layui-nav-item" lay-unselect="">
-            <a lay-href="app/message/" layadmin-event="message">
-                <i class="layui-icon layui-icon-notice"></i>
+        <%--<li class="layui-nav-item" lay-unselect="">--%>
+            <%--<a lay-href="app/message/" layadmin-event="message">--%>
+                <%--<i class="layui-icon layui-icon-notice"></i>--%>
 
-                <!-- 如果有新消息，则显示小圆点 -->
-                <script type="text/html" template="" lay-url="./json/message/new.js">
-                    {{# if(d.data.newmsg){ }}
-                    <span class="layui-badge-dot"></span>
-                    {{# } }}
-                </script>  <span class="layui-badge-dot"></span>
+                <%--<!-- 如果有新消息，则显示小圆点 -->--%>
+                <%--<script type="text/html" template="" lay-url="./json/message/new.js">--%>
+                    <%--{{# if(d.data.newmsg){ }}--%>
+                    <%--<span class="layui-badge-dot"></span>--%>
+                    <%--{{# } }}--%>
+                <%--</script>  <span class="layui-badge-dot"></span>--%>
 
-            </a>
-        </li>
-        <li class="layui-nav-item layui-hide-xs" lay-unselect="">
-            <a href="javascript:;" layadmin-event="theme">
-                <i class="layui-icon layui-icon-theme"></i>
-            </a>
-        </li>
-        <li class="layui-nav-item layui-hide-xs" lay-unselect="">
-            <a href="javascript:;" layadmin-event="note">
-                <i class="layui-icon layui-icon-note"></i>
-            </a>
-        </li>
+            <%--</a>--%>
+        <%--</li>--%>
+        <%--<li class="layui-nav-item layui-hide-xs" lay-unselect="">--%>
+            <%--<a href="javascript:;" layadmin-event="theme">--%>
+                <%--<i class="layui-icon layui-icon-theme"></i>--%>
+            <%--</a>--%>
+        <%--</li>--%>
+        <%--<li class="layui-nav-item layui-hide-xs" lay-unselect="">--%>
+            <%--<a href="javascript:;" layadmin-event="note">--%>
+                <%--<i class="layui-icon layui-icon-note"></i>--%>
+            <%--</a>--%>
+        <%--</li>--%>
         <li class="layui-nav-item">
             <a href="javascript:;">
                 <cite>[${userInfo != null && userInfo.name != null ? userInfo.name : ''}]</cite>
                 <span class="layui-nav-more"></span>
             </a>
             <dl class="layui-nav-child">
-                <!-- 二级菜单 -->
-                <dd>
-                    <a onclick="demoTest()">
-                        <i class="iconfont">&#xe6a7;</i>
-                        <cite>测试链接</cite>
-                    </a>
-                </dd>
-                <dd>
-                    <a onclick="xadmin.open('切换帐号','http://www.baidu.com')">
-                        <i class="iconfont">&#xe6a7;</i>
-                        <cite>个人信息</cite>
-                    </a>
-                </dd>
-                <hr>
+                <%--<!-- 二级菜单 -->--%>
+                <%--<dd>--%>
+                    <%--<a onclick="demoTest()">--%>
+                        <%--<i class="iconfont">&#xe6a7;</i>--%>
+                        <%--<cite>测试链接</cite>--%>
+                    <%--</a>--%>
+                <%--</dd>--%>
+                <%--<dd>--%>
+                    <%--<a onclick="xadmin.open('切换帐号','http://www.baidu.com')">--%>
+                        <%--<i class="iconfont">&#xe6a7;</i>--%>
+                        <%--<cite>个人信息</cite>--%>
+                    <%--</a>--%>
+                <%--</dd>--%>
+                <%--<hr>--%>
                 <dd>
                     <a href="javascript:;" onclick="logout()">
                         <i class="iconfont">&#xe6a7;</i>
@@ -150,9 +150,9 @@
                 </dd>
             </dl>
         </li>
-        <li class="layui-nav-item">
-            <a href="javascript:;" layadmin-event="more" onclick="showOrHideVersion();"><i class="layui-icon layui-icon-more-vertical"></i></a>
-        </li>
+        <%--<li class="layui-nav-item">--%>
+            <%--<a href="javascript:;" layadmin-event="more" onclick="showOrHideVersion();"><i class="layui-icon layui-icon-more-vertical"></i></a>--%>
+        <%--</li>--%>
         <%--<span class="layui-nav-bar" style="left: 29px; top: 48px; width: 0px; opacity: 0;"></span>--%>
     </ul>
 </div>

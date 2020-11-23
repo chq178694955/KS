@@ -92,6 +92,8 @@
         var element = layui.element;
         var table = layui.table;
 
+        form.render('select');
+
         table.init('sysUserList_${menuId}',{
             id: 'sysUserList_${menuId}',
             url: '${ctx}/sys/user/find',

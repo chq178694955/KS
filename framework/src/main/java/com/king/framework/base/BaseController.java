@@ -16,9 +16,13 @@ import org.springframework.util.StringUtils;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 
+import javax.servlet.ServletOutputStream;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
+import java.net.URLEncoder;
 import java.util.*;
 
 /**
@@ -193,6 +197,49 @@ public class BaseController {
             }
         }
         return result;
+    }
+
+    protected void downloadFile(String fileName,String filePath,HttpServletResponse response){
+        FileInputStream in = null;
+        ServletOutputStream out = null;
+        try {
+            // 获取文件流
+            in = new FileInputStream(new File(filePath));
+            // 输出设置
+            response.setContentType("application/x-download");
+            response.setCharacterEncoding("UTF-8");
+            //输出文件名
+            String _fileName = URLEncoder.encode(fileName, "UTF-8");
+            response.addHeader("Content-Disposition", "attachment;filename=" + _fileName);
+            out = response.getOutputStream();
+
+            byte buff[] = new byte[1024];
+            int length = 0;
+            while ((length = in.read(buff)) > 0) {
+                out.write(buff,0,length);
+            }
+        } catch(Exception e){
+            e.printStackTrace();
+            try {
+                if(in != null){
+                    in.close();
+                }
+                if(out != null){
+                    out.close();
+                    out.flush();
+                }
+            } catch (IOException ex) {
+                ex.printStackTrace();
+            }
+        } finally {
+            try{
+                in.close();
+                out.close();
+                out.flush();
+            } catch (IOException e){
+                e.printStackTrace();
+            }
+        }
     }
 
 }
