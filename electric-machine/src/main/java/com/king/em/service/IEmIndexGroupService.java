@@ -11,7 +11,7 @@ import com.king.framework.model.Criteria;
  */
 public interface IEmIndexGroupService {
 
-    EmIndexGroup findByName(String name);
+    EmIndexGroup findByName(Criteria criteria);
 
     EmIndexGroup findById(Long id);
 

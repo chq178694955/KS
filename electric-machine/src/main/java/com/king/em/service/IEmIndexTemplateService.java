@@ -4,6 +4,8 @@ import com.github.pagehelper.PageInfo;
 import com.king.em.entity.EmIndexTemplate;
 import com.king.framework.model.Criteria;
 
+import java.util.List;
+
 /**
  * @创建人 chq
  * @创建时间 2020/11/23
@@ -22,5 +24,7 @@ public interface IEmIndexTemplateService {
     boolean del(Long id);
 
     PageInfo<EmIndexTemplate> find(PageInfo<EmIndexTemplate> page, Criteria criteria, Boolean isDownload);
+
+    List<EmIndexTemplate> findAll();
 
 }

@@ -19,7 +19,7 @@ import java.util.List;
 public class EmIndexDetailServiceImpl implements IEmIndexDetailService {
 
     @Autowired
-    private com.king.em.dao.EmIndexDetailDao EmIndexDetailDao;
+    private com.king.em.dao.EmIndexDetailDao emIndexDetailDao;
 
     @Override
     public EmIndexDetail findByName(String name) {
@@ -28,17 +28,17 @@ public class EmIndexDetailServiceImpl implements IEmIndexDetailService {
 
     @Override
     public boolean add(EmIndexDetail detail) {
-        return EmIndexDetailDao.insert(detail) > 0 ? true : false;
+        return emIndexDetailDao.insert(detail) > 0 ? true : false;
     }
 
     @Override
     public boolean update(EmIndexDetail detail) {
-        return EmIndexDetailDao.update(detail) > 0 ? true : false;
+        return emIndexDetailDao.update(detail) > 0 ? true : false;
     }
 
     @Override
     public boolean del(Long id) {
-        return EmIndexDetailDao.delete(id) > 0 ? true : false;
+        return emIndexDetailDao.delete(id) > 0 ? true : false;
     }
 
     @Override
@@ -46,7 +46,7 @@ public class EmIndexDetailServiceImpl implements IEmIndexDetailService {
         if(!isDownload){
             PageHelper.startPage(page.getPageNum(),page.getPageSize());
         }
-        List<EmIndexDetail> list = EmIndexDetailDao.find(criteria);
+        List<EmIndexDetail> list = emIndexDetailDao.find(criteria);
         PageInfo<EmIndexDetail> pageInfo = new PageInfo<>(list);
         pageInfo.setPageNum(page.getPageNum());
         pageInfo.setPageSize(page.getPageSize());
@@ -55,6 +55,28 @@ public class EmIndexDetailServiceImpl implements IEmIndexDetailService {
 
     @Override
     public EmIndexDetail findById(Long id) {
-        return EmIndexDetailDao.get(id);
+        return emIndexDetailDao.get(id);
+    }
+
+    @Override
+    public boolean batchAdd(List<EmIndexDetail> details) {
+        return emIndexDetailDao.batchInsert("insert",details) > 0 ? true : false;
+    }
+
+    @Override
+    public List<EmIndexDetail> findByGroupId(Long groupId) {
+        Criteria criteria = new Criteria();
+        criteria.put("groupId",groupId);
+        return emIndexDetailDao.find("findByGroupId",criteria);
+    }
+
+    @Override
+    public boolean delByGroupId(Long groupId) {
+        return emIndexDetailDao.delete("deleteByGroupId",groupId) > 0 ? true : false;
+    }
+
+    @Override
+    public boolean batchUpdate(List<EmIndexDetail> details) {
+        return emIndexDetailDao.batchUpdate("update",details) > 0 ? true : false;
     }
 }

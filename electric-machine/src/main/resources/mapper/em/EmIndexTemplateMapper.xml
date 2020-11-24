@@ -36,6 +36,13 @@
     order by id asc
   </select>
 
+  <select id="findAll" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from em_index_template
+    order by id asc
+  </select>
+
   <delete id="delete" parameterType="java.lang.Long">
     delete from em_index_template where id = #{id,jdbcType=BIGINT}
   </delete>

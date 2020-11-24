@@ -196,6 +196,41 @@
             };
         });
 
+        table.on('tool(dataListTemplate_${menuId})',function(obj){
+            var data = obj.data;
+            data.menuId = '${menuId}';
+            switch(obj.event){
+                case 'del':
+                    Frame.confirm('确定删除该指标吗？',function(){
+                        $.ajax({
+                            url: APP_ENV + '/em/indexMgr/deleteTemplate',
+                            data:{id: data.id},
+                            dataType:'json',
+                            success:function (result) {
+                                if(result.code == 0){
+                                    $('#queryTemplate_${menuId}').click();
+                                    loadCategories();
+                                }
+                                Frame.alert(result.msg);
+                            }
+                        });
+                    });
+                    break;
+                case 'edit':
+                    Frame.modMainTab({
+                        id:'${menuId}',
+                        url:APP_ENV + '/em/indexMgr/toUpdateTemplate',
+                        params:{
+                            menuId:'${menuId}',
+                            id: data.id
+                        }
+                    });
+
+                    //Frame.loadPage('${menuId}','game/vote/toVoting?menuId=${menuId}',data,WebUtils.getMessage('com.btn.modify'),400);
+                    break;
+            };
+        });
+
         loadCategories(function(){
             table.init('dataListTemplate_${menuId}',{
                 id: 'dataListTemplate_${menuId}',

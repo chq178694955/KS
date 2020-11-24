@@ -138,8 +138,9 @@ public class EmIndexMgrController extends BaseController {
     }
 
     @RequestMapping("toUpdateTemplate")
-    public ModelAndView toUpdateTemplate(HttpServletRequest request,EmIndexTemplate template){
+    public ModelAndView toUpdateTemplate(HttpServletRequest request,Long id){
         ModelAndView mv = new ModelAndView("em/indexMgr/updateTemplate");
+        EmIndexTemplate template = emIndexTemplateService.findById(id);
         mv.addObject("template",template);
         return mv;
     }

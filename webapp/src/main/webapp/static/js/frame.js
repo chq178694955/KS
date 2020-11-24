@@ -44,8 +44,8 @@ window.Frame = window.Frame || {
     err: function(content){
         this.Layer.err(content);
     },
-    info: function(content){
-        this.Layer.info(content);
+    info: function(content,iconIndex){
+        this.Layer.info(content,iconIndex);
     },
     confirm: function(title,doFunc){
       this.Layer.confirm(title,doFunc);
@@ -56,6 +56,7 @@ window.Frame = window.Frame || {
     closeLayer: function(){
         if(this.Layer.layerIndex != null){
             layer.close(this.Layer.layerIndex);
+            this.Layer.layerIndex = null;
         }
     },
     tips: function(title,id){
@@ -130,14 +131,23 @@ Frame.Tabs = {
 
     updateTab: function(opts){
         if(Frame.Tabs.existTab(opts.id)){
-            Frame.load();
             var that = this;
             $.ajax({
                 url: opts.url,
                 data: opts.params,
+                beforeSend: function(){
+                    Frame.load();
+                },
                 success: function(html){
                     $('#' + that.mainContentId + opts.id).html(html);
-                    Frame.closeLayer();
+                },
+                error: function(xhr,status,errorMsg){
+
+                },
+                complete: function(XMLHttpRequest,status){
+                    if(Frame.Layer.layerIndex != null){
+                        Frame.closeLayer();
+                    }
                 }
             });
         }
@@ -149,11 +159,17 @@ Frame.Tabs = {
             Frame.Tabs.tabChange(opts.id)
         }else{
             if(!WebUtils.isEmpty(opts.url)){
-                Frame.load();
+                if(opts.url.indexOf('/#') >= 0){
+                    Frame.info(WebUtils.getMessage("ks.global.exception.404"),2)
+                    return ;
+                }
                 var that = this;
                 $.ajax({
                     url: opts.url,
                     async: true,
+                    beforeSend: function(){
+                        Frame.load();
+                    },
                     success: function(html){
                         if(typeof html == 'string'){
                             opts.content = "<div style='height: 100%;overflow-y: auto' id='"+that.mainContentId + opts.id+"'>"+html+"</div>";
@@ -168,19 +184,20 @@ Frame.Tabs = {
                             });
                             Frame.Tabs.tabChange(opts.id);
                         }else{
-                            Frame.info(html.msg);
+                            Frame.info(html.msg,2);
                         }
-                        Frame.closeLayer();
                     },
-                    error: function(result){
-                        Frame.closeLayer();
-                        if(result.status == 404){
-                            Frame.info(WebUtils.getMessage("ks.global.exception.404"))
-                        }else if(result.status == 500){
-                            Frame.info(WebUtils.getMessage("ks.global.exception.500"))
+                    error: function(xhr,status,errorMsg){
+                        if(xhr.status == 404){
+                            Frame.info(WebUtils.getMessage("ks.global.exception.404"),2)
+                        }else if(xhr.status == 500){
+                            Frame.info(WebUtils.getMessage("ks.global.exception.500"),2)
                         }else{
-                            Frame.info(WebUtils.getMessage("ks.global.exception.other"))
+                            Frame.info(WebUtils.getMessage("ks.global.exception.other"),2)
                         }
+                    },
+                    complete: function(){
+                        Frame.closeLayer();
                     }
                 });
             }else if(!WebUtils.isEmpty(opts.content)){
@@ -297,10 +314,10 @@ Frame.Layer = {
             content: WebUtils.fmtStr(content)
         })
     },
-    info: function(content){
+    info: function(content,iconIndex){
         layer.alert(content,{
             shade:0,
-            icon:5,
+            icon:iconIndex != undefined ? iconIndex : 1,
             offset:'rb',
             time:3000,
             anim:2
@@ -388,11 +405,13 @@ Frame.DataGrid = {
                 Frame.load();
             },
             success: function (data) {
-                Frame.closeLayer();
                 if (data.guid) {
                     Frame.DataGrid.defFilterCols = 0;
                     window.self.location = APP_ENV + '/global/datagrid/download?guid='+data.guid;
                 }
+            },
+            complete: function(XMLHttpRequest,status){
+                Frame.closeLayer();
             }
         });
         // 清理导出表单

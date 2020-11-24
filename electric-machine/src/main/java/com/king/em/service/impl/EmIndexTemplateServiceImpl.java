@@ -58,4 +58,9 @@ public class EmIndexTemplateServiceImpl implements IEmIndexTemplateService {
     public EmIndexTemplate findById(Long id) {
         return emIndexTemplateDao.get(id);
     }
+
+    @Override
+    public List<EmIndexTemplate> findAll() {
+        return emIndexTemplateDao.findAll();
+    }
 }

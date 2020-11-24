@@ -20,83 +20,66 @@
 <div class="layui-fluid">
     <div class="layui-row layui-col-space15">
         <div class="layui-col-md12">
-            <form class="layui-form layui-form-pane" lay-filter="addForm" action="${ctx}/em/baseParams/add">
+            <form class="layui-form layui-form-pane" lay-filter="addForm" action="${ctx}/em/indexMgr/addTemplate">
                 <div class="layui-card">
                     <div class="layui-card-header">新增系统指标</div>
                     <div class="layui-card-body">
                         <div class="layui-form-item">
                             <div class="layui-inline">
-                                <label class="layui-form-label" style="width: 170px;">额定电流（A）</label>
+                                <label class="layui-form-label" style="width: 170px;">指标名称</label>
                                 <div class="layui-input-inline">
-                                    <input type="text" name="fixedCurrent" lay-verify="required|number" lay-verType="tips" placeholder="请输入额定电流" autocomplete="off" class="layui-input">
+                                    <input type="text" name="name" lay-verify="required" lay-verType="tips" placeholder="请输入指标名称" autocomplete="off" class="layui-input">
                                 </div>
                             </div>
                             <div class="layui-inline">
-                                <label class="layui-form-label" style="width: 170px;">电机机身长度（m）</label>
+                                <label class="layui-form-label" style="width: 170px;">指标单位</label>
                                 <div class="layui-input-inline">
-                                    <input name="machineLength" lay-verify="required|number" lay-verType="tips" placeholder="请输入电机机身长度" autocomplete="off" class="layui-input">
+                                    <input name="unit" lay-verify="required" lay-verType="tips" placeholder="请输入指标单位" autocomplete="off" class="layui-input">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="layui-form-item">
+                            <div class="layui-inline">
+                                <label class="layui-form-label" style="width: 170px;">最大值</label>
+                                <div class="layui-input-inline">
+                                    <input type="text" name="maxVal" lay-verify="required|number" lay-verType="tips" placeholder="请输入指标最大值" autocomplete="off" class="layui-input">
+                                </div>
+                            </div>
+                            <div class="layui-inline">
+                                <label class="layui-form-label" style="width: 170px;">最小值</label>
+                                <div class="layui-input-inline">
+                                    <input name="minVal" lay-verify="required|number" lay-verType="tips" placeholder="请输入指标最小值" autocomplete="off" class="layui-input">
                                 </div>
                             </div>
                         </div>
                         <div class="layui-form-item">
                             <div class="layui-inline">
-                                <label class="layui-form-label" style="width: 170px;">额定电压（V）</label>
+                                <label class="layui-form-label" style="width: 170px;">最优指标</label>
                                 <div class="layui-input-inline">
-                                    <input type="text" name="fixedVoltage" lay-verify="required|number" lay-verType="tips" placeholder="请输入额定电压" autocomplete="off" class="layui-input">
+                                    <input type="text" name="bestVal" lay-verify="required|number" lay-verType="tips" placeholder="请输入最优指标" autocomplete="off" class="layui-input">
                                 </div>
                             </div>
                             <div class="layui-inline">
-                                <label class="layui-form-label" style="width: 170px;">横截面高度（m）</label>
+                                <label class="layui-form-label" style="width: 170px;">指标权重</label>
                                 <div class="layui-input-inline">
-                                    <input name="machineHeight" lay-verify="required|number" lay-verType="tips" placeholder="请输入横截面高度" autocomplete="off" class="layui-input">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="layui-form-item">
-                            <div class="layui-inline">
-                                <label class="layui-form-label" style="width: 170px;">额定转速（r/min）</label>
-                                <div class="layui-input-inline">
-                                    <input type="text" name="fixedSpeed" lay-verify="required|number" lay-verType="tips" placeholder="请输入额定转速" autocomplete="off" class="layui-input">
-                                </div>
-                            </div>
-                            <div class="layui-inline">
-                                <label class="layui-form-label" style="width: 170px;">横截面宽度（m）</label>
-                                <div class="layui-input-inline">
-                                    <input name="machineWidth" lay-verify="required|number" lay-verType="tips" placeholder="请输入横截面宽度" autocomplete="off" class="layui-input">
+                                    <input name="weight" lay-verify="required|number" lay-verType="tips" placeholder="请输入指标权重" autocomplete="off" class="layui-input">
                                 </div>
                             </div>
                         </div>
                         <div class="layui-form-item">
                             <div class="layui-inline">
-                                <label class="layui-form-label" style="width: 170px;">额定转矩（N·m）</label>
+                                <label class="layui-form-label" style="width: 170px;">所属分类</label>
                                 <div class="layui-input-inline">
-                                    <input type="text" name="fixedTorque" lay-verify="required|number" lay-verType="tips" placeholder="请输入额定转矩" autocomplete="off" class="layui-input">
-                                </div>
-                            </div>
-                            <div class="layui-inline">
-                                <label class="layui-form-label" style="width: 170px;">转子轴前端长度（m）</label>
-                                <div class="layui-input-inline">
-                                    <input name="rotorLength" lay-verify="required|number" lay-verType="tips" placeholder="请输入转子轴前端长度" autocomplete="off" class="layui-input">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="layui-form-item">
-                            <div class="layui-inline">
-                                <label class="layui-form-label" style="width: 170px;">电机过载能力（倍）</label>
-                                <div class="layui-input-inline">
-                                    <input type="text" name="overloadCapacity" lay-verify="required|number" lay-verType="tips" placeholder="请输入电机过载能力" autocomplete="off" class="layui-input">
-                                </div>
-                            </div>
-                            <div class="layui-inline">
-                                <label class="layui-form-label" style="width: 170px;">电机质量（kg）</label>
-                                <div class="layui-input-inline">
-                                    <input name="machineWeight" lay-verify="required|number" lay-verType="tips" placeholder="请输入电机质量" autocomplete="off" class="layui-input">
+                                    <select id="categoryId_${menuId}" name="categoryId" lay-verify="">
+
+                                    </select>
                                 </div>
                             </div>
                         </div>
                         <div class="layui-form-item">
                             <div class="layui-input-block">
-                                <button class="layui-btn" lay-submit="" lay-filter="addForm"><spring:message code="com.btn.add"/></button>
+                                <button class="layui-btn" lay-submit="" lay-filter="addForm"><spring:message code="com.btn.save"/></button>
                                 <button class="layui-btn layui-btn-primary" type="reset"><spring:message code="com.btn.reset"/></button>
                             </div>
                         </div>
@@ -134,12 +117,36 @@
             return false;
         });
         form.render();
+
+        loadCategories();
+        function loadCategories(callback){
+            $.ajax({
+                url: APP_ENV + '/em/indexMgr/listCategory',
+                dataType: 'json',
+                success: function(categories){
+                    if(categories){
+                        $('#categoryId_${menuId}').empty();
+                        var strSelected = '';
+                        for(var i=0;i<categories.length;i++){
+                            var cate = categories[i];
+                            if(i == 0)strSelected = 'selected';
+                            $('#categoryId_${menuId}').append('<option value="'+cate.id+'" '+strSelected+'>'+cate.name+'</option>');
+                            strSelected = '';
+                        }
+                        form.render('select','addForm');
+                    }
+                    if(typeof callback == 'function'){
+                        callback();
+                    }
+                }
+            })
+        }
     });
 
     function goBack(){
         Frame.modMainTab({
             id:'${menuId}',
-            url:APP_ENV + '/em/baseParams/toMain',
+            url:APP_ENV + '/em/indexMgr/toMain',
             params:{
                 menuId:'${menuId}'
             }

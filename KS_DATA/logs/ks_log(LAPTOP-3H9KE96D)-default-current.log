@@ -1,602 +1,829 @@
-2020-11-23 04:19:09,771 INFO (StartupInfoLogger.java:55)- Starting Startup on LAPTOP-3H9KE96D with PID 18876 (D:\projects\KS\webapp\target\classes started by 17869 in D:\projects\KS)
-2020-11-23 04:19:09,778 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
-2020-11-23 04:19:09,779 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
-2020-11-23 04:19:20,812 INFO (SpringBeanUtil.java:26)- ========ApplicationContext配置成功,在普通类可以通过调用SpringUtils.getAppContext()获取applicationContext对象,applicationContext=org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@5df8d229, started on Mon Nov 23 04:19:09 GMT+08:00 2020
-2020-11-23 04:19:24,636 INFO (StartupInfoLogger.java:61)- Started Startup in 15.754 seconds (JVM running for 18.957)
-2020-11-23 04:19:24,640 INFO (InitApplicationRun.java:26)- King System already started ...
-2020-11-23 04:19:25,118 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select dict_sn, class_no, dict_no, dict_desc, disp_order, parent_sn, use_flag from sys_dict 
-2020-11-23 04:19:26,077 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
-2020-11-23 04:19:26,317 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 13
-2020-11-23 04:19:26,387 INFO (InitApplicationRun.java:28)- Initialization data complete ...
-2020-11-23 04:19:34,984 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select * from sys_user where username = ? 
-2020-11-23 04:19:35,115 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: admin(String)
-2020-11-23 04:19:35,120 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
-2020-11-23 04:19:35,331 INFO (LoginController.java:122)- ********************登录成功，进入首页！********************
-2020-11-23 04:19:35,348 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select * from sys_user where username = ? 
-2020-11-23 04:19:35,350 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: com.king.system.po.UserInfo@75986591(String)
-2020-11-23 04:19:35,353 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 0
-2020-11-23 04:19:36,090 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select a.id, a.name, a.url, a.type, a.pid, a.permission, icon from sys_resources a, sys_role_resources b, sys_user_role c where a.id = b.res_id and b.role_id = c.rid and c.uid = ? order by a.id 
-2020-11-23 04:19:36,115 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 1(Long)
-2020-11-23 04:19:36,135 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 25
-2020-11-23 04:19:42,733 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name, url, type, pid, permission, icon from sys_resources 
-2020-11-23 04:19:42,735 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
-2020-11-23 04:19:42,742 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 34
-2020-11-23 04:19:47,771 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select a.id, a.name, a.url, a.type, a.pid, a.permission, a.icon, b.name as parent_name from sys_resources a left join sys_resources b on a.pid = b.id where a.id = ? 
-2020-11-23 04:19:47,775 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 46(Long)
-2020-11-23 04:19:47,778 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
-2020-11-23 04:19:51,399 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select a.id, a.name, a.url, a.type, a.pid, a.permission, a.icon, b.name as parent_name from sys_resources a left join sys_resources b on a.pid = b.id where a.id = ? 
-2020-11-23 04:19:51,400 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 47(Long)
-2020-11-23 04:19:51,402 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
-2020-11-23 04:20:17,521 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: update sys_resources SET name = ?, url = ?, pid = ?, icon = ? where id = ? 
-2020-11-23 04:20:17,582 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 指标管理(String), #(String), 45(Long), &#xe607;(String), 47(Long)
-2020-11-23 04:20:17,588 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==    Updates: 1
-2020-11-23 04:20:17,611 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name, url, type, pid, permission, icon from sys_resources 
-2020-11-23 04:20:17,612 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
-2020-11-23 04:20:17,618 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 34
-2020-11-23 04:20:28,041 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select a.id, a.name, a.url, a.type, a.pid, a.permission, a.icon, b.name as parent_name from sys_resources a left join sys_resources b on a.pid = b.id where a.id = ? 
-2020-11-23 04:20:28,042 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 48(Long)
-2020-11-23 04:20:28,045 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
-2020-11-23 04:20:35,600 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: update sys_resources SET name = ?, url = ?, pid = ?, icon = ? where id = ? 
-2020-11-23 04:20:35,602 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 我的指标(String), #(String), 45(Long), &#xe607;(String), 48(Long)
-2020-11-23 04:20:35,653 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==    Updates: 1
-2020-11-23 04:20:35,675 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name, url, type, pid, permission, icon from sys_resources 
-2020-11-23 04:20:35,675 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
-2020-11-23 04:20:35,688 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 34
-2020-11-23 04:21:08,412 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select * from sys_user where username = ? 
-2020-11-23 04:21:08,412 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: admin(String)
-2020-11-23 04:21:08,415 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
-2020-11-23 04:21:08,444 INFO (LoginController.java:122)- ********************登录成功，进入首页！********************
-2020-11-23 04:21:08,451 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select * from sys_user where username = ? 
-2020-11-23 04:21:08,452 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: com.king.system.po.UserInfo@25cf6cd3(String)
-2020-11-23 04:21:08,455 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 0
-2020-11-23 04:21:08,647 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select a.id, a.name, a.url, a.type, a.pid, a.permission, icon from sys_resources a, sys_role_resources b, sys_user_role c where a.id = b.res_id and b.role_id = c.rid and c.uid = ? order by a.id 
-2020-11-23 04:21:08,648 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 1(Long)
-2020-11-23 04:21:08,657 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 25
-2020-11-23 04:26:47,375 INFO (StartupInfoLogger.java:55)- Starting Startup on LAPTOP-3H9KE96D with PID 10892 (D:\projects\KS\webapp\target\classes started by 17869 in D:\projects\KS)
-2020-11-23 04:26:47,380 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
-2020-11-23 04:26:47,381 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
-2020-11-23 04:26:51,972 INFO (SpringBeanUtil.java:26)- ========ApplicationContext配置成功,在普通类可以通过调用SpringUtils.getAppContext()获取applicationContext对象,applicationContext=org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@63d0cd1d, started on Mon Nov 23 04:26:47 GMT+08:00 2020
-2020-11-23 04:26:53,327 INFO (StartupInfoLogger.java:61)- Started Startup in 7.046 seconds (JVM running for 9.175)
-2020-11-23 04:26:53,328 INFO (InitApplicationRun.java:26)- King System already started ...
-2020-11-23 04:26:53,538 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select dict_sn, class_no, dict_no, dict_desc, disp_order, parent_sn, use_flag from sys_dict 
-2020-11-23 04:26:53,681 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
-2020-11-23 04:26:53,948 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 13
-2020-11-23 04:26:53,953 INFO (InitApplicationRun.java:28)- Initialization data complete ...
-2020-11-23 04:27:01,818 INFO (LoginController.java:122)- ********************登录成功，进入首页！********************
-2020-11-23 04:27:01,829 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select * from sys_user where username = ? 
-2020-11-23 04:27:01,874 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: com.king.system.po.UserInfo@251ad857(String)
-2020-11-23 04:27:01,876 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 0
-2020-11-23 04:27:02,893 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select a.id, a.name, a.url, a.type, a.pid, a.permission, icon from sys_resources a, sys_role_resources b, sys_user_role c where a.id = b.res_id and b.role_id = c.rid and c.uid = ? order by a.id 
-2020-11-23 04:27:02,909 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 1(Long)
-2020-11-23 04:27:02,925 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 25
-2020-11-23 04:27:05,734 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name, url, type, pid, permission, icon from sys_resources 
-2020-11-23 04:27:05,736 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
-2020-11-23 04:27:05,747 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 34
-2020-11-23 04:27:07,746 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select a.id, a.name, a.url, a.type, a.pid, a.permission, a.icon, b.name as parent_name from sys_resources a left join sys_resources b on a.pid = b.id where a.id = ? 
-2020-11-23 04:27:07,749 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 47(Long)
-2020-11-23 04:27:07,753 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
-2020-11-23 04:27:17,298 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: update sys_resources SET name = ?, url = ?, pid = ?, icon = ? where id = ? 
-2020-11-23 04:27:17,309 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 指标管理(String), em/indexMgr/toMain(String), 45(Long), &#xe607;(String), 47(Long)
-2020-11-23 04:27:17,360 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==    Updates: 1
-2020-11-23 04:27:17,389 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name, url, type, pid, permission, icon from sys_resources 
-2020-11-23 04:27:17,390 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
-2020-11-23 04:27:17,402 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 34
-2020-11-23 04:27:21,984 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select a.id, a.name, a.url, a.type, a.pid, a.permission, a.icon, b.name as parent_name from sys_resources a left join sys_resources b on a.pid = b.id where a.id = ? 
-2020-11-23 04:27:21,985 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 48(Long)
-2020-11-23 04:27:21,988 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
-2020-11-23 04:27:31,637 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: update sys_resources SET name = ?, url = ?, pid = ?, icon = ? where id = ? 
-2020-11-23 04:27:31,639 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 我的指标(String), em/myIndex/toMain(String), 45(Long), &#xe607;(String), 48(Long)
-2020-11-23 04:27:31,644 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==    Updates: 1
-2020-11-23 04:27:31,670 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name, url, type, pid, permission, icon from sys_resources 
-2020-11-23 04:27:31,671 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
-2020-11-23 04:27:31,685 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 34
-2020-11-23 04:27:35,539 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select * from sys_user where username = ? 
-2020-11-23 04:27:35,540 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: admin(String)
-2020-11-23 04:27:35,542 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
-2020-11-23 04:27:35,544 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select a.id, a.name from sys_role a,sys_user_role b where a.id = b.rid and b.uid = ? 
-2020-11-23 04:27:35,546 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 1(Long)
-2020-11-23 04:27:35,548 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
-2020-11-23 04:27:35,549 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select a.id, a.name, a.url, a.type, a.pid, a.permission, icon from sys_resources a ,sys_role_resources b where a.id = b.res_id and b.role_id = ? 
-2020-11-23 04:27:35,551 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 1(Long)
-2020-11-23 04:27:35,556 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 25
-2020-11-23 04:27:35,684 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT count(0) FROM sys_user a LEFT JOIN sys_user_role b ON a.id = b.uid LEFT JOIN sys_role c ON b.rid = c.id 
-2020-11-23 04:27:35,692 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
-2020-11-23 04:27:35,695 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
-2020-11-23 04:27:35,701 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select a.id, a.username, a.password, a.name, a.id_card_num, a.state, c.id as role_id, c.name as role_name from sys_user a left join sys_user_role b on a.id = b.uid left join sys_role c on b.rid = c.id limit ?,? 
-2020-11-23 04:27:35,709 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 0(Integer), 10(Integer)
-2020-11-23 04:27:35,714 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 3
-2020-11-23 04:28:13,909 INFO (StartupInfoLogger.java:55)- Starting Startup on LAPTOP-3H9KE96D with PID 10892 (D:\projects\KS\webapp\target\classes started by 17869 in D:\projects\KS)
-2020-11-23 04:28:13,910 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
-2020-11-23 04:28:13,910 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
-2020-11-23 04:28:16,357 INFO (SpringBeanUtil.java:26)- ========ApplicationContext配置成功,在普通类可以通过调用SpringUtils.getAppContext()获取applicationContext对象,applicationContext=org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@edf796e, started on Mon Nov 23 04:28:13 GMT+08:00 2020
-2020-11-23 04:28:17,409 INFO (StartupInfoLogger.java:61)- Started Startup in 3.591 seconds (JVM running for 93.258)
-2020-11-23 04:28:17,410 INFO (InitApplicationRun.java:26)- King System already started ...
-2020-11-23 04:28:17,427 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select dict_sn, class_no, dict_no, dict_desc, disp_order, parent_sn, use_flag from sys_dict 
-2020-11-23 04:28:17,428 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
-2020-11-23 04:28:17,431 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 13
-2020-11-23 04:28:17,433 INFO (InitApplicationRun.java:28)- Initialization data complete ...
-2020-11-23 04:28:25,195 INFO (StartupInfoLogger.java:55)- Starting Startup on LAPTOP-3H9KE96D with PID 10892 (D:\projects\KS\webapp\target\classes started by 17869 in D:\projects\KS)
-2020-11-23 04:28:25,196 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
-2020-11-23 04:28:25,197 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
-2020-11-23 04:28:26,960 INFO (SpringBeanUtil.java:26)- ========ApplicationContext配置成功,在普通类可以通过调用SpringUtils.getAppContext()获取applicationContext对象,applicationContext=org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@6ae94c77, started on Mon Nov 23 04:28:25 GMT+08:00 2020
-2020-11-23 04:28:28,001 INFO (StartupInfoLogger.java:61)- Started Startup in 2.899 seconds (JVM running for 103.85)
-2020-11-23 04:28:28,002 INFO (InitApplicationRun.java:26)- King System already started ...
-2020-11-23 04:28:28,015 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select dict_sn, class_no, dict_no, dict_desc, disp_order, parent_sn, use_flag from sys_dict 
-2020-11-23 04:28:28,016 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
-2020-11-23 04:28:28,018 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 13
-2020-11-23 04:28:28,019 INFO (InitApplicationRun.java:28)- Initialization data complete ...
-2020-11-23 04:28:58,981 INFO (StartupInfoLogger.java:55)- Starting Startup on LAPTOP-3H9KE96D with PID 15256 (D:\projects\KS\webapp\target\classes started by 17869 in D:\projects\KS)
-2020-11-23 04:28:58,987 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
-2020-11-23 04:28:58,988 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
-2020-11-23 04:29:04,168 INFO (SpringBeanUtil.java:26)- ========ApplicationContext配置成功,在普通类可以通过调用SpringUtils.getAppContext()获取applicationContext对象,applicationContext=org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@53ebe1c3, started on Mon Nov 23 04:28:59 GMT+08:00 2020
-2020-11-23 04:29:05,511 INFO (StartupInfoLogger.java:61)- Started Startup in 7.572 seconds (JVM running for 8.991)
-2020-11-23 04:29:05,512 INFO (InitApplicationRun.java:26)- King System already started ...
-2020-11-23 04:29:05,673 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select dict_sn, class_no, dict_no, dict_desc, disp_order, parent_sn, use_flag from sys_dict 
-2020-11-23 04:29:05,816 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
-2020-11-23 04:29:06,048 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 13
-2020-11-23 04:29:06,052 INFO (InitApplicationRun.java:28)- Initialization data complete ...
-2020-11-23 04:29:18,085 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select * from sys_user where username = ? 
-2020-11-23 04:29:18,206 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: admin(String)
-2020-11-23 04:29:18,211 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
-2020-11-23 04:29:18,409 INFO (LoginController.java:122)- ********************登录成功，进入首页！********************
-2020-11-23 04:29:18,425 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select * from sys_user where username = ? 
-2020-11-23 04:29:18,426 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: com.king.system.po.UserInfo@5a069777(String)
-2020-11-23 04:29:18,430 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 0
-2020-11-23 04:29:18,969 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select a.id, a.name, a.url, a.type, a.pid, a.permission, icon from sys_resources a, sys_role_resources b, sys_user_role c where a.id = b.res_id and b.role_id = c.rid and c.uid = ? order by a.id 
-2020-11-23 04:29:18,987 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 1(Long)
-2020-11-23 04:29:19,008 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 25
-2020-11-23 04:29:22,878 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT count(0) FROM em_base_params 
-2020-11-23 04:29:22,887 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
-2020-11-23 04:29:22,890 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
-2020-11-23 04:29:22,895 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, fixed_current, fixed_voltage, fixed_speed, fixed_torque, overload_capacity, machine_length, machine_height, machine_width, rotor_length, machine_weight, is_default from em_base_params limit ?,? 
-2020-11-23 04:29:22,904 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 0(Integer), 10(Integer)
-2020-11-23 04:29:22,907 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
-2020-11-23 04:29:30,713 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT count(0) FROM em_base_params 
-2020-11-23 04:29:30,713 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
-2020-11-23 04:29:30,716 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
-2020-11-23 04:29:30,717 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, fixed_current, fixed_voltage, fixed_speed, fixed_torque, overload_capacity, machine_length, machine_height, machine_width, rotor_length, machine_weight, is_default from em_base_params limit ?,? 
-2020-11-23 04:29:30,718 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 0(Integer), 10(Integer)
-2020-11-23 04:29:30,721 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
-2020-11-23 04:33:05,493 INFO (StartupInfoLogger.java:55)- Starting Startup on LAPTOP-3H9KE96D with PID 15256 (D:\projects\KS\webapp\target\classes started by 17869 in D:\projects\KS)
-2020-11-23 04:33:05,493 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
-2020-11-23 04:33:05,494 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
-2020-11-23 04:33:07,620 INFO (SpringBeanUtil.java:26)- ========ApplicationContext配置成功,在普通类可以通过调用SpringUtils.getAppContext()获取applicationContext对象,applicationContext=org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@7d37c106, started on Mon Nov 23 04:33:05 GMT+08:00 2020
-2020-11-23 04:33:09,278 INFO (StartupInfoLogger.java:61)- Started Startup in 3.854 seconds (JVM running for 252.758)
-2020-11-23 04:33:09,279 INFO (InitApplicationRun.java:26)- King System already started ...
-2020-11-23 04:33:09,292 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select dict_sn, class_no, dict_no, dict_desc, disp_order, parent_sn, use_flag from sys_dict 
-2020-11-23 04:33:09,293 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
-2020-11-23 04:33:09,296 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 13
-2020-11-23 04:33:09,297 INFO (InitApplicationRun.java:28)- Initialization data complete ...
-2020-11-23 04:34:44,984 INFO (StartupInfoLogger.java:55)- Starting Startup on LAPTOP-3H9KE96D with PID 15256 (D:\projects\KS\webapp\target\classes started by 17869 in D:\projects\KS)
-2020-11-23 04:34:44,984 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
-2020-11-23 04:34:44,985 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
-2020-11-23 04:34:50,135 INFO (StartupInfoLogger.java:55)- Starting Startup on LAPTOP-3H9KE96D with PID 15256 (D:\projects\KS\webapp\target\classes started by 17869 in D:\projects\KS)
-2020-11-23 04:34:50,136 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
-2020-11-23 04:34:50,136 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
-2020-11-23 04:35:08,031 INFO (StartupInfoLogger.java:55)- Starting Startup on LAPTOP-3H9KE96D with PID 15256 (D:\projects\KS\webapp\target\classes started by 17869 in D:\projects\KS)
-2020-11-23 04:35:08,031 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
-2020-11-23 04:35:08,031 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
-2020-11-23 04:36:53,163 INFO (StartupInfoLogger.java:55)- Starting Startup on LAPTOP-3H9KE96D with PID 15256 (D:\projects\KS\webapp\target\classes started by 17869 in D:\projects\KS)
-2020-11-23 04:36:53,163 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
-2020-11-23 04:36:53,164 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
-2020-11-23 04:36:55,827 INFO (SpringBeanUtil.java:26)- ========ApplicationContext配置成功,在普通类可以通过调用SpringUtils.getAppContext()获取applicationContext对象,applicationContext=org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@dfacdf6, started on Mon Nov 23 04:36:53 GMT+08:00 2020
-2020-11-23 04:36:56,732 INFO (StartupInfoLogger.java:61)- Started Startup in 3.642 seconds (JVM running for 480.212)
-2020-11-23 04:36:56,733 INFO (InitApplicationRun.java:26)- King System already started ...
-2020-11-23 04:36:56,745 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select dict_sn, class_no, dict_no, dict_desc, disp_order, parent_sn, use_flag from sys_dict 
-2020-11-23 04:36:56,746 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
-2020-11-23 04:36:56,749 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 13
-2020-11-23 04:36:56,750 INFO (InitApplicationRun.java:28)- Initialization data complete ...
-2020-11-23 04:37:01,329 INFO (StartupInfoLogger.java:55)- Starting Startup on LAPTOP-3H9KE96D with PID 15256 (D:\projects\KS\webapp\target\classes started by 17869 in D:\projects\KS)
-2020-11-23 04:37:01,330 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
-2020-11-23 04:37:01,330 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
-2020-11-23 04:37:03,264 INFO (SpringBeanUtil.java:26)- ========ApplicationContext配置成功,在普通类可以通过调用SpringUtils.getAppContext()获取applicationContext对象,applicationContext=org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@597da9f7, started on Mon Nov 23 04:37:01 GMT+08:00 2020
-2020-11-23 04:37:04,175 INFO (StartupInfoLogger.java:61)- Started Startup in 2.903 seconds (JVM running for 487.655)
-2020-11-23 04:37:04,176 INFO (InitApplicationRun.java:26)- King System already started ...
-2020-11-23 04:37:04,187 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select dict_sn, class_no, dict_no, dict_desc, disp_order, parent_sn, use_flag from sys_dict 
-2020-11-23 04:37:04,188 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
-2020-11-23 04:37:04,190 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 13
-2020-11-23 04:37:04,191 INFO (InitApplicationRun.java:28)- Initialization data complete ...
-2020-11-23 04:38:00,901 INFO (StartupInfoLogger.java:55)- Starting Startup on LAPTOP-3H9KE96D with PID 15256 (D:\projects\KS\webapp\target\classes started by 17869 in D:\projects\KS)
-2020-11-23 04:38:00,902 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
-2020-11-23 04:38:00,902 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
-2020-11-23 04:38:02,781 INFO (SpringBeanUtil.java:26)- ========ApplicationContext配置成功,在普通类可以通过调用SpringUtils.getAppContext()获取applicationContext对象,applicationContext=org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@24470af1, started on Mon Nov 23 04:38:00 GMT+08:00 2020
-2020-11-23 04:38:03,746 INFO (StartupInfoLogger.java:61)- Started Startup in 2.974 seconds (JVM running for 547.225)
-2020-11-23 04:38:03,746 INFO (InitApplicationRun.java:26)- King System already started ...
-2020-11-23 04:38:03,769 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select dict_sn, class_no, dict_no, dict_desc, disp_order, parent_sn, use_flag from sys_dict 
-2020-11-23 04:38:03,769 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
-2020-11-23 04:38:03,771 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 13
-2020-11-23 04:38:03,773 INFO (InitApplicationRun.java:28)- Initialization data complete ...
-2020-11-23 04:38:42,959 INFO (StartupInfoLogger.java:55)- Starting Startup on LAPTOP-3H9KE96D with PID 15256 (D:\projects\KS\webapp\target\classes started by 17869 in D:\projects\KS)
-2020-11-23 04:38:42,960 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
-2020-11-23 04:38:42,960 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
-2020-11-23 04:38:45,310 INFO (SpringBeanUtil.java:26)- ========ApplicationContext配置成功,在普通类可以通过调用SpringUtils.getAppContext()获取applicationContext对象,applicationContext=org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@4ce283b3, started on Mon Nov 23 04:38:42 GMT+08:00 2020
-2020-11-23 04:38:46,866 INFO (StartupInfoLogger.java:61)- Started Startup in 3.962 seconds (JVM running for 590.346)
-2020-11-23 04:38:46,868 INFO (InitApplicationRun.java:26)- King System already started ...
-2020-11-23 04:38:46,887 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select dict_sn, class_no, dict_no, dict_desc, disp_order, parent_sn, use_flag from sys_dict 
-2020-11-23 04:38:46,888 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
-2020-11-23 04:38:46,890 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 13
-2020-11-23 04:38:46,891 INFO (InitApplicationRun.java:28)- Initialization data complete ...
-2020-11-23 04:38:53,785 INFO (StartupInfoLogger.java:55)- Starting Startup on LAPTOP-3H9KE96D with PID 15256 (D:\projects\KS\webapp\target\classes started by 17869 in D:\projects\KS)
-2020-11-23 04:38:53,785 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
-2020-11-23 04:38:53,786 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
-2020-11-23 04:38:55,719 INFO (SpringBeanUtil.java:26)- ========ApplicationContext配置成功,在普通类可以通过调用SpringUtils.getAppContext()获取applicationContext对象,applicationContext=org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@5a5166ab, started on Mon Nov 23 04:38:53 GMT+08:00 2020
-2020-11-23 04:38:57,727 INFO (StartupInfoLogger.java:61)- Started Startup in 4.035 seconds (JVM running for 601.206)
-2020-11-23 04:38:57,727 INFO (InitApplicationRun.java:26)- King System already started ...
-2020-11-23 04:38:57,739 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select dict_sn, class_no, dict_no, dict_desc, disp_order, parent_sn, use_flag from sys_dict 
-2020-11-23 04:38:57,740 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
-2020-11-23 04:38:57,742 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 13
-2020-11-23 04:38:57,743 INFO (InitApplicationRun.java:28)- Initialization data complete ...
-2020-11-23 04:39:02,390 INFO (StartupInfoLogger.java:55)- Starting Startup on LAPTOP-3H9KE96D with PID 15256 (D:\projects\KS\webapp\target\classes started by 17869 in D:\projects\KS)
-2020-11-23 04:39:02,390 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
-2020-11-23 04:39:02,390 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
-2020-11-23 04:39:18,235 INFO (StartupInfoLogger.java:55)- Starting Startup on LAPTOP-3H9KE96D with PID 15256 (D:\projects\KS\webapp\target\classes started by 17869 in D:\projects\KS)
-2020-11-23 04:39:18,236 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
-2020-11-23 04:39:18,236 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
-2020-11-23 04:39:41,833 INFO (StartupInfoLogger.java:55)- Starting Startup on LAPTOP-3H9KE96D with PID 15256 (D:\projects\KS\webapp\target\classes started by 17869 in D:\projects\KS)
-2020-11-23 04:39:41,833 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
-2020-11-23 04:39:41,833 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
-2020-11-23 04:39:58,986 INFO (StartupInfoLogger.java:55)- Starting Startup on LAPTOP-3H9KE96D with PID 15256 (D:\projects\KS\webapp\target\classes started by 17869 in D:\projects\KS)
-2020-11-23 04:39:58,986 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
-2020-11-23 04:39:58,986 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
-2020-11-23 04:40:30,967 INFO (StartupInfoLogger.java:55)- Starting Startup on LAPTOP-3H9KE96D with PID 15256 (D:\projects\KS\webapp\target\classes started by 17869 in D:\projects\KS)
-2020-11-23 04:40:30,967 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
-2020-11-23 04:40:30,968 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
-2020-11-23 04:41:07,068 INFO (StartupInfoLogger.java:55)- Starting Startup on LAPTOP-3H9KE96D with PID 15256 (D:\projects\KS\webapp\target\classes started by 17869 in D:\projects\KS)
-2020-11-23 04:41:07,068 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
-2020-11-23 04:41:07,068 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
-2020-11-23 04:41:29,613 INFO (StartupInfoLogger.java:55)- Starting Startup on LAPTOP-3H9KE96D with PID 15256 (D:\projects\KS\webapp\target\classes started by 17869 in D:\projects\KS)
-2020-11-23 04:41:29,615 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
-2020-11-23 04:41:29,615 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
-2020-11-23 04:43:25,295 INFO (StartupInfoLogger.java:55)- Starting Startup on LAPTOP-3H9KE96D with PID 15256 (D:\projects\KS\webapp\target\classes started by 17869 in D:\projects\KS)
-2020-11-23 04:43:25,296 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
-2020-11-23 04:43:25,296 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
-2020-11-23 04:43:28,728 INFO (SpringBeanUtil.java:26)- ========ApplicationContext配置成功,在普通类可以通过调用SpringUtils.getAppContext()获取applicationContext对象,applicationContext=org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@363ddf52, started on Mon Nov 23 04:43:25 GMT+08:00 2020
-2020-11-23 04:43:31,771 INFO (StartupInfoLogger.java:61)- Started Startup in 6.537 seconds (JVM running for 875.251)
-2020-11-23 04:43:31,773 INFO (InitApplicationRun.java:26)- King System already started ...
-2020-11-23 04:43:31,801 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select dict_sn, class_no, dict_no, dict_desc, disp_order, parent_sn, use_flag from sys_dict 
-2020-11-23 04:43:31,802 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
-2020-11-23 04:43:31,807 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 13
-2020-11-23 04:43:31,809 INFO (InitApplicationRun.java:28)- Initialization data complete ...
-2020-11-23 04:50:17,426 INFO (StartupInfoLogger.java:55)- Starting Startup on LAPTOP-3H9KE96D with PID 15256 (D:\projects\KS\webapp\target\classes started by 17869 in D:\projects\KS)
-2020-11-23 04:50:17,427 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
-2020-11-23 04:50:17,427 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
-2020-11-23 04:50:19,702 INFO (SpringBeanUtil.java:26)- ========ApplicationContext配置成功,在普通类可以通过调用SpringUtils.getAppContext()获取applicationContext对象,applicationContext=org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@6f024486, started on Mon Nov 23 04:50:17 GMT+08:00 2020
-2020-11-23 04:50:21,034 INFO (StartupInfoLogger.java:61)- Started Startup in 3.69 seconds (JVM running for 1284.514)
-2020-11-23 04:50:21,036 INFO (InitApplicationRun.java:26)- King System already started ...
-2020-11-23 04:50:21,050 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select dict_sn, class_no, dict_no, dict_desc, disp_order, parent_sn, use_flag from sys_dict 
-2020-11-23 04:50:21,051 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
-2020-11-23 04:50:21,055 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 13
-2020-11-23 04:50:21,057 INFO (InitApplicationRun.java:28)- Initialization data complete ...
-2020-11-23 04:51:24,467 INFO (StartupInfoLogger.java:55)- Starting Startup on LAPTOP-3H9KE96D with PID 15256 (D:\projects\KS\webapp\target\classes started by 17869 in D:\projects\KS)
-2020-11-23 04:51:24,468 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
-2020-11-23 04:51:24,468 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
-2020-11-23 05:36:09,331 INFO (StartupInfoLogger.java:55)- Starting Startup on LAPTOP-3H9KE96D with PID 17448 (D:\projects\KS\webapp\target\classes started by 17869 in D:\projects\KS)
-2020-11-23 05:36:09,338 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
-2020-11-23 05:36:09,339 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
-2020-11-23 05:36:14,402 INFO (SpringBeanUtil.java:26)- ========ApplicationContext配置成功,在普通类可以通过调用SpringUtils.getAppContext()获取applicationContext对象,applicationContext=org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@18bf4985, started on Mon Nov 23 05:36:09 GMT+08:00 2020
-2020-11-23 05:36:15,781 INFO (StartupInfoLogger.java:61)- Started Startup in 7.506 seconds (JVM running for 8.978)
-2020-11-23 05:36:15,782 INFO (InitApplicationRun.java:26)- King System already started ...
-2020-11-23 05:37:08,058 INFO (StartupInfoLogger.java:55)- Starting Startup on LAPTOP-3H9KE96D with PID 3064 (D:\projects\KS\webapp\target\classes started by 17869 in D:\projects\KS)
-2020-11-23 05:37:08,063 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
-2020-11-23 05:37:08,064 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
-2020-11-23 05:37:12,190 INFO (SpringBeanUtil.java:26)- ========ApplicationContext配置成功,在普通类可以通过调用SpringUtils.getAppContext()获取applicationContext对象,applicationContext=org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@783542a0, started on Mon Nov 23 05:37:08 GMT+08:00 2020
-2020-11-23 05:37:13,625 INFO (StartupInfoLogger.java:61)- Started Startup in 6.717 seconds (JVM running for 8.075)
-2020-11-23 05:37:13,626 INFO (InitApplicationRun.java:26)- King System already started ...
-2020-11-23 05:37:13,788 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select dict_sn, class_no, dict_no, dict_desc, disp_order, parent_sn, use_flag from sys_dict 
-2020-11-23 05:37:14,163 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
-2020-11-23 05:37:14,208 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 13
-2020-11-23 05:37:14,212 INFO (InitApplicationRun.java:28)- Initialization data complete ...
-2020-11-23 05:37:22,023 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select * from sys_user where username = ? 
-2020-11-23 05:37:22,141 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: admin(String)
-2020-11-23 05:37:22,146 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
-2020-11-23 05:37:22,310 INFO (LoginController.java:122)- ********************登录成功，进入首页！********************
-2020-11-23 05:37:22,324 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select * from sys_user where username = ? 
-2020-11-23 05:37:22,326 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: com.king.system.po.UserInfo@1dadc6e0(String)
-2020-11-23 05:37:22,329 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 0
-2020-11-23 05:37:22,968 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select a.id, a.name, a.url, a.type, a.pid, a.permission, icon from sys_resources a, sys_role_resources b, sys_user_role c where a.id = b.res_id and b.role_id = c.rid and c.uid = ? order by a.id 
-2020-11-23 05:37:22,986 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 1(Long)
-2020-11-23 05:37:23,007 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 25
-2020-11-23 05:37:25,505 ERROR (GlobalExceptionHandler.java:88)- *****服务器异常*****nested exception is org.apache.ibatis.exceptions.PersistenceException: 
-### Error querying database.  Cause: java.lang.IllegalArgumentException: Mapped Statements collection does not contain value for com.king.em.dao.EmIndexCategoryDao.find
-### Cause: java.lang.IllegalArgumentException: Mapped Statements collection does not contain value for com.king.em.dao.EmIndexCategoryDao.find
-2020-11-23 05:37:25,505 ERROR (GlobalExceptionHandler.java:89)- RequestFail[/em/indexMgr/findCategory][page=1,limit=10]
-2020-11-23 05:40:55,194 INFO (StartupInfoLogger.java:55)- Starting Startup on LAPTOP-3H9KE96D with PID 4396 (D:\projects\KS\webapp\target\classes started by 17869 in D:\projects\KS)
-2020-11-23 05:40:55,199 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
-2020-11-23 05:40:55,200 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
-2020-11-23 05:41:00,315 INFO (SpringBeanUtil.java:26)- ========ApplicationContext配置成功,在普通类可以通过调用SpringUtils.getAppContext()获取applicationContext对象,applicationContext=org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@740b3412, started on Mon Nov 23 05:40:55 GMT+08:00 2020
-2020-11-23 05:41:01,715 INFO (StartupInfoLogger.java:61)- Started Startup in 7.633 seconds (JVM running for 8.987)
-2020-11-23 05:41:01,716 INFO (InitApplicationRun.java:26)- King System already started ...
-2020-11-23 05:41:01,910 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select dict_sn, class_no, dict_no, dict_desc, disp_order, parent_sn, use_flag from sys_dict 
-2020-11-23 05:41:02,305 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
-2020-11-23 05:41:02,344 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 13
-2020-11-23 05:41:02,350 INFO (InitApplicationRun.java:28)- Initialization data complete ...
-2020-11-23 05:41:05,757 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT count(0) FROM em_index_category 
-2020-11-23 05:41:05,765 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
-2020-11-23 05:41:05,766 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
-2020-11-23 05:41:05,768 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name from em_index_category order by id asc limit ?,? 
-2020-11-23 05:41:05,776 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 0(Integer), 10(Integer)
-2020-11-23 05:41:05,816 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 3
-2020-11-23 05:41:26,961 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT count(0) FROM em_index_category 
-2020-11-23 05:41:26,962 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
-2020-11-23 05:41:26,966 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
-2020-11-23 05:41:26,967 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name from em_index_category order by id asc limit ?,? 
-2020-11-23 05:41:26,968 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 0(Integer), 10(Integer)
-2020-11-23 05:41:26,969 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 3
-2020-11-23 05:49:18,801 INFO (StartupInfoLogger.java:55)- Starting Startup on LAPTOP-3H9KE96D with PID 14104 (D:\projects\KS\webapp\target\classes started by 17869 in D:\projects\KS)
-2020-11-23 05:49:18,807 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
-2020-11-23 05:49:18,809 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
-2020-11-23 05:49:24,459 INFO (SpringBeanUtil.java:26)- ========ApplicationContext配置成功,在普通类可以通过调用SpringUtils.getAppContext()获取applicationContext对象,applicationContext=org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@3fd45b79, started on Mon Nov 23 05:49:18 GMT+08:00 2020
-2020-11-23 05:49:25,874 INFO (StartupInfoLogger.java:61)- Started Startup in 8.148 seconds (JVM running for 9.722)
-2020-11-23 05:49:25,875 INFO (InitApplicationRun.java:26)- King System already started ...
-2020-11-23 05:49:26,030 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select dict_sn, class_no, dict_no, dict_desc, disp_order, parent_sn, use_flag from sys_dict 
-2020-11-23 05:49:26,395 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
-2020-11-23 05:49:26,452 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 13
-2020-11-23 05:49:26,457 INFO (InitApplicationRun.java:28)- Initialization data complete ...
-2020-11-23 05:50:10,781 INFO (StartupInfoLogger.java:55)- Starting Startup on LAPTOP-3H9KE96D with PID 18668 (D:\projects\KS\webapp\target\classes started by 17869 in D:\projects\KS)
-2020-11-23 05:50:10,787 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
-2020-11-23 05:50:10,787 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
-2020-11-23 05:50:15,985 INFO (SpringBeanUtil.java:26)- ========ApplicationContext配置成功,在普通类可以通过调用SpringUtils.getAppContext()获取applicationContext对象,applicationContext=org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@7224c94b, started on Mon Nov 23 05:50:10 GMT+08:00 2020
-2020-11-23 05:50:17,333 INFO (StartupInfoLogger.java:61)- Started Startup in 7.617 seconds (JVM running for 8.978)
-2020-11-23 05:50:17,334 INFO (InitApplicationRun.java:26)- King System already started ...
-2020-11-23 05:50:17,491 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select dict_sn, class_no, dict_no, dict_desc, disp_order, parent_sn, use_flag from sys_dict 
-2020-11-23 05:50:17,841 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
-2020-11-23 05:50:17,874 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 13
-2020-11-23 05:50:17,878 INFO (InitApplicationRun.java:28)- Initialization data complete ...
-2020-11-23 05:50:35,657 INFO (LoginController.java:122)- ********************登录成功，进入首页！********************
-2020-11-23 05:50:35,667 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select * from sys_user where username = ? 
-2020-11-23 05:50:35,716 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: com.king.system.po.UserInfo@2553ce99(String)
-2020-11-23 05:50:35,718 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 0
-2020-11-23 05:50:36,802 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select a.id, a.name, a.url, a.type, a.pid, a.permission, icon from sys_resources a, sys_role_resources b, sys_user_role c where a.id = b.res_id and b.role_id = c.rid and c.uid = ? order by a.id 
-2020-11-23 05:50:36,819 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 1(Long)
-2020-11-23 05:50:36,834 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 25
-2020-11-23 05:50:39,936 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT count(0) FROM em_index_category 
-2020-11-23 05:50:39,944 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
-2020-11-23 05:50:39,947 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
-2020-11-23 05:50:39,952 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name from em_index_category order by id asc limit ?,? 
-2020-11-23 05:50:39,960 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 0(Integer), 10(Integer)
-2020-11-23 05:50:39,963 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 3
-2020-11-23 05:50:41,492 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name from em_index_category where id = ? order by id asc 
-2020-11-23 05:50:41,494 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 1(Integer)
-2020-11-23 05:50:41,497 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
-2020-11-23 05:50:43,506 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: update em_index_category SET name = ? WHERE id = ? 
-2020-11-23 05:50:43,521 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 动态控制性能1(String), 1(Integer)
-2020-11-23 05:50:43,526 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==    Updates: 1
-2020-11-23 05:50:46,217 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT count(0) FROM em_index_category 
-2020-11-23 05:50:46,219 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
-2020-11-23 05:50:46,222 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
-2020-11-23 05:50:46,224 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name from em_index_category order by id asc limit ?,? 
-2020-11-23 05:50:46,225 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 0(Integer), 10(Integer)
-2020-11-23 05:50:46,227 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 3
-2020-11-23 05:50:47,545 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name from em_index_category where id = ? order by id asc 
-2020-11-23 05:50:47,547 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 1(Integer)
-2020-11-23 05:50:47,550 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
-2020-11-23 05:50:50,071 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: update em_index_category SET name = ? WHERE id = ? 
-2020-11-23 05:50:50,073 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 动态控制性能(String), 1(Integer)
-2020-11-23 05:50:50,081 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==    Updates: 1
-2020-11-23 05:50:53,377 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT count(0) FROM em_index_category 
-2020-11-23 05:50:53,378 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
-2020-11-23 05:50:53,381 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
-2020-11-23 05:50:53,383 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name from em_index_category order by id asc limit ?,? 
-2020-11-23 05:50:53,385 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 0(Integer), 10(Integer)
-2020-11-23 05:50:53,387 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 3
-2020-11-23 05:50:58,345 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: insert into em_index_category (name) values (?) 
-2020-11-23 05:50:58,420 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 1231232(String)
-2020-11-23 05:50:58,428 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==    Updates: 1
-2020-11-23 05:50:58,430 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT LAST_INSERT_ID() 
-2020-11-23 05:50:58,438 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
-2020-11-23 05:50:58,445 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
-2020-11-23 05:51:01,189 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT count(0) FROM em_index_category 
-2020-11-23 05:51:01,190 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
-2020-11-23 05:51:01,194 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
-2020-11-23 05:51:01,196 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name from em_index_category order by id asc limit ?,? 
-2020-11-23 05:51:01,197 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 0(Integer), 10(Integer)
-2020-11-23 05:51:01,201 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 4
-2020-11-23 05:51:03,349 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: delete from em_index_category where id = ? 
-2020-11-23 05:51:03,400 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 4(Integer)
-2020-11-23 05:51:03,409 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==    Updates: 1
-2020-11-23 05:51:03,443 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT count(0) FROM em_index_category 
-2020-11-23 05:51:03,444 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
-2020-11-23 05:51:03,446 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
-2020-11-23 05:51:03,451 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name from em_index_category order by id asc limit ?,? 
-2020-11-23 05:51:03,452 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 0(Integer), 10(Integer)
-2020-11-23 05:51:03,459 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 3
-2020-11-23 05:51:47,217 INFO (LoginController.java:122)- ********************登录成功，进入首页！********************
-2020-11-23 05:51:47,225 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select * from sys_user where username = ? 
-2020-11-23 05:51:47,228 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: com.king.system.po.UserInfo@1959a356(String)
-2020-11-23 05:51:47,231 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 0
-2020-11-23 05:51:47,476 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select a.id, a.name, a.url, a.type, a.pid, a.permission, icon from sys_resources a, sys_role_resources b, sys_user_role c where a.id = b.res_id and b.role_id = c.rid and c.uid = ? order by a.id 
-2020-11-23 05:51:47,479 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 1(Long)
-2020-11-23 05:51:47,540 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 25
-2020-11-23 05:51:49,410 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT count(0) FROM em_index_category 
-2020-11-23 05:51:49,410 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
-2020-11-23 05:51:49,412 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
-2020-11-23 05:51:49,413 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name from em_index_category order by id asc limit ?,? 
-2020-11-23 05:51:49,415 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 0(Integer), 10(Integer)
-2020-11-23 05:51:49,416 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 3
-2020-11-23 06:09:58,764 INFO (StartupInfoLogger.java:55)- Starting Startup on LAPTOP-3H9KE96D with PID 5152 (D:\projects\KS\webapp\target\classes started by 17869 in D:\projects\KS)
-2020-11-23 06:09:58,769 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
-2020-11-23 06:09:58,771 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
-2020-11-23 06:10:02,962 INFO (SpringBeanUtil.java:26)- ========ApplicationContext配置成功,在普通类可以通过调用SpringUtils.getAppContext()获取applicationContext对象,applicationContext=org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@67f9ac1f, started on Mon Nov 23 06:09:58 GMT+08:00 2020
-2020-11-23 06:10:04,358 INFO (StartupInfoLogger.java:61)- Started Startup in 6.735 seconds (JVM running for 8.375)
-2020-11-23 06:10:04,360 INFO (InitApplicationRun.java:26)- King System already started ...
-2020-11-23 06:10:04,571 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select dict_sn, class_no, dict_no, dict_desc, disp_order, parent_sn, use_flag from sys_dict 
-2020-11-23 06:10:04,934 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
-2020-11-23 06:10:04,976 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 13
-2020-11-23 06:10:04,980 INFO (InitApplicationRun.java:28)- Initialization data complete ...
-2020-11-23 06:10:10,793 INFO (LoginController.java:122)- ********************登录成功，进入首页！********************
-2020-11-23 06:10:10,803 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select * from sys_user where username = ? 
-2020-11-23 06:10:10,848 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: com.king.system.po.UserInfo@19c5e91e(String)
-2020-11-23 06:10:10,849 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 0
-2020-11-23 06:10:11,965 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select a.id, a.name, a.url, a.type, a.pid, a.permission, icon from sys_resources a, sys_role_resources b, sys_user_role c where a.id = b.res_id and b.role_id = c.rid and c.uid = ? order by a.id 
-2020-11-23 06:10:11,981 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 1(Long)
-2020-11-23 06:10:11,994 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 25
-2020-11-23 06:10:14,425 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name from em_index_category order by id asc 
-2020-11-23 06:10:14,428 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
-2020-11-23 06:10:14,432 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 3
-2020-11-23 06:10:14,518 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT count(0) FROM em_index_category 
-2020-11-23 06:10:14,526 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
-2020-11-23 06:10:14,530 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
-2020-11-23 06:10:14,535 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name from em_index_category order by id asc limit ?,? 
-2020-11-23 06:10:14,543 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 0(Integer), 10(Integer)
-2020-11-23 06:10:14,548 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 3
-2020-11-23 06:10:23,881 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: insert into em_index_category (name) values (?) 
-2020-11-23 06:10:23,900 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 222(String)
-2020-11-23 06:10:23,952 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==    Updates: 1
-2020-11-23 06:10:23,953 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT LAST_INSERT_ID() 
-2020-11-23 06:10:23,959 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
-2020-11-23 06:10:23,963 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
-2020-11-23 06:10:27,313 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT count(0) FROM em_index_category 
-2020-11-23 06:10:27,314 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
-2020-11-23 06:10:27,316 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
-2020-11-23 06:10:27,318 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name from em_index_category order by id asc limit ?,? 
-2020-11-23 06:10:27,320 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 0(Integer), 10(Integer)
-2020-11-23 06:10:27,324 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 4
-2020-11-23 06:10:27,326 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name from em_index_category order by id asc 
-2020-11-23 06:10:27,326 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
-2020-11-23 06:10:27,331 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 4
-2020-11-23 06:10:32,582 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: delete from em_index_category where id = ? 
-2020-11-23 06:10:32,589 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 5(Integer)
-2020-11-23 06:10:32,641 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==    Updates: 1
-2020-11-23 06:10:32,677 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT count(0) FROM em_index_category 
-2020-11-23 06:10:32,679 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
-2020-11-23 06:10:32,681 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name from em_index_category order by id asc 
-2020-11-23 06:10:32,681 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
-2020-11-23 06:10:32,682 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
-2020-11-23 06:10:32,683 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name from em_index_category order by id asc limit ?,? 
-2020-11-23 06:10:32,685 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 0(Integer), 10(Integer)
-2020-11-23 06:10:32,685 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 3
-2020-11-23 06:10:32,687 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 3
-2020-11-23 06:14:19,963 INFO (StartupInfoLogger.java:55)- Starting Startup on LAPTOP-3H9KE96D with PID 5152 (D:\projects\KS\webapp\target\classes started by 17869 in D:\projects\KS)
-2020-11-23 06:14:19,965 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
-2020-11-23 06:14:19,965 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
-2020-11-23 06:14:22,041 INFO (SpringBeanUtil.java:26)- ========ApplicationContext配置成功,在普通类可以通过调用SpringUtils.getAppContext()获取applicationContext对象,applicationContext=org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@2832adc1, started on Mon Nov 23 06:14:19 GMT+08:00 2020
-2020-11-23 06:14:23,021 INFO (StartupInfoLogger.java:61)- Started Startup in 3.189 seconds (JVM running for 267.037)
-2020-11-23 06:14:23,022 INFO (InitApplicationRun.java:26)- King System already started ...
-2020-11-23 06:14:23,090 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select dict_sn, class_no, dict_no, dict_desc, disp_order, parent_sn, use_flag from sys_dict 
-2020-11-23 06:14:23,093 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
-2020-11-23 06:14:23,101 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 13
-2020-11-23 06:14:23,102 INFO (InitApplicationRun.java:28)- Initialization data complete ...
-2020-11-23 06:16:11,642 INFO (StartupInfoLogger.java:55)- Starting Startup on LAPTOP-3H9KE96D with PID 5252 (D:\projects\KS\webapp\target\classes started by 17869 in D:\projects\KS)
-2020-11-23 06:16:11,647 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
-2020-11-23 06:16:11,648 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
-2020-11-23 06:16:16,059 INFO (SpringBeanUtil.java:26)- ========ApplicationContext配置成功,在普通类可以通过调用SpringUtils.getAppContext()获取applicationContext对象,applicationContext=org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@8d41df5, started on Mon Nov 23 06:16:11 GMT+08:00 2020
-2020-11-23 06:16:17,433 INFO (StartupInfoLogger.java:61)- Started Startup in 6.85 seconds (JVM running for 8.306)
-2020-11-23 06:16:17,435 INFO (InitApplicationRun.java:26)- King System already started ...
-2020-11-23 06:16:17,686 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select dict_sn, class_no, dict_no, dict_desc, disp_order, parent_sn, use_flag from sys_dict 
-2020-11-23 06:16:18,034 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
-2020-11-23 06:16:18,067 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 13
-2020-11-23 06:16:18,071 INFO (InitApplicationRun.java:28)- Initialization data complete ...
-2020-11-23 06:16:21,832 INFO (LoginController.java:122)- ********************登录成功，进入首页！********************
-2020-11-23 06:16:21,860 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select * from sys_user where username = ? 
-2020-11-23 06:16:21,982 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: com.king.system.po.UserInfo@3ec81827(String)
-2020-11-23 06:16:21,985 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 0
-2020-11-23 06:16:23,779 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select a.id, a.name, a.url, a.type, a.pid, a.permission, icon from sys_resources a, sys_role_resources b, sys_user_role c where a.id = b.res_id and b.role_id = c.rid and c.uid = ? order by a.id 
-2020-11-23 06:16:23,805 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 1(Long)
-2020-11-23 06:16:23,835 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 25
-2020-11-23 06:16:26,340 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name from em_index_category order by id asc 
-2020-11-23 06:16:26,342 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
-2020-11-23 06:16:26,344 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 3
-2020-11-23 06:16:26,444 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT count(0) FROM em_index_category 
-2020-11-23 06:16:26,451 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
-2020-11-23 06:16:26,455 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
-2020-11-23 06:16:26,459 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name from em_index_category order by id asc limit ?,? 
-2020-11-23 06:16:26,469 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 0(Integer), 10(Integer)
-2020-11-23 06:16:26,472 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 3
-2020-11-23 06:16:26,473 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT count(0) FROM em_index_template 
-2020-11-23 06:16:26,476 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
-2020-11-23 06:16:26,482 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
-2020-11-23 06:16:26,486 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name, best_val, min_val, max_val, weight, unit, category_id from em_index_template order by id asc limit ?,? 
-2020-11-23 06:16:26,491 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 0(Integer), 10(Integer)
-2020-11-23 06:16:26,501 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 10
-2020-11-23 06:21:13,056 INFO (StartupInfoLogger.java:55)- Starting Startup on LAPTOP-3H9KE96D with PID 20240 (D:\projects\KS\webapp\target\classes started by 17869 in D:\projects\KS)
-2020-11-23 06:21:13,064 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
-2020-11-23 06:21:13,065 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
-2020-11-23 06:21:18,190 INFO (SpringBeanUtil.java:26)- ========ApplicationContext配置成功,在普通类可以通过调用SpringUtils.getAppContext()获取applicationContext对象,applicationContext=org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@7e24de28, started on Mon Nov 23 06:21:13 GMT+08:00 2020
-2020-11-23 06:21:19,550 INFO (StartupInfoLogger.java:61)- Started Startup in 7.595 seconds (JVM running for 8.977)
-2020-11-23 06:21:19,552 INFO (InitApplicationRun.java:26)- King System already started ...
-2020-11-23 06:21:19,756 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select dict_sn, class_no, dict_no, dict_desc, disp_order, parent_sn, use_flag from sys_dict 
-2020-11-23 06:21:20,120 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
-2020-11-23 06:21:20,149 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 13
-2020-11-23 06:21:20,153 INFO (InitApplicationRun.java:28)- Initialization data complete ...
-2020-11-23 06:21:24,250 INFO (LoginController.java:122)- ********************登录成功，进入首页！********************
-2020-11-23 06:21:24,278 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select * from sys_user where username = ? 
-2020-11-23 06:21:24,396 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: com.king.system.po.UserInfo@573a0f34(String)
-2020-11-23 06:21:24,400 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 0
-2020-11-23 06:21:26,034 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select a.id, a.name, a.url, a.type, a.pid, a.permission, icon from sys_resources a, sys_role_resources b, sys_user_role c where a.id = b.res_id and b.role_id = c.rid and c.uid = ? order by a.id 
-2020-11-23 06:21:26,053 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 1(Long)
-2020-11-23 06:21:26,123 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 25
-2020-11-23 06:21:28,471 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name from em_index_category order by id asc 
-2020-11-23 06:21:28,475 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
-2020-11-23 06:21:28,478 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 3
-2020-11-23 06:21:28,544 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT count(0) FROM em_index_category 
-2020-11-23 06:21:28,554 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
-2020-11-23 06:21:28,557 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
-2020-11-23 06:21:28,560 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name from em_index_category order by id asc limit ?,? 
-2020-11-23 06:21:28,566 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT count(0) FROM em_index_template 
-2020-11-23 06:21:28,568 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 0(Integer), 10(Integer)
-2020-11-23 06:21:28,570 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
-2020-11-23 06:21:28,572 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 3
-2020-11-23 06:21:28,572 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
-2020-11-23 06:21:28,574 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name, best_val, min_val, max_val, weight, unit, category_id from em_index_template order by id asc limit ?,? 
-2020-11-23 06:21:28,576 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 0(Integer), 10(Integer)
-2020-11-23 06:21:28,581 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 10
-2020-11-23 06:21:31,149 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT count(0) FROM em_index_template 
-2020-11-23 06:21:31,151 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
-2020-11-23 06:21:31,154 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
-2020-11-23 06:21:31,156 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name, best_val, min_val, max_val, weight, unit, category_id from em_index_template order by id asc limit ?,? 
-2020-11-23 06:21:31,158 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 0(Integer), 10(Integer)
-2020-11-23 06:21:31,171 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 10
-2020-11-23 06:21:32,745 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT count(0) FROM em_index_template 
-2020-11-23 06:21:32,746 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
-2020-11-23 06:21:32,747 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
-2020-11-23 06:21:32,749 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name, best_val, min_val, max_val, weight, unit, category_id from em_index_template order by id asc limit ?,? 
-2020-11-23 06:21:32,750 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 0(Integer), 10(Integer)
-2020-11-23 06:21:32,754 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 10
-2020-11-23 06:25:37,497 INFO (StartupInfoLogger.java:55)- Starting Startup on LAPTOP-3H9KE96D with PID 100 (D:\projects\KS\webapp\target\classes started by 17869 in D:\projects\KS)
-2020-11-23 06:25:37,504 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
-2020-11-23 06:25:37,505 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
-2020-11-23 06:25:42,163 INFO (SpringBeanUtil.java:26)- ========ApplicationContext配置成功,在普通类可以通过调用SpringUtils.getAppContext()获取applicationContext对象,applicationContext=org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@17aee516, started on Mon Nov 23 06:25:37 GMT+08:00 2020
-2020-11-23 06:25:43,642 INFO (StartupInfoLogger.java:61)- Started Startup in 7.278 seconds (JVM running for 8.727)
-2020-11-23 06:25:43,643 INFO (InitApplicationRun.java:26)- King System already started ...
-2020-11-23 06:25:43,797 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select dict_sn, class_no, dict_no, dict_desc, disp_order, parent_sn, use_flag from sys_dict 
-2020-11-23 06:25:44,226 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
-2020-11-23 06:25:44,282 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 13
-2020-11-23 06:25:44,286 INFO (InitApplicationRun.java:28)- Initialization data complete ...
-2020-11-23 06:25:49,118 INFO (LoginController.java:122)- ********************登录成功，进入首页！********************
-2020-11-23 06:25:49,148 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select * from sys_user where username = ? 
-2020-11-23 06:25:49,338 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: com.king.system.po.UserInfo@1ccceed7(String)
-2020-11-23 06:25:49,343 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 0
-2020-11-23 06:25:51,821 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select a.id, a.name, a.url, a.type, a.pid, a.permission, icon from sys_resources a, sys_role_resources b, sys_user_role c where a.id = b.res_id and b.role_id = c.rid and c.uid = ? order by a.id 
-2020-11-23 06:25:51,844 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 1(Long)
-2020-11-23 06:25:51,862 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 25
-2020-11-23 06:25:53,933 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name from em_index_category order by id asc 
-2020-11-23 06:25:53,936 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
-2020-11-23 06:25:53,940 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 3
-2020-11-23 06:25:54,025 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT count(0) FROM em_index_category 
-2020-11-23 06:25:54,032 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
-2020-11-23 06:25:54,035 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
-2020-11-23 06:25:54,042 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name from em_index_category order by id asc limit ?,? 
-2020-11-23 06:25:54,048 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 0(Integer), 10(Integer)
-2020-11-23 06:25:54,051 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 3
-2020-11-23 06:25:54,052 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT count(0) FROM em_index_template a, em_index_category b WHERE a.category_id = b.id 
-2020-11-23 06:25:54,058 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
-2020-11-23 06:25:54,061 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
-2020-11-23 06:25:54,063 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select a.id,a.name,a.best_val,a.min_val,a.max_val,a.weight,a.unit,a.category_id,b.name as category_name from em_index_template a,em_index_category b WHERE a.category_id = b.id order by id asc limit ?,? 
-2020-11-23 06:25:54,068 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 0(Integer), 10(Integer)
-2020-11-23 06:25:54,077 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 10
-2020-11-23 06:25:59,618 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT count(0) FROM em_index_template a, em_index_category b WHERE a.category_id = b.id 
-2020-11-23 06:25:59,620 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
-2020-11-23 06:25:59,622 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
-2020-11-23 06:25:59,624 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select a.id,a.name,a.best_val,a.min_val,a.max_val,a.weight,a.unit,a.category_id,b.name as category_name from em_index_template a,em_index_category b WHERE a.category_id = b.id order by id asc limit ?,? 
-2020-11-23 06:25:59,625 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 10(Integer), 10(Integer)
-2020-11-23 06:25:59,634 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 6
-2020-11-23 06:26:26,829 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT count(0) FROM em_base_params 
-2020-11-23 06:26:26,831 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
-2020-11-23 06:26:26,832 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
-2020-11-23 06:26:26,833 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, fixed_current, fixed_voltage, fixed_speed, fixed_torque, overload_capacity, machine_length, machine_height, machine_width, rotor_length, machine_weight, is_default from em_base_params limit ?,? 
-2020-11-23 06:26:26,834 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 0(Integer), 10(Integer)
-2020-11-23 06:26:26,836 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
-2020-11-23 08:40:05,468 INFO (StartupInfoLogger.java:55)- Starting Startup on LAPTOP-3H9KE96D with PID 18684 (D:\projects\KS\webapp\target\classes started by 17869 in D:\projects\KS)
-2020-11-23 08:40:05,472 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
-2020-11-23 08:40:05,472 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
-2020-11-23 08:40:10,132 INFO (SpringBeanUtil.java:26)- ========ApplicationContext配置成功,在普通类可以通过调用SpringUtils.getAppContext()获取applicationContext对象,applicationContext=org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@172ba270, started on Mon Nov 23 08:40:05 GMT+08:00 2020
+2020-11-24 13:45:50,196 INFO (StartupInfoLogger.java:55)- Starting Startup on LAPTOP-3H9KE96D with PID 2436 (D:\projects\KS\webapp\target\classes started by 17869 in D:\projects\KS)
+2020-11-24 13:45:50,202 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2020-11-24 13:45:50,203 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
+2020-11-24 13:45:54,878 INFO (SpringBeanUtil.java:26)- ========ApplicationContext配置成功,在普通类可以通过调用SpringUtils.getAppContext()获取applicationContext对象,applicationContext=org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@3a22d327, started on Tue Nov 24 13:45:50 GMT+08:00 2020
+2020-11-24 13:45:56,395 INFO (StartupInfoLogger.java:61)- Started Startup in 7.291 seconds (JVM running for 8.597)
+2020-11-24 13:45:56,396 INFO (InitApplicationRun.java:26)- King System already started ...
+2020-11-24 13:45:56,612 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select dict_sn, class_no, dict_no, dict_desc, disp_order, parent_sn, use_flag from sys_dict 
+2020-11-24 13:45:56,978 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-24 13:45:57,022 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 13
+2020-11-24 13:45:57,027 INFO (InitApplicationRun.java:28)- Initialization data complete ...
+2020-11-24 13:46:44,699 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select * from sys_user where username = ? 
+2020-11-24 13:46:44,747 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: admin(String)
+2020-11-24 13:46:44,755 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-11-24 13:46:44,767 ERROR (GlobalExceptionHandler.java:76)- *****用户名或密码错误*****Submitted credentials for token [org.apache.shiro.authc.UsernamePasswordToken - admin, rememberMe=true] did not match the expected credentials.
+2020-11-24 13:46:44,767 ERROR (GlobalExceptionHandler.java:77)- RequestFail[/login][username=admin,password=000000]
+2020-11-24 13:46:56,935 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select * from sys_user where username = ? 
+2020-11-24 13:46:56,935 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: admin(String)
+2020-11-24 13:46:56,937 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-11-24 13:46:56,938 ERROR (GlobalExceptionHandler.java:76)- *****用户名或密码错误*****Submitted credentials for token [org.apache.shiro.authc.UsernamePasswordToken - admin, rememberMe=true] did not match the expected credentials.
+2020-11-24 13:46:56,939 ERROR (GlobalExceptionHandler.java:77)- RequestFail[/login][username=admin,password=000000]
+2020-11-24 13:47:00,551 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select * from sys_user where username = ? 
+2020-11-24 13:47:00,552 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: admin(String)
+2020-11-24 13:47:00,554 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-11-24 13:47:00,612 INFO (LoginController.java:122)- ********************登录成功，进入首页！********************
+2020-11-24 13:47:00,621 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select * from sys_user where username = ? 
+2020-11-24 13:47:00,622 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: com.king.system.po.UserInfo@2056cb11(String)
+2020-11-24 13:47:00,623 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 0
+2020-11-24 13:47:01,139 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select a.id, a.name, a.url, a.type, a.pid, a.permission, icon from sys_resources a, sys_role_resources b, sys_user_role c where a.id = b.res_id and b.role_id = c.rid and c.uid = ? order by a.id 
+2020-11-24 13:47:01,151 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 1(Long)
+2020-11-24 13:47:01,166 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 25
+2020-11-24 13:47:06,809 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT count(0) FROM em_index_detail d, em_index_group g, em_index_template t, em_index_category c WHERE d.group_id = g.id AND d.index_id = t.id AND t.category_id = c.id 
+2020-11-24 13:47:06,814 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-24 13:47:06,818 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-11-24 13:47:08,363 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT count(0) FROM em_index_detail d, em_index_group g, em_index_template t, em_index_category c WHERE d.group_id = g.id AND d.index_id = t.id AND t.category_id = c.id AND g.name LIKE concat('%', ?, '%') 
+2020-11-24 13:47:08,367 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: (String)
+2020-11-24 13:47:08,379 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-11-24 13:47:09,370 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name from em_index_category order by id asc 
+2020-11-24 13:47:09,374 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-24 13:47:09,375 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 3
+2020-11-24 13:47:09,381 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name, best_val, min_val, max_val, weight, unit, category_id from em_index_template order by id asc 
+2020-11-24 13:47:09,382 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-24 13:47:09,397 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 16
+2020-11-24 13:49:41,742 INFO (StartupInfoLogger.java:55)- Starting Startup on LAPTOP-3H9KE96D with PID 12168 (D:\projects\KS\webapp\target\classes started by 17869 in D:\projects\KS)
+2020-11-24 13:49:41,747 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2020-11-24 13:49:41,749 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
+2020-11-24 13:49:46,981 INFO (SpringBeanUtil.java:26)- ========ApplicationContext配置成功,在普通类可以通过调用SpringUtils.getAppContext()获取applicationContext对象,applicationContext=org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@2bf86f46, started on Tue Nov 24 13:49:41 GMT+08:00 2020
+2020-11-24 13:49:48,519 INFO (StartupInfoLogger.java:61)- Started Startup in 7.821 seconds (JVM running for 9.144)
+2020-11-24 13:49:48,521 INFO (InitApplicationRun.java:26)- King System already started ...
+2020-11-24 13:49:48,696 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select dict_sn, class_no, dict_no, dict_desc, disp_order, parent_sn, use_flag from sys_dict 
+2020-11-24 13:49:49,034 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-24 13:49:49,073 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 13
+2020-11-24 13:49:49,077 INFO (InitApplicationRun.java:28)- Initialization data complete ...
+2020-11-24 13:50:17,314 INFO (LoginController.java:122)- ********************登录成功，进入首页！********************
+2020-11-24 13:50:17,326 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select * from sys_user where username = ? 
+2020-11-24 13:50:17,387 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: com.king.system.po.UserInfo@7cc3eb2d(String)
+2020-11-24 13:50:17,389 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 0
+2020-11-24 13:50:18,791 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select a.id, a.name, a.url, a.type, a.pid, a.permission, icon from sys_resources a, sys_role_resources b, sys_user_role c where a.id = b.res_id and b.role_id = c.rid and c.uid = ? order by a.id 
+2020-11-24 13:50:18,805 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 1(Long)
+2020-11-24 13:50:18,818 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 25
+2020-11-24 13:50:22,237 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT count(0) FROM em_index_detail d, em_index_group g, em_index_template t, em_index_category c WHERE d.group_id = g.id AND d.index_id = t.id AND t.category_id = c.id 
+2020-11-24 13:50:22,242 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-24 13:50:22,245 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-11-24 13:50:22,953 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name from em_index_category order by id asc 
+2020-11-24 13:50:22,955 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-24 13:50:22,956 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 3
+2020-11-24 13:50:22,965 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name, best_val, min_val, max_val, weight, unit, category_id from em_index_template order by id asc 
+2020-11-24 13:50:22,966 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-24 13:50:22,972 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 16
+2020-11-24 13:52:07,895 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name, creator_id, create_time from em_index_group where name = ? and creator_id = ? 
+2020-11-24 13:52:07,896 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: king指标1(String), 1(Long)
+2020-11-24 13:52:07,899 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 0
+2020-11-24 13:52:07,901 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: insert into em_index_group (name, creator_id, create_time ) values (?, ?, ? ) 
+2020-11-24 13:52:07,913 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: king指标1(String), 1(Long), 2020-11-24 13:52:07.9(Timestamp)
+2020-11-24 13:52:07,926 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==    Updates: 1
+2020-11-24 13:52:07,927 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT LAST_INSERT_ID() 
+2020-11-24 13:52:07,930 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-24 13:52:07,932 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-11-24 13:52:07,933 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name, best_val, min_val, max_val, weight, unit, category_id from em_index_template order by id asc 
+2020-11-24 13:52:07,934 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-24 13:52:07,937 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 16
+2020-11-24 13:52:07,940 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: insert into em_index_detail (index_id, val, weight, group_id) values (?, ?, ?, ?) 
+2020-11-24 13:52:07,943 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 1(Long), 1(BigDecimal), 0.1000000000000000055511151231257827021181583404541015625(BigDecimal), 1(Long)
+2020-11-24 13:52:07,947 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==    Updates: 1
+2020-11-24 13:52:07,948 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT LAST_INSERT_ID() 
+2020-11-24 13:52:07,948 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-24 13:52:07,949 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-11-24 13:52:07,950 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: insert into em_index_detail (index_id, val, weight, group_id) values (?, ?, ?, ?) 
+2020-11-24 13:52:07,950 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 2(Long), 1(BigDecimal), 0.1000000000000000055511151231257827021181583404541015625(BigDecimal), 1(Long)
+2020-11-24 13:52:07,952 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==    Updates: 1
+2020-11-24 13:52:07,952 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT LAST_INSERT_ID() 
+2020-11-24 13:52:07,953 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-24 13:52:07,954 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-11-24 13:52:07,955 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: insert into em_index_detail (index_id, val, weight, group_id) values (?, ?, ?, ?) 
+2020-11-24 13:52:07,956 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 3(Long), 1(BigDecimal), 0.1000000000000000055511151231257827021181583404541015625(BigDecimal), 1(Long)
+2020-11-24 13:52:07,961 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==    Updates: 1
+2020-11-24 13:52:07,962 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT LAST_INSERT_ID() 
+2020-11-24 13:52:07,963 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-24 13:52:07,964 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-11-24 13:52:07,966 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: insert into em_index_detail (index_id, val, weight, group_id) values (?, ?, ?, ?) 
+2020-11-24 13:52:07,966 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 4(Long), 1(BigDecimal), 0.1000000000000000055511151231257827021181583404541015625(BigDecimal), 1(Long)
+2020-11-24 13:52:07,968 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==    Updates: 1
+2020-11-24 13:52:07,969 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT LAST_INSERT_ID() 
+2020-11-24 13:52:07,969 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-24 13:52:07,971 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-11-24 13:52:07,972 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: insert into em_index_detail (index_id, val, weight, group_id) values (?, ?, ?, ?) 
+2020-11-24 13:52:07,973 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 5(Long), 1(BigDecimal), 0.1000000000000000055511151231257827021181583404541015625(BigDecimal), 1(Long)
+2020-11-24 13:52:07,975 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==    Updates: 1
+2020-11-24 13:52:07,975 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT LAST_INSERT_ID() 
+2020-11-24 13:52:07,976 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-24 13:52:07,978 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-11-24 13:52:07,979 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: insert into em_index_detail (index_id, val, weight, group_id) values (?, ?, ?, ?) 
+2020-11-24 13:52:07,980 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 6(Long), 1(BigDecimal), 0.1000000000000000055511151231257827021181583404541015625(BigDecimal), 1(Long)
+2020-11-24 13:52:07,981 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==    Updates: 1
+2020-11-24 13:52:07,982 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT LAST_INSERT_ID() 
+2020-11-24 13:52:07,982 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-24 13:52:07,984 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-11-24 13:52:07,985 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: insert into em_index_detail (index_id, val, weight, group_id) values (?, ?, ?, ?) 
+2020-11-24 13:52:07,986 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 7(Long), 1(BigDecimal), 0.1000000000000000055511151231257827021181583404541015625(BigDecimal), 1(Long)
+2020-11-24 13:52:07,987 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==    Updates: 1
+2020-11-24 13:52:07,988 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT LAST_INSERT_ID() 
+2020-11-24 13:52:07,989 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-24 13:52:07,992 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-11-24 13:52:07,994 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: insert into em_index_detail (index_id, val, weight, group_id) values (?, ?, ?, ?) 
+2020-11-24 13:52:07,995 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 8(Long), 1(BigDecimal), 0.1000000000000000055511151231257827021181583404541015625(BigDecimal), 1(Long)
+2020-11-24 13:52:07,996 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==    Updates: 1
+2020-11-24 13:52:07,997 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT LAST_INSERT_ID() 
+2020-11-24 13:52:07,997 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-24 13:52:07,998 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-11-24 13:52:07,998 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: insert into em_index_detail (index_id, val, weight, group_id) values (?, ?, ?, ?) 
+2020-11-24 13:52:07,999 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 9(Long), 1(BigDecimal), 0.1000000000000000055511151231257827021181583404541015625(BigDecimal), 1(Long)
+2020-11-24 13:52:08,000 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==    Updates: 1
+2020-11-24 13:52:08,000 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT LAST_INSERT_ID() 
+2020-11-24 13:52:08,001 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-24 13:52:08,001 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-11-24 13:52:08,002 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: insert into em_index_detail (index_id, val, weight, group_id) values (?, ?, ?, ?) 
+2020-11-24 13:52:08,003 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 10(Long), 1(BigDecimal), 0.1000000000000000055511151231257827021181583404541015625(BigDecimal), 1(Long)
+2020-11-24 13:52:08,005 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==    Updates: 1
+2020-11-24 13:52:08,005 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT LAST_INSERT_ID() 
+2020-11-24 13:52:08,006 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-24 13:52:08,006 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-11-24 13:52:08,007 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: insert into em_index_detail (index_id, val, weight, group_id) values (?, ?, ?, ?) 
+2020-11-24 13:52:08,008 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 11(Long), 1(BigDecimal), 0.1000000000000000055511151231257827021181583404541015625(BigDecimal), 1(Long)
+2020-11-24 13:52:08,010 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==    Updates: 1
+2020-11-24 13:52:08,011 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT LAST_INSERT_ID() 
+2020-11-24 13:52:08,011 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-24 13:52:08,012 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-11-24 13:52:08,013 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: insert into em_index_detail (index_id, val, weight, group_id) values (?, ?, ?, ?) 
+2020-11-24 13:52:08,013 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 12(Long), 1(BigDecimal), 0.1000000000000000055511151231257827021181583404541015625(BigDecimal), 1(Long)
+2020-11-24 13:52:08,015 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==    Updates: 1
+2020-11-24 13:52:08,015 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT LAST_INSERT_ID() 
+2020-11-24 13:52:08,015 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-24 13:52:08,016 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-11-24 13:52:08,017 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: insert into em_index_detail (index_id, val, weight, group_id) values (?, ?, ?, ?) 
+2020-11-24 13:52:08,017 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 13(Long), 1(BigDecimal), 0.1000000000000000055511151231257827021181583404541015625(BigDecimal), 1(Long)
+2020-11-24 13:52:08,018 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==    Updates: 1
+2020-11-24 13:52:08,019 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT LAST_INSERT_ID() 
+2020-11-24 13:52:08,019 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-24 13:52:08,020 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-11-24 13:52:08,020 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: insert into em_index_detail (index_id, val, weight, group_id) values (?, ?, ?, ?) 
+2020-11-24 13:52:08,021 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 14(Long), 1(BigDecimal), 0.1000000000000000055511151231257827021181583404541015625(BigDecimal), 1(Long)
+2020-11-24 13:52:08,022 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==    Updates: 1
+2020-11-24 13:52:08,022 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT LAST_INSERT_ID() 
+2020-11-24 13:52:08,023 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-24 13:52:08,024 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-11-24 13:52:08,026 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: insert into em_index_detail (index_id, val, weight, group_id) values (?, ?, ?, ?) 
+2020-11-24 13:52:08,026 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 15(Long), 1(BigDecimal), 0.1000000000000000055511151231257827021181583404541015625(BigDecimal), 1(Long)
+2020-11-24 13:52:08,029 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==    Updates: 1
+2020-11-24 13:52:08,029 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT LAST_INSERT_ID() 
+2020-11-24 13:52:08,029 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-24 13:52:08,029 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-11-24 13:52:08,030 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: insert into em_index_detail (index_id, val, weight, group_id) values (?, ?, ?, ?) 
+2020-11-24 13:52:08,031 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 16(Long), 1(BigDecimal), 0.1000000000000000055511151231257827021181583404541015625(BigDecimal), 1(Long)
+2020-11-24 13:52:08,033 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==    Updates: 1
+2020-11-24 13:52:08,033 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT LAST_INSERT_ID() 
+2020-11-24 13:52:08,035 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-24 13:52:08,035 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-11-24 13:52:13,327 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT count(0) FROM em_index_detail d, em_index_group g, em_index_template t, em_index_category c WHERE d.group_id = g.id AND d.index_id = t.id AND t.category_id = c.id 
+2020-11-24 13:52:13,328 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-24 13:52:13,330 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-11-24 13:52:13,333 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select d.id,d.index_id,d.val,d.weight,d.group_id, t.max_val,t.min_val,t.unit,t.category_id, g.name as group_name,c.name as category_name from em_index_detail d,em_index_group g,em_index_template t,em_index_category c WHERE d.group_id = g.id and d.index_id = t.id and t.category_id = c.id order by g.create_time desc,d.id asc limit ?,? 
+2020-11-24 13:52:13,340 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 0(Integer), 10(Integer)
+2020-11-24 13:52:13,346 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 10
+2020-11-24 13:53:31,439 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT count(0) FROM em_index_detail d, em_index_group g, em_index_template t, em_index_category c WHERE d.group_id = g.id AND d.index_id = t.id AND t.category_id = c.id AND g.name LIKE concat('%', ?, '%') 
+2020-11-24 13:53:31,442 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 爱爱(String)
+2020-11-24 13:53:31,444 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-11-24 13:53:34,405 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT count(0) FROM em_index_detail d, em_index_group g, em_index_template t, em_index_category c WHERE d.group_id = g.id AND d.index_id = t.id AND t.category_id = c.id AND g.name LIKE concat('%', ?, '%') 
+2020-11-24 13:53:34,406 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: king(String)
+2020-11-24 13:53:34,407 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-11-24 13:53:34,408 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select d.id,d.index_id,d.val,d.weight,d.group_id, t.max_val,t.min_val,t.unit,t.category_id, g.name as group_name,c.name as category_name from em_index_detail d,em_index_group g,em_index_template t,em_index_category c WHERE d.group_id = g.id and d.index_id = t.id and t.category_id = c.id and g.name like concat('%',?,'%') order by g.create_time desc,d.id asc limit ?,? 
+2020-11-24 13:53:34,410 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: king(String), 0(Integer), 10(Integer)
+2020-11-24 13:53:34,419 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 10
+2020-11-24 13:53:40,401 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT count(0) FROM em_index_detail d, em_index_group g, em_index_template t, em_index_category c WHERE d.group_id = g.id AND d.index_id = t.id AND t.category_id = c.id 
+2020-11-24 13:53:40,402 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-24 13:53:40,403 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-11-24 13:53:40,405 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select d.id,d.index_id,d.val,d.weight,d.group_id, t.max_val,t.min_val,t.unit,t.category_id, g.name as group_name,c.name as category_name from em_index_detail d,em_index_group g,em_index_template t,em_index_category c WHERE d.group_id = g.id and d.index_id = t.id and t.category_id = c.id order by g.create_time desc,d.id asc limit ?,? 
+2020-11-24 13:53:40,407 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 0(Integer), 10(Integer)
+2020-11-24 13:53:40,412 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 10
+2020-11-24 13:53:41,229 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT count(0) FROM em_index_detail d, em_index_group g, em_index_template t, em_index_category c WHERE d.group_id = g.id AND d.index_id = t.id AND t.category_id = c.id AND g.name LIKE concat('%', ?, '%') 
+2020-11-24 13:53:41,229 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: (String)
+2020-11-24 13:53:41,232 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-11-24 13:53:41,233 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select d.id,d.index_id,d.val,d.weight,d.group_id, t.max_val,t.min_val,t.unit,t.category_id, g.name as group_name,c.name as category_name from em_index_detail d,em_index_group g,em_index_template t,em_index_category c WHERE d.group_id = g.id and d.index_id = t.id and t.category_id = c.id and g.name like concat('%',?,'%') order by g.create_time desc,d.id asc limit ?,? 
+2020-11-24 13:53:41,234 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: (String), 0(Integer), 10(Integer)
+2020-11-24 13:53:41,238 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 10
+2020-11-24 13:54:40,546 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, fixed_current, fixed_voltage, fixed_speed, fixed_torque, overload_capacity, machine_length, machine_height, machine_width, rotor_length, machine_weight, is_default from em_base_params where id = ? 
+2020-11-24 13:54:40,553 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: null
+2020-11-24 13:54:40,564 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 0
+2020-11-24 13:56:15,803 INFO (StartupInfoLogger.java:55)- Starting Startup on LAPTOP-3H9KE96D with PID 19716 (D:\projects\KS\webapp\target\classes started by 17869 in D:\projects\KS)
+2020-11-24 13:56:15,808 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2020-11-24 13:56:15,809 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
+2020-11-24 13:56:19,966 INFO (SpringBeanUtil.java:26)- ========ApplicationContext配置成功,在普通类可以通过调用SpringUtils.getAppContext()获取applicationContext对象,applicationContext=org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@772add47, started on Tue Nov 24 13:56:15 GMT+08:00 2020
+2020-11-24 13:56:21,471 INFO (StartupInfoLogger.java:61)- Started Startup in 6.585 seconds (JVM running for 7.849)
+2020-11-24 13:56:21,472 INFO (InitApplicationRun.java:26)- King System already started ...
+2020-11-24 13:56:21,652 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select dict_sn, class_no, dict_no, dict_desc, disp_order, parent_sn, use_flag from sys_dict 
+2020-11-24 13:56:22,014 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-24 13:56:22,061 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 13
+2020-11-24 13:56:22,066 INFO (InitApplicationRun.java:28)- Initialization data complete ...
+2020-11-24 13:56:25,835 INFO (LoginController.java:122)- ********************登录成功，进入首页！********************
+2020-11-24 13:56:25,847 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select * from sys_user where username = ? 
+2020-11-24 13:56:25,899 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: com.king.system.po.UserInfo@7d10bace(String)
+2020-11-24 13:56:25,901 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 0
+2020-11-24 13:56:26,893 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select a.id, a.name, a.url, a.type, a.pid, a.permission, icon from sys_resources a, sys_role_resources b, sys_user_role c where a.id = b.res_id and b.role_id = c.rid and c.uid = ? order by a.id 
+2020-11-24 13:56:26,912 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 1(Long)
+2020-11-24 13:56:26,923 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 25
+2020-11-24 13:56:28,980 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT count(0) FROM em_index_detail d, em_index_group g, em_index_template t, em_index_category c WHERE d.group_id = g.id AND d.index_id = t.id AND t.category_id = c.id 
+2020-11-24 13:56:28,985 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-24 13:56:28,986 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-11-24 13:56:28,989 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select d.id,d.index_id,d.val,d.weight,d.group_id, t.max_val,t.min_val,t.unit,t.category_id, g.name as group_name,c.name as category_name from em_index_detail d,em_index_group g,em_index_template t,em_index_category c WHERE d.group_id = g.id and d.index_id = t.id and t.category_id = c.id order by g.create_time desc,d.id asc limit ?,? 
+2020-11-24 13:56:28,994 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 0(Integer), 10(Integer)
+2020-11-24 13:56:29,002 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 10
+2020-11-24 13:56:30,015 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT count(0) FROM em_index_detail d, em_index_group g, em_index_template t, em_index_category c WHERE d.group_id = g.id AND d.index_id = t.id AND t.category_id = c.id AND g.name LIKE concat('%', ?, '%') 
+2020-11-24 13:56:30,024 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: (String)
+2020-11-24 13:56:30,026 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-11-24 13:56:30,032 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select d.id,d.index_id,d.val,d.weight,d.group_id, t.max_val,t.min_val,t.unit,t.category_id, g.name as group_name,c.name as category_name from em_index_detail d,em_index_group g,em_index_template t,em_index_category c WHERE d.group_id = g.id and d.index_id = t.id and t.category_id = c.id and g.name like concat('%',?,'%') order by g.create_time desc,d.id asc limit ?,? 
+2020-11-24 13:56:30,035 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: (String), 0(Integer), 10(Integer)
+2020-11-24 13:56:30,044 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 10
+2020-11-24 14:01:12,711 INFO (StartupInfoLogger.java:55)- Starting Startup on LAPTOP-3H9KE96D with PID 14912 (D:\projects\KS\webapp\target\classes started by 17869 in D:\projects\KS)
+2020-11-24 14:01:12,718 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2020-11-24 14:01:12,719 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
+2020-11-24 14:01:18,440 INFO (SpringBeanUtil.java:26)- ========ApplicationContext配置成功,在普通类可以通过调用SpringUtils.getAppContext()获取applicationContext对象,applicationContext=org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@3cbd528e, started on Tue Nov 24 14:01:12 GMT+08:00 2020
+2020-11-24 14:01:19,878 INFO (StartupInfoLogger.java:61)- Started Startup in 8.44 seconds (JVM running for 10.097)
+2020-11-24 14:01:19,879 INFO (InitApplicationRun.java:26)- King System already started ...
+2020-11-24 14:01:20,045 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select dict_sn, class_no, dict_no, dict_desc, disp_order, parent_sn, use_flag from sys_dict 
+2020-11-24 14:01:20,380 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-24 14:01:20,415 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 13
+2020-11-24 14:01:20,419 INFO (InitApplicationRun.java:28)- Initialization data complete ...
+2020-11-24 14:01:23,678 INFO (LoginController.java:122)- ********************登录成功，进入首页！********************
+2020-11-24 14:01:23,688 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select * from sys_user where username = ? 
+2020-11-24 14:01:23,740 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: com.king.system.po.UserInfo@17d73c0c(String)
+2020-11-24 14:01:23,742 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 0
+2020-11-24 14:01:24,721 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select a.id, a.name, a.url, a.type, a.pid, a.permission, icon from sys_resources a, sys_role_resources b, sys_user_role c where a.id = b.res_id and b.role_id = c.rid and c.uid = ? order by a.id 
+2020-11-24 14:01:24,733 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 1(Long)
+2020-11-24 14:01:24,748 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 25
+2020-11-24 14:01:34,952 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT count(0) FROM em_index_detail d, em_index_group g, em_index_template t, em_index_category c WHERE d.group_id = g.id AND d.index_id = t.id AND t.category_id = c.id 
+2020-11-24 14:01:34,955 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-24 14:01:34,957 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-11-24 14:01:34,961 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select d.id,d.index_id,d.val,d.weight,d.group_id, t.max_val,t.min_val,t.unit,t.category_id, g.name as group_name,c.name as category_name from em_index_detail d,em_index_group g,em_index_template t,em_index_category c WHERE d.group_id = g.id and d.index_id = t.id and t.category_id = c.id order by g.create_time desc,d.id asc limit ?,? 
+2020-11-24 14:01:34,969 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 0(Integer), 10(Integer)
+2020-11-24 14:01:34,974 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 10
+2020-11-24 14:01:51,320 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name from em_index_category order by id asc 
+2020-11-24 14:01:51,323 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-24 14:01:51,325 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 3
+2020-11-24 14:01:51,330 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name, best_val, min_val, max_val, weight, unit, category_id from em_index_template order by id asc 
+2020-11-24 14:01:51,331 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-24 14:01:51,339 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 16
+2020-11-24 14:01:53,100 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT count(0) FROM em_index_detail d, em_index_group g, em_index_template t, em_index_category c WHERE d.group_id = g.id AND d.index_id = t.id AND t.category_id = c.id 
+2020-11-24 14:01:53,101 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-24 14:01:53,107 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-11-24 14:01:53,110 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select d.id,d.index_id,d.val,d.weight,d.group_id, t.max_val,t.min_val,t.unit,t.category_id, g.name as group_name,c.name as category_name from em_index_detail d,em_index_group g,em_index_template t,em_index_category c WHERE d.group_id = g.id and d.index_id = t.id and t.category_id = c.id order by g.create_time desc,d.id asc limit ?,? 
+2020-11-24 14:01:53,111 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 0(Integer), 10(Integer)
+2020-11-24 14:01:53,121 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 10
+2020-11-24 14:06:29,839 INFO (StartupInfoLogger.java:55)- Starting Startup on LAPTOP-3H9KE96D with PID 3776 (D:\projects\KS\webapp\target\classes started by 17869 in D:\projects\KS)
+2020-11-24 14:06:29,853 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2020-11-24 14:06:29,856 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
+2020-11-24 14:06:36,082 INFO (SpringBeanUtil.java:26)- ========ApplicationContext配置成功,在普通类可以通过调用SpringUtils.getAppContext()获取applicationContext对象,applicationContext=org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@118b24d6, started on Tue Nov 24 14:06:30 GMT+08:00 2020
+2020-11-24 14:06:37,611 INFO (StartupInfoLogger.java:61)- Started Startup in 9.332 seconds (JVM running for 10.602)
+2020-11-24 14:06:37,612 INFO (InitApplicationRun.java:26)- King System already started ...
+2020-11-24 14:06:37,810 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select dict_sn, class_no, dict_no, dict_desc, disp_order, parent_sn, use_flag from sys_dict 
+2020-11-24 14:06:38,168 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-24 14:06:38,208 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 13
+2020-11-24 14:06:38,213 INFO (InitApplicationRun.java:28)- Initialization data complete ...
+2020-11-24 14:06:54,921 INFO (LoginController.java:122)- ********************登录成功，进入首页！********************
+2020-11-24 14:06:54,931 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select * from sys_user where username = ? 
+2020-11-24 14:06:54,983 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: com.king.system.po.UserInfo@7cc3eb2d(String)
+2020-11-24 14:06:54,985 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 0
+2020-11-24 14:06:56,010 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select a.id, a.name, a.url, a.type, a.pid, a.permission, icon from sys_resources a, sys_role_resources b, sys_user_role c where a.id = b.res_id and b.role_id = c.rid and c.uid = ? order by a.id 
+2020-11-24 14:06:56,023 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 1(Long)
+2020-11-24 14:06:56,033 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 25
+2020-11-24 14:06:59,623 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT count(0) FROM em_index_detail d, em_index_group g, em_index_template t, em_index_category c WHERE d.group_id = g.id AND d.index_id = t.id AND t.category_id = c.id 
+2020-11-24 14:06:59,627 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-24 14:06:59,628 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-11-24 14:06:59,631 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select d.id,d.index_id,d.val,d.weight,d.group_id, t.max_val,t.min_val,t.unit,t.category_id, g.name as group_name,c.name as category_name from em_index_detail d,em_index_group g,em_index_template t,em_index_category c WHERE d.group_id = g.id and d.index_id = t.id and t.category_id = c.id order by g.create_time desc,d.id asc limit ?,? 
+2020-11-24 14:06:59,638 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 0(Integer), 10(Integer)
+2020-11-24 14:06:59,642 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 10
+2020-11-24 14:07:59,652 INFO (StartupInfoLogger.java:55)- Starting Startup on LAPTOP-3H9KE96D with PID 16580 (D:\projects\KS\webapp\target\classes started by 17869 in D:\projects\KS)
+2020-11-24 14:07:59,658 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2020-11-24 14:07:59,659 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
+2020-11-24 14:08:05,037 INFO (SpringBeanUtil.java:26)- ========ApplicationContext配置成功,在普通类可以通过调用SpringUtils.getAppContext()获取applicationContext对象,applicationContext=org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@64167d8e, started on Tue Nov 24 14:07:59 GMT+08:00 2020
+2020-11-24 14:08:06,596 INFO (StartupInfoLogger.java:61)- Started Startup in 8.0 seconds (JVM running for 9.249)
+2020-11-24 14:08:06,598 INFO (InitApplicationRun.java:26)- King System already started ...
+2020-11-24 14:08:06,829 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select dict_sn, class_no, dict_no, dict_desc, disp_order, parent_sn, use_flag from sys_dict 
+2020-11-24 14:08:07,180 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-24 14:08:07,219 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 13
+2020-11-24 14:08:07,223 INFO (InitApplicationRun.java:28)- Initialization data complete ...
+2020-11-24 14:08:15,024 INFO (LoginController.java:122)- ********************登录成功，进入首页！********************
+2020-11-24 14:08:15,036 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select * from sys_user where username = ? 
+2020-11-24 14:08:15,088 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: com.king.system.po.UserInfo@2455da2c(String)
+2020-11-24 14:08:15,090 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 0
+2020-11-24 14:08:16,466 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select a.id, a.name, a.url, a.type, a.pid, a.permission, icon from sys_resources a, sys_role_resources b, sys_user_role c where a.id = b.res_id and b.role_id = c.rid and c.uid = ? order by a.id 
+2020-11-24 14:08:16,480 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 1(Long)
+2020-11-24 14:08:16,494 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 25
+2020-11-24 14:08:21,883 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT count(0) FROM em_index_detail d, em_index_group g, em_index_template t, em_index_category c WHERE d.group_id = g.id AND d.index_id = t.id AND t.category_id = c.id 
+2020-11-24 14:08:21,888 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-24 14:08:21,890 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-11-24 14:08:21,895 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select d.id,d.index_id,d.val,d.weight,d.group_id, t.max_val,t.min_val,t.unit,t.category_id, g.name as group_name,c.name as category_name from em_index_detail d,em_index_group g,em_index_template t,em_index_category c WHERE d.group_id = g.id and d.index_id = t.id and t.category_id = c.id order by g.create_time desc,d.id asc limit ?,? 
+2020-11-24 14:08:21,902 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 0(Integer), 10(Integer)
+2020-11-24 14:08:21,907 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 10
+2020-11-24 14:08:31,233 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name from em_index_category order by id asc 
+2020-11-24 14:08:31,234 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-24 14:08:31,236 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 3
+2020-11-24 14:08:31,244 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name, best_val, min_val, max_val, weight, unit, category_id from em_index_template order by id asc 
+2020-11-24 14:08:31,246 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-24 14:08:31,251 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 16
+2020-11-24 14:08:31,258 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name, creator_id, create_time from em_index_group where id = ? 
+2020-11-24 14:08:31,259 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: null
+2020-11-24 14:08:31,260 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 0
+2020-11-24 14:08:31,261 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, index_id, val, weight, group_id from em_index_detail order by id asc 
+2020-11-24 14:08:31,262 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-24 14:08:31,266 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 16
+2020-11-24 14:09:07,853 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT count(0) FROM em_index_detail d, em_index_group g, em_index_template t, em_index_category c WHERE d.group_id = g.id AND d.index_id = t.id AND t.category_id = c.id 
+2020-11-24 14:09:07,854 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-24 14:09:07,859 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-11-24 14:09:07,861 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select d.id,d.index_id,d.val,d.weight,d.group_id, t.max_val,t.min_val,t.unit,t.category_id, g.name as group_name,c.name as category_name from em_index_detail d,em_index_group g,em_index_template t,em_index_category c WHERE d.group_id = g.id and d.index_id = t.id and t.category_id = c.id order by g.create_time desc,d.id asc limit ?,? 
+2020-11-24 14:09:07,861 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 0(Integer), 10(Integer)
+2020-11-24 14:09:07,876 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 10
+2020-11-24 14:09:09,623 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name from em_index_category order by id asc 
+2020-11-24 14:09:09,625 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-24 14:09:09,628 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 3
+2020-11-24 14:09:09,630 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name, best_val, min_val, max_val, weight, unit, category_id from em_index_template order by id asc 
+2020-11-24 14:09:09,630 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-24 14:09:09,632 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 16
+2020-11-24 14:09:09,633 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name, creator_id, create_time from em_index_group where id = ? 
+2020-11-24 14:09:09,634 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: null
+2020-11-24 14:09:09,635 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 0
+2020-11-24 14:09:14,192 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, index_id, val, weight, group_id from em_index_detail order by id asc 
+2020-11-24 14:09:14,192 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-24 14:09:14,196 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 16
+2020-11-24 14:09:38,311 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT count(0) FROM em_index_detail d, em_index_group g, em_index_template t, em_index_category c WHERE d.group_id = g.id AND d.index_id = t.id AND t.category_id = c.id 
+2020-11-24 14:09:38,312 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-24 14:09:38,315 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-11-24 14:09:38,317 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select d.id,d.index_id,d.val,d.weight,d.group_id, t.max_val,t.min_val,t.unit,t.category_id, g.name as group_name,c.name as category_name from em_index_detail d,em_index_group g,em_index_template t,em_index_category c WHERE d.group_id = g.id and d.index_id = t.id and t.category_id = c.id order by g.create_time desc,d.id asc limit ?,? 
+2020-11-24 14:09:38,318 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 0(Integer), 10(Integer)
+2020-11-24 14:09:38,320 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 10
+2020-11-24 14:09:40,273 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name from em_index_category order by id asc 
+2020-11-24 14:09:40,274 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-24 14:09:40,278 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 3
+2020-11-24 14:09:40,279 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name, best_val, min_val, max_val, weight, unit, category_id from em_index_template order by id asc 
+2020-11-24 14:09:40,280 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-24 14:09:40,282 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 16
+2020-11-24 14:09:42,925 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name, creator_id, create_time from em_index_group where id = ? 
+2020-11-24 14:09:42,926 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: null
+2020-11-24 14:09:42,927 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 0
+2020-11-24 14:09:42,929 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, index_id, val, weight, group_id from em_index_detail order by id asc 
+2020-11-24 14:09:42,930 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-24 14:09:42,931 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 16
+2020-11-24 14:09:50,224 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT count(0) FROM em_index_detail d, em_index_group g, em_index_template t, em_index_category c WHERE d.group_id = g.id AND d.index_id = t.id AND t.category_id = c.id 
+2020-11-24 14:09:50,224 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-24 14:09:50,226 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-11-24 14:09:50,229 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select d.id,d.index_id,d.val,d.weight,d.group_id, t.max_val,t.min_val,t.unit,t.category_id, g.name as group_name,c.name as category_name from em_index_detail d,em_index_group g,em_index_template t,em_index_category c WHERE d.group_id = g.id and d.index_id = t.id and t.category_id = c.id order by g.create_time desc,d.id asc limit ?,? 
+2020-11-24 14:09:50,229 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 0(Integer), 10(Integer)
+2020-11-24 14:09:50,231 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 10
+2020-11-24 14:09:55,605 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name from em_index_category order by id asc 
+2020-11-24 14:09:55,607 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-24 14:09:55,610 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 3
+2020-11-24 14:09:55,612 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name, best_val, min_val, max_val, weight, unit, category_id from em_index_template order by id asc 
+2020-11-24 14:09:55,613 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-24 14:09:55,616 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 16
+2020-11-24 14:09:55,617 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name, creator_id, create_time from em_index_group where id = ? 
+2020-11-24 14:09:55,618 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: null
+2020-11-24 14:09:55,618 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 0
+2020-11-24 14:09:55,619 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, index_id, val, weight, group_id from em_index_detail order by id asc 
+2020-11-24 14:09:55,620 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-24 14:09:55,622 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 16
+2020-11-24 14:10:01,125 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT count(0) FROM em_index_detail d, em_index_group g, em_index_template t, em_index_category c WHERE d.group_id = g.id AND d.index_id = t.id AND t.category_id = c.id 
+2020-11-24 14:10:01,125 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-24 14:10:01,128 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-11-24 14:10:01,132 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select d.id,d.index_id,d.val,d.weight,d.group_id, t.max_val,t.min_val,t.unit,t.category_id, g.name as group_name,c.name as category_name from em_index_detail d,em_index_group g,em_index_template t,em_index_category c WHERE d.group_id = g.id and d.index_id = t.id and t.category_id = c.id order by g.create_time desc,d.id asc limit ?,? 
+2020-11-24 14:10:01,133 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 0(Integer), 10(Integer)
+2020-11-24 14:10:01,137 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 10
+2020-11-24 14:10:03,787 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name from em_index_category order by id asc 
+2020-11-24 14:10:03,788 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-24 14:10:03,788 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 3
+2020-11-24 14:10:03,789 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name, best_val, min_val, max_val, weight, unit, category_id from em_index_template order by id asc 
+2020-11-24 14:10:03,789 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-24 14:10:03,791 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 16
+2020-11-24 14:10:03,792 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name, creator_id, create_time from em_index_group where id = ? 
+2020-11-24 14:10:03,793 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: null
+2020-11-24 14:10:03,794 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 0
+2020-11-24 14:10:03,797 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, index_id, val, weight, group_id from em_index_detail order by id asc 
+2020-11-24 14:10:03,799 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-24 14:10:03,801 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 16
+2020-11-24 14:10:05,361 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT count(0) FROM em_index_detail d, em_index_group g, em_index_template t, em_index_category c WHERE d.group_id = g.id AND d.index_id = t.id AND t.category_id = c.id 
+2020-11-24 14:10:05,362 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-24 14:10:05,364 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-11-24 14:10:05,367 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select d.id,d.index_id,d.val,d.weight,d.group_id, t.max_val,t.min_val,t.unit,t.category_id, g.name as group_name,c.name as category_name from em_index_detail d,em_index_group g,em_index_template t,em_index_category c WHERE d.group_id = g.id and d.index_id = t.id and t.category_id = c.id order by g.create_time desc,d.id asc limit ?,? 
+2020-11-24 14:10:05,368 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 0(Integer), 10(Integer)
+2020-11-24 14:10:05,370 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 10
+2020-11-24 14:13:59,921 INFO (StartupInfoLogger.java:55)- Starting Startup on LAPTOP-3H9KE96D with PID 9760 (D:\projects\KS\webapp\target\classes started by 17869 in D:\projects\KS)
+2020-11-24 14:13:59,926 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2020-11-24 14:13:59,927 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
+2020-11-24 14:14:05,862 INFO (SpringBeanUtil.java:26)- ========ApplicationContext配置成功,在普通类可以通过调用SpringUtils.getAppContext()获取applicationContext对象,applicationContext=org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@243ddb52, started on Tue Nov 24 14:14:00 GMT+08:00 2020
+2020-11-24 14:14:07,690 INFO (StartupInfoLogger.java:61)- Started Startup in 8.714 seconds (JVM running for 10.149)
+2020-11-24 14:14:07,692 INFO (InitApplicationRun.java:26)- King System already started ...
+2020-11-24 14:14:07,889 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select dict_sn, class_no, dict_no, dict_desc, disp_order, parent_sn, use_flag from sys_dict 
+2020-11-24 14:14:08,254 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-24 14:14:08,289 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 13
+2020-11-24 14:14:08,294 INFO (InitApplicationRun.java:28)- Initialization data complete ...
+2020-11-24 14:14:10,454 INFO (LoginController.java:122)- ********************登录成功，进入首页！********************
+2020-11-24 14:14:10,466 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select * from sys_user where username = ? 
+2020-11-24 14:14:10,518 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: com.king.system.po.UserInfo@7d10bace(String)
+2020-11-24 14:14:10,520 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 0
+2020-11-24 14:14:12,727 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select a.id, a.name, a.url, a.type, a.pid, a.permission, icon from sys_resources a, sys_role_resources b, sys_user_role c where a.id = b.res_id and b.role_id = c.rid and c.uid = ? order by a.id 
+2020-11-24 14:14:12,749 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 1(Long)
+2020-11-24 14:14:12,769 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 25
+2020-11-24 14:14:16,386 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT count(0) FROM em_index_detail d, em_index_group g, em_index_template t, em_index_category c WHERE d.group_id = g.id AND d.index_id = t.id AND t.category_id = c.id 
+2020-11-24 14:14:16,391 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-24 14:14:16,393 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-11-24 14:14:16,395 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select d.id,d.index_id,d.val,d.weight,d.group_id, t.max_val,t.min_val,t.unit,t.category_id, g.name as group_name,c.name as category_name from em_index_detail d,em_index_group g,em_index_template t,em_index_category c WHERE d.group_id = g.id and d.index_id = t.id and t.category_id = c.id order by g.create_time desc,d.id asc limit ?,? 
+2020-11-24 14:14:16,401 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 0(Integer), 10(Integer)
+2020-11-24 14:14:16,407 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 10
+2020-11-24 14:14:20,830 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name from em_index_category order by id asc 
+2020-11-24 14:14:20,831 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-24 14:14:20,837 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 3
+2020-11-24 14:14:20,844 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name, best_val, min_val, max_val, weight, unit, category_id from em_index_template order by id asc 
+2020-11-24 14:14:20,845 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-24 14:14:20,855 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 16
+2020-11-24 14:14:20,859 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name, creator_id, create_time from em_index_group where id = ? 
+2020-11-24 14:14:20,860 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 1(Long)
+2020-11-24 14:14:20,863 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-11-24 14:14:20,879 ERROR (GlobalExceptionHandler.java:88)- *****服务器异常*****nested exception is org.apache.ibatis.reflection.ReflectionException: There is no getter for property named 'groupId' in 'class java.lang.Long'
+2020-11-24 14:14:20,879 ERROR (GlobalExceptionHandler.java:89)- RequestFail[/em/myIndex/toUpdate][menuId=48,groupId=1]
+2020-11-24 14:16:50,890 INFO (StartupInfoLogger.java:55)- Starting Startup on LAPTOP-3H9KE96D with PID 2696 (D:\projects\KS\webapp\target\classes started by 17869 in D:\projects\KS)
+2020-11-24 14:16:50,895 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2020-11-24 14:16:50,896 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
+2020-11-24 14:16:56,337 INFO (SpringBeanUtil.java:26)- ========ApplicationContext配置成功,在普通类可以通过调用SpringUtils.getAppContext()获取applicationContext对象,applicationContext=org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@1d443b65, started on Tue Nov 24 14:16:51 GMT+08:00 2020
+2020-11-24 14:16:58,074 INFO (StartupInfoLogger.java:61)- Started Startup in 8.158 seconds (JVM running for 9.455)
+2020-11-24 14:16:58,075 INFO (InitApplicationRun.java:26)- King System already started ...
+2020-11-24 14:16:58,259 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select dict_sn, class_no, dict_no, dict_desc, disp_order, parent_sn, use_flag from sys_dict 
+2020-11-24 14:16:58,610 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-24 14:16:58,647 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 13
+2020-11-24 14:16:58,651 INFO (InitApplicationRun.java:28)- Initialization data complete ...
+2020-11-24 14:17:01,425 INFO (LoginController.java:122)- ********************登录成功，进入首页！********************
+2020-11-24 14:17:01,436 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select * from sys_user where username = ? 
+2020-11-24 14:17:01,487 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: com.king.system.po.UserInfo@de22b0b(String)
+2020-11-24 14:17:01,489 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 0
+2020-11-24 14:17:03,583 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select a.id, a.name, a.url, a.type, a.pid, a.permission, icon from sys_resources a, sys_role_resources b, sys_user_role c where a.id = b.res_id and b.role_id = c.rid and c.uid = ? order by a.id 
+2020-11-24 14:17:03,611 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 1(Long)
+2020-11-24 14:17:03,630 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 25
+2020-11-24 14:17:05,916 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT count(0) FROM em_index_detail d, em_index_group g, em_index_template t, em_index_category c WHERE d.group_id = g.id AND d.index_id = t.id AND t.category_id = c.id 
+2020-11-24 14:17:05,932 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-24 14:17:05,936 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-11-24 14:17:05,941 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select d.id,d.index_id,d.val,d.weight,d.group_id, t.max_val,t.min_val,t.unit,t.category_id, g.name as group_name,c.name as category_name from em_index_detail d,em_index_group g,em_index_template t,em_index_category c WHERE d.group_id = g.id and d.index_id = t.id and t.category_id = c.id order by g.create_time desc,d.id asc limit ?,? 
+2020-11-24 14:17:05,957 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 0(Integer), 10(Integer)
+2020-11-24 14:17:06,004 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 10
+2020-11-24 14:17:08,397 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name from em_index_category order by id asc 
+2020-11-24 14:17:08,401 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-24 14:17:08,404 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 3
+2020-11-24 14:17:08,428 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name, best_val, min_val, max_val, weight, unit, category_id from em_index_template order by id asc 
+2020-11-24 14:17:08,431 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-24 14:17:08,445 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 16
+2020-11-24 14:17:08,458 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name, creator_id, create_time from em_index_group where id = ? 
+2020-11-24 14:17:08,461 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 1(Long)
+2020-11-24 14:17:08,469 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-11-24 14:17:08,472 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, index_id, val, weight, group_id from em_index_detail WHERE group_id = ? order by id asc 
+2020-11-24 14:17:08,477 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 1(Long)
+2020-11-24 14:17:08,487 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 16
+2020-11-24 14:17:20,060 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name, creator_id, create_time from em_index_group where id = ? 
+2020-11-24 14:17:20,062 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 1(Long)
+2020-11-24 14:17:20,066 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-11-24 14:17:20,068 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name, creator_id, create_time from em_index_group where name = ? and creator_id = ? 
+2020-11-24 14:17:20,070 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: king指标2(String), 1(Long)
+2020-11-24 14:17:20,071 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 0
+2020-11-24 14:17:20,073 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: update em_index_group SET name = ?, creator_id = ?, create_time = ? where id = ? 
+2020-11-24 14:17:20,086 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: king指标2(String), 1(Long), 2020-11-24 14:17:20.072(Timestamp), 1(Long)
+2020-11-24 14:17:20,092 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==    Updates: 1
+2020-11-24 14:17:20,094 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name, best_val, min_val, max_val, weight, unit, category_id from em_index_template order by id asc 
+2020-11-24 14:17:20,095 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-24 14:17:20,101 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 16
+2020-11-24 14:17:20,105 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: update em_index_detail SET index_id = ?, val = ?, weight = ?, group_id = ? where id = ? 
+2020-11-24 14:17:20,108 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 1(Long), 1(BigDecimal), 0.1000000000000000055511151231257827021181583404541015625(BigDecimal), 1(Long), 1(Long)
+2020-11-24 14:17:20,110 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==    Updates: 1
+2020-11-24 14:17:20,112 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: update em_index_detail SET index_id = ?, val = ?, weight = ?, group_id = ? where id = ? 
+2020-11-24 14:17:20,112 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 2(Long), 1(BigDecimal), 0.1000000000000000055511151231257827021181583404541015625(BigDecimal), 1(Long), 2(Long)
+2020-11-24 14:17:20,115 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==    Updates: 1
+2020-11-24 14:17:20,117 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: update em_index_detail SET index_id = ?, val = ?, weight = ?, group_id = ? where id = ? 
+2020-11-24 14:17:20,119 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 3(Long), 1(BigDecimal), 0.1000000000000000055511151231257827021181583404541015625(BigDecimal), 1(Long), 3(Long)
+2020-11-24 14:17:20,122 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==    Updates: 1
+2020-11-24 14:17:20,124 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: update em_index_detail SET index_id = ?, val = ?, weight = ?, group_id = ? where id = ? 
+2020-11-24 14:17:20,125 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 4(Long), 1(BigDecimal), 0.1000000000000000055511151231257827021181583404541015625(BigDecimal), 1(Long), 4(Long)
+2020-11-24 14:17:20,128 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==    Updates: 1
+2020-11-24 14:17:20,130 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: update em_index_detail SET index_id = ?, val = ?, weight = ?, group_id = ? where id = ? 
+2020-11-24 14:17:20,130 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 5(Long), 1(BigDecimal), 0.1000000000000000055511151231257827021181583404541015625(BigDecimal), 1(Long), 5(Long)
+2020-11-24 14:17:20,133 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==    Updates: 1
+2020-11-24 14:17:20,133 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: update em_index_detail SET index_id = ?, val = ?, weight = ?, group_id = ? where id = ? 
+2020-11-24 14:17:20,134 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 6(Long), 1(BigDecimal), 0.1000000000000000055511151231257827021181583404541015625(BigDecimal), 1(Long), 6(Long)
+2020-11-24 14:17:20,137 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==    Updates: 1
+2020-11-24 14:17:20,138 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: update em_index_detail SET index_id = ?, val = ?, weight = ?, group_id = ? where id = ? 
+2020-11-24 14:17:20,138 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 7(Long), 1(BigDecimal), 0.1000000000000000055511151231257827021181583404541015625(BigDecimal), 1(Long), 7(Long)
+2020-11-24 14:17:20,141 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==    Updates: 1
+2020-11-24 14:17:20,141 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: update em_index_detail SET index_id = ?, val = ?, weight = ?, group_id = ? where id = ? 
+2020-11-24 14:17:20,142 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 8(Long), 1(BigDecimal), 0.1000000000000000055511151231257827021181583404541015625(BigDecimal), 1(Long), 8(Long)
+2020-11-24 14:17:20,146 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==    Updates: 1
+2020-11-24 14:17:20,148 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: update em_index_detail SET index_id = ?, val = ?, weight = ?, group_id = ? where id = ? 
+2020-11-24 14:17:20,148 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 9(Long), 1(BigDecimal), 0.1000000000000000055511151231257827021181583404541015625(BigDecimal), 1(Long), 9(Long)
+2020-11-24 14:17:20,150 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==    Updates: 1
+2020-11-24 14:17:20,151 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: update em_index_detail SET index_id = ?, val = ?, weight = ?, group_id = ? where id = ? 
+2020-11-24 14:17:20,151 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 10(Long), 1(BigDecimal), 0.1000000000000000055511151231257827021181583404541015625(BigDecimal), 1(Long), 10(Long)
+2020-11-24 14:17:20,153 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==    Updates: 1
+2020-11-24 14:17:20,154 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: update em_index_detail SET index_id = ?, val = ?, weight = ?, group_id = ? where id = ? 
+2020-11-24 14:17:20,154 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 11(Long), 1(BigDecimal), 0.1000000000000000055511151231257827021181583404541015625(BigDecimal), 1(Long), 11(Long)
+2020-11-24 14:17:20,156 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==    Updates: 1
+2020-11-24 14:17:20,157 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: update em_index_detail SET index_id = ?, val = ?, weight = ?, group_id = ? where id = ? 
+2020-11-24 14:17:20,158 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 12(Long), 1(BigDecimal), 0.1000000000000000055511151231257827021181583404541015625(BigDecimal), 1(Long), 12(Long)
+2020-11-24 14:17:20,160 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==    Updates: 1
+2020-11-24 14:17:20,161 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: update em_index_detail SET index_id = ?, val = ?, weight = ?, group_id = ? where id = ? 
+2020-11-24 14:17:20,162 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 13(Long), 1(BigDecimal), 0.1000000000000000055511151231257827021181583404541015625(BigDecimal), 1(Long), 13(Long)
+2020-11-24 14:17:20,164 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==    Updates: 1
+2020-11-24 14:17:20,165 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: update em_index_detail SET index_id = ?, val = ?, weight = ?, group_id = ? where id = ? 
+2020-11-24 14:17:20,165 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 14(Long), 1(BigDecimal), 0.1000000000000000055511151231257827021181583404541015625(BigDecimal), 1(Long), 14(Long)
+2020-11-24 14:17:20,167 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==    Updates: 1
+2020-11-24 14:17:20,168 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: update em_index_detail SET index_id = ?, val = ?, weight = ?, group_id = ? where id = ? 
+2020-11-24 14:17:20,169 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 15(Long), 1(BigDecimal), 0.1000000000000000055511151231257827021181583404541015625(BigDecimal), 1(Long), 15(Long)
+2020-11-24 14:17:20,171 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==    Updates: 1
+2020-11-24 14:17:20,171 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: update em_index_detail SET index_id = ?, val = ?, weight = ?, group_id = ? where id = ? 
+2020-11-24 14:17:20,172 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 16(Long), 1(BigDecimal), 0.1000000000000000055511151231257827021181583404541015625(BigDecimal), 1(Long), 16(Long)
+2020-11-24 14:17:20,173 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==    Updates: 1
+2020-11-24 14:17:24,335 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT count(0) FROM em_index_detail d, em_index_group g, em_index_template t, em_index_category c WHERE d.group_id = g.id AND d.index_id = t.id AND t.category_id = c.id 
+2020-11-24 14:17:24,336 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-24 14:17:24,338 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-11-24 14:17:24,340 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select d.id,d.index_id,d.val,d.weight,d.group_id, t.max_val,t.min_val,t.unit,t.category_id, g.name as group_name,c.name as category_name from em_index_detail d,em_index_group g,em_index_template t,em_index_category c WHERE d.group_id = g.id and d.index_id = t.id and t.category_id = c.id order by g.create_time desc,d.id asc limit ?,? 
+2020-11-24 14:17:24,342 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 0(Integer), 10(Integer)
+2020-11-24 14:17:24,354 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 10
+2020-11-24 14:17:34,208 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name from em_index_category order by id asc 
+2020-11-24 14:17:34,209 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-24 14:17:34,211 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 3
+2020-11-24 14:17:34,212 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name, best_val, min_val, max_val, weight, unit, category_id from em_index_template order by id asc 
+2020-11-24 14:17:34,212 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-24 14:17:34,216 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 16
+2020-11-24 14:17:34,218 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name, creator_id, create_time from em_index_group where id = ? 
+2020-11-24 14:17:34,218 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 1(Long)
+2020-11-24 14:17:34,222 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-11-24 14:17:34,224 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, index_id, val, weight, group_id from em_index_detail WHERE group_id = ? order by id asc 
+2020-11-24 14:17:34,226 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 1(Long)
+2020-11-24 14:17:34,228 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 16
+2020-11-24 14:17:41,496 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name, creator_id, create_time from em_index_group where id = ? 
+2020-11-24 14:17:41,497 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 1(Long)
+2020-11-24 14:17:41,501 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-11-24 14:17:41,503 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name, creator_id, create_time from em_index_group where name = ? and creator_id = ? 
+2020-11-24 14:17:41,505 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: king指标2(String), 1(Long)
+2020-11-24 14:17:41,509 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-11-24 14:17:41,510 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: update em_index_group SET name = ?, creator_id = ?, create_time = ? where id = ? 
+2020-11-24 14:17:41,512 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: king指标2(String), 1(Long), 2020-11-24 14:17:41.509(Timestamp), 1(Long)
+2020-11-24 14:17:41,515 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==    Updates: 1
+2020-11-24 14:17:41,516 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name, best_val, min_val, max_val, weight, unit, category_id from em_index_template order by id asc 
+2020-11-24 14:17:41,517 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-24 14:17:41,521 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 16
+2020-11-24 14:17:41,522 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: update em_index_detail SET index_id = ?, val = ?, weight = ?, group_id = ? where id = ? 
+2020-11-24 14:17:41,523 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 1(Long), 2(BigDecimal), 0.1000000000000000055511151231257827021181583404541015625(BigDecimal), 1(Long), 1(Long)
+2020-11-24 14:17:41,525 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==    Updates: 1
+2020-11-24 14:17:41,526 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: update em_index_detail SET index_id = ?, val = ?, weight = ?, group_id = ? where id = ? 
+2020-11-24 14:17:41,527 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 2(Long), 2(BigDecimal), 0.1000000000000000055511151231257827021181583404541015625(BigDecimal), 1(Long), 2(Long)
+2020-11-24 14:17:41,528 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==    Updates: 1
+2020-11-24 14:17:41,529 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: update em_index_detail SET index_id = ?, val = ?, weight = ?, group_id = ? where id = ? 
+2020-11-24 14:17:41,529 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 3(Long), 2(BigDecimal), 0.1000000000000000055511151231257827021181583404541015625(BigDecimal), 1(Long), 3(Long)
+2020-11-24 14:17:41,531 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==    Updates: 1
+2020-11-24 14:17:41,532 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: update em_index_detail SET index_id = ?, val = ?, weight = ?, group_id = ? where id = ? 
+2020-11-24 14:17:41,532 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 4(Long), 1(BigDecimal), 0.1000000000000000055511151231257827021181583404541015625(BigDecimal), 1(Long), 4(Long)
+2020-11-24 14:17:41,534 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==    Updates: 1
+2020-11-24 14:17:41,535 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: update em_index_detail SET index_id = ?, val = ?, weight = ?, group_id = ? where id = ? 
+2020-11-24 14:17:41,535 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 5(Long), 1(BigDecimal), 0.1000000000000000055511151231257827021181583404541015625(BigDecimal), 1(Long), 5(Long)
+2020-11-24 14:17:41,536 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==    Updates: 1
+2020-11-24 14:17:41,537 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: update em_index_detail SET index_id = ?, val = ?, weight = ?, group_id = ? where id = ? 
+2020-11-24 14:17:41,537 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 6(Long), 1(BigDecimal), 0.1000000000000000055511151231257827021181583404541015625(BigDecimal), 1(Long), 6(Long)
+2020-11-24 14:17:41,539 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==    Updates: 1
+2020-11-24 14:17:41,539 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: update em_index_detail SET index_id = ?, val = ?, weight = ?, group_id = ? where id = ? 
+2020-11-24 14:17:41,540 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 7(Long), 1(BigDecimal), 0.1000000000000000055511151231257827021181583404541015625(BigDecimal), 1(Long), 7(Long)
+2020-11-24 14:17:41,541 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==    Updates: 1
+2020-11-24 14:17:41,542 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: update em_index_detail SET index_id = ?, val = ?, weight = ?, group_id = ? where id = ? 
+2020-11-24 14:17:41,542 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 8(Long), 1(BigDecimal), 0.1000000000000000055511151231257827021181583404541015625(BigDecimal), 1(Long), 8(Long)
+2020-11-24 14:17:41,544 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==    Updates: 1
+2020-11-24 14:17:41,544 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: update em_index_detail SET index_id = ?, val = ?, weight = ?, group_id = ? where id = ? 
+2020-11-24 14:17:41,545 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 9(Long), 1(BigDecimal), 0.1000000000000000055511151231257827021181583404541015625(BigDecimal), 1(Long), 9(Long)
+2020-11-24 14:17:41,547 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==    Updates: 1
+2020-11-24 14:17:41,547 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: update em_index_detail SET index_id = ?, val = ?, weight = ?, group_id = ? where id = ? 
+2020-11-24 14:17:41,548 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 10(Long), 1(BigDecimal), 0.1000000000000000055511151231257827021181583404541015625(BigDecimal), 1(Long), 10(Long)
+2020-11-24 14:17:41,549 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==    Updates: 1
+2020-11-24 14:17:41,550 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: update em_index_detail SET index_id = ?, val = ?, weight = ?, group_id = ? where id = ? 
+2020-11-24 14:17:41,551 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 11(Long), 1(BigDecimal), 0.1000000000000000055511151231257827021181583404541015625(BigDecimal), 1(Long), 11(Long)
+2020-11-24 14:17:41,553 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==    Updates: 1
+2020-11-24 14:17:41,554 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: update em_index_detail SET index_id = ?, val = ?, weight = ?, group_id = ? where id = ? 
+2020-11-24 14:17:41,554 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 12(Long), 1(BigDecimal), 0.1000000000000000055511151231257827021181583404541015625(BigDecimal), 1(Long), 12(Long)
+2020-11-24 14:17:41,557 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==    Updates: 1
+2020-11-24 14:17:41,557 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: update em_index_detail SET index_id = ?, val = ?, weight = ?, group_id = ? where id = ? 
+2020-11-24 14:17:41,558 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 13(Long), 1(BigDecimal), 0.1000000000000000055511151231257827021181583404541015625(BigDecimal), 1(Long), 13(Long)
+2020-11-24 14:17:41,559 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==    Updates: 1
+2020-11-24 14:17:41,560 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: update em_index_detail SET index_id = ?, val = ?, weight = ?, group_id = ? where id = ? 
+2020-11-24 14:17:41,560 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 14(Long), 1(BigDecimal), 0.1000000000000000055511151231257827021181583404541015625(BigDecimal), 1(Long), 14(Long)
+2020-11-24 14:17:41,563 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==    Updates: 1
+2020-11-24 14:17:41,564 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: update em_index_detail SET index_id = ?, val = ?, weight = ?, group_id = ? where id = ? 
+2020-11-24 14:17:41,564 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 15(Long), 1(BigDecimal), 0.1000000000000000055511151231257827021181583404541015625(BigDecimal), 1(Long), 15(Long)
+2020-11-24 14:17:41,566 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==    Updates: 1
+2020-11-24 14:17:41,567 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: update em_index_detail SET index_id = ?, val = ?, weight = ?, group_id = ? where id = ? 
+2020-11-24 14:17:41,568 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 16(Long), 1(BigDecimal), 0.1000000000000000055511151231257827021181583404541015625(BigDecimal), 1(Long), 16(Long)
+2020-11-24 14:17:41,570 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==    Updates: 1
+2020-11-24 14:17:44,829 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT count(0) FROM em_index_detail d, em_index_group g, em_index_template t, em_index_category c WHERE d.group_id = g.id AND d.index_id = t.id AND t.category_id = c.id 
+2020-11-24 14:17:44,829 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-24 14:17:44,832 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-11-24 14:17:44,835 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select d.id,d.index_id,d.val,d.weight,d.group_id, t.max_val,t.min_val,t.unit,t.category_id, g.name as group_name,c.name as category_name from em_index_detail d,em_index_group g,em_index_template t,em_index_category c WHERE d.group_id = g.id and d.index_id = t.id and t.category_id = c.id order by g.create_time desc,d.id asc limit ?,? 
+2020-11-24 14:17:44,836 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 0(Integer), 10(Integer)
+2020-11-24 14:17:44,838 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 10
+2020-11-24 14:18:11,993 INFO (LoginController.java:122)- ********************登录成功，进入首页！********************
+2020-11-24 14:18:11,996 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select * from sys_user where username = ? 
+2020-11-24 14:18:11,996 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: com.king.system.po.UserInfo@73096bd4(String)
+2020-11-24 14:18:11,998 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 0
+2020-11-24 14:18:12,280 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select a.id, a.name, a.url, a.type, a.pid, a.permission, icon from sys_resources a, sys_role_resources b, sys_user_role c where a.id = b.res_id and b.role_id = c.rid and c.uid = ? order by a.id 
+2020-11-24 14:18:12,282 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 1(Long)
+2020-11-24 14:18:12,292 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 25
+2020-11-24 14:18:13,997 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT count(0) FROM em_index_detail d, em_index_group g, em_index_template t, em_index_category c WHERE d.group_id = g.id AND d.index_id = t.id AND t.category_id = c.id 
+2020-11-24 14:18:13,997 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-24 14:18:13,999 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-11-24 14:18:14,002 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select d.id,d.index_id,d.val,d.weight,d.group_id, t.max_val,t.min_val,t.unit,t.category_id, g.name as group_name,c.name as category_name from em_index_detail d,em_index_group g,em_index_template t,em_index_category c WHERE d.group_id = g.id and d.index_id = t.id and t.category_id = c.id order by g.create_time desc,d.id asc limit ?,? 
+2020-11-24 14:18:14,002 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 0(Integer), 10(Integer)
+2020-11-24 14:18:14,004 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 10
+2020-11-24 14:18:19,614 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: delete from em_index_detail where group_id = ? 
+2020-11-24 14:18:19,617 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 1(Long)
+2020-11-24 14:18:19,622 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==    Updates: 16
+2020-11-24 14:18:21,386 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT count(0) FROM em_index_detail d, em_index_group g, em_index_template t, em_index_category c WHERE d.group_id = g.id AND d.index_id = t.id AND t.category_id = c.id AND g.name LIKE concat('%', ?, '%') 
+2020-11-24 14:18:21,391 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: (String)
+2020-11-24 14:18:21,392 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-11-24 14:19:38,114 INFO (StartupInfoLogger.java:55)- Starting Startup on LAPTOP-3H9KE96D with PID 14128 (D:\projects\KS\webapp\target\classes started by 17869 in D:\projects\KS)
+2020-11-24 14:19:38,120 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2020-11-24 14:19:38,121 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
+2020-11-24 14:19:44,193 INFO (SpringBeanUtil.java:26)- ========ApplicationContext配置成功,在普通类可以通过调用SpringUtils.getAppContext()获取applicationContext对象,applicationContext=org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@4b5b4c53, started on Tue Nov 24 14:19:38 GMT+08:00 2020
+2020-11-24 14:19:45,587 INFO (StartupInfoLogger.java:61)- Started Startup in 8.805 seconds (JVM running for 10.25)
+2020-11-24 14:19:45,588 INFO (InitApplicationRun.java:26)- King System already started ...
+2020-11-24 14:19:45,751 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select dict_sn, class_no, dict_no, dict_desc, disp_order, parent_sn, use_flag from sys_dict 
+2020-11-24 14:19:46,090 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-24 14:19:46,124 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 13
+2020-11-24 14:19:46,128 INFO (InitApplicationRun.java:28)- Initialization data complete ...
+2020-11-24 14:19:49,972 INFO (LoginController.java:122)- ********************登录成功，进入首页！********************
+2020-11-24 14:19:49,983 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select * from sys_user where username = ? 
+2020-11-24 14:19:50,032 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: com.king.system.po.UserInfo@6ab510f5(String)
+2020-11-24 14:19:50,034 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 0
+2020-11-24 14:19:51,128 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select a.id, a.name, a.url, a.type, a.pid, a.permission, icon from sys_resources a, sys_role_resources b, sys_user_role c where a.id = b.res_id and b.role_id = c.rid and c.uid = ? order by a.id 
+2020-11-24 14:19:51,143 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 1(Long)
+2020-11-24 14:19:51,153 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 25
+2020-11-24 14:19:54,945 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT count(0) FROM em_index_detail d, em_index_group g, em_index_template t, em_index_category c WHERE d.group_id = g.id AND d.index_id = t.id AND t.category_id = c.id 
+2020-11-24 14:19:54,954 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-24 14:19:54,956 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-11-24 14:19:55,903 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name from em_index_category order by id asc 
+2020-11-24 14:19:55,906 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-24 14:19:55,908 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 3
+2020-11-24 14:19:55,913 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name, best_val, min_val, max_val, weight, unit, category_id from em_index_template order by id asc 
+2020-11-24 14:19:55,914 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-24 14:19:55,922 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 16
+2020-11-24 14:19:57,204 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT count(0) FROM em_index_detail d, em_index_group g, em_index_template t, em_index_category c WHERE d.group_id = g.id AND d.index_id = t.id AND t.category_id = c.id 
+2020-11-24 14:19:57,205 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-24 14:19:57,208 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-11-24 14:19:58,014 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name from em_index_category order by id asc 
+2020-11-24 14:19:58,015 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-24 14:19:58,018 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 3
+2020-11-24 14:19:58,020 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name, best_val, min_val, max_val, weight, unit, category_id from em_index_template order by id asc 
+2020-11-24 14:19:58,022 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-24 14:19:58,026 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 16
+2020-11-24 14:19:59,072 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT count(0) FROM em_index_detail d, em_index_group g, em_index_template t, em_index_category c WHERE d.group_id = g.id AND d.index_id = t.id AND t.category_id = c.id 
+2020-11-24 14:19:59,073 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-24 14:19:59,074 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-11-24 14:19:59,740 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name from em_index_category order by id asc 
+2020-11-24 14:19:59,741 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-24 14:19:59,742 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 3
+2020-11-24 14:19:59,743 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name, best_val, min_val, max_val, weight, unit, category_id from em_index_template order by id asc 
+2020-11-24 14:19:59,743 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-24 14:19:59,745 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 16
+2020-11-24 14:20:00,794 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT count(0) FROM em_index_detail d, em_index_group g, em_index_template t, em_index_category c WHERE d.group_id = g.id AND d.index_id = t.id AND t.category_id = c.id 
+2020-11-24 14:20:00,795 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-24 14:20:00,798 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-11-24 14:20:03,424 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name from em_index_category order by id asc 
+2020-11-24 14:20:03,424 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-24 14:20:03,426 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 3
+2020-11-24 14:20:03,427 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name, best_val, min_val, max_val, weight, unit, category_id from em_index_template order by id asc 
+2020-11-24 14:20:03,427 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-24 14:20:03,431 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 16
+2020-11-24 14:20:04,777 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT count(0) FROM em_index_detail d, em_index_group g, em_index_template t, em_index_category c WHERE d.group_id = g.id AND d.index_id = t.id AND t.category_id = c.id 
+2020-11-24 14:20:04,778 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-24 14:20:04,785 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-11-24 14:21:11,823 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name from em_index_category order by id asc 
+2020-11-24 14:21:11,824 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-24 14:21:11,825 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 3
+2020-11-24 14:21:11,826 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name, best_val, min_val, max_val, weight, unit, category_id from em_index_template order by id asc 
+2020-11-24 14:21:11,827 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-24 14:21:11,829 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 16
+2020-11-24 14:21:13,807 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT count(0) FROM em_index_detail d, em_index_group g, em_index_template t, em_index_category c WHERE d.group_id = g.id AND d.index_id = t.id AND t.category_id = c.id 
+2020-11-24 14:21:13,809 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-24 14:21:13,810 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-11-24 14:21:16,347 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name from em_index_category order by id asc 
+2020-11-24 14:21:16,349 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-24 14:21:16,353 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 3
+2020-11-24 14:21:16,355 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name, best_val, min_val, max_val, weight, unit, category_id from em_index_template order by id asc 
+2020-11-24 14:21:16,355 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-24 14:21:16,357 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 16
+2020-11-24 14:21:17,828 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT count(0) FROM em_index_detail d, em_index_group g, em_index_template t, em_index_category c WHERE d.group_id = g.id AND d.index_id = t.id AND t.category_id = c.id 
+2020-11-24 14:21:17,829 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-24 14:21:17,830 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-11-24 14:21:19,134 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name from em_index_category order by id asc 
+2020-11-24 14:21:19,135 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-24 14:21:19,136 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 3
+2020-11-24 14:21:19,136 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name, best_val, min_val, max_val, weight, unit, category_id from em_index_template order by id asc 
+2020-11-24 14:21:19,137 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-24 14:21:19,138 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 16
+2020-11-24 14:21:20,892 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT count(0) FROM em_index_detail d, em_index_group g, em_index_template t, em_index_category c WHERE d.group_id = g.id AND d.index_id = t.id AND t.category_id = c.id 
+2020-11-24 14:21:20,893 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-24 14:21:20,894 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-11-24 14:21:22,110 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name from em_index_category order by id asc 
+2020-11-24 14:21:22,111 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-24 14:21:22,114 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 3
+2020-11-24 14:21:22,116 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name, best_val, min_val, max_val, weight, unit, category_id from em_index_template order by id asc 
+2020-11-24 14:21:22,116 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-24 14:21:22,118 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 16
+2020-11-24 14:21:23,409 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT count(0) FROM em_index_detail d, em_index_group g, em_index_template t, em_index_category c WHERE d.group_id = g.id AND d.index_id = t.id AND t.category_id = c.id 
+2020-11-24 14:21:23,409 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-24 14:21:23,411 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-11-24 14:21:24,254 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name from em_index_category order by id asc 
+2020-11-24 14:21:24,254 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-24 14:21:24,255 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 3
+2020-11-24 14:21:24,256 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name, best_val, min_val, max_val, weight, unit, category_id from em_index_template order by id asc 
+2020-11-24 14:21:24,258 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-24 14:21:24,262 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 16
+2020-11-24 14:21:25,155 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT count(0) FROM em_index_detail d, em_index_group g, em_index_template t, em_index_category c WHERE d.group_id = g.id AND d.index_id = t.id AND t.category_id = c.id 
+2020-11-24 14:21:25,156 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-24 14:21:25,158 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-11-24 14:21:25,838 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name from em_index_category order by id asc 
+2020-11-24 14:21:25,838 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-24 14:21:25,840 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 3
+2020-11-24 14:21:25,841 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name, best_val, min_val, max_val, weight, unit, category_id from em_index_template order by id asc 
+2020-11-24 14:21:25,842 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-24 14:21:25,846 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 16
+2020-11-24 14:21:26,728 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT count(0) FROM em_index_detail d, em_index_group g, em_index_template t, em_index_category c WHERE d.group_id = g.id AND d.index_id = t.id AND t.category_id = c.id 
+2020-11-24 14:21:26,729 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-24 14:21:26,731 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-11-24 14:21:27,436 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name from em_index_category order by id asc 
+2020-11-24 14:21:27,437 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-24 14:21:27,438 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 3
+2020-11-24 14:21:27,440 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name, best_val, min_val, max_val, weight, unit, category_id from em_index_template order by id asc 
+2020-11-24 14:21:27,441 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-24 14:21:27,445 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 16
+2020-11-24 14:21:28,347 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT count(0) FROM em_index_detail d, em_index_group g, em_index_template t, em_index_category c WHERE d.group_id = g.id AND d.index_id = t.id AND t.category_id = c.id 
+2020-11-24 14:21:28,347 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-24 14:21:28,349 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-11-24 14:21:29,036 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name from em_index_category order by id asc 
+2020-11-24 14:21:29,037 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-24 14:21:29,038 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 3
+2020-11-24 14:21:29,040 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name, best_val, min_val, max_val, weight, unit, category_id from em_index_template order by id asc 
+2020-11-24 14:21:29,040 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-24 14:21:29,042 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 16
+2020-11-24 14:21:29,881 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT count(0) FROM em_index_detail d, em_index_group g, em_index_template t, em_index_category c WHERE d.group_id = g.id AND d.index_id = t.id AND t.category_id = c.id 
+2020-11-24 14:21:29,881 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-24 14:21:29,883 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-11-24 14:21:30,532 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name from em_index_category order by id asc 
+2020-11-24 14:21:30,533 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-24 14:21:30,533 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 3
+2020-11-24 14:21:30,533 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name, best_val, min_val, max_val, weight, unit, category_id from em_index_template order by id asc 
+2020-11-24 14:21:30,533 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-24 14:21:30,535 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 16
+2020-11-24 14:21:31,584 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT count(0) FROM em_index_detail d, em_index_group g, em_index_template t, em_index_category c WHERE d.group_id = g.id AND d.index_id = t.id AND t.category_id = c.id 
+2020-11-24 14:21:31,584 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-24 14:21:31,588 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-11-24 14:21:32,401 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name from em_index_category order by id asc 
+2020-11-24 14:21:32,402 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-24 14:21:32,403 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 3
+2020-11-24 14:21:32,404 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name, best_val, min_val, max_val, weight, unit, category_id from em_index_template order by id asc 
+2020-11-24 14:21:32,404 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-24 14:21:32,408 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 16
+2020-11-24 14:21:33,349 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT count(0) FROM em_index_detail d, em_index_group g, em_index_template t, em_index_category c WHERE d.group_id = g.id AND d.index_id = t.id AND t.category_id = c.id 
+2020-11-24 14:21:33,349 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-24 14:21:33,350 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-11-24 14:21:34,129 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name from em_index_category order by id asc 
+2020-11-24 14:21:34,129 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-24 14:21:34,130 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 3
+2020-11-24 14:21:34,131 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name, best_val, min_val, max_val, weight, unit, category_id from em_index_template order by id asc 
+2020-11-24 14:21:34,131 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-24 14:21:34,132 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 16
+2020-11-24 14:21:35,098 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT count(0) FROM em_index_detail d, em_index_group g, em_index_template t, em_index_category c WHERE d.group_id = g.id AND d.index_id = t.id AND t.category_id = c.id 
+2020-11-24 14:21:35,099 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-24 14:21:35,100 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-11-24 14:21:35,963 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name from em_index_category order by id asc 
+2020-11-24 14:21:35,964 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-24 14:21:35,965 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 3
+2020-11-24 14:21:35,965 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name, best_val, min_val, max_val, weight, unit, category_id from em_index_template order by id asc 
+2020-11-24 14:21:35,965 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-24 14:21:35,967 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 16
+2020-11-24 14:21:36,980 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT count(0) FROM em_index_detail d, em_index_group g, em_index_template t, em_index_category c WHERE d.group_id = g.id AND d.index_id = t.id AND t.category_id = c.id 
+2020-11-24 14:21:36,980 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-24 14:21:36,982 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-11-24 14:21:37,848 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name from em_index_category order by id asc 
+2020-11-24 14:21:37,848 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-24 14:21:37,850 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 3
+2020-11-24 14:21:37,852 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name, best_val, min_val, max_val, weight, unit, category_id from em_index_template order by id asc 
+2020-11-24 14:21:37,852 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-24 14:21:37,854 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 16
+2020-11-24 14:21:38,882 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT count(0) FROM em_index_detail d, em_index_group g, em_index_template t, em_index_category c WHERE d.group_id = g.id AND d.index_id = t.id AND t.category_id = c.id 
+2020-11-24 14:21:38,883 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-24 14:21:38,885 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-11-24 14:21:39,663 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name from em_index_category order by id asc 
+2020-11-24 14:21:39,664 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-24 14:21:39,665 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 3
+2020-11-24 14:21:39,666 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name, best_val, min_val, max_val, weight, unit, category_id from em_index_template order by id asc 
+2020-11-24 14:21:39,667 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-24 14:21:39,669 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 16
+2020-11-24 14:21:40,487 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT count(0) FROM em_index_detail d, em_index_group g, em_index_template t, em_index_category c WHERE d.group_id = g.id AND d.index_id = t.id AND t.category_id = c.id 
+2020-11-24 14:21:40,488 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-24 14:21:40,490 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1
+2020-11-24 14:21:41,134 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name from em_index_category order by id asc 
+2020-11-24 14:21:41,135 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-24 14:21:41,138 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 3
+2020-11-24 14:21:41,139 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: select id, name, best_val, min_val, max_val, weight, unit, category_id from em_index_template order by id asc 
+2020-11-24 14:21:41,139 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-24 14:21:41,140 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 16
+2020-11-24 14:21:42,069 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==>  Preparing: SELECT count(0) FROM em_index_detail d, em_index_group g, em_index_template t, em_index_category c WHERE d.group_id = g.id AND d.index_id = t.id AND t.category_id = c.id 
+2020-11-24 14:21:42,070 DEBUG (JakartaCommonsLoggingImpl.java:54)- ==> Parameters: 
+2020-11-24 14:21:42,072 DEBUG (JakartaCommonsLoggingImpl.java:54)- <==      Total: 1

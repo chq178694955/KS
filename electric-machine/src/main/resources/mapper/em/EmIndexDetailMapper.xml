@@ -6,7 +6,13 @@
     <result column="index_id" jdbcType="BIGINT" property="indexId" />
     <result column="val" jdbcType="DECIMAL" property="val" />
     <result column="weight" jdbcType="DECIMAL" property="weight" />
+    <result column="max_val" jdbcType="DECIMAL" property="maxVal" />
+    <result column="min_val" jdbcType="DECIMAL" property="minVal" />
+    <result column="unit" jdbcType="VARCHAR" property="unit" />
     <result column="group_id" jdbcType="BIGINT" property="groupId" />
+    <result column="group_name" jdbcType="VARCHAR" property="groupName" />
+    <result column="category_id" jdbcType="INTEGER" property="categoryId" />
+    <result column="category_name" jdbcType="VARCHAR" property="categoryName" />
   </resultMap>
 
   <sql id="Base_Column_List">
@@ -14,25 +20,47 @@
   </sql>
   <select id="find" parameterType="java.util.Map" resultMap="BaseResultMap">
     select
-    <include refid="Base_Column_List" />
-    from em_index_detail
+    d.id,d.index_id,d.val,d.weight,d.group_id,
+    t.max_val,t.min_val,t.unit,t.category_id,
+    g.name as group_name,c.name as category_name
+    from em_index_detail d,em_index_group g,em_index_template t,em_index_category c
     <where>
-      <if test="groupId != null">
-        and group_id = #{groupId,jdbcType=VARCHAR}
+      and d.group_id = g.id
+      and d.index_id = t.id
+      and t.category_id = c.id
+      <if test="userId != null">
+
+      </if>
+      <if test="searchKey != null">
+        and g.name like concat('%',#{searchKey,jdbcType=VARCHAR},'%')
       </if>
     </where>
-    order by id asc
+    order by g.create_time desc,d.id asc
   </select>
 
   <select id="get" parameterType="java.lang.Long" resultMap="BaseResultMap">
     select
     <include refid="Base_Column_List" />
     from em_index_detail where id = #{id,jdbcType=BIGINT}
+  </select>
+
+  <select id="findByGroupId" parameterType="java.util.Map" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from em_index_detail
+    <where>
+      <if test="groupId != null">
+        and group_id = #{groupId,jdbcType=BIGINT}
+      </if>
+    </where>
     order by id asc
   </select>
 
   <delete id="delete" parameterType="java.lang.Long">
     delete from em_index_detail where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <delete id="deleteByGroupId" parameterType="java.lang.Long">
+    delete from em_index_detail where group_id = #{groupId,jdbcType=BIGINT}
   </delete>
   <insert id="insert" parameterType="com.king.em.entity.EmIndexDetail">
     <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Long">

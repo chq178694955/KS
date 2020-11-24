@@ -23,8 +23,8 @@ public class EmIndexGroupServiceImpl implements IEmIndexGroupService {
     private EmIndexGroupDao EmIndexGroupDao;
 
     @Override
-    public EmIndexGroup findByName(String name) {
-        return null;
+    public EmIndexGroup findByName(Criteria criteria) {
+        return EmIndexGroupDao.get("findByName",criteria);
     }
 
     @Override
