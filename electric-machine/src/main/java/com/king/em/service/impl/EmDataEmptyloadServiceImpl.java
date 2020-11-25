@@ -66,4 +66,9 @@ public class EmDataEmptyloadServiceImpl implements IExperimentDataMgrService<Exp
         pageInfo.setPageSize(page.getPageSize());
         return pageInfo;
     }
+
+    @Override
+    public List<Experiment> findAll(Criteria criteria) {
+        return emDataEmptyloadDao.find("find",criteria);
+    }
 }

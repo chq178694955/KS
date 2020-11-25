@@ -24,6 +24,8 @@ public interface IExperimentDataMgrService<T extends Experiment> {
 
     List<T> findAll();
 
+    List<T> findAll(Criteria criteria);
+
     PageInfo<T> find(PageInfo<T> page,Criteria criteria,Boolean isDownload);
 
 }

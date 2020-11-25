@@ -66,4 +66,9 @@ public class EmDataOverloadServiceImpl implements IExperimentDataMgrService<Expe
         pageInfo.setPageSize(page.getPageSize());
         return pageInfo;
     }
+
+    @Override
+    public List<Experiment> findAll(Criteria criteria) {
+        return emDataOverloadDao.find("find",criteria);
+    }
 }

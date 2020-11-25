@@ -68,4 +68,9 @@ public class EmDataSpeedServiceImpl implements IExperimentDataMgrService<Experim
         pageInfo.setPageSize(page.getPageSize());
         return pageInfo;
     }
+
+    @Override
+    public List<Experiment> findAll(Criteria criteria) {
+        return emDataSpeedDao.find("find",criteria);
+    }
 }

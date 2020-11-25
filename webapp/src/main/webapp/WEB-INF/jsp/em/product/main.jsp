@@ -10,7 +10,7 @@
 <div class="x-nav">
     <span class="layui-breadcrumb">
         <a href="javascript:;">伺服电机</a>
-        <a><cite>试验数据</cite></a>
+        <a><cite>实验数据</cite></a>
     </span>
 </div>
 <div class="layui-fluid">
@@ -50,10 +50,10 @@
                         <tr>
                             <th lay-data="{checkbox:true}"></th>
                             <th lay-data="{field:'id',width:75,align:'center'}">ID</th>
-                            <th lay-data="{field:'name',width:250,align:'center'}">试验项目名</th>
+                            <th lay-data="{field:'name',width:250,align:'center'}">实验项目名</th>
                             <%--<th lay-data="{field:'creator',width:120,align:'center'}">创建人</th>--%>
-                            <th lay-data="{field:'createTimeDesc',width:120,align:'center'}">创建时间</th>
-                            <th lay-data="{field:'oper',fixed:'right',width:180,align:'center',toolbar:'#operBar_${menuId}'}"><spring:message code="com.btn.oper"/></th>
+                            <th lay-data="{field:'createTimeDesc',width:180,align:'center'}">创建时间</th>
+                            <th lay-data="{field:'oper',fixed:'right',width:160,align:'center',toolbar:'#operBar_${menuId}'}"><spring:message code="com.btn.oper"/></th>
                         </thead>
                     </table>
 

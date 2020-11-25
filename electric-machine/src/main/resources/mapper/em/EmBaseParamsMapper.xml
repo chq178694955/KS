@@ -25,7 +25,7 @@
     <include refid="Base_Column_List" />
     from em_base_params
     <where>
-        <if test="isDefault != null and isDefault > 0">
+        <if test="isDefault != null">
             and is_default = #{isDefault,jdbcType=INTEGER}
         </if>
     </where>
@@ -35,6 +35,12 @@
     <include refid="Base_Column_List" />
     from em_base_params
     where id = #{id,jdbcType=INTEGER}
+  </select>
+  <select id="selectDefault" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from em_base_params
+    where is_default = 1
   </select>
   <delete id="delete" parameterType="java.lang.Integer">
     delete from em_base_params where id = #{id,jdbcType=INTEGER}

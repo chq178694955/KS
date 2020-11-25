@@ -8,6 +8,7 @@ import com.king.em.factory.ExperimentDataServiceFactory;
 import com.king.em.service.IEmProductService;
 import com.king.framework.base.BaseController;
 import com.king.framework.model.Criteria;
+import com.king.system.utils.AuthUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -41,6 +42,7 @@ public class ProductManagerController extends BaseController {
         PageInfo<EmProduct> page = super.getPage(request);
         Criteria criteria = new Criteria();
         criteria.put("searchKey",super.getParam("searchKey"));
+        criteria.put("userId", AuthUtils.getUserInfo().getId());
         PageInfo<EmProduct> pageInfo = emProductService.find(page,criteria,isDownloadReq());
         return getGridData(pageInfo);
     }

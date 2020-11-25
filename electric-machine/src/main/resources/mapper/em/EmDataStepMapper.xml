@@ -4,7 +4,7 @@
   <resultMap id="BaseResultMap" type="com.king.em.entity.EmDataStep">
     <result column="id" jdbcType="BIGINT" property="id" />
     <result column="product_id" jdbcType="INTEGER" property="productId" />
-    <result column="data_time" jdbcType="TIMESTAMP" property="dataTime" />
+    <result column="data_time" jdbcType="DECIMAL" property="dataTime" />
     <result column="speed" jdbcType="DECIMAL" property="speed" />
   </resultMap>
 
@@ -38,7 +38,7 @@
     </selectKey>
     insert into em_data_step (product_id, data_time, speed
       )
-    values (#{productId,jdbcType=INTEGER}, #{dataTime,jdbcType=TIMESTAMP}, #{speed,jdbcType=DECIMAL}
+    values (#{productId,jdbcType=INTEGER}, #{dataTime,jdbcType=DECIMAL}, #{speed,jdbcType=DECIMAL}
       )
   </insert>
 
@@ -49,7 +49,7 @@
         product_id = #{productId,jdbcType=INTEGER},
       </if>
       <if test="dataTime != null">
-        data_time = #{dataTime,jdbcType=TIMESTAMP},
+        data_time = #{dataTime,jdbcType=DECIMAL},
       </if>
       <if test="speed != null">
         speed = #{speed,jdbcType=DECIMAL},

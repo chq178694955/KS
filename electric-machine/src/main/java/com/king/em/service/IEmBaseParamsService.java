@@ -21,4 +21,6 @@ public interface IEmBaseParamsService {
 
     EmBaseParams findById(Integer id);
 
+    EmBaseParams findDefault();
+
 }

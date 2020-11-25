@@ -66,4 +66,9 @@ public class EmDataStepServiceImpl implements IExperimentDataMgrService<Experime
         pageInfo.setPageSize(page.getPageSize());
         return pageInfo;
     }
+
+    @Override
+    public List<Experiment> findAll(Criteria criteria) {
+        return emDataStepDao.find("find",criteria);
+    }
 }

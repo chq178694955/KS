@@ -68,4 +68,9 @@ public class EmDataConstantloadServiceImpl implements IExperimentDataMgrService<
         pageInfo.setPageSize(page.getPageSize());
         return pageInfo;
     }
+
+    @Override
+    public List<Experiment> findAll(Criteria criteria) {
+        return emDataConstantloadDao.find("find",criteria);
+    }
 }

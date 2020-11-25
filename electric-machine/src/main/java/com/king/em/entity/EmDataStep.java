@@ -6,17 +6,17 @@ import java.util.Date;
 public class EmDataStep extends Experiment {
 
 
-    private Long dataTime;
+    private BigDecimal dataTime;
 
     private BigDecimal speed;
 
     private static final long serialVersionUID = 1L;
 
-    public Long getDataTime() {
+    public BigDecimal getDataTime() {
         return dataTime;
     }
 
-    public void setDataTime(Long dataTime) {
+    public void setDataTime(BigDecimal dataTime) {
         this.dataTime = dataTime;
     }
 

@@ -20,4 +20,6 @@ public interface EmBaseParamsMapper {
 
     EmBaseParams selectOne(Integer id);
 
+    EmBaseParams selectDefault();
+
 }

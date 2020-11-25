@@ -53,4 +53,9 @@ public class EmBaseParamsServiceImpl implements IEmBaseParamsService {
     public EmBaseParams findById(Integer id) {
         return emBaseParamsMapper.selectOne(id);
     }
+
+    @Override
+    public EmBaseParams findDefault() {
+        return emBaseParamsMapper.selectDefault();
+    }
 }

@@ -62,4 +62,9 @@ public class EmProductServiceImpl implements IEmProductService {
         pageInfo.setPageSize(page.getPageSize());
         return pageInfo;
     }
+
+    @Override
+    public List<EmProduct> findAll(Criteria criteria) {
+        return emProductDao.find(criteria);
+    }
 }

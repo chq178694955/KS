@@ -68,4 +68,9 @@ public class EmDataSinServiceImpl implements IExperimentDataMgrService<Experimen
         pageInfo.setPageSize(page.getPageSize());
         return pageInfo;
     }
+
+    @Override
+    public List<Experiment> findAll(Criteria criteria) {
+        return emDataSinDao.find("find",criteria);
+    }
 }

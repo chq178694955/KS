@@ -102,7 +102,7 @@ public class EmHomeController extends BaseController {
             for(int i=beginIndex;i<countRow;i++){
                 Row row = sheet.getRow(i);
                 // step 1
-                Long v1 = this.parseLong(this.getCellFormatValue(row.getCell(0)));
+                BigDecimal v1 = this.parseDecimal(this.getCellFormatValue(row.getCell(0)));
                 BigDecimal v2 = this.parseDecimal(this.getCellFormatValue(row.getCell(1)));
                 if(v1 != null && v2 != null){
                     EmDataStep entity = new EmDataStep();
@@ -204,7 +204,7 @@ public class EmHomeController extends BaseController {
                             value = null;
                         }
                     }else{
-                        value = new DecimalFormat("0").format(cell.getNumericCellValue());
+                        value = new DecimalFormat("##########.####").format(cell.getNumericCellValue());
                     }
                     break;
                 case XSSFCell.CELL_TYPE_FORMULA://公式
