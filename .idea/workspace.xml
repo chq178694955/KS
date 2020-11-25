@@ -7,32 +7,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fe042204-8736-438e-94f6-a48ebd7c8011" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/framework/src/main/java/com/king/framework/utils/TestUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webapp/src/main/java/com/king/app/webapp/controller/em/EmAnalysisController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/em/analysis/customParams.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/em/analysis/main.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/em/analysis/customIndex.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/KS_DATA/cache/2001.index" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/KS_DATA/logs/ks_log(LAPTOP-3H9KE96D)-default-current.log" beforeDir="false" afterPath="$PROJECT_DIR$/KS_DATA/logs/ks_log(LAPTOP-3H9KE96D)-default-current.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/dao/EmBaseParamsMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/dao/EmBaseParamsMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/entity/EmDataStep.java" beforeDir="false" afterPath="$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/entity/EmDataStep.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/service/IEmBaseParamsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/service/IEmBaseParamsService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/service/IEmProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/service/IEmProductService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/service/IExperimentDataMgrService.java" beforeDir="false" afterPath="$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/service/IExperimentDataMgrService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/service/impl/EmBaseParamsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/service/impl/EmBaseParamsServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/service/impl/EmDataConstantloadServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/service/impl/EmDataConstantloadServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/service/impl/EmDataEmptyloadServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/service/impl/EmDataEmptyloadServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/service/impl/EmDataOverloadServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/service/impl/EmDataOverloadServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/service/impl/EmDataSinServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/service/impl/EmDataSinServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/service/impl/EmDataSpeedServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/service/impl/EmDataSpeedServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/service/impl/EmDataStepServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/service/impl/EmDataStepServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/service/impl/EmProductServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/service/impl/EmProductServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/electric-machine/src/main/resources/mapper/em/EmBaseParamsMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/electric-machine/src/main/resources/mapper/em/EmBaseParamsMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/electric-machine/src/main/resources/mapper/em/EmDataStepMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/electric-machine/src/main/resources/mapper/em/EmDataStepMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/electric-machine/src/main/resources/mapper/em/EmProductMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/electric-machine/src/main/resources/mapper/em/EmProductMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/src/main/java/com/king/app/webapp/controller/em/EmHomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/java/com/king/app/webapp/controller/em/EmHomeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/src/main/java/com/king/app/webapp/controller/em/ProductManagerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/java/com/king/app/webapp/controller/em/ProductManagerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/em/product/main.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/em/product/main.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/electric-machine/src/main/resources/mapper/em/EmIndexDetailMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/electric-machine/src/main/resources/mapper/em/EmIndexDetailMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/electric-machine/src/main/resources/mapper/em/EmIndexGroupMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/electric-machine/src/main/resources/mapper/em/EmIndexGroupMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/src/main/java/com/king/app/webapp/controller/em/EmAnalysisController.java" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/java/com/king/app/webapp/controller/em/EmAnalysisController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/em/analysis/main.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/em/analysis/main.jsp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/framework/target/" />
@@ -59,79 +40,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/webapp/src/main/java/com/king/app/webapp/controller/em/EmAnalysisController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
-              <caret line="116" column="34" lean-forward="true" selection-start-line="116" selection-start-column="34" selection-end-line="116" selection-end-column="34" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#6860#6861#0" expanded="true" />
-                <element signature="e#6901#6902#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/em/analysis/customParams.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="298">
-              <caret line="92" column="41" lean-forward="true" selection-start-line="92" selection-start-column="41" selection-end-line="92" selection-end-column="41" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/em/analysis/main.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="333">
-              <caret line="410" column="37" selection-start-line="410" selection-start-column="37" selection-end-line="410" selection-end-column="37" />
-              <folding>
-                <element signature="n#blockquote#0;n#div#0;n#div#0;n#div#1;n#!!top" />
-                <element signature="n#style#0;n#p#0;n#blockquote#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#form#0;n#div#0;n#div#0;n#div#1;n#!!top" />
-                <element signature="n#fieldset#0;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#1;n#!!top" />
-                <element signature="n#style#0;n#label#0;n#div#0;n#div#0;n#div#0;n#fieldset#0;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#label#0;n#div#0;n#div#1;n#div#0;n#fieldset#0;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#label#0;n#div#1;n#div#1;n#div#0;n#fieldset#0;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#label#0;n#div#0;n#div#2;n#div#0;n#fieldset#0;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#label#0;n#div#1;n#div#2;n#div#0;n#fieldset#0;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#label#0;n#div#0;n#div#3;n#div#0;n#fieldset#0;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#label#0;n#div#1;n#div#3;n#div#0;n#fieldset#0;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#p#0;n#div#0;n#fieldset#0;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#fieldset#1;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#1;n#!!top" />
-                <element signature="n#style#0;n#label#0;n#div#0;n#div#1;n#div#0;n#fieldset#1;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#label#0;n#div#1;n#div#1;n#div#0;n#fieldset#1;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#label#0;n#div#0;n#div#2;n#div#0;n#fieldset#1;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#label#0;n#div#1;n#div#2;n#div#0;n#fieldset#1;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#label#0;n#div#0;n#div#3;n#div#0;n#fieldset#1;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#label#0;n#div#1;n#div#3;n#div#0;n#fieldset#1;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#label#0;n#div#0;n#div#4;n#div#0;n#fieldset#1;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#label#0;n#div#1;n#div#4;n#div#0;n#fieldset#1;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#label#0;n#div#0;n#div#5;n#div#0;n#fieldset#1;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#label#0;n#div#1;n#div#5;n#div#0;n#fieldset#1;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#fieldset#2;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#1;n#!!top" />
-                <element signature="n#style#0;n#fieldset#0;n#div#0;n#fieldset#2;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#label#0;n#div#0;n#div#0;n#div#0;n#fieldset#0;n#div#0;n#fieldset#2;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#label#0;n#div#1;n#div#0;n#div#0;n#fieldset#0;n#div#0;n#fieldset#2;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#label#0;n#div#2;n#div#0;n#div#0;n#fieldset#0;n#div#0;n#fieldset#2;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#label#0;n#div#0;n#div#1;n#div#0;n#fieldset#0;n#div#0;n#fieldset#2;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#label#0;n#div#1;n#div#1;n#div#0;n#fieldset#0;n#div#0;n#fieldset#2;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#label#0;n#div#2;n#div#1;n#div#0;n#fieldset#0;n#div#0;n#fieldset#2;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#fieldset#1;n#div#0;n#fieldset#2;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#label#0;n#div#0;n#div#0;n#div#0;n#fieldset#1;n#div#0;n#fieldset#2;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#label#0;n#div#1;n#div#0;n#div#0;n#fieldset#1;n#div#0;n#fieldset#2;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#label#0;n#div#2;n#div#0;n#div#0;n#fieldset#1;n#div#0;n#fieldset#2;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#label#0;n#div#0;n#div#1;n#div#0;n#fieldset#1;n#div#0;n#fieldset#2;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#label#0;n#div#1;n#div#1;n#div#0;n#fieldset#1;n#div#0;n#fieldset#2;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#label#0;n#div#2;n#div#1;n#div#0;n#fieldset#1;n#div#0;n#fieldset#2;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#fieldset#2;n#div#0;n#fieldset#2;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#label#0;n#div#0;n#div#0;n#div#0;n#fieldset#2;n#div#0;n#fieldset#2;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#label#0;n#div#1;n#div#0;n#div#0;n#fieldset#2;n#div#0;n#fieldset#2;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#label#0;n#div#2;n#div#0;n#div#0;n#fieldset#2;n#div#0;n#fieldset#2;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#label#0;n#div#0;n#div#1;n#div#0;n#fieldset#2;n#div#0;n#fieldset#2;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="302">
+              <caret line="330" column="10" selection-start-line="330" selection-start-column="10" selection-end-line="330" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -151,10 +64,8 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>&lt;i class=&quot;layui-icon&quot;</find>
       <find>batchInsert</find>
       <find>lay-verType=&quot;tips&quot;</find>
-      <find>findByGroupId</find>
       <find>em_data_template</find>
       <find>switch</find>
       <find>usedFlagSwitchTpl_</find>
@@ -181,6 +92,8 @@
       <find>customParamsDataList_</find>
       <find>lay-verify=&quot;required|number&quot;</find>
       <find>addForm</find>
+      <find>findByGroupId</find>
+      <find>experimentForm</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -200,7 +113,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/webapp/src/main/java/com/king/app/webapp/controller/em/AttrTypeMgrController.java" />
         <option value="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/em/baseParams/update.jsp" />
         <option value="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/em/indexMgr/updateCategory.jsp" />
         <option value="$PROJECT_DIR$/electric-machine/src/main/resources/mapper/em/EmIndexCategoryMapper.xml" />
@@ -219,12 +131,10 @@
         <option value="$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/entity/EmIndexDetail.java" />
         <option value="$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/service/IEmIndexGroupService.java" />
         <option value="$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/service/impl/EmIndexGroupServiceImpl.java" />
-        <option value="$PROJECT_DIR$/electric-machine/src/main/resources/mapper/em/EmIndexGroupMapper.xml" />
         <option value="$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/service/IEmIndexDetailService.java" />
         <option value="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/em/myIndex/add.jsp" />
         <option value="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/em/myIndex/update.jsp" />
         <option value="$PROJECT_DIR$/webapp/src/main/java/com/king/app/webapp/controller/em/EmMyIndexController.java" />
-        <option value="$PROJECT_DIR$/electric-machine/src/main/resources/mapper/em/EmIndexDetailMapper.xml" />
         <option value="$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/service/impl/EmIndexDetailServiceImpl.java" />
         <option value="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/em/myIndex/main.jsp" />
         <option value="$PROJECT_DIR$/webapp/src/main/java/com/king/app/webapp/controller/em/ProductManagerController.java" />
@@ -247,9 +157,12 @@
         <option value="$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/dao/EmBaseParamsMapper.java" />
         <option value="$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/service/IEmBaseParamsService.java" />
         <option value="$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/service/impl/EmBaseParamsServiceImpl.java" />
-        <option value="$PROJECT_DIR$/webapp/src/main/java/com/king/app/webapp/controller/em/EmAnalysisController.java" />
         <option value="$PROJECT_DIR$/webapp/src/main/webapp/static/js/frame.js" />
         <option value="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/em/analysis/customParams.jsp" />
+        <option value="$PROJECT_DIR$/electric-machine/src/main/resources/mapper/em/EmIndexGroupMapper.xml" />
+        <option value="$PROJECT_DIR$/webapp/src/main/java/com/king/app/webapp/controller/em/EmAnalysisController.java" />
+        <option value="$PROJECT_DIR$/electric-machine/src/main/resources/mapper/em/EmIndexDetailMapper.xml" />
+        <option value="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/em/analysis/customIndex.jsp" />
         <option value="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/em/analysis/main.jsp" />
       </list>
     </option>
@@ -660,7 +573,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1606291743162" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1606302928111" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -883,7 +796,7 @@
       <workItem from="1606129655298" duration="2602000" />
       <workItem from="1606177931031" duration="18893000" />
       <workItem from="1606221046526" duration="8126000" />
-      <workItem from="1606263822961" duration="19410000" />
+      <workItem from="1606263822961" duration="27417000" />
     </task>
     <task id="LOCAL-00001" summary="excel导出">
       <created>1586849513817</created>
@@ -955,11 +868,18 @@
       <option name="project" value="LOCAL" />
       <updated>1606198992468</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="电机项目20201125-&gt;性能评估50%">
+      <created>1606291789829</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1606291789829</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="735656000" />
+    <option name="totallyTimeSpent" value="743663000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1024,7 +944,8 @@
     <MESSAGE value="echarts封装" />
     <MESSAGE value="电机项目20201123" />
     <MESSAGE value="电机项目20201124-&gt;我的指标" />
-    <option name="LAST_COMMIT_MESSAGE" value="电机项目20201124-&gt;我的指标" />
+    <MESSAGE value="电机项目20201125-&gt;性能评估50%" />
+    <option name="LAST_COMMIT_MESSAGE" value="电机项目20201125-&gt;性能评估50%" />
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
@@ -1076,26 +997,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/webapp/src/main/java/com/king/app/webapp/controller/em/EmIndexMgrController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-489">
-          <caret line="61" column="5" lean-forward="true" selection-start-line="61" selection-start-column="5" selection-end-line="61" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/service/IEmIndexDetailService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="461">
-          <caret line="31" column="53" selection-start-line="31" selection-start-column="53" selection-end-line="31" selection-end-column="53" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/em/myIndex/update.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="637">
@@ -1118,13 +1019,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/electric-machine/src/main/resources/mapper/em/EmIndexGroupMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="129">
-          <caret line="20" column="48" selection-start-line="20" selection-start-column="48" selection-end-line="20" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/service/impl/EmIndexGroupServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="262">
@@ -1133,42 +1027,6 @@
             <element signature="imports" expanded="true" />
             <element signature="e#1674#1675#0" expanded="true" />
             <element signature="e#1720#1721#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/electric-machine/src/main/resources/mapper/em/EmIndexDetailMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="56">
-          <caret line="46" column="57" selection-start-line="46" selection-start-column="57" selection-end-line="46" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/service/impl/EmIndexDetailServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
-          <caret line="73" column="46" selection-start-line="73" selection-start-column="46" selection-end-line="73" selection-end-column="46" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1628#1629#0" expanded="true" />
-            <element signature="e#1675#1676#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webapp/src/main/java/com/king/app/webapp/controller/em/EmMyIndexController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="86" column="33" lean-forward="true" selection-start-line="86" selection-start-column="33" selection-end-line="86" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/em/myIndex/add.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="91" column="22" lean-forward="true" selection-start-line="91" selection-start-column="8" selection-end-line="91" selection-end-column="22" />
-          <folding>
-            <element signature="n#style#0;n#a#0;n#div#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1437,18 +1295,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/webapp/src/main/java/com/king/app/webapp/controller/em/EmAnalysisController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="116" column="34" lean-forward="true" selection-start-line="116" selection-start-column="34" selection-end-line="116" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#6860#6861#0" expanded="true" />
-            <element signature="e#6901#6902#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/sys/user/main.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
@@ -1467,13 +1313,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="302">
           <caret line="166" column="55" selection-start-line="166" selection-start-column="55" selection-end-line="166" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/em/myIndex/main.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="48" column="68" selection-start-line="48" selection-start-column="59" selection-end-line="48" selection-end-column="68" />
         </state>
       </provider>
     </entry>
@@ -1502,62 +1341,90 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/em/myIndex/add.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="60" column="67" selection-start-line="60" selection-start-column="67" selection-end-line="60" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/em/myIndex/main.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="258">
+          <caret line="63" column="62" selection-start-line="63" selection-start-column="50" selection-end-line="63" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/service/IEmIndexGroupService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-28">
+          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/em/analysis/customParams.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="92" column="41" lean-forward="true" selection-start-line="92" selection-start-column="41" selection-end-line="92" selection-end-column="41" />
+        <state relative-caret-position="165">
+          <caret line="85" column="25" lean-forward="true" selection-start-line="85" selection-start-column="25" selection-end-line="85" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapp/src/main/java/com/king/app/webapp/controller/em/EmMyIndexController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2194">
+          <caret line="56" column="21" lean-forward="true" selection-start-line="56" selection-start-column="21" selection-end-line="56" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/electric-machine/src/main/resources/mapper/em/EmIndexDetailMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="302">
+          <caret line="55" column="30" lean-forward="true" selection-start-line="55" selection-start-column="30" selection-end-line="55" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/service/impl/EmIndexDetailServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="188">
+          <caret line="69" column="51" selection-start-line="69" selection-start-column="38" selection-end-line="69" selection-end-column="51" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1628#1629#0" expanded="true" />
+            <element signature="e#1675#1676#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapp/src/main/java/com/king/app/webapp/controller/em/EmAnalysisController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="237" column="41" lean-forward="true" selection-start-line="237" selection-start-column="41" selection-end-line="237" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#6860#6861#0" expanded="true" />
+            <element signature="e#6901#6902#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/electric-machine/src/main/resources/mapper/em/EmIndexGroupMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="148">
+          <caret line="15" column="37" selection-start-line="15" selection-start-column="37" selection-end-line="15" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/em/analysis/customIndex.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="67">
+          <caret line="73" column="32" lean-forward="true" selection-start-line="73" selection-start-column="32" selection-end-line="73" selection-end-column="32" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/em/analysis/main.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="333">
-          <caret line="410" column="37" selection-start-line="410" selection-start-column="37" selection-end-line="410" selection-end-column="37" />
-          <folding>
-            <element signature="n#blockquote#0;n#div#0;n#div#0;n#div#1;n#!!top" />
-            <element signature="n#style#0;n#p#0;n#blockquote#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#form#0;n#div#0;n#div#0;n#div#1;n#!!top" />
-            <element signature="n#fieldset#0;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#1;n#!!top" />
-            <element signature="n#style#0;n#label#0;n#div#0;n#div#0;n#div#0;n#fieldset#0;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#label#0;n#div#0;n#div#1;n#div#0;n#fieldset#0;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#label#0;n#div#1;n#div#1;n#div#0;n#fieldset#0;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#label#0;n#div#0;n#div#2;n#div#0;n#fieldset#0;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#label#0;n#div#1;n#div#2;n#div#0;n#fieldset#0;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#label#0;n#div#0;n#div#3;n#div#0;n#fieldset#0;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#label#0;n#div#1;n#div#3;n#div#0;n#fieldset#0;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#div#0;n#fieldset#0;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#fieldset#1;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#1;n#!!top" />
-            <element signature="n#style#0;n#label#0;n#div#0;n#div#1;n#div#0;n#fieldset#1;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#label#0;n#div#1;n#div#1;n#div#0;n#fieldset#1;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#label#0;n#div#0;n#div#2;n#div#0;n#fieldset#1;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#label#0;n#div#1;n#div#2;n#div#0;n#fieldset#1;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#label#0;n#div#0;n#div#3;n#div#0;n#fieldset#1;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#label#0;n#div#1;n#div#3;n#div#0;n#fieldset#1;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#label#0;n#div#0;n#div#4;n#div#0;n#fieldset#1;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#label#0;n#div#1;n#div#4;n#div#0;n#fieldset#1;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#label#0;n#div#0;n#div#5;n#div#0;n#fieldset#1;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#label#0;n#div#1;n#div#5;n#div#0;n#fieldset#1;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#fieldset#2;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#1;n#!!top" />
-            <element signature="n#style#0;n#fieldset#0;n#div#0;n#fieldset#2;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#label#0;n#div#0;n#div#0;n#div#0;n#fieldset#0;n#div#0;n#fieldset#2;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#label#0;n#div#1;n#div#0;n#div#0;n#fieldset#0;n#div#0;n#fieldset#2;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#label#0;n#div#2;n#div#0;n#div#0;n#fieldset#0;n#div#0;n#fieldset#2;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#label#0;n#div#0;n#div#1;n#div#0;n#fieldset#0;n#div#0;n#fieldset#2;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#label#0;n#div#1;n#div#1;n#div#0;n#fieldset#0;n#div#0;n#fieldset#2;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#label#0;n#div#2;n#div#1;n#div#0;n#fieldset#0;n#div#0;n#fieldset#2;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#fieldset#1;n#div#0;n#fieldset#2;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#label#0;n#div#0;n#div#0;n#div#0;n#fieldset#1;n#div#0;n#fieldset#2;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#label#0;n#div#1;n#div#0;n#div#0;n#fieldset#1;n#div#0;n#fieldset#2;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#label#0;n#div#2;n#div#0;n#div#0;n#fieldset#1;n#div#0;n#fieldset#2;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#label#0;n#div#0;n#div#1;n#div#0;n#fieldset#1;n#div#0;n#fieldset#2;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#label#0;n#div#1;n#div#1;n#div#0;n#fieldset#1;n#div#0;n#fieldset#2;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#label#0;n#div#2;n#div#1;n#div#0;n#fieldset#1;n#div#0;n#fieldset#2;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#fieldset#2;n#div#0;n#fieldset#2;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#label#0;n#div#0;n#div#0;n#div#0;n#fieldset#2;n#div#0;n#fieldset#2;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#label#0;n#div#1;n#div#0;n#div#0;n#fieldset#2;n#div#0;n#fieldset#2;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#label#0;n#div#2;n#div#0;n#div#0;n#fieldset#2;n#div#0;n#fieldset#2;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#label#0;n#div#0;n#div#1;n#div#0;n#fieldset#2;n#div#0;n#fieldset#2;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="302">
+          <caret line="330" column="10" selection-start-line="330" selection-start-column="10" selection-end-line="330" selection-end-column="10" />
         </state>
       </provider>
     </entry>

@@ -15,6 +15,11 @@
     select
     <include refid="Base_Column_List" />
     from em_index_group
+    <where>
+      <if test="userId != null">
+        and creator_id = #{userId,jdbcType=BIGINT}
+      </if>
+    </where>
     order by id asc
   </select>
 

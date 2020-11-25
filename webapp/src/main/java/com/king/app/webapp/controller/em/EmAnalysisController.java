@@ -6,8 +6,7 @@ import com.github.pagehelper.PageInfo;
 import com.king.em.dto.ExperimentType;
 import com.king.em.entity.*;
 import com.king.em.factory.ExperimentDataServiceFactory;
-import com.king.em.service.IEmBaseParamsService;
-import com.king.em.service.IEmProductService;
+import com.king.em.service.*;
 import com.king.framework.base.BaseController;
 import com.king.framework.model.Criteria;
 import com.king.system.utils.AuthUtils;
@@ -38,6 +37,14 @@ public class EmAnalysisController extends BaseController {
     private IEmProductService emProductService;
     @Autowired
     private IEmBaseParamsService emBaseParamsService;
+    @Autowired
+    private IEmIndexCategoryService emIndexCategoryService;
+    @Autowired
+    private IEmIndexTemplateService emIndexTemplateService;
+    @Autowired
+    private IEmIndexGroupService emIndexGroupService;
+    @Autowired
+    private IEmIndexDetailService emIndexDetailService;
 
     @RequestMapping("toMain")
     public ModelAndView toMain(HttpServletRequest request){
@@ -52,6 +59,11 @@ public class EmAnalysisController extends BaseController {
             Map<String,Object> experimentDataObj = this.getExperimentData(productId,request);
             mv.addObject("experimentDataObj",experimentDataObj);
         }
+        // 指标相关
+        List<EmIndexCategory> categories = emIndexCategoryService.findAll();
+        List<EmIndexTemplate> templates = emIndexTemplateService.findAll();
+        mv.addObject("categories",categoryToAry(categories));
+        mv.addObject("templates",templateToAry(templates));
         return mv;
     }
 
@@ -143,6 +155,33 @@ public class EmAnalysisController extends BaseController {
         return ary;
     }
 
+    private JSONArray categoryToAry(List<EmIndexCategory> categories){
+        JSONArray ary = new JSONArray();
+        for(EmIndexCategory category : categories){
+            JSONObject obj = new JSONObject();
+            obj.put("id",category.getId());
+            obj.put("name",category.getName());
+            ary.add(obj);
+        }
+        return ary;
+    }
+
+    private JSONArray templateToAry(List<EmIndexTemplate> templates){
+        JSONArray ary = new JSONArray();
+        for(EmIndexTemplate template : templates){
+            JSONObject obj = new JSONObject();
+            obj.put("id",template.getId());
+            obj.put("bestVal",template.getBestVal());
+            obj.put("maxVal",template.getMaxVal());
+            obj.put("minVal",template.getMinVal());
+            obj.put("weight",template.getWeight());
+            obj.put("unit",template.getUnit());
+            obj.put("categoryId",template.getCategoryId());
+            ary.add(obj);
+        }
+        return ary;
+    }
+
     /**
      * 下拉框选择时重新加载数据
      * @param request
@@ -175,6 +214,28 @@ public class EmAnalysisController extends BaseController {
         criteria.put("isDefault",0);
         PageInfo<EmBaseParams> pageInfo = emBaseParamsService.find(page,criteria,isDownloadReq());
         return getGridData(pageInfo);
+    }
+
+    @RequestMapping("toCustomIndex")
+    public ModelAndView toCustomIndex(){
+        ModelAndView mv = new ModelAndView("em/analysis/customIndex");
+        return mv;
+    }
+
+    @ResponseBody
+    @RequestMapping("findIndexGroup")
+    public Object findIndexGroup(HttpServletRequest request){
+        PageInfo<EmIndexGroup> page = super.getPage(request);
+        Criteria criteria = new Criteria();
+        criteria.put("userId", AuthUtils.getUserInfo().getId());//带入条件，只查询属于自己创建的指标
+        PageInfo<EmIndexGroup> pageInfo = emIndexGroupService.find(page,criteria,isDownloadReq());
+        return getGridData(pageInfo);
+    }
+
+    @ResponseBody
+    @RequestMapping("findCustomIndex")
+    public Object findCustomIndex(HttpServletRequest request,Long groupId){
+        return emIndexDetailService.findByGroupId(groupId);
     }
 
 }

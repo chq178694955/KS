@@ -237,137 +237,46 @@
                             <div class="layui-field-box">
                                 <div class="layui-form-item">
                                     <div class="layui-input-block">
-                                        <input type="radio" name="radioIndex" value="1" title="系统指标" checked/>
-                                        <input type="radio" name="radioIndex" value="0" title="用户自定义"/>
+                                        <input type="radio" name="radioIndex" lay-filter="radioIndex" value="1" title="系统指标" checked/>
+                                        <input type="radio" name="radioIndex" lay-filter="radioIndex" value="0" title="用户自定义"/>
                                     </div>
                                 </div>
 
-                                <fieldset style="border-color: #01AAED;border-width: 1px;">
-                                    <legend>动态控制性能</legend>
-                                    <div class="layui-field-box">
-                                        <div class="layui-form-item">
-                                            <div class="layui-inline">
-                                                <label class="layui-form-label" style="width: 180px;">调整时间（ms）</label>
-                                                <div class="layui-input-inline">
-                                                    <input type="text" name="radioParams" lay-verify="required|number" class="layui-input"/>
-                                                </div>
-                                            </div>
-                                            <div class="layui-inline">
-                                                <label class="layui-form-label" style="width: 180px;">峰值时间（ms）</label>
-                                                <div class="layui-input-inline">
-                                                    <input type="text" name="radioParams" lay-verify="required|number" class="layui-input"/>
-                                                </div>
-                                            </div>
-                                            <div class="layui-inline">
-                                                <label class="layui-form-label" style="width: 180px;">超调量（%）</label>
-                                                <div class="layui-input-inline">
-                                                    <input type="text" name="radioParams" lay-verify="required|number" class="layui-input"/>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="layui-form-item">
-                                            <div class="layui-inline">
-                                                <label class="layui-form-label" style="width: 180px;">转速调整率（%）</label>
-                                                <div class="layui-input-inline">
-                                                    <input type="text" name="radioParams" lay-verify="required|number" class="layui-input"/>
-                                                </div>
-                                            </div>
-                                            <div class="layui-inline">
-                                                <label class="layui-form-label" style="width: 180px;">转速变化率（%）</label>
-                                                <div class="layui-input-inline">
-                                                    <input type="text" name="radioParams" lay-verify="required|number" class="layui-input"/>
-                                                </div>
-                                            </div>
-                                            <div class="layui-inline">
-                                                <label class="layui-form-label" style="width: 180px;">正反转速差率（%）</label>
-                                                <div class="layui-input-inline">
-                                                    <input type="text" name="radioParams" lay-verify="required|number" class="layui-input"/>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </fieldset>
+                                <c:forEach var="category" items="${categories}">
+                                    <fieldset style="border-color: #01AAED;border-width: 1px;">
+                                        <legend>${category.name}</legend>
+                                        <div class="layui-field-box">
+                                            <c:forEach var="template" items="${templates}">
+                                                <c:if test="${category.id == template.categoryId}">
+                                                    <blockquote class="layui-elem-quote">
+                                                        <i class="layui-icon" style="color: #FF5722;">&#xe642;</i>&nbsp;&nbsp;
+                                                        <span style="color: #FF5722;font-weight: bold;">${category.name}</span>
+                                                        <span style="color: #FF5722;font-weight: bold;">（${template.unit}）</span>
+                                                        <span style="color: #FF5722;font-weight: bold;">【最大值：${template.maxVal}</span>
+                                                        <span style="color: #FF5722;font-weight: bold;">、最小值：${template.maxVal}】</span>
+                                                    </blockquote>
+                                                    <div class="layui-form-item">
+                                                        <div class="layui-inline">
+                                                            <label class="layui-form-label" style="width: 170px;">指标值</label>
+                                                            <div class="layui-input-inline">
+                                                                <!-- 表单数据名称采用 "val_" 加 原始指标id的方式，后台按照此规则进行解析 -->
+                                                                <input type="text" name="val_${template.id}" id="val_${template.id}_${menuId}" lay-verify="required|number"  placeholder="请输入指标值" autocomplete="off" class="layui-input">
+                                                            </div>
+                                                        </div>
 
-                                <fieldset style="border-color: #01AAED;border-width: 1px;">
-                                    <legend>稳态控制性能</legend>
-                                    <div class="layui-field-box">
-                                        <div class="layui-form-item">
-                                            <div class="layui-inline">
-                                                <label class="layui-form-label" style="width: 180px;">调速范围（倍）</label>
-                                                <div class="layui-input-inline">
-                                                    <input type="text" name="radioParams" lay-verify="required|number" class="layui-input"/>
-                                                </div>
-                                            </div>
-                                            <div class="layui-inline">
-                                                <label class="layui-form-label" style="width: 180px;">过载能力（倍）</label>
-                                                <div class="layui-input-inline">
-                                                    <input type="text" name="radioParams" lay-verify="required|number" class="layui-input"/>
-                                                </div>
-                                            </div>
-                                            <div class="layui-inline">
-                                                <label class="layui-form-label" style="width: 180px;">转速平均误差（r/min）</label>
-                                                <div class="layui-input-inline">
-                                                    <input type="text" name="radioParams" lay-verify="required|number" class="layui-input"/>
-                                                </div>
-                                            </div>
+                                                        <div class="layui-inline">
+                                                            <label class="layui-form-label" style="width: 170px;">权重值</label>
+                                                            <div class="layui-input-inline">
+                                                                <!-- 表单数据名称采用 "weight_" 加 原始指标id的方式，后台按照此规则进行解析 -->
+                                                                <input type="text" name="weight_${template.id}" id="weight_${template.id}_${menuId}" lay-verify="required|number"  placeholder="请输入权重值" autocomplete="off" class="layui-input">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </c:if>
+                                            </c:forEach>
                                         </div>
-
-                                        <div class="layui-form-item">
-                                            <div class="layui-inline">
-                                                <label class="layui-form-label" style="width: 180px;">转矩平均误差（N·m）</label>
-                                                <div class="layui-input-inline">
-                                                    <input type="text" name="radioParams" lay-verify="required|number" class="layui-input"/>
-                                                </div>
-                                            </div>
-                                            <div class="layui-inline">
-                                                <label class="layui-form-label" style="width: 180px;">转速波动系数（%）</label>
-                                                <div class="layui-input-inline">
-                                                    <input type="text" name="radioParams" lay-verify="required|number" class="layui-input"/>
-                                                </div>
-                                            </div>
-                                            <div class="layui-inline">
-                                                <label class="layui-form-label" style="width: 180px;">转矩波动系数（%）</label>
-                                                <div class="layui-input-inline">
-                                                    <input type="text" name="radioParams" lay-verify="required|number" class="layui-input"/>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </fieldset>
-
-                                <fieldset style="border-color: #01AAED;border-width: 1px;">
-                                    <legend>伺服电机本体设计</legend>
-                                    <div class="layui-field-box">
-                                        <div class="layui-form-item">
-                                            <div class="layui-inline">
-                                                <label class="layui-form-label" style="width: 180px;">功率密度（kw/kg）</label>
-                                                <div class="layui-input-inline">
-                                                    <input type="text" name="radioParams" lay-verify="required|number" class="layui-input"/>
-                                                </div>
-                                            </div>
-                                            <div class="layui-inline">
-                                                <label class="layui-form-label" style="width: 180px;">电机体积（m<sup>3</sup>）</label>
-                                                <div class="layui-input-inline">
-                                                    <input type="text" name="radioParams" lay-verify="required|number" class="layui-input"/>
-                                                </div>
-                                            </div>
-                                            <div class="layui-inline">
-                                                <label class="layui-form-label" style="width: 180px;">电机质量（kg）</label>
-                                                <div class="layui-input-inline">
-                                                    <input type="text" name="radioParams" lay-verify="required|number" class="layui-input"/>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="layui-form-item">
-                                            <div class="layui-inline">
-                                                <label class="layui-form-label" style="width: 180px;">电机轴向尺寸（m）</label>
-                                                <div class="layui-input-inline">
-                                                    <input type="text" name="radioParams" lay-verify="required|number" class="layui-input"/>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </fieldset>
+                                    </fieldset>
+                                </c:forEach>
                             </div>
                         </fieldset>
                         <!-- 3.系统指标结束 -->
@@ -387,30 +296,37 @@
         </div>
     </div>
 
-    <div class="layui-row layui-col-space15">
-        <div class="layui-col-md12">
-            <div class="layui-card">
-                <div class="layui-card-body">
-                    <!-- 5.分析结果开始 -->
-                    <fieldset class="layui-elem-field">
-                        <legend>结果展示</legend>
-                        <div class="layui-field-box">
-                            <!-- tab控件别放入form当中，会导致表单元素和列表元素部分失效 -->
-                            <div class="layui-tab layui-tab-brief">
-                                <ul class="layui-tab-title">
-                                    <li class="layui-this">评估结果</li>
-                                    <li>动态控制性能</li>
-                                    <li>稳态控制性能</li>
-                                    <li>伺服电机本体设计</li>
-                                    <li>综合性能差异显示</li>
-                                </ul>
-                                <div class="layui-tab-content"></div>
-                            </div>
+    <%--<div class="layui-row layui-col-space15">--%>
+        <%--<div class="layui-col-md12">--%>
+            <%----%>
+        <%--</div>--%>
+    <%--</div>--%>
+    <div class="layui-card">
+        <div class="layui-card-body">
+            <!-- 5.分析结果开始 -->
+            <fieldset class="layui-elem-field">
+                <legend>结果展示</legend>
+                <div class="layui-field-box">
+                    <!-- tab控件别放入form当中，会导致表单元素和列表元素部分失效 -->
+                    <div class="layui-tab layui-tab-brief" lay-filter="analysisResult">
+                        <ul class="layui-tab-title">
+                            <li class="layui-this">评估结果</li>
+                            <li>动态控制性能</li>
+                            <li>稳态控制性能</li>
+                            <li>伺服电机本体设计</li>
+                            <li>综合性能差异显示</li>
+                        </ul>
+                        <div class="layui-tab-content">
+                            <div class="layui-tab-item layui-show">内容1</div>
+                            <div class="layui-tab-item">内容2</div>
+                            <div class="layui-tab-item">内容3</div>
+                            <div class="layui-tab-item">内容4</div>
+                            <div class="layui-tab-item">内容5</div>
                         </div>
-                    </fieldset>
-                    <!-- 5.分析结果结束 -->
+                    </div>
                 </div>
-            </div>
+            </fieldset>
+            <!-- 5.分析结果结束 -->
         </div>
     </div>
 </div>
@@ -553,6 +469,27 @@
             }
         });
 
+        form.on('radio(radioIndex)',function(data){
+            console.log(data.value);// 0-用户自定义 1-系统预设
+            if(data.value == 1){
+                loadDefaultIndex();
+            }else{
+                Frame.loadPage('${menuId}','em/analysis/toCustomIndex?menuId=${menuId}',{},'用户自定义指标',600,450);
+            }
+        });
+
+        //指标
+        loadDefaultIndex();
+        function loadDefaultIndex(){
+            var templates = ${templates};
+            for(var i=0;i<templates.length;i++){
+                var template = templates[i];
+                $('#val_' + template.id + '_${menuId}').val(template.bestVal);
+                $('#weight_' + template.id + '_${menuId}').val(template.weight);
+            }
+        }
+
+
         //开始评估
         form.on('submit(experimentForm)',function(data){
             console.log(data.elem);
@@ -573,6 +510,11 @@
             })
             */
             return false;
+        });
+
+        //结果tab展示
+        element.on('tab(analysisResult)',function(data){
+            console.log(data);
         });
 
     });
