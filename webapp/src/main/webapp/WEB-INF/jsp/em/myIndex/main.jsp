@@ -50,15 +50,16 @@
                         url:'${ctx}/em/myIndex/find',
                         id:'dataList_${menuId}',
                         page:true,
+                        limit:16
                         }">
                         <thead>
                         <tr>
                             <th lay-data="{checkbox:true}"></th>
                             <th lay-data="{field:'id',width:75,align:'center',hide:true}">ID</th>
                             <th lay-data="{field:'groupName',width:160,align:'center'}">分组名称</th>
-                            <th lay-data="{field:'val',width:160,align:'center'}">我的指标</th>
-                            <th lay-data="{field:'minVal',width:160,align:'center'}">最小指标</th>
-                            <th lay-data="{field:'maxVal',width:160,align:'center'}">最大指标</th>
+                            <th lay-data="{field:'val',width:160,align:'center'}">我的最优指标</th>
+                            <%--<th lay-data="{field:'minVal',width:160,align:'center'}">最小指标</th>--%>
+                            <%--<th lay-data="{field:'maxVal',width:160,align:'center'}">最大指标</th>--%>
                             <th lay-data="{field:'weight',width:160,align:'center'}">指标权重</th>
                             <th lay-data="{field:'unit',width:120,align:'center'}">单位</th>
                             <th lay-data="{field:'categoryName',width:160,align:'center'}">所属分类</th>

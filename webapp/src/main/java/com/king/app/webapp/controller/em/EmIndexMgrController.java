@@ -3,8 +3,10 @@ package com.king.app.webapp.controller.em;
 import com.github.pagehelper.PageInfo;
 import com.king.app.webapp.dto.ResultResp;
 import com.king.em.entity.EmIndexCategory;
+import com.king.em.entity.EmIndexFormula;
 import com.king.em.entity.EmIndexTemplate;
 import com.king.em.service.IEmIndexCategoryService;
+import com.king.em.service.IEmIndexFormulaService;
 import com.king.em.service.IEmIndexTemplateService;
 import com.king.framework.base.BaseController;
 import com.king.framework.model.Criteria;
@@ -31,6 +33,8 @@ public class EmIndexMgrController extends BaseController {
     private IEmIndexCategoryService emIndexCategoryService;
     @Autowired
     private IEmIndexTemplateService emIndexTemplateService;
+    @Autowired
+    private IEmIndexFormulaService emIndexFormulaService;
 
     @RequestMapping("toMain")
     public ModelAndView toMain(){
@@ -119,6 +123,8 @@ public class EmIndexMgrController extends BaseController {
     @RequestMapping("toAddTemplate")
     public ModelAndView toAddTemplate(){
         ModelAndView mv = new ModelAndView("em/indexMgr/addTemplate");
+        List<EmIndexFormula> furmulas = emIndexFormulaService.findAll();
+        mv.addObject("furmulas",furmulas);
         return mv;
     }
 
@@ -142,6 +148,8 @@ public class EmIndexMgrController extends BaseController {
         ModelAndView mv = new ModelAndView("em/indexMgr/updateTemplate");
         EmIndexTemplate template = emIndexTemplateService.findById(id);
         mv.addObject("template",template);
+        List<EmIndexFormula> furmulas = emIndexFormulaService.findAll();
+        mv.addObject("furmulas",furmulas);
         return mv;
     }
 

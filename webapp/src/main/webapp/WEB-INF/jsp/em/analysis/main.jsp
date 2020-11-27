@@ -41,7 +41,7 @@
                 </p>
             </blockquote>
 
-            <form class="layui-form layui-form-pane" lay-filter="experimentForm" action="${ctx}/em/myIndex/add">
+            <form class="layui-form layui-form-pane" lay-filter="experimentForm" action="${ctx}/em/analysis/startEstimate">
                 <div class="layui-card">
                     <div class="layui-card-body">
                         <!-- 1.实验数据开始 -->
@@ -249,11 +249,10 @@
                                             <c:forEach var="template" items="${templates}">
                                                 <c:if test="${category.id == template.categoryId}">
                                                     <blockquote class="layui-elem-quote">
-                                                        <i class="layui-icon" style="color: #FF5722;">&#xe642;</i>&nbsp;&nbsp;
-                                                        <span style="color: #FF5722;font-weight: bold;">${category.name}</span>
+                                                        <span style="color: #FF5722;font-weight: bold;">${template.name}</span>
                                                         <span style="color: #FF5722;font-weight: bold;">（${template.unit}）</span>
-                                                        <span style="color: #FF5722;font-weight: bold;">【最大值：${template.maxVal}</span>
-                                                        <span style="color: #FF5722;font-weight: bold;">、最小值：${template.maxVal}】</span>
+                                                        <%--<span style="color: #FF5722;font-weight: bold;">【最大值：${template.maxVal}</span>--%>
+                                                        <%--<span style="color: #FF5722;font-weight: bold;">、最小值：${template.maxVal}】</span>--%>
                                                     </blockquote>
                                                     <div class="layui-form-item">
                                                         <div class="layui-inline">
@@ -296,39 +295,79 @@
         </div>
     </div>
 
-    <%--<div class="layui-row layui-col-space15">--%>
-        <%--<div class="layui-col-md12">--%>
-            <%----%>
-        <%--</div>--%>
-    <%--</div>--%>
-    <div class="layui-card">
-        <div class="layui-card-body">
-            <!-- 5.分析结果开始 -->
-            <fieldset class="layui-elem-field">
-                <legend>结果展示</legend>
-                <div class="layui-field-box">
-                    <!-- tab控件别放入form当中，会导致表单元素和列表元素部分失效 -->
-                    <div class="layui-tab layui-tab-brief" lay-filter="analysisResult">
-                        <ul class="layui-tab-title">
-                            <li class="layui-this">评估结果</li>
-                            <li>动态控制性能</li>
-                            <li>稳态控制性能</li>
-                            <li>伺服电机本体设计</li>
-                            <li>综合性能差异显示</li>
-                        </ul>
-                        <div class="layui-tab-content">
-                            <div class="layui-tab-item layui-show">内容1</div>
-                            <div class="layui-tab-item">内容2</div>
-                            <div class="layui-tab-item">内容3</div>
-                            <div class="layui-tab-item">内容4</div>
-                            <div class="layui-tab-item">内容5</div>
-                        </div>
-                    </div>
+    <div class="layui-row layui-col-space15">
+        <div class="layui-col-md12">
+            <div class="layui-card">
+                <div class="layui-card-header">
+                    <span>分析结果</span>
+                    <a class="layui-btn layui-btn-sm layui-btn-primary" style="line-height:2.5em;margin-top:4px;float:right;" onclick="downloadExperiment()" title="下载评估结果">
+                        <i class="iconfont layui-icon-excel" style="color: #FF5722;"></i>
+                    </a>
                 </div>
-            </fieldset>
-            <!-- 5.分析结果结束 -->
+                <div class="layui-card-body">
+                    <form class="layui-form layui-form-pane" lay-filter="experimentResultForm">
+
+                        <fieldset class="layui-elem-field" style="border-color: #5FB878;border-width: 1px;">
+                            <legend>评估结果</legend>
+                            <div class="layui-field-box">
+                                <div class="layui-form-item">
+                                    <div class="layui-inline">
+                                        <label class="layui-form-label" style="width: 180px;">综合性能评级</label>
+                                        <div class="layui-input-inline">
+                                            <input type="text" name="evaluation" id="evaluation_${menuId}" class="layui-input" disabled/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="layui-form-item">
+                                    <c:forEach var="category" items="${categories}">
+                                        <label class="layui-form-label" style="width: 180px;">${category.name}</label>
+                                        <div class="layui-input-inline">
+                                            <input type="text" name="evaluation_${category.id}" id="evaluation_${category.id}_${menuId}" class="layui-input" disabled/>
+                                        </div>
+                                    </c:forEach>
+                                </div>
+                            </div>
+                        </fieldset>
+
+                        <!-- 显示没有做归一化的指标结果 -->
+                        <c:forEach var="category" items="${categories}">
+                            <fieldset class="layui-elem-field" style="border-color: #5FB878;border-width: 1px;">
+                                <legend>${category.name}</legend>
+                                <div class="layui-field-box">
+                                    <div class="layui-form-item">
+                                        <div class="layui-row">
+                                            <c:forEach var="template" items="${templates}">
+                                                <c:if test="${category.id == template.categoryId}">
+                                                    <div class="layui-col-md4">
+                                                        <label class="layui-form-label" style="width: 50%;">${template.name}（${template.unit}）</label>
+                                                        <div class="layui-input-inline">
+                                                            <input type="text" name="calc_${template.id}" id="calc_${template.id}_${menuId}" class="layui-input" disabled/>
+                                                        </div>
+                                                    </div>
+                                                </c:if>
+                                            </c:forEach>
+                                        </div>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </c:forEach>
+
+                        <!-- 综合性能差异显示（折线图） -->
+                        <fieldset class="layui-elem-field" style="border-color: #5FB878;border-width: 1px;">
+                            <legend>综合性能差异显示</legend>
+                            <div class="layui-field-box">
+                                <div id="experimentResultChart" style="height: 300px;">
+
+                                </div>
+                            </div>
+                        </fieldset>
+
+                    </form>
+                </div>
+            </div>
         </div>
     </div>
+
 </div>
 
 <script>
@@ -352,7 +391,8 @@
                         {field:'speed',width:120,title:'转速（r/min）',align:'center'}
                     ]
                 ],
-                data: stepList
+                data: stepList,
+                limit:Number.MAX_VALUE
             });
 
             var sinList = ${experimentDataObj.sinList};
@@ -365,7 +405,8 @@
                         {field:'speed10',width:120,title:'转速（r/min）',align:'center'}
                     ]
                 ],
-                data: sinList
+                data: sinList,
+                limit:Number.MAX_VALUE
             });
 
             var emptyloadList = ${experimentDataObj.emptyloadList};
@@ -379,7 +420,8 @@
                         {field:'speedReverse',width:150,title:'反向转速（r/min）',align:'center'}
                     ]
                 ],
-                data: emptyloadList
+                data: emptyloadList,
+                limit:Number.MAX_VALUE
             });
 
             var constantloadList = ${experimentDataObj.constantloadList};
@@ -393,7 +435,8 @@
                         {field:'torque100',width:120,title:'转矩（N·m）',align:'center'}
                     ]
                 ],
-                data: constantloadList
+                data: constantloadList,
+                limit:Number.MAX_VALUE
             });
         }
 
@@ -495,20 +538,81 @@
             console.log(data.elem);
             console.log(data.form);
             console.log(data.field);
-            /*
+
             $.ajax({
                 url: data.form.action,
                 data: data.field,
                 dataType: 'json',
+                beforeSend: function(){
+                    Frame.load();
+                },
                 success: function(result){
                     if(result.code == 0){
-                        $('#query_${menuId}').click();
-                        layer.close(Frame.Layer.layerIndex);
+                        //成功则显示分析结果
+                        if(result.data){
+                            if(result.data.categories){
+                                $('#evaluation_${menuId}').val(result.data.evaluation);
+                                for(var i=0;i<result.data.categories.length;i++){
+                                    var category = result.data.categories[i];
+                                    $('#evaluation_' + category.id + '_${menuId}').val(result.data['evaluation_' + category.id]);
+                                }
+                            }
+                            if(result.data.templates){
+                                var xData = [];
+                                var yData = [];
+                                for(var i=0;i<result.data.templates.length;i++){
+                                    var template = result.data.templates[i];
+                                    $('#calc_' + template.id + '_${menuId}').val(template.calcVal);
+                                    xData.push(template.name);
+                                    yData.push(template.normalVal);
+                                }
+                                //显示折线图
+                                var chartOption = {
+                                    title:{
+                                        text:'归一化后性能差异'
+                                    },
+                                    tooltip:{
+                                        trigger:'axis'
+                                    },
+                                    legend:{
+                                        data:['性能指标']
+                                    },
+                                    xAxis:[{
+                                        name:'性能指标',
+                                        type:'category',
+                                        boundaryGap:false,
+                                        axisLabel:{
+                                            interval:0,
+                                            rotate:40
+                                        },
+                                        data:xData
+                                    }],
+                                    yAxis:[{
+                                        name:'归一化结果',
+                                        type:'value',
+                                        max:1,
+                                        min:0
+                                    }],
+                                    series:[
+                                        {
+                                            name:'性能指标',
+                                            type:'line',
+                                            data:yData
+                                        }
+                                    ]
+                                };
+                                WebUtils.Chart.createChart('experimentResultChart',chartOption);
+                            }
+                        }
                     }
-                    Frame.alert(result.msg);
+                    if(result.msg && result.msg != undefined && result.msg != ''){
+                        Frame.alert(result.msg);
+                    }
+                },
+                complete: function(XMLHttpRequest, status){
+                    Frame.closeLayer()
                 }
             })
-            */
             return false;
         });
 
@@ -516,6 +620,10 @@
         element.on('tab(analysisResult)',function(data){
             console.log(data);
         });
+
+        function downloadExperiment(){
+            Frame.info('正在下载评估结果,请稍后...',1)
+        }
 
     });
 </script>

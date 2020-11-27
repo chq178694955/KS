@@ -7,6 +7,7 @@
 --%>
 <%@ page pageEncoding="UTF-8" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <div class="x-nav">
     <span class="layui-breadcrumb">
         <a href="javascript:;">伺服电机</a>
@@ -74,6 +75,21 @@
                                 <div class="layui-input-inline">
                                     <select id="categoryId_${menuId}" name="categoryId" lay-verify="">
 
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="layui-inline">
+                                <label class="layui-form-label" style="width: 170px;">归一化公式</label>
+                                <div class="layui-input-inline">
+                                    <select type="text" name="formulaId">
+                                        <c:forEach var="formula" items="${furmulas}">
+                                            <c:if test="${template.formulaId == formula.id}">
+                                                <option value="${formula.id}" selected>${formula.name}</option>
+                                            </c:if>
+                                            <c:if test="${template.formulaId != formula.id}">
+                                                <option value="${formula.id}">${formula.name}</option>
+                                            </c:if>
+                                        </c:forEach>
                                     </select>
                                 </div>
                             </div>

@@ -28,9 +28,9 @@
                                 <button id="query_${menuId}" type="button" class="layui-btn layui-btn-normal" title="<spring:message code="com.btn.query"/>">
                                     <i class="layui-icon layui-icon-search"></i>
                                 </button>
-                                <button id="add_${menuId}" type="button" class="layui-btn layui-btn-warm" title="<spring:message code="com.btn.add"/>">
-                                    <i class="layui-icon layui-icon-add-1"></i>
-                                </button>
+                                <%--<button id="add_${menuId}" type="button" class="layui-btn layui-btn-warm" title="<spring:message code="com.btn.add"/>">--%>
+                                    <%--<i class="layui-icon layui-icon-add-1"></i>--%>
+                                <%--</button>--%>
                                 <button id="excel_${menuId}" type="button" class="layui-btn" title="<spring:message code="com.btn.excel"/>">
                                     <i class="iconfont layui-icon-excel"></i>
                                 </button>
@@ -58,10 +58,10 @@
                             <i class="layui-icon layui-icon-edit"></i>
                             <cite><spring:message code="com.btn.edit"/></cite>
                         </a>
-                        <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del" title="<spring:message code="com.btn.del"/>">
-                            <i class="layui-icon layui-icon-delete"></i>
-                            <cite><spring:message code="com.btn.del"/></cite>
-                        </a>
+                        <%--<a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del" title="<spring:message code="com.btn.del"/>">--%>
+                            <%--<i class="layui-icon layui-icon-delete"></i>--%>
+                            <%--<cite><spring:message code="com.btn.del"/></cite>--%>
+                        <%--</a>--%>
                     </script>
                 </div>
             </div>
@@ -90,9 +90,9 @@
                                 <button id="queryTemplate_${menuId}" type="button" class="layui-btn layui-btn-normal" title="<spring:message code="com.btn.query"/>">
                                     <i class="layui-icon layui-icon-search"></i>
                                 </button>
-                                <button id="addTemplate_${menuId}" type="button" class="layui-btn layui-btn-warm" title="<spring:message code="com.btn.add"/>">
-                                    <i class="layui-icon layui-icon-add-1"></i>
-                                </button>
+                                <%--<button id="addTemplate_${menuId}" type="button" class="layui-btn layui-btn-warm" title="<spring:message code="com.btn.add"/>">--%>
+                                    <%--<i class="layui-icon layui-icon-add-1"></i>--%>
+                                <%--</button>--%>
                                 <button id="excelTemplate_${menuId}" type="button" class="layui-btn" title="<spring:message code="com.btn.excel"/>">
                                     <i class="iconfont layui-icon-excel"></i>
                                 </button>
@@ -105,6 +105,7 @@
                         url:'${ctx}/em/indexMgr/findTemplate',
                         id:'dataListTemplate_${menuId}',
                         page:true,
+                        limit:16
                         }">
                         <thead>
                         <tr>
@@ -112,8 +113,8 @@
                             <th lay-data="{field:'id',width:75,align:'center',hide:true}">ID</th>
                             <th lay-data="{field:'name',width:160,align:'center'}">指标名称</th>
                             <th lay-data="{field:'bestVal',width:160,align:'center'}">最优指标</th>
-                            <th lay-data="{field:'minVal',width:160,align:'center'}">最小指标</th>
-                            <th lay-data="{field:'maxVal',width:160,align:'center'}">最大指标</th>
+                            <%--<th lay-data="{field:'minVal',width:160,align:'center'}">最小指标</th>--%>
+                            <%--<th lay-data="{field:'maxVal',width:160,align:'center'}">最大指标</th>--%>
                             <th lay-data="{field:'weight',width:160,align:'center'}">指标权重</th>
                             <th lay-data="{field:'unit',width:120,align:'center'}">单位</th>
                             <th lay-data="{field:'categoryName',width:160,align:'center'}">所属分类</th>

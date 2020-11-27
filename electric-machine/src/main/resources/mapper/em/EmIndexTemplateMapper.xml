@@ -10,15 +10,16 @@
     <result column="weight" jdbcType="DECIMAL" property="weight" />
     <result column="unit" jdbcType="VARCHAR" property="unit" />
     <result column="category_id" jdbcType="INTEGER" property="categoryId" />
+    <result column="formula_id" jdbcType="INTEGER" property="formulaId" />
     <result column="category_name" jdbcType="VARCHAR" property="categoryName" />
   </resultMap>
 
   <sql id="Base_Column_List">
-    id, name, best_val, min_val, max_val, weight, unit, category_id
+    id, name, best_val, min_val, max_val, weight, unit, category_id, formula_id
   </sql>
   <select id="find" parameterType="java.util.Map" resultMap="BaseResultMap">
     select
-    a.id,a.name,a.best_val,a.min_val,a.max_val,a.weight,a.unit,a.category_id,b.name as category_name
+    a.id,a.name,a.best_val,a.min_val,a.max_val,a.weight,a.unit,a.category_id,a.formula_id,b.name as category_name
     from em_index_template a,em_index_category b
     <where>
       and a.category_id = b.id
@@ -52,10 +53,10 @@
     </selectKey>
     insert into em_index_template (name, best_val, min_val, 
       max_val, weight, unit, 
-      category_id)
+      category_id,formula_id)
     values (#{name,jdbcType=VARCHAR}, #{bestVal,jdbcType=DECIMAL}, #{minVal,jdbcType=DECIMAL}, 
       #{maxVal,jdbcType=DECIMAL}, #{weight,jdbcType=DECIMAL}, #{unit,jdbcType=VARCHAR}, 
-      #{categoryId,jdbcType=INTEGER})
+      #{categoryId,jdbcType=INTEGER},#{formulaId,jdbcType=INTEGER})
   </insert>
 
   <update id="update" parameterType="com.king.em.entity.EmIndexTemplate">
@@ -81,6 +82,9 @@
       </if>
       <if test="categoryId != null">
         category_id = #{categoryId,jdbcType=INTEGER},
+      </if>
+      <if test="formulaId != null">
+        formula_id = #{formulaId,jdbcType=INTEGER},
       </if>
     </set>
     where id = #{id,jdbcType=BIGINT}

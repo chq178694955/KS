@@ -148,9 +148,9 @@ public class EmHomeController extends BaseController {
                 // constant load
                 BigDecimal v10 = this.parseDecimal(this.getCellFormatValue(row.getCell(9)));
                 BigDecimal v11 = this.parseDecimal(this.getCellFormatValue(row.getCell(10)));
-                BigDecimal v12 = this.parseDecimal(this.getCellFormatValue(row.getCell(11)));
-                BigDecimal v13 = this.parseDecimal(this.getCellFormatValue(row.getCell(12)));
-                if(v10 != null && v11 != null && v12 != null && v13 != null){
+                BigDecimal v12 = this.parseDecimal(this.getCellFormatValue(row.getCell(11)));//转速设定值，只需要一条即可
+                BigDecimal v13 = this.parseDecimal(this.getCellFormatValue(row.getCell(12)));//负载转矩，只需要一条即可
+                if(v10 != null && v11 != null){
                     EmDataConstantload entity = new EmDataConstantload();
                     entity.setSpeed100(v10);
                     entity.setTorque100(v11);

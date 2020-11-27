@@ -22,6 +22,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.math.BigDecimal;
 import java.net.URLEncoder;
 import java.util.*;
 
@@ -81,6 +82,11 @@ public class BaseController {
     protected Double getDoubleParam(String paramName) {
         String paramValue = this.getParam(paramName);
         return StringUtils.isEmpty(paramValue) ? null : Double.parseDouble(paramValue);
+    }
+
+    protected BigDecimal getDecimalParam(String paramName) {
+        String paramValue = this.getParam(paramName);
+        return StringUtils.isEmpty(paramValue) ? null : new BigDecimal(paramValue);
     }
 
     protected Map<String, String> getParams(HttpServletRequest request) {

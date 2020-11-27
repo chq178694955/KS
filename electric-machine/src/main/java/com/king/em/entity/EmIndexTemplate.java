@@ -22,6 +22,13 @@ public class EmIndexTemplate implements Serializable {
 
     private String categoryName;
 
+    private Integer formulaId;
+
+    /*自定义属性*/
+    private BigDecimal calcVal;
+
+    private BigDecimal normalVal;
+
     private static final long serialVersionUID = 1L;
 
     public Long getId() {
@@ -94,5 +101,29 @@ public class EmIndexTemplate implements Serializable {
 
     public void setCategoryName(String categoryName) {
         this.categoryName = categoryName;
+    }
+
+    public Integer getFormulaId() {
+        return formulaId;
+    }
+
+    public void setFormulaId(Integer formulaId) {
+        this.formulaId = formulaId;
+    }
+
+    public BigDecimal getCalcVal() {
+        return calcVal;
+    }
+
+    public void setCalcVal(BigDecimal calcVal) {
+        this.calcVal = calcVal;
+    }
+
+    public BigDecimal getNormalVal() {
+        return normalVal;
+    }
+
+    public void setNormalVal(BigDecimal normalVal) {
+        this.normalVal = normalVal;
     }
 }

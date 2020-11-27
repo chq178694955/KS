@@ -45,14 +45,17 @@
                                     <c:forEach var="template" items="${templates}">
                                         <c:if test="${category.id == template.categoryId}">
                                             <blockquote class="layui-elem-quote">
-                                                <i class="layui-icon" style="color: #FF5722;">&#xe642;</i>&nbsp;&nbsp;<span style="color: #FF5722;font-weight: bold;">${template.name}</span>
+                                                <span style="color: #FF5722;font-weight: bold;">${template.name}</span>
+                                                <span style="color: #FF5722;font-weight: bold;">（${template.unit}）</span>
+                                                <%--<span style="color: #FF5722;font-weight: bold;">【最大值：${template.maxVal}</span>--%>
+                                                <%--<span style="color: #FF5722;font-weight: bold;">、最小值：${template.maxVal}】</span>--%>
                                             </blockquote>
                                             <div class="layui-form-item">
                                                 <div class="layui-inline">
                                                     <label class="layui-form-label" style="width: 170px;">自定义指标</label>
                                                     <div class="layui-input-inline">
                                                         <!-- 表单数据名称采用 "val_" 加 原始指标id的方式，后台按照此规则进行解析 -->
-                                                        <input type="text" name="val_${template.id}" lay-verify="required|number"  placeholder="请输入自定义指标值" autocomplete="off" class="layui-input">
+                                                        <input type="text" name="val_${template.id}" lay-verify="required|number"  placeholder="请输入自定义最优指标值" autocomplete="off" class="layui-input">
                                                     </div>
                                                 </div>
 

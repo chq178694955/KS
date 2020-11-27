@@ -46,7 +46,10 @@
                                     <c:forEach var="template" items="${templates}">
                                         <c:if test="${category.id == template.categoryId}">
                                             <blockquote class="layui-elem-quote">
-                                                <i class="layui-icon" style="color: #FF5722;">&#xe642;</i>&nbsp;&nbsp;<span style="color: #FF5722;font-weight: bold;">${template.name}</span>
+                                                <span style="color: #FF5722;font-weight: bold;">${template.name}</span>
+                                                <span style="color: #FF5722;font-weight: bold;">（${template.unit}）</span>
+                                                <%--<span style="color: #FF5722;font-weight: bold;">【最大值：${template.maxVal}</span>--%>
+                                                <%--<span style="color: #FF5722;font-weight: bold;">、最小值：${template.maxVal}】</span>--%>
                                             </blockquote>
                                             <!-- 用户自定义指标赋值 -->
                                             <c:forEach var="detail" items="${details}">
@@ -59,7 +62,7 @@
                                                             <label class="layui-form-label" style="width: 170px;">自定义指标</label>
                                                             <div class="layui-input-inline">
                                                                 <!-- 表单数据名称采用 "val_" 加 原始指标id的方式，后台按照此规则进行解析 -->
-                                                                <input type="text" name="val_${template.id}" value="${detail.val}" lay-verify="required|number"  placeholder="请输入自定义指标值" autocomplete="off" class="layui-input">
+                                                                <input type="text" name="val_${template.id}" value="${detail.val}" lay-verify="required|number"  placeholder="请输入自定义最优指标值" autocomplete="off" class="layui-input">
                                                             </div>
                                                         </div>
 
@@ -99,6 +102,138 @@
         element.render('breadcrumb');
 
         form.render();
+
+        //表单验证
+        form.verify({
+            val_1: function(value,item){
+                if(value < 0){
+                    return '调整时间不能小于0';
+                }
+                if(value > 100){
+                    return '调整时间不能大于100';
+                }
+            },
+            val_2: function(value,item){
+                if(value < 0){
+                    return '峰值时间不能小于0';
+                }
+                if(value > 70){
+                    return '调峰值时间不能大于70';
+                }
+            },
+            val_3: function(value,item){
+                if(value < 0){
+                    return '超调量不能小于0';
+                }
+                if(value > 30){
+                    return '超调量不能大于30';
+                }
+            },
+            val_4: function(value,item){
+                if(value < 0){
+                    return '转速调整率不能小于0';
+                }
+                if(value > 100){
+                    return '转速调整率不能大于100';
+                }
+            },
+            val_5: function(value,item){
+                if(value < 0){
+                    return '转速变化率不能小于0';
+                }
+                if(value > 100){
+                    return '转速变化率不能大于100';
+                }
+            },
+            val_6: function(value,item){
+                if(value < 0){
+                    return '正反转速差率不能小于0';
+                }
+                if(value > 100){
+                    return '正反转速差率不能大于100';
+                }
+            },
+            val_7: function(value,item){
+                if(value < 2){
+                    return '调速范围不能小于2';
+                }
+                if(value > 25){
+                    return '调速范围不能大于25';
+                }
+            },
+            val_8: function(value,item){
+                if(value < 2){
+                    return '过载能力不能小于2';
+                }
+                if(value > 3.5){
+                    return '过载能力不能大于3.5';
+                }
+            },
+            val_9: function(value,item){
+                if(value < 0){
+                    return '转速平均误差不能小于0';
+                }
+                if(value > 10){
+                    return '转速平均误差不能大于10';
+                }
+            },
+            val_10: function(value,item){
+                if(value < 0){
+                    return '转矩平均误差不能小于0';
+                }
+                if(value > 2){
+                    return '转矩平均误差不能大于2';
+                }
+            },
+            val_11: function(value,item){
+                if(value < 0){
+                    return '转速波动系数不能小于0';
+                }
+                if(value > 10){
+                    return '转速波动系数不能大于10';
+                }
+            },
+            val_12: function(value,item){
+                if(value < 0){
+                    return '转矩波动系数不能小于0';
+                }
+                if(value > 30){
+                    return '转矩波动系数不能大于30';
+                }
+            },
+            val_13: function(value,item){
+                if(value < 0.02){
+                    return '功率密度不能小于0.02';
+                }
+                if(value > 0.15){
+                    return '功率密度不能大于0.15';
+                }
+            },
+            val_14: function(value,item){
+                if(value < 0){
+                    return '电机体积不能小于0';
+                }
+                if(value > 0.01){
+                    return '电机体积不能大于0.01';
+                }
+            },
+            val_15: function(value,item){
+                if(value < 2){
+                    return '电机质量不能小于2';
+                }
+                if(value > 10){
+                    return '电机质量不能大于10';
+                }
+            },
+            val_16: function(value,item){
+                if(value < 0.15){
+                    return '转速波动系数不能小于0.15';
+                }
+                if(value > 0.5){
+                    return '转速波动系数不能大于0.5';
+                }
+            }
+        });
 
         form.on('submit(updateForm)',function(data){
             console.log(data.elem);
