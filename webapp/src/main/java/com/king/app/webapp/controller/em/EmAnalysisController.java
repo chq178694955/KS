@@ -14,14 +14,24 @@ import com.king.em.util.EmCalcUtil;
 import com.king.framework.base.BaseController;
 import com.king.framework.model.Criteria;
 import com.king.system.utils.AuthUtils;
+import org.apache.poi.hssf.usermodel.HSSFWorkbook;
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.ss.usermodel.Sheet;
+import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.util.CollectionUtils;
+import org.springframework.util.ResourceUtils;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.*;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -455,6 +465,68 @@ public class EmAnalysisController extends BaseController {
         }
     }
 
+    @ResponseBody
+    @RequestMapping(value = "downloadResult",method = RequestMethod.POST)
+    public void downloadResult(HttpServletRequest request, HttpServletResponse response){
+        try {
+            String evaluation = super.getParam("evaluation");
+            String evaluation1 = super.getParam("evaluation_1");
+            String evaluation2 = super.getParam("evaluation_2");
+            String evaluation3 = super.getParam("evaluation_3");
+            File resultFile = ResourceUtils.getFile("classpath:evaluation-result.xlsx");
+            String fileName = resultFile.getPath();
+            String fileExt = fileName.substring(fileName.lastIndexOf("."));
+            InputStream is = new FileInputStream(resultFile);
+            Workbook book = null;
+            if(".xls".equals(fileExt)){
+                book = new HSSFWorkbook(is);
+            }else if(".xlsx".equals(fileExt)){
+                book = new XSSFWorkbook(is);
+            }
+            Sheet sheet = book.getSheetAt(0);//获取第一个sheet
 
+            Row row2 = sheet.getRow(2);
+            Row row3 = sheet.getRow(3);
+            Row row4 = sheet.getRow(4);
+            Row row5 = sheet.getRow(5);
+            Row row6 = sheet.getRow(6);
+            Row row7 = sheet.getRow(7);
+
+            row2.getCell(1).setCellValue(super.getParam("calc_1"));
+            row3.getCell(1).setCellValue(super.getParam("calc_2"));
+            row4.getCell(1).setCellValue(super.getParam("calc_3"));
+            row5.getCell(1).setCellValue(super.getParam("calc_4"));
+            row6.getCell(1).setCellValue(super.getParam("calc_5"));
+            row7.getCell(1).setCellValue(super.getParam("calc_6"));
+
+            row2.getCell(4).setCellValue(super.getParam("calc_7"));
+            row3.getCell(4).setCellValue(super.getParam("calc_8"));
+            row4.getCell(4).setCellValue(super.getParam("calc_9"));
+            row5.getCell(4).setCellValue(super.getParam("calc_10"));
+            row6.getCell(4).setCellValue(super.getParam("calc_11"));
+            row7.getCell(4).setCellValue(super.getParam("calc_12"));
+
+            Row row10 = sheet.getRow(10);
+            Row row11 = sheet.getRow(11);
+            Row row12 = sheet.getRow(12);
+            Row row13 = sheet.getRow(13);
+
+            row10.getCell(1).setCellValue(super.getParam("calc_13"));
+            row11.getCell(1).setCellValue(super.getParam("calc_14"));
+            row12.getCell(1).setCellValue(super.getParam("calc_15"));
+            row13.getCell(1).setCellValue(super.getParam("calc_16"));
+
+            row10.getCell(4).setCellValue(evaluation);
+            row11.getCell(4).setCellValue(evaluation1);
+            row12.getCell(4).setCellValue(evaluation2);
+            row13.getCell(4).setCellValue(evaluation3);
+
+            super.downloadFile("评估结果.xlsx", book,response);
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 
 }

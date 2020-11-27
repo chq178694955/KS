@@ -7,6 +7,7 @@ import com.king.framework.export.Field;
 import com.king.framework.export.HtmlDataGridExport;
 import com.king.framework.export.ITableExport;
 import com.king.framework.utils.I18nUtils;
+import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.subject.Subject;
 import org.springframework.beans.factory.annotation.Value;
@@ -240,6 +241,37 @@ public class BaseController {
         } finally {
             try{
                 in.close();
+                out.close();
+                out.flush();
+            } catch (IOException e){
+                e.printStackTrace();
+            }
+        }
+    }
+
+    protected void downloadFile(String fileName, Workbook book, HttpServletResponse response){
+        ServletOutputStream out = null;
+        try {
+            // 输出设置
+            response.setContentType("application/x-download");
+            response.setCharacterEncoding("UTF-8");
+            //输出文件名
+            String _fileName = URLEncoder.encode(fileName, "UTF-8");
+            response.addHeader("Content-Disposition", "attachment;filename=" + _fileName);
+            out = response.getOutputStream();
+            book.write(out);
+        } catch(Exception e){
+            e.printStackTrace();
+            try {
+                if(out != null){
+                    out.close();
+                    out.flush();
+                }
+            } catch (IOException ex) {
+                ex.printStackTrace();
+            }
+        } finally {
+            try{
                 out.close();
                 out.flush();
             } catch (IOException e){

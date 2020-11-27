@@ -300,7 +300,7 @@
             <div class="layui-card">
                 <div class="layui-card-header">
                     <span>分析结果</span>
-                    <a class="layui-btn layui-btn-sm layui-btn-primary" style="line-height:2.5em;margin-top:4px;float:right;" onclick="downloadExperiment()" title="下载评估结果">
+                    <a id="downloadExperiment_${menuId}" class="layui-btn layui-btn-sm layui-btn-primary" style="line-height:2.5em;margin-top:4px;float:right;" href="javascript:void(0)" title="下载评估结果">
                         <i class="iconfont layui-icon-excel" style="color: #FF5722;"></i>
                     </a>
                 </div>
@@ -371,6 +371,8 @@
 </div>
 
 <script>
+    var xData = [];//全局用于存放生成echarts图表的数据，为了导出excel使用不再进行计算
+    var yData = [];//全局用于存放生成echarts图表的数据，为了导出excel使用不再进行计算
     layui.use(['form','element','table','laydate'], function() {
         var element = layui.element;
         var form = layui.form;
@@ -558,8 +560,6 @@
                                 }
                             }
                             if(result.data.templates){
-                                var xData = [];
-                                var yData = [];
                                 for(var i=0;i<result.data.templates.length;i++){
                                     var template = result.data.templates[i];
                                     $('#calc_' + template.id + '_${menuId}').val(template.calcVal);
@@ -621,9 +621,32 @@
             console.log(data);
         });
 
-        function downloadExperiment(){
-            Frame.info('正在下载评估结果,请稍后...',1)
-        }
-
+        $('#downloadExperiment_${menuId}').bind('click',downloadExperiment);
     });
+    function downloadExperiment(){
+        //此种方式可行
+        //window.location.href=APP_ENV+"/em/analysis/downloadResult";
+        //改为模拟表单方式下载文件，方便传参
+        var url = APP_ENV+"/em/analysis/downloadResult";
+        var downloadForm = $("<form></form>").attr("action",url).attr("method","post");
+        var evaluation = $("#evaluation_${menuId}").val();
+        if(WebUtils.isEmpty(evaluation)){
+            Frame.alert("暂无结果分析，请开始评估");
+            return ;
+        }
+        downloadForm.append($("<input/>").attr("type","hidden").attr("name","evaluation").attr("value",evaluation));
+        <c:forEach var="category" items="${categories}">
+            var evaluationItem = $("#evaluation_${category.id}_${menuId}").val();
+            downloadForm.append($("<input/>").attr("type","hidden").attr("name","evaluation_${category.id}").attr("value",evaluationItem));
+        </c:forEach>
+
+        <c:forEach var="template" items="${templates}">
+            var calcItem = $("#calc_${template.id}_${menuId}").val();
+            downloadForm.append($("<input/>").attr("type","hidden").attr("name","calc_${template.id}").attr("value",calcItem));
+        </c:forEach>
+
+        downloadForm.append($("<input/>").attr("type","hidden").attr("name","xData").attr("value",xData));
+        downloadForm.append($("<input/>").attr("type","hidden").attr("name","yData").attr("value",yData));
+        downloadForm.appendTo("body").submit().remove();
+    }
 </script>
