@@ -647,6 +647,29 @@
 
         downloadForm.append($("<input/>").attr("type","hidden").attr("name","xData").attr("value",xData));
         downloadForm.append($("<input/>").attr("type","hidden").attr("name","yData").attr("value",yData));
+        var imgUrl = baseUrlFromEcharts();
+        downloadForm.append($("<input/>").attr("type","hidden").attr("name","imgUrl").attr("value",imgUrl));
         downloadForm.appendTo("body").submit().remove();
+    }
+
+    /**
+     * 将echarts图表转成图片
+     * @returns {*|*|*|string}
+     */
+    function baseUrlFromEcharts(){
+        var baseCanvas = $('#experimentResultChart').find("canvas").first()[0];
+        if(!baseCanvas){
+            return ;
+        }
+        var width = baseCanvas.width;
+        var height = baseCanvas.height;
+        var ctx = baseCanvas.getContext('2d');
+        $('#experimentResultChart').find('canvas').each(function(i,canvasObj){
+            if(i > 0){
+                var canvasTmp = $(canvasObj)[0];
+                ctx.drawImage(canvasTmp,0,0,width,height);
+            }
+        });
+        return baseCanvas.toDataURL();
     }
 </script>

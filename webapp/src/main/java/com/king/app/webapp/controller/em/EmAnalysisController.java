@@ -1,5 +1,6 @@
 package com.king.app.webapp.controller.em;
 
+import com.alibaba.druid.util.StringUtils;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import com.github.pagehelper.PageInfo;
@@ -14,11 +15,12 @@ import com.king.em.util.EmCalcUtil;
 import com.king.framework.base.BaseController;
 import com.king.framework.model.Criteria;
 import com.king.system.utils.AuthUtils;
+import org.apache.commons.codec.binary.Base64;
+import org.apache.poi.hssf.usermodel.HSSFClientAnchor;
+import org.apache.poi.hssf.usermodel.HSSFPatriarch;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
-import org.apache.poi.ss.usermodel.Cell;
-import org.apache.poi.ss.usermodel.Row;
-import org.apache.poi.ss.usermodel.Sheet;
-import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.ss.usermodel.*;
+import org.apache.poi.xssf.usermodel.XSSFClientAnchor;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -29,14 +31,13 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
+import javax.imageio.ImageIO;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.awt.image.BufferedImage;
 import java.io.*;
 import java.math.BigDecimal;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.stream.Collectors;
 
 /**
@@ -401,8 +402,10 @@ public class EmAnalysisController extends BaseController {
                 BigDecimal normalizationVal = FormulaMgrServiceFactory.getInstance().getCalcResult(FormulaType.fromValue(template.getFormulaId()),val,lower,upper);
                 BigDecimal _weight = mapIndex.get("weight_" + template.getId());
                 //存入map方便后续
-                mapIndex.put("normalVal_" + template.getId(),normalizationVal.multiply(_weight).setScale(BigDecimal.ROUND_HALF_UP,2));
-                template.setNormalVal(normalizationVal.multiply(_weight).setScale(BigDecimal.ROUND_HALF_UP,2));
+                mapIndex.put("normalVal_" + template.getId(),normalizationVal.multiply(_weight));
+                //因图像只需要展示归一化后的数据，不需要乘以权重，特此修改
+                //template.setNormalVal(normalizationVal.multiply(_weight));
+                template.setNormalVal(normalizationVal);
             }
 
             result.put("templates",templateToAry(newTemplates));//保存计算后的指标值
@@ -520,6 +523,35 @@ public class EmAnalysisController extends BaseController {
             row11.getCell(4).setCellValue(evaluation1);
             row12.getCell(4).setCellValue(evaluation2);
             row13.getCell(4).setCellValue(evaluation3);
+
+            //生成图表
+            String imgUrl = super.getParam("imgUrl");
+            if(!StringUtils.isEmpty(imgUrl)){
+                String[] imgUrlArr = imgUrl.split("base64,");
+                Base64 decode = new Base64();
+                byte[] buffer = decode.decode(imgUrlArr[1]);
+                String picPath = request.getRealPath("")+ "/"+ UUID.randomUUID().toString() +".png";
+                File file = new File(picPath);//图片文件
+                //生成图片
+                OutputStream out = new FileOutputStream(file);//图片输出流
+                out.write(buffer);
+                out.flush();//清空流
+                out.close();//关闭流
+                ByteArrayOutputStream outStream = new ByteArrayOutputStream(); // 将图片写入流中
+                BufferedImage bufferImg = ImageIO.read(new File(picPath));
+                ImageIO.write(bufferImg, "PNG", outStream); // 利用HSSFPatriarch将图片写入EXCEL
+                Drawing patri = sheet.createDrawingPatriarch();
+                ClientAnchor anchor = null;
+                if(".xls".equals(fileExt)){
+                    anchor = new HSSFClientAnchor(0, 0, 0, 0,(short) 6, 1, (short) 13, 8);
+                }else if(".xlsx".equals(fileExt)){
+                    anchor = new XSSFClientAnchor(0, 0, 0, 0,(short) 6, 1, (short) 13, 8);
+                }
+                patri.createPicture(anchor, book.addPicture(outStream.toByteArray(), HSSFWorkbook.PICTURE_TYPE_PNG));
+                if(file.exists()){
+                    file.delete();//删除图片
+                }
+            }
 
             super.downloadFile("评估结果.xlsx", book,response);
         } catch (FileNotFoundException e) {
