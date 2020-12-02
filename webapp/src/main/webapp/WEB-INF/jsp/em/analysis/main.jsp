@@ -17,30 +17,6 @@
 <div class="layui-fluid">
     <div class="layui-row layui-col-space15">
         <div class="layui-col-md12">
-            <blockquote class="layui-elem-quote">
-                <p style="color: #1E9FFF;font-weight: bold;">
-                    1.性能评估必须有可以试验的数据作为支撑，数据可以在<span class="x-red">首页</span>的Excel导入按钮将数据导入到系统当中。<br/>
-                    2.导入数据的Excel<span class="x-red">文件名</span>会作为本次数据的名称保存到系统当中，请取自己理解的文件名。<span class="x-red">相同文件名导入的数据会对系统已存在的数据进行覆盖。</span><br/>
-                    3.本系统预设了基本参数值，<span class="x-red">非专业人士要请勿修改</span>。如果对于基本参数不满意可以自行添加自己需要的即可。<br/>
-                    4.本系统预设了最优指标以及默认指标权重，<span class="x-red">非专业人士要请勿修改</span>。如果对于预设指标不满意可以自行添加自己需要的即可（每个用户都可以配置属于自己的指标，但系统预设指标属于共用）。<br/>
-                    <span class="layui-badge-dot"></span>
-                    <span class="layui-badge-dot layui-bg-orange"></span>
-                    <span class="layui-badge-dot layui-bg-green"></span>
-                    <span class="layui-badge-dot layui-bg-cyan"></span>
-                    <span class="layui-badge-dot layui-bg-blue"></span>
-                    <span class="layui-badge-dot layui-bg-black"></span>
-                    <span class="layui-badge-dot layui-bg-gray"></span>
-                    <span class="layui-badge layui-bg-cyan">开始实验吧！</span>
-                    <span class="layui-badge-dot layui-bg-gray"></span>
-                    <span class="layui-badge-dot layui-bg-black"></span>
-                    <span class="layui-badge-dot layui-bg-blue"></span>
-                    <span class="layui-badge-dot layui-bg-cyan"></span>
-                    <span class="layui-badge-dot layui-bg-green"></span>
-                    <span class="layui-badge-dot layui-bg-orange"></span>
-                    <span class="layui-badge-dot"></span>
-                </p>
-            </blockquote>
-
             <form class="layui-form layui-form-pane" lay-filter="experimentForm" action="${ctx}/em/analysis/startEstimate">
                 <div class="layui-card">
                     <div class="layui-card-body">
