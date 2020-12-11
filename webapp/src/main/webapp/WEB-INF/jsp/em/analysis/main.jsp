@@ -28,7 +28,7 @@
                                     <div class="layui-inline">
                                         <label class="layui-form-label" style="width: 180px;">实验数据</label>
                                         <div class="layui-input-inline">
-                                            <select name="productId" id="productList_${menuId}" lay-filter="productSelectFilter" lay-verify="">
+                                            <select name="productId" id="productList_${menuId}" lay-filter="productSelectFilter" lay-verify="" lay-search>
                                                 <c:forEach var="product" items="${productList}">
                                                     <option value="${product.id}">${product.name}</option>
                                                 </c:forEach>
