@@ -8,6 +8,8 @@ public class EmIndexDetail implements Serializable {
 
     private Long indexId;
 
+    private String indexName;
+
     private BigDecimal val;
 
     private BigDecimal weight;
@@ -125,5 +127,13 @@ public class EmIndexDetail implements Serializable {
 
     public void setCategoryName(String categoryName) {
         this.categoryName = categoryName;
+    }
+
+    public String getIndexName() {
+        return indexName;
+    }
+
+    public void setIndexName(String indexName) {
+        this.indexName = indexName;
     }
 }

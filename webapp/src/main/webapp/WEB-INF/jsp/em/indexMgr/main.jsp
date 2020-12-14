@@ -9,7 +9,7 @@
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <div class="x-nav">
     <span class="layui-breadcrumb">
-        <a href="javascript:;">伺服电机</a>
+        <a href="javascript:;">评估系统</a>
         <a><cite>指标管理</cite></a>
     </span>
 </div>
@@ -26,13 +26,13 @@
                         <div class="layui-form-item">
                             <div class="layui-inline">
                                 <button id="query_${menuId}" type="button" class="layui-btn layui-btn-normal" title="<spring:message code="com.btn.query"/>">
-                                    <i class="layui-icon layui-icon-search"></i>
+                                    <i class="layui-icon layui-icon-search"></i><spring:message code="com.btn.query"/>
                                 </button>
                                 <%--<button id="add_${menuId}" type="button" class="layui-btn layui-btn-warm" title="<spring:message code="com.btn.add"/>">--%>
                                     <%--<i class="layui-icon layui-icon-add-1"></i>--%>
                                 <%--</button>--%>
                                 <button id="excel_${menuId}" type="button" class="layui-btn" title="<spring:message code="com.btn.excel"/>">
-                                    <i class="iconfont layui-icon-excel"></i>
+                                    <i class="iconfont layui-icon-excel"></i><spring:message code="com.btn.excel"/>
                                 </button>
                             </div>
                         </div>
@@ -88,13 +88,13 @@
                             </div>
                             <div class="layui-inline">
                                 <button id="queryTemplate_${menuId}" type="button" class="layui-btn layui-btn-normal" title="<spring:message code="com.btn.query"/>">
-                                    <i class="layui-icon layui-icon-search"></i>
+                                    <i class="layui-icon layui-icon-search"></i><spring:message code="com.btn.query"/>
                                 </button>
                                 <%--<button id="addTemplate_${menuId}" type="button" class="layui-btn layui-btn-warm" title="<spring:message code="com.btn.add"/>">--%>
                                     <%--<i class="layui-icon layui-icon-add-1"></i>--%>
                                 <%--</button>--%>
                                 <button id="excelTemplate_${menuId}" type="button" class="layui-btn" title="<spring:message code="com.btn.excel"/>">
-                                    <i class="iconfont layui-icon-excel"></i>
+                                    <i class="iconfont layui-icon-excel"></i><spring:message code="com.btn.excel"/>
                                 </button>
                             </div>
                         </div>

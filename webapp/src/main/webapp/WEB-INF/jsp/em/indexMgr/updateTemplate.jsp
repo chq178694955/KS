@@ -10,11 +10,11 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <div class="x-nav">
     <span class="layui-breadcrumb">
-        <a href="javascript:;">伺服电机</a>
+        <a href="javascript:;">评估系统</a>
         <a><cite>系统指标</cite></a>
     </span>
     <a class="layui-btn layui-btn-sm layui-btn-primary" style="line-height:2.5em;margin-top:4px;float:right;" onclick="goBack()" title="<spring:message code="com.goBack"/>">
-        <i class="iconfont">&#xe650;</i>
+        <i class="iconfont">&#xe650;</i><spring:message code="com.goBack"/>
     </a>
 </div>
 

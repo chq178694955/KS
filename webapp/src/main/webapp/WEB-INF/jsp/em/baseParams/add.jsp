@@ -9,11 +9,11 @@
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <div class="x-nav">
     <span class="layui-breadcrumb">
-        <a href="javascript:;">伺服电机</a>
+        <a href="javascript:;">评估系统</a>
         <a><cite>电机参数</cite></a>
     </span>
     <a class="layui-btn layui-btn-sm layui-btn-primary" style="line-height:2.5em;margin-top:4px;float:right;" onclick="goBack()" title="<spring:message code="com.goBack"/>">
-        <i class="iconfont">&#xe650;</i>
+        <i class="iconfont">&#xe650;</i><spring:message code="com.goBack"/>
     </a>
 </div>
 
@@ -96,7 +96,7 @@
                         </div>
                         <div class="layui-form-item">
                             <div class="layui-input-block">
-                                <button class="layui-btn" lay-submit="" lay-filter="addForm"><spring:message code="com.btn.add"/></button>
+                                <button class="layui-btn" lay-submit="" lay-filter="addForm"><spring:message code="com.btn.save"/></button>
                                 <button class="layui-btn layui-btn-primary" type="reset"><spring:message code="com.btn.reset"/></button>
                             </div>
                         </div>

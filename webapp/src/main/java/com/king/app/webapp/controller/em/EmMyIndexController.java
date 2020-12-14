@@ -16,6 +16,7 @@ import com.king.system.utils.AuthUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.util.CollectionUtils;
+import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
@@ -55,7 +56,10 @@ public class EmMyIndexController extends BaseController {
     public Object find(HttpServletRequest request){
         PageInfo<EmIndexDetail> page = super.getPage(request);
         Criteria criteria = new Criteria();
-        criteria.put("searchKey",super.getParam("searchKey"));
+        if(!StringUtils.isEmpty(super.getParam("groupId"))){
+            criteria.put("groupId",super.getParam("groupId"));
+        }
+
         criteria.put("userId", AuthUtils.getUserInfo().getId());//带入条件，只查询属于自己创建的指标
         PageInfo<EmIndexDetail> pageInfo = emIndexDetailService.find(page,criteria,isDownloadReq());
         return getGridData(pageInfo);
@@ -192,6 +196,13 @@ public class EmMyIndexController extends BaseController {
         }else{
             return ResultResp.fail();
         }
+    }
+
+    @RequestMapping("groupList")
+    @ResponseBody
+    public Object groupList(HttpServletRequest request){
+        return emIndexGroupService.findAll();
+
     }
 
 }

@@ -2,7 +2,9 @@ package com.king.em.service.impl;
 
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
+import com.king.em.dao.EmIndexGroupDao;
 import com.king.em.entity.EmIndexDetail;
+import com.king.em.entity.EmIndexGroup;
 import com.king.em.service.IEmIndexDetailService;
 import com.king.framework.model.Criteria;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,6 +22,8 @@ public class EmIndexDetailServiceImpl implements IEmIndexDetailService {
 
     @Autowired
     private com.king.em.dao.EmIndexDetailDao emIndexDetailDao;
+    @Autowired
+    private EmIndexGroupDao emIndexGroupDao;
 
     @Override
     public EmIndexDetail findByName(String name) {
@@ -72,7 +76,9 @@ public class EmIndexDetailServiceImpl implements IEmIndexDetailService {
 
     @Override
     public boolean delByGroupId(Long groupId) {
-        return emIndexDetailDao.delete("deleteByGroupId",groupId) > 0 ? true : false;
+        boolean flag = emIndexDetailDao.delete("deleteByGroupId",groupId) > 0 ? true : false;
+        emIndexGroupDao.delete(groupId);
+        return flag;
     }
 
     @Override

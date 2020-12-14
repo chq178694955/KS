@@ -53,7 +53,7 @@ public class UserController extends BaseController {
 
     @RequestMapping("add")
     @ResponseBody
-    public Object add(HttpServletRequest request, SysUser user){
+    public Object add(HttpServletRequest request, SysUserVO user){
         SysUser oldUser = sysUserService.findByUserName(user.getUsername());
         if(oldUser != null){
             return new ResultResp(I18nUtils.get("sys.user.tip.existsUser",user.getUsername()));

@@ -10,7 +10,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <div class="x-nav">
     <span class="layui-breadcrumb">
-        <a href="javascript:;">伺服电机</a>
+        <a href="javascript:;">评估系统</a>
         <a><cite>性能评估</cite></a>
     </span>
 </div>
@@ -22,7 +22,7 @@
                     <div class="layui-card-body">
                         <!-- 1.实验数据开始 -->
                         <fieldset class="layui-elem-field">
-                            <legend>实验数据</legend>
+                            <legend style="font-weight: bold">实验数据</legend>
                             <div class="layui-field-box">
                                 <div class="layui-form-item">
                                     <div class="layui-inline">
@@ -36,95 +36,90 @@
                                         </div>
                                     </div>
                                 </div>
-                                <c:if test="${experimentDataObj.hasDataFlag}">
-                                    <div class="layui-form-item">
-                                        <div class="layui-inline">
-                                            <label class="layui-form-label" style="width: 180px;">空载转速（r/min）</label>
-                                            <div class="layui-input-inline">
-                                                <input type="text" name="speedEmpty" id="speedEmpty_${menuId}" value="${experimentDataObj.speedEmpty}" class="layui-input" autocomplete="false" disabled/>
-                                            </div>
-                                        </div>
-                                        <div class="layui-inline">
-                                            <label class="layui-form-label" style="width: 180px;">额定负载转速（r/min）</label>
-                                            <div class="layui-input-inline">
-                                                <input type="text" name="speedFixedLoad" id="speedFixedLoad_${menuId}" value="${experimentDataObj.speedFixedLoad}" class="layui-input" autocomplete="false" disabled/>
-                                            </div>
+                                <div class="layui-form-item">
+                                    <div class="layui-inline">
+                                        <label class="layui-form-label" style="width: 180px;">空载转速（r/min）</label>
+                                        <div class="layui-input-inline">
+                                            <input type="text" name="speedEmpty" id="speedEmpty_${menuId}" value="${experimentDataObj.speedEmpty}" class="layui-input" autocomplete="false" disabled/>
                                         </div>
                                     </div>
-                                    <div class="layui-form-item">
-                                        <div class="layui-inline">
-                                            <label class="layui-form-label" style="width: 180px;">最大转速（r/min）</label>
-                                            <div class="layui-input-inline">
-                                                <input type="text" name="speedMax" id="speedMax_${menuId}" value="${experimentDataObj.speedMax}" class="layui-input" autocomplete="false" disabled/>
-                                            </div>
-                                        </div>
-                                        <div class="layui-inline">
-                                            <label class="layui-form-label" style="width: 180px;">最小转速（r/min）</label>
-                                            <div class="layui-input-inline">
-                                                <input type="text" name="speedMin" id="speedMin_${menuId}" value="${experimentDataObj.speedMin}" class="layui-input" autocomplete="false" disabled/>
-                                            </div>
+                                    <div class="layui-inline">
+                                        <label class="layui-form-label" style="width: 180px;">额定负载转速（r/min）</label>
+                                        <div class="layui-input-inline">
+                                            <input type="text" name="speedFixedLoad" id="speedFixedLoad_${menuId}" value="${experimentDataObj.speedFixedLoad}" class="layui-input" autocomplete="false" disabled/>
                                         </div>
                                     </div>
-                                    <div class="layui-form-item">
-                                        <div class="layui-inline">
-                                            <label class="layui-form-label" style="width: 180px;">转速设定值（r/min）</label>
-                                            <div class="layui-input-inline">
-                                                <input type="text" name="speedSetter" id="speedSetter_${menuId}" value="${experimentDataObj.speedSetter}" class="layui-input" autocomplete="false" disabled/>
-                                            </div>
-                                        </div>
-                                        <div class="layui-inline">
-                                            <label class="layui-form-label" style="width: 180px;">负载转矩（T·m）</label>
-                                            <div class="layui-input-inline">
-                                                <input type="text" name="torqueOverload" id="torqueOverload_${menuId}" value="${experimentDataObj.torqueOverload}" class="layui-input" autocomplete="false" disabled/>
-                                            </div>
+                                </div>
+                                <div class="layui-form-item">
+                                    <div class="layui-inline">
+                                        <label class="layui-form-label" style="width: 180px;">最大转速（r/min）</label>
+                                        <div class="layui-input-inline">
+                                            <input type="text" name="speedMax" id="speedMax_${menuId}" value="${experimentDataObj.speedMax}" class="layui-input" autocomplete="false" disabled/>
                                         </div>
                                     </div>
+                                    <div class="layui-inline">
+                                        <label class="layui-form-label" style="width: 180px;">最小转速（r/min）</label>
+                                        <div class="layui-input-inline">
+                                            <input type="text" name="speedMin" id="speedMin_${menuId}" value="${experimentDataObj.speedMin}" class="layui-input" autocomplete="false" disabled/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="layui-form-item">
+                                    <div class="layui-inline">
+                                        <label class="layui-form-label" style="width: 180px;">转速设定值（r/min）</label>
+                                        <div class="layui-input-inline">
+                                            <input type="text" name="speedSetter" id="speedSetter_${menuId}" value="${experimentDataObj.speedSetter}" class="layui-input" autocomplete="false" disabled/>
+                                        </div>
+                                    </div>
+                                    <div class="layui-inline">
+                                        <label class="layui-form-label" style="width: 180px;">负载转矩（T·m）</label>
+                                        <div class="layui-input-inline">
+                                            <input type="text" name="torqueOverload" id="torqueOverload_${menuId}" value="${experimentDataObj.torqueOverload}" class="layui-input" autocomplete="false" disabled/>
+                                        </div>
+                                    </div>
+                                </div>
 
-                                    <div class="layui-row">
-                                        <div class="layui-col-md3">
-                                            <div class="layui-card">
-                                                <div class="layui-card-header">阶跃响应数据</div>
-                                                <div class="layui-card-body">
-                                                    <div id="stepDataList_${menuId}"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="layui-col-md3">
-                                            <div class="layui-card">
-                                                <div class="layui-card-header">正弦响应数据</div>
-                                                <div class="layui-card-body">
-                                                    <div id="sinDataList_${menuId}"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="layui-col-md3">
-                                            <div class="layui-card">
-                                                <div class="layui-card-header">空载实验数据</div>
-                                                <div class="layui-card-body">
-                                                    <div id="emptyloadDataList_${menuId}"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="layui-col-md3">
-                                            <div class="layui-card">
-                                                <div class="layui-card-header">恒定负载扰动数据</div>
-                                                <div class="layui-card-body">
-                                                    <div id="constantloadDataList_${menuId}"></div>
-                                                </div>
+                                <div class="layui-row">
+                                    <div class="layui-col-md3">
+                                        <div class="layui-card">
+                                            <div class="layui-card-header" style="font-weight: bold">阶跃响应数据</div>
+                                            <div class="layui-card-body">
+                                                <table lay-filter="stepDataList_${menuId}" id="stepDataList_${menuId}" class="layui-table"></table>
                                             </div>
                                         </div>
                                     </div>
-                                </c:if>
-                                <c:if test="${!experimentDataObj.hasDataFlag}">
-                                    <p class="x-red" style="font-weight: bold;">${experimentDataObj.msg}</p>
-                                </c:if>
+                                    <div class="layui-col-md3">
+                                        <div class="layui-card">
+                                            <div class="layui-card-header" style="font-weight: bold">正弦响应数据</div>
+                                            <div class="layui-card-body">
+                                                <table lay-filter="sinDataList_${menuId}" id="sinDataList_${menuId}" class="layui-table"></table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="layui-col-md3">
+                                        <div class="layui-card">
+                                            <div class="layui-card-header" style="font-weight: bold">空载实验数据</div>
+                                            <div class="layui-card-body">
+                                                <table lay-filter="emptyloadDataList_${menuId}" id="emptyloadDataList_${menuId}" class="layui-table"></table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="layui-col-md3">
+                                        <div class="layui-card">
+                                            <div class="layui-card-header" style="font-weight: bold" class="layui-table">恒定负载扰动数据</div>
+                                            <div class="layui-card-body">
+                                                <table lay-filter="constantloadDataList_${menuId}" id="constantloadDataList_${menuId}" class="layui-table"></table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </fieldset>
                         <!-- 1.实验数据结束 -->
 
                         <!-- 2.系统参数开始 -->
                         <fieldset class="layui-elem-field">
-                            <legend>基本参数</legend>
+                            <legend style="font-weight: bold">基本参数</legend>
                             <div class="layui-field-box">
                                 <div class="layui-form-item">
                                     <div class="layui-input-block">
@@ -209,7 +204,7 @@
 
                         <!-- 3.系统指标开始 -->
                         <fieldset class="layui-elem-field">
-                            <legend>系统指标</legend>
+                            <legend style="font-weight: bold">系统指标</legend>
                             <div class="layui-field-box">
                                 <div class="layui-form-item">
                                     <div class="layui-input-block">
@@ -220,7 +215,7 @@
 
                                 <c:forEach var="category" items="${categories}">
                                     <fieldset style="border-color: #01AAED;border-width: 1px;">
-                                        <legend>${category.name}</legend>
+                                        <legend style="font-weight: bold">${category.name}</legend>
                                         <div class="layui-field-box">
                                             <c:forEach var="template" items="${templates}">
                                                 <c:if test="${category.id == template.categoryId}">
@@ -275,16 +270,16 @@
         <div class="layui-col-md12">
             <div class="layui-card">
                 <div class="layui-card-header">
-                    <span>分析结果</span>
-                    <a id="downloadExperiment_${menuId}" class="layui-btn layui-btn-sm layui-btn-primary" style="line-height:2.5em;margin-top:4px;float:right;" href="javascript:void(0)" title="下载评估结果">
-                        <i class="iconfont layui-icon-excel" style="color: #FF5722;"></i>
+                    <span>评估结果数据</span>
+                    <a id="downloadExperiment_${menuId}" class="layui-btn layui-btn-sm layui-btn-primary" style="line-height:2.5em;margin-top:4px;float:right;" href="javascript:void(0)" title="评估结果下载">
+                        <i class="iconfont layui-icon-excel" style="color: #FF5722;"></i>评估结果下载
                     </a>
                 </div>
                 <div class="layui-card-body">
                     <form class="layui-form layui-form-pane" lay-filter="experimentResultForm">
 
                         <fieldset class="layui-elem-field" style="border-color: #5FB878;border-width: 1px;">
-                            <legend>评估结果</legend>
+                            <legend style="font-weight: bold">等级评估</legend>
                             <div class="layui-field-box">
                                 <div class="layui-form-item">
                                     <div class="layui-inline">
@@ -308,7 +303,7 @@
                         <!-- 显示没有做归一化的指标结果 -->
                         <c:forEach var="category" items="${categories}">
                             <fieldset class="layui-elem-field" style="border-color: #5FB878;border-width: 1px;">
-                                <legend>${category.name}</legend>
+                                <legend style="font-weight: bold">${category.name}</legend>
                                 <div class="layui-field-box">
                                     <div class="layui-form-item">
                                         <div class="layui-row">
@@ -330,7 +325,7 @@
 
                         <!-- 综合性能差异显示（折线图） -->
                         <fieldset class="layui-elem-field" style="border-color: #5FB878;border-width: 1px;">
-                            <legend>综合性能差异显示</legend>
+                            <legend style="font-weight: bold">综合性能差异显示</legend>
                             <div class="layui-field-box">
                                 <div id="experimentResultChart" style="height: 300px;">
 
@@ -356,66 +351,81 @@
         element.render('breadcrumb');
         form.render();
 
+        table.render({
+            elem: '#stepDataList_${menuId}',
+            title:'阶跃响应数据',
+            height:300,
+            cols:[
+                [
+                    {field:'dataTime',width:120,title:'时间（ms）',align:'center'},
+                    {field:'speed',width:120,title:'转速（r/min）',align:'center'}
+                ]
+            ],
+            data: [],
+            limit:Number.MAX_VALUE
+        });
+        table.render({
+            elem: '#sinDataList_${menuId}',
+            title:'正弦响应数据',
+            height:300,
+            cols:[
+                [
+                    {field:'speed10',width:120,title:'转速（r/min）',align:'center'}
+                ]
+            ],
+            data: [],
+            limit:Number.MAX_VALUE
+        });
+        table.render({
+            elem: '#emptyloadDataList_${menuId}',
+            title:'空载实验数据',
+            height:300,
+            cols:[
+                [
+                    {field:'speedForward',width:150,title:'正向转速（r/min）',align:'center'},
+                    {field:'speedReverse',width:150,title:'反向转速（r/min）',align:'center'}
+                ]
+            ],
+            data: [],
+            limit:Number.MAX_VALUE
+        });
+        table.render({
+            elem: '#constantloadDataList_${menuId}',
+            title:'恒定负载扰动实验数据',
+            height:300,
+            cols:[
+                [
+                    {field:'speed100',width:120,title:'转速（r/min）',align:'center'},
+                    {field:'torque100',width:120,title:'转矩（N·m）',align:'center'}
+                ]
+            ],
+            data: [],
+            limit:Number.MAX_VALUE
+        });
+
         var hasDataFlag = ${experimentDataObj.hasDataFlag};
         if(hasDataFlag){
             var stepList = ${experimentDataObj.stepList};
-            table.render({
-                elem: '#stepDataList_${menuId}',
-                title:'阶跃响应数据',
-                height:300,
-                cols:[
-                    [
-                        {field:'dataTime',width:120,title:'时间（ms）',align:'center'},
-                        {field:'speed',width:120,title:'转速（r/min）',align:'center'}
-                    ]
-                ],
-                data: stepList,
-                limit:Number.MAX_VALUE
+            table.init('stepDataList_${menuId}',{
+                data: stepList
             });
 
             var sinList = ${experimentDataObj.sinList};
-            table.render({
-                elem: '#sinDataList_${menuId}',
-                title:'正弦响应数据',
-                height:300,
-                cols:[
-                    [
-                        {field:'speed10',width:120,title:'转速（r/min）',align:'center'}
-                    ]
-                ],
-                data: sinList,
-                limit:Number.MAX_VALUE
+            table.init('sinDataList_${menuId}',{
+                data: sinList
             });
 
             var emptyloadList = ${experimentDataObj.emptyloadList};
-            table.render({
-                elem: '#emptyloadDataList_${menuId}',
-                title:'空载实验数据',
-                height:300,
-                cols:[
-                    [
-                        {field:'speedForward',width:150,title:'正向转速（r/min）',align:'center'},
-                        {field:'speedReverse',width:150,title:'反向转速（r/min）',align:'center'}
-                    ]
-                ],
-                data: emptyloadList,
-                limit:Number.MAX_VALUE
+            table.init('emptyloadDataList_${menuId}',{
+                data: emptyloadList
             });
 
             var constantloadList = ${experimentDataObj.constantloadList};
-            table.render({
-                elem: '#constantloadDataList_${menuId}',
-                title:'恒定负载扰动实验数据',
-                height:300,
-                cols:[
-                    [
-                        {field:'speed100',width:120,title:'转速（r/min）',align:'center'},
-                        {field:'torque100',width:120,title:'转矩（N·m）',align:'center'}
-                    ]
-                ],
-                data: constantloadList,
-                limit:Number.MAX_VALUE
+            table.init('constantloadDataList_${menuId}',{
+                data: constantloadList
             });
+        }else{
+            Frame.info('${experimentDataObj.msg}',2);
         }
 
         //实验项目下拉选中事件
@@ -451,6 +461,59 @@
 
                         table.reload('constantloadDataList_${menuId}', {
                             data: res.constantloadList
+                        });
+                    }else{
+                        Frame.info('${res.msg}',2);
+                        table.render({
+                            elem: '#stepDataList_${menuId}',
+                            title:'阶跃响应数据',
+                            height:300,
+                            cols:[
+                                [
+                                    {field:'dataTime',width:120,title:'时间（ms）',align:'center'},
+                                    {field:'speed',width:120,title:'转速（r/min）',align:'center'}
+                                ]
+                            ],
+                            data: [],
+                            limit:Number.MAX_VALUE
+                        });
+                        table.render({
+                            elem: '#sinDataList_${menuId}',
+                            title:'正弦响应数据',
+                            height:300,
+                            cols:[
+                                [
+                                    {field:'speed10',width:120,title:'转速（r/min）',align:'center'}
+                                ]
+                            ],
+                            data: [],
+                            limit:Number.MAX_VALUE
+                        });
+                        table.render({
+                            elem: '#emptyloadDataList_${menuId}',
+                            title:'空载实验数据',
+                            height:300,
+                            cols:[
+                                [
+                                    {field:'speedForward',width:150,title:'正向转速（r/min）',align:'center'},
+                                    {field:'speedReverse',width:150,title:'反向转速（r/min）',align:'center'}
+                                ]
+                            ],
+                            data: [],
+                            limit:Number.MAX_VALUE
+                        });
+                        table.render({
+                            elem: '#constantloadDataList_${menuId}',
+                            title:'恒定负载扰动实验数据',
+                            height:300,
+                            cols:[
+                                [
+                                    {field:'speed100',width:120,title:'转速（r/min）',align:'center'},
+                                    {field:'torque100',width:120,title:'转矩（N·m）',align:'center'}
+                                ]
+                            ],
+                            data: [],
+                            limit:Number.MAX_VALUE
                         });
                     }
                 }
@@ -528,6 +591,8 @@
                     if(result.code == 0){
                         //成功则显示分析结果
                         if(result.data){
+                            xData = [];
+                            yData = [];
                             if(result.data.categories){
                                 $('#evaluation_${menuId}').val(result.data.evaluation);
                                 for(var i=0;i<result.data.categories.length;i++){

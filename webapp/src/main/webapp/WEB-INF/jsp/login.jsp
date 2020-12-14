@@ -36,7 +36,8 @@
 <body class="login-bg">
 
 <div class="login layui-anim layui-anim-up">
-    <div class="message"><spring:message code="com.login.title"/></div>
+<%--    <div class="message"><spring:message code="com.login.title"/></div>--%>
+    <div class="message">伺服电机性能评估系统</div>
     <div id="darkbannerwrap"></div>
 
     <form method="post" class="layui-form" >

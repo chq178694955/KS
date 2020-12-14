@@ -50,9 +50,15 @@ public class SysUserServiceImpl implements ISysUserService {
     }
 
     @Override
-    public int addUser(SysUser user) {
+    public int addUser(SysUserVO user) {
         user.setPassword(MD5Util.encode(user.getPassword()));
-        return sysUserDao.insert("insert", user);
+        int count = sysUserDao.insert("insert", user);
+        if(user.getRoleId() > 0){
+            //修改用户角色关系
+            sysUserDao.delete("delUserRole",user.getId());
+            sysUserDao.insert("addUserRole",user);
+        }
+        return count;
     }
 
     @Override
@@ -64,9 +70,6 @@ public class SysUserServiceImpl implements ISysUserService {
         if(user.getRoleId() > 0){
             //修改用户角色关系
             sysUserDao.delete("delUserRole",user.getId());
-            Criteria criteria = new Criteria();
-            criteria.put("userId",user.getId());
-            criteria.put("roleId",user.getRoleId());
             sysUserDao.insert("addUserRole",user);
         }
         return sysUserDao.update("update", u);

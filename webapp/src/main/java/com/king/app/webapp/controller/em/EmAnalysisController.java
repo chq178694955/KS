@@ -103,6 +103,8 @@ public class EmAnalysisController extends BaseController {
         List<Experiment> speedList = ExperimentDataServiceFactory.getInstance().getService(ExperimentType.SPEED).findAll(criteria);
         List<Experiment> constantloadList = ExperimentDataServiceFactory.getInstance().getService(ExperimentType.CONSTANTLOAD).findAll(criteria);
         result.put("stepList",dataToAry(ExperimentType.STEP,stepList));//取全部数据
+        result.put("sinList",new JSONArray());
+        result.put("constantloadList",new JSONArray());
         result.put("emptyloadList",dataToAry(ExperimentType.EMPTYLOAD,emptyloadList));//取全部数据
         //判断数据是否完整
         if(CollectionUtils.isEmpty(sinList) || CollectionUtils.isEmpty(sinList) || CollectionUtils.isEmpty(overloadList)

@@ -5,25 +5,54 @@
       <artifact name="webapp:war exploded" />
     </artifacts-to-build>
   </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="fe042204-8736-438e-94f6-a48ebd7c8011" name="Default Changelist" comment="">
+    <list default="true" id="fe042204-8736-438e-94f6-a48ebd7c8011" name="Default Changelist" comment="电机项目20201128-&gt;首页调整">
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webapp/src/main/webapp/static/echarts/echarts.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webapp/src/main/webapp/static/images/hn_university_logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/KS_DATA/logs/ks_log(LAPTOP-3H9KE96D)-default-current.log" beforeDir="false" afterPath="$PROJECT_DIR$/KS_DATA/logs/ks_log(LAPTOP-3H9KE96D)-default-current.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/src/main/resources/cache/ehcache-archive.xml" beforeDir="false" afterPath="$PROJECT_DIR$/archive/src/main/resources/cache/ehcache-archive.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/entity/EmIndexDetail.java" beforeDir="false" afterPath="$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/entity/EmIndexDetail.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/service/IEmIndexGroupService.java" beforeDir="false" afterPath="$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/service/IEmIndexGroupService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/service/impl/EmIndexDetailServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/service/impl/EmIndexDetailServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/service/impl/EmIndexGroupServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/service/impl/EmIndexGroupServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/electric-machine/src/main/resources/mapper/em/EmIndexDetailMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/electric-machine/src/main/resources/mapper/em/EmIndexDetailMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/electric-machine/src/main/resources/mapper/em/EmIndexGroupMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/electric-machine/src/main/resources/mapper/em/EmIndexGroupMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/framework/src/main/resources/datasources.properties" beforeDir="false" afterPath="$PROJECT_DIR$/framework/src/main/resources/datasources.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/system/src/main/java/com/king/system/service/ISysUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/system/src/main/java/com/king/system/service/ISysUserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/system/src/main/java/com/king/system/service/impl/SysUserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/system/src/main/java/com/king/system/service/impl/SysUserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/system/src/main/resources/mapper/system/SysUserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/system/src/main/resources/mapper/system/SysUserMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webapp/src/main/java/com/king/app/webapp/controller/em/EmAnalysisController.java" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/java/com/king/app/webapp/controller/em/EmAnalysisController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/src/main/java/com/king/app/webapp/controller/em/EmMyIndexController.java" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/java/com/king/app/webapp/controller/em/EmMyIndexController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/src/main/java/com/king/app/webapp/controller/system/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/java/com/king/app/webapp/controller/system/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/common/include.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/common/include.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/em/analysis/main.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/em/analysis/main.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/em/baseParams/add.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/em/baseParams/add.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/em/baseParams/main.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/em/baseParams/main.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/em/baseParams/update.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/em/baseParams/update.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/em/indexMgr/addCategory.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/em/indexMgr/addCategory.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/em/indexMgr/addTemplate.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/em/indexMgr/addTemplate.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/em/indexMgr/main.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/em/indexMgr/main.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/em/indexMgr/updateCategory.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/em/indexMgr/updateCategory.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/em/indexMgr/updateTemplate.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/em/indexMgr/updateTemplate.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/em/myIndex/add.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/em/myIndex/add.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/em/myIndex/main.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/em/myIndex/main.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/em/myIndex/update.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/em/myIndex/update.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/src/main/webapp/static/echarts-2.2.7/extension/BMap/doc/BMap.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/src/main/webapp/static/echarts-2.2.7/extension/BMap/doc/BMap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/src/main/webapp/static/echarts-2.2.7/extension/BMap/doc/doc.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/src/main/webapp/static/echarts-2.2.7/extension/BMap/doc/example.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/src/main/webapp/static/echarts-2.2.7/extension/BMap/doc/example.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/src/main/webapp/static/echarts-2.2.7/extension/BMap/src/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/src/main/webapp/static/echarts-2.2.7/extension/README.md" beforeDir="false" />
     </list>
-    <ignored path="$PROJECT_DIR$/target/" />
-    <ignored path="$PROJECT_DIR$/framework/target/" />
-    <ignored path="$PROJECT_DIR$/webapp/target/" />
-    <ignored path="$PROJECT_DIR$/realtime/target/" />
-    <ignored path="$PROJECT_DIR$/archive/target/" />
-    <ignored path="$PROJECT_DIR$/system/target/" />
-    <ignored path="$PROJECT_DIR$/game/target/" />
-    <ignored path="$PROJECT_DIR$/keke/target/" />
-    <ignored path="$PROJECT_DIR$/study/target/" />
-    <ignored path="$PROJECT_DIR$/test-client/target/" />
-    <ignored path="$PROJECT_DIR$/electric-machine/target/" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -261,9 +290,9 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="localRepository" value="D:\mavenLocalRepository" />
-        <option name="mavenHome" value="D:/software/maven/apache-maven-3.6.0" />
-        <option name="userSettingsFile" value="D:\software\maven\apache-maven-3.6.0\conf\settings.xml" />
+        <option name="localRepository" value="C:\mavenRepository" />
+        <option name="mavenHome" value="C:\software\apache-maven-3.6.3" />
+        <option name="userSettingsFile" value="C:\software\apache-maven-3.6.3\conf\settings.xml" />
       </MavenGeneralSettings>
     </option>
     <option name="enabledProfiles">
@@ -296,11 +325,15 @@
       <select />
     </treeState>
   </component>
+  <component name="MavenRunner">
+    <option name="skipTests" value="true" />
+  </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-10" />
     <option name="width" value="1400" />
     <option name="height" value="820" />
   </component>
+  <component name="ProjectId" id="1lWpxPIy6djjdg40EwSV3SF6X2W" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -449,34 +482,50 @@
       <pane id="PackagesPane" />
     </panes>
   </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
     <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1606894263993" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/webapp/src/main/webapp/static/images" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.1366782" />
     <property name="project.structure.side.proportion" value="0.248497" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="File.Encoding" />
+  </component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.king.framework.echarts" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\projects\KS\webapp\src\main\webapp\static\images" />
+      <recent name="C:\projects\KS\webapp\src\main\webapp\static\echarts" />
       <recent name="D:\projects\KS\webapp\src\main\resources" />
       <recent name="D:\projects\KS\webapp\src\main\webapp\WEB-INF\jsp\em\analysis" />
       <recent name="D:\projects\KS\webapp\src\main\webapp\WEB-INF\jsp\em\myIndex" />
-      <recent name="D:\projects\KS\webapp\src\main\webapp\static\fonts" />
-      <recent name="D:\projects\KS\webapp\src\main\webapp\WEB-INF\jsp\em\indexMgr" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\projects\KS\webapp\src\main\webapp\WEB-INF\jsp\sys" />
+      <recent name="D:\projects\KS\webapp\src\main\webapp\static" />
+      <recent name="D:\projects\KS\framework\src\main\resources\i18n" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.king.app.webapp.controller.em" />
@@ -485,23 +534,6 @@
       <recent name="com.king.app.webapp.filter" />
       <recent name="com.king.framework.echarts.series.impl" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\projects\KS\webapp\src\main\webapp\WEB-INF\jsp\sys" />
-      <recent name="D:\projects\KS\webapp\src\main\webapp\static" />
-      <recent name="D:\projects\KS\framework\src\main\resources\i18n" />
-    </key>
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
   <component name="RunManager" selected="Spring Boot.Startup_web">
     <configuration name="FontConvertWindow" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -530,6 +562,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Startup_web" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="webapp" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.king.app.webapp.starter.Startup" />
@@ -550,6 +593,7 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -697,6 +741,12 @@
       <workItem from="1607320378677" duration="437000" />
       <workItem from="1607402115739" duration="2241000" />
       <workItem from="1607477551329" duration="723000" />
+      <workItem from="1607722950894" duration="3608000" />
+      <workItem from="1607728875083" duration="23000" />
+      <workItem from="1607774399649" duration="390000" />
+      <workItem from="1607860737661" duration="6368000" />
+      <workItem from="1607905523914" duration="1056000" />
+      <workItem from="1607909368535" duration="9000000" />
     </task>
     <task id="LOCAL-00001" summary="excel导出">
       <created>1586849513817</created>
@@ -868,7 +918,19 @@
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="excel导出" />

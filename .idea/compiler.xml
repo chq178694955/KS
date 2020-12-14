@@ -6,14 +6,14 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="archive" />
-        <module name="electric-machine" />
-        <module name="framework" />
-        <module name="game" />
-        <module name="keke" />
-        <module name="system" />
-        <module name="test-client" />
         <module name="webapp" />
+        <module name="game" />
+        <module name="framework" />
+        <module name="system" />
+        <module name="keke" />
+        <module name="archive" />
+        <module name="test-client" />
+        <module name="electric-machine" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

@@ -19,7 +19,7 @@ public interface ISysUserService {
 
     PageInfo<SysUserVO> find(PageInfo<SysUser> page, Criteria criteria, Boolean isDownload);
 
-    int addUser(SysUser user);
+    int addUser(SysUserVO user);
 
     int updateUser(SysUserVO user);
 

@@ -75,7 +75,7 @@
   <delete id="delUserRole" parameterType="java.lang.Long">
     delete from sys_user_role where uid = #{userId}
   </delete>
-  <insert id="addUserRole" parameterType="java.util.Map">
+  <insert id="addUserRole" parameterType="com.king.system.vo.SysUserVO">
     insert into sys_user_role(uid,rid) values(#{id},#{roleId})
   </insert>
 </mapper>

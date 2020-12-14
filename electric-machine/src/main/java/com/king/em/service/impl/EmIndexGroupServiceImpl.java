@@ -23,6 +23,11 @@ public class EmIndexGroupServiceImpl implements IEmIndexGroupService {
     private EmIndexGroupDao EmIndexGroupDao;
 
     @Override
+    public List<EmIndexGroup> findAll() {
+        return EmIndexGroupDao.findAll();
+    }
+
+    @Override
     public EmIndexGroup findByName(Criteria criteria) {
         return EmIndexGroupDao.get("findByName",criteria);
     }

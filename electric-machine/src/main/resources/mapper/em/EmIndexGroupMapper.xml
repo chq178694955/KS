@@ -23,6 +23,13 @@
     order by id asc
   </select>
 
+  <select id="findAll" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from em_index_group
+    order by create_time desc
+  </select>
+
   <select id="get" parameterType="java.lang.Long" resultMap="BaseResultMap">
     select
     <include refid="Base_Column_List" />

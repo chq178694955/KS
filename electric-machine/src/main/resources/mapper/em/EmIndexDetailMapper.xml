@@ -4,6 +4,7 @@
   <resultMap id="BaseResultMap" type="com.king.em.entity.EmIndexDetail">
     <result column="id" jdbcType="BIGINT" property="id" />
     <result column="index_id" jdbcType="BIGINT" property="indexId" />
+    <result column="index_name" jdbcType="VARCHAR" property="indexName" />
     <result column="val" jdbcType="DECIMAL" property="val" />
     <result column="weight" jdbcType="DECIMAL" property="weight" />
     <result column="max_val" jdbcType="DECIMAL" property="maxVal" />
@@ -21,7 +22,7 @@
   <select id="find" parameterType="java.util.Map" resultMap="BaseResultMap">
     select
     d.id,d.index_id,d.val,d.weight,d.group_id,
-    t.max_val,t.min_val,t.unit,t.category_id,
+    t.max_val,t.min_val,t.unit,t.category_id,t.name as index_name,
     g.name as group_name,c.name as category_name
     from em_index_detail d,em_index_group g,em_index_template t,em_index_category c
     <where>
@@ -29,10 +30,10 @@
       and d.index_id = t.id
       and t.category_id = c.id
       <if test="userId != null">
-
+        and g.creator_id = #{userId,jdbcType=BIGINT}
       </if>
-      <if test="searchKey != null">
-        and g.name like concat('%',#{searchKey,jdbcType=VARCHAR},'%')
+      <if test="groupId != null">
+        and g.id = #{groupId,jdbcType=BIGINT}
       </if>
     </where>
     order by g.create_time desc,d.id asc
