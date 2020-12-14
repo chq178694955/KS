@@ -9,49 +9,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fe042204-8736-438e-94f6-a48ebd7c8011" name="Default Changelist" comment="电机项目20201128-&gt;首页调整">
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webapp/src/main/webapp/static/echarts/echarts.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webapp/src/main/webapp/static/images/hn_university_logo.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+    <list default="true" id="fe042204-8736-438e-94f6-a48ebd7c8011" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/archive/src/main/resources/cache/ehcache-archive.xml" beforeDir="false" afterPath="$PROJECT_DIR$/archive/src/main/resources/cache/ehcache-archive.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/entity/EmIndexDetail.java" beforeDir="false" afterPath="$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/entity/EmIndexDetail.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/service/IEmIndexGroupService.java" beforeDir="false" afterPath="$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/service/IEmIndexGroupService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/service/impl/EmIndexDetailServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/service/impl/EmIndexDetailServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/service/impl/EmIndexGroupServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/service/impl/EmIndexGroupServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/electric-machine/src/main/resources/mapper/em/EmIndexDetailMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/electric-machine/src/main/resources/mapper/em/EmIndexDetailMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/electric-machine/src/main/resources/mapper/em/EmIndexGroupMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/electric-machine/src/main/resources/mapper/em/EmIndexGroupMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/framework/src/main/resources/datasources.properties" beforeDir="false" afterPath="$PROJECT_DIR$/framework/src/main/resources/datasources.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/src/main/java/com/king/system/service/ISysUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/system/src/main/java/com/king/system/service/ISysUserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/src/main/java/com/king/system/service/impl/SysUserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/system/src/main/java/com/king/system/service/impl/SysUserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/src/main/resources/mapper/system/SysUserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/system/src/main/resources/mapper/system/SysUserMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/src/main/java/com/king/app/webapp/controller/em/EmAnalysisController.java" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/java/com/king/app/webapp/controller/em/EmAnalysisController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/src/main/java/com/king/app/webapp/controller/em/EmMyIndexController.java" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/java/com/king/app/webapp/controller/em/EmMyIndexController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/src/main/java/com/king/app/webapp/controller/system/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/java/com/king/app/webapp/controller/system/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/common/include.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/common/include.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/src/main/java/com/king/app/webapp/controller/keke/ResidentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/java/com/king/app/webapp/controller/keke/ResidentController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/em/analysis/main.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/em/analysis/main.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/em/baseParams/add.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/em/baseParams/add.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/em/baseParams/main.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/em/baseParams/main.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/em/baseParams/update.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/em/baseParams/update.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/em/indexMgr/addCategory.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/em/indexMgr/addCategory.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/em/indexMgr/addTemplate.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/em/indexMgr/addTemplate.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/em/indexMgr/main.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/em/indexMgr/main.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/em/indexMgr/updateCategory.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/em/indexMgr/updateCategory.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/em/indexMgr/updateTemplate.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/em/indexMgr/updateTemplate.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/em/myIndex/add.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/em/myIndex/add.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/em/myIndex/main.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/em/myIndex/main.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/em/myIndex/update.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/em/myIndex/update.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/login.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/src/main/webapp/static/echarts-2.2.7/extension/BMap/doc/BMap.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/src/main/webapp/static/echarts-2.2.7/extension/BMap/doc/BMap.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/src/main/webapp/static/echarts-2.2.7/extension/BMap/doc/doc.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/src/main/webapp/static/echarts-2.2.7/extension/BMap/doc/example.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/src/main/webapp/static/echarts-2.2.7/extension/BMap/doc/example.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/src/main/webapp/static/echarts-2.2.7/extension/BMap/src/main.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/src/main/webapp/static/echarts-2.2.7/extension/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/keke/resident/main.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/keke/resident/main.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -562,13 +524,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -746,7 +710,8 @@
       <workItem from="1607774399649" duration="390000" />
       <workItem from="1607860737661" duration="6368000" />
       <workItem from="1607905523914" duration="1056000" />
-      <workItem from="1607909368535" duration="9000000" />
+      <workItem from="1607909368535" duration="9221000" />
+      <workItem from="1607930165504" duration="5766000" />
     </task>
     <task id="LOCAL-00001" summary="excel导出">
       <created>1586849513817</created>
@@ -860,7 +825,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606871540679</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="电机项目20201214-&gt;电机项目bug修复">
+      <created>1607922968532</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1607922968532</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -947,7 +919,8 @@
     <MESSAGE value="电机项目20201126-&gt;结果导出" />
     <MESSAGE value="电机项目20201128-&gt;导出结果的图表分析" />
     <MESSAGE value="电机项目20201128-&gt;首页调整" />
-    <option name="LAST_COMMIT_MESSAGE" value="电机项目20201128-&gt;首页调整" />
+    <MESSAGE value="电机项目20201214-&gt;电机项目bug修复" />
+    <option name="LAST_COMMIT_MESSAGE" value="电机项目20201214-&gt;电机项目bug修复" />
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">

@@ -463,7 +463,7 @@
                             data: res.constantloadList
                         });
                     }else{
-                        Frame.info('${res.msg}',2);
+                        Frame.info(res.msg,2);
                         table.render({
                             elem: '#stepDataList_${menuId}',
                             title:'阶跃响应数据',

@@ -10,12 +10,35 @@
 <div class="x-nav">
     <span class="layui-breadcrumb">
         <a href="javascript:;">可可小城</a>
-        <a><cite>居民管理</cite></a>
+        <a><cite>业主信息</cite></a>
     </span>
 </div>
 <div class="layui-fluid">
     <div class="layui-row layui-col-space15">
         <div class="layui-col-md12">
+            <div class="layui-card">
+                <div class="layui-card-header">业主信息导入</div>
+                <div class="layui-card-body">
+                    <form class="layui-form">
+                        <div class="layui-form-item">
+                            <div class="layui-inline">
+                                <label class="layui-form-label">业主信息</label>
+                                <div class="layui-input-inline">
+                                    <input type="text" class="layui-input" id="filePath_${menuId}" disabled/>
+                                </div>
+                                <div class="layui-input-inline">
+                                    <button type="button" class="layui-btn layui-btn-normal" id="residentImportBtn_${menuId}">
+                                        <i class="layui-icon">&#xe67c;</i>选择文件
+                                    </button>
+                                    <button class="layui-btn" lay-submit="" lay-filter="residentUpload" id="residentUploadBtn_${menuId}">
+                                        立即上传
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
             <div class="layui-card">
                 <div class="layui-card-header">
                     <form class="layui-form" lay-filter="searchFormResident" lay-filter="searchFormResident">
@@ -89,10 +112,40 @@
 </div>
 
 <script>
-    layui.use(['element','table','form'],function(){
+    layui.use(['element','table','form','upload'],function(){
         var element = layui.element;
         var talbe = layui.table;
         var form = layui.form;
+        var upload = layui.upload;
+
+        upload.render({
+            elem: '#residentImportBtn_${menuId}'
+            ,url: APP_ENV + '/em/home/uploadExcelData'
+            ,auto:false
+            ,bindAction:'#residentUploadBtn_${menuId}'
+            ,before:function(){
+                // this.data = {
+                //     name: $('input[name="name"]').val()
+                // }
+            }
+            ,choose: function(obj){
+                obj.preview(function(index,file,result){
+                    $('#filePath_${menuId}').val(file.name)
+                });
+            }
+            ,done: function(res, index, upload){ //上传后的回调
+                console.log(res);
+                if(res.code == 0){
+                    Frame.alert('上传成功');
+                }else{
+                    Frame.alert('上传失败，' + res.msg);
+                }
+
+            }
+            ,accept: 'file' //允许上传的文件类型
+            ,size: 50 //最大允许上传的文件大小
+            ,exts:'xls|xlsx'
+        });
 
         form.render('select');
 
