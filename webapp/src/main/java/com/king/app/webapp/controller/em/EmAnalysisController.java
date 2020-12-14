@@ -404,18 +404,27 @@ public class EmAnalysisController extends BaseController {
             EmIndexTemplate lastTemplate = newTemplates.stream().reduce((first,second)->second).orElse(null);
 
             //*** 归一化处理 ***
+            // 1.系统预设指标不进行归一化处理和加权、因为它已经做过处理了
+            // 2.自定义指标需要进行归一化处理和加权
+            int radioIndex = super.getIntegerParam("radioIndex");//1-系统预设 0-自定义
+
             for(EmIndexTemplate template : newTemplates){
                 BigDecimal val = mapIndex.get("calc_" + template.getId());
                 BigDecimal lower = template.getMinVal();
                 BigDecimal upper = template.getMaxVal();
-                //获取归一化后的值
-                BigDecimal normalizationVal = FormulaMgrServiceFactory.getInstance().getCalcResult(FormulaType.fromValue(template.getFormulaId()),val,lower,upper);
-                BigDecimal _weight = mapIndex.get("weight_" + template.getId());
-                //存入map方便后续
-                mapIndex.put("normalVal_" + template.getId(),normalizationVal.multiply(_weight));
-                //因图像只需要展示归一化后的数据，不需要乘以权重，特此修改
-                //template.setNormalVal(normalizationVal.multiply(_weight));
-                template.setNormalVal(normalizationVal);
+                if(radioIndex == 1){
+                    mapIndex.put("normalVal_" + template.getId(),template.getBestVal());
+                    template.setNormalVal(template.getBestVal());
+                }else{
+                    //获取归一化后的值
+                    BigDecimal normalizationVal = FormulaMgrServiceFactory.getInstance().getCalcResult(FormulaType.fromValue(template.getFormulaId()),val,lower,upper);
+                    BigDecimal _weight = mapIndex.get("weight_" + template.getId());
+                    //存入map方便后续
+                    mapIndex.put("normalVal_" + template.getId(),normalizationVal.multiply(_weight));
+                    //因图像只需要展示归一化后的数据，不需要乘以权重，特此修改
+                    //template.setNormalVal(normalizationVal.multiply(_weight));
+                    template.setNormalVal(normalizationVal);
+                }
             }
 
             result.put("templates",templateToAry(newTemplates));//保存计算后的指标值
@@ -535,6 +544,7 @@ public class EmAnalysisController extends BaseController {
             row13.getCell(4).setCellValue(evaluation3);
 
             //生成图表
+            /*
             String imgUrl = super.getParam("imgUrl");
             if(!StringUtils.isEmpty(imgUrl)){
                 String[] imgUrlArr = imgUrl.split("base64,");
@@ -562,6 +572,7 @@ public class EmAnalysisController extends BaseController {
                     file.delete();//删除图片
                 }
             }
+            */
 
             super.downloadFile("评估结果.xlsx", book,response);
         } catch (FileNotFoundException e) {

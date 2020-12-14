@@ -257,6 +257,10 @@
                                 <button class="layui-btn layui-btn-radius layui-btn-normal" lay-submit="" lay-filter="experimentForm">
                                     <i class="layui-icon">&#xe62c;</i>开始评估<i class="layui-icon">&#xe62c;</i>
                                 </button>
+
+                                <button class="layui-btn layui-btn-radius layui-btn-normal" id="clearResultBtn_${menuId}">
+                                    <i class="layui-icon layui-icon-delete"></i>清空评估结果
+                                </button>
                             </div>
                         </div>
                         <!-- 4.执行分析按钮结束 -->
@@ -324,14 +328,14 @@
                         </c:forEach>
 
                         <!-- 综合性能差异显示（折线图） -->
-                        <fieldset class="layui-elem-field" style="border-color: #5FB878;border-width: 1px;">
-                            <legend style="font-weight: bold">综合性能差异显示</legend>
-                            <div class="layui-field-box">
-                                <div id="experimentResultChart" style="height: 300px;">
+                        <%--<fieldset class="layui-elem-field" style="border-color: #5FB878;border-width: 1px;">--%>
+                            <%--<legend style="font-weight: bold">综合性能差异显示</legend>--%>
+                            <%--<div class="layui-field-box">--%>
+                                <%--<div id="experimentResultChart" style="height: 300px;">--%>
 
-                                </div>
-                            </div>
-                        </fieldset>
+                                <%--</div>--%>
+                            <%--</div>--%>
+                        <%--</fieldset>--%>
 
                     </form>
                 </div>
@@ -604,10 +608,11 @@
                                 for(var i=0;i<result.data.templates.length;i++){
                                     var template = result.data.templates[i];
                                     $('#calc_' + template.id + '_${menuId}').val(template.calcVal);
-                                    xData.push(template.name);
-                                    yData.push(template.normalVal);
+                                    // xData.push(template.name);
+                                    // yData.push(template.normalVal);
                                 }
                                 //显示折线图
+                                /*
                                 var chartOption = {
                                     title:{
                                         text:'归一化后性能差异'
@@ -643,6 +648,7 @@
                                     ]
                                 };
                                 WebUtils.Chart.createChart('experimentResultChart',chartOption);
+                                */
                             }
                         }
                     }
@@ -686,10 +692,12 @@
             downloadForm.append($("<input/>").attr("type","hidden").attr("name","calc_${template.id}").attr("value",calcItem));
         </c:forEach>
 
+        /*
         downloadForm.append($("<input/>").attr("type","hidden").attr("name","xData").attr("value",xData));
         downloadForm.append($("<input/>").attr("type","hidden").attr("name","yData").attr("value",yData));
         var imgUrl = baseUrlFromEcharts();
         downloadForm.append($("<input/>").attr("type","hidden").attr("name","imgUrl").attr("value",imgUrl));
+        */
         downloadForm.appendTo("body").submit().remove();
     }
 

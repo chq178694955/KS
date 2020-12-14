@@ -86,7 +86,7 @@ public class EmCalcUtil {
      * @return
      */
     public static BigDecimal getSpeedChangeRatio(EmDataOverload overload){
-        return overload.getSpeedEmpty().subtract(overload.getSpeedFixedLoad()).divide(overload.getSpeedEmpty(),BigDecimal.ROUND_HALF_UP,4);
+        return overload.getSpeedEmpty().subtract(overload.getSpeedFixedLoad()).divide(overload.getSpeedEmpty(),BigDecimal.ROUND_HALF_UP,4).multiply(new BigDecimal(100));
     }
 
     /**
@@ -111,7 +111,7 @@ public class EmCalcUtil {
         List<EmDataEmptyload> emptyloads = emptyloadList.stream().map(e-> (EmDataEmptyload)e).collect(Collectors.toList());
         BigDecimal totalForward = emptyloads.stream().map(EmDataEmptyload::getSpeedForward).reduce(BigDecimal.ZERO,BigDecimal::add);
         BigDecimal totalReverse = emptyloads.stream().map(EmDataEmptyload::getSpeedReverse).reduce(BigDecimal.ZERO,BigDecimal::add);
-        return totalForward.subtract(totalReverse).abs().divide(totalForward.add(totalReverse),BigDecimal.ROUND_HALF_UP,4);
+        return totalForward.subtract(totalReverse).abs().divide(totalForward.add(totalReverse),BigDecimal.ROUND_HALF_UP,4).multiply(new BigDecimal(100));
     }
 
 
@@ -157,7 +157,7 @@ public class EmCalcUtil {
         EmDataConstantload minDto = constantloads.stream().reduce((first,second)->( first.getTorque100().compareTo(second.getTorque100()) < 0 ? first : second )).orElse(null);
         BigDecimal max = maxDto.getTorque100();
         BigDecimal min = minDto.getTorque100();
-        return max.subtract(min).divide(max.add(min),BigDecimal.ROUND_HALF_UP,4);
+        return max.subtract(min).divide(max.add(min),BigDecimal.ROUND_HALF_UP,4).multiply(new BigDecimal(100));
     }
 
     /**
@@ -172,7 +172,7 @@ public class EmCalcUtil {
         EmDataConstantload minDto = constantloads.stream().reduce((first,second)->( first.getSpeed100().compareTo(second.getSpeed100()) < 0 ? first : second )).orElse(null);
         BigDecimal max = maxDto.getSpeed100();
         BigDecimal min = minDto.getSpeed100();
-        return max.subtract(min).divide(max.add(min),BigDecimal.ROUND_HALF_UP,4);
+        return max.subtract(min).divide(max.add(min),BigDecimal.ROUND_HALF_UP,4).multiply(new BigDecimal(100));
     }
 
     /**
