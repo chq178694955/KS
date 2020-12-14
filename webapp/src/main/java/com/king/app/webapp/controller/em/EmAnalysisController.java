@@ -74,6 +74,15 @@ public class EmAnalysisController extends BaseController {
             //获取实验数据
             Map<String,Object> experimentDataObj = this.getExperimentData(productId);
             mv.addObject("experimentDataObj",experimentDataObj);
+        }else{
+            Map<String,Object> experimentDataObj = new HashMap<>();
+            experimentDataObj.put("hasDataFlag",false);
+            experimentDataObj.put("msg","暂无试验数据");
+            experimentDataObj.put("stepList",new JSONArray());
+            experimentDataObj.put("sinList",new JSONArray());
+            experimentDataObj.put("emptyloadList",new JSONArray());
+            experimentDataObj.put("constantloadList",new JSONArray());
+            mv.addObject("experimentDataObj",experimentDataObj);
         }
         // 指标相关
         List<EmIndexCategory> categories = emIndexCategoryService.findAll();

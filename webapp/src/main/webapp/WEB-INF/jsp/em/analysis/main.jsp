@@ -406,22 +406,22 @@
         var hasDataFlag = ${experimentDataObj.hasDataFlag};
         if(hasDataFlag){
             var stepList = ${experimentDataObj.stepList};
-            table.init('stepDataList_${menuId}',{
+            table.reload('stepDataList_${menuId}',{
                 data: stepList
             });
 
             var sinList = ${experimentDataObj.sinList};
-            table.init('sinDataList_${menuId}',{
+            table.reload('sinDataList_${menuId}',{
                 data: sinList
             });
 
             var emptyloadList = ${experimentDataObj.emptyloadList};
-            table.init('emptyloadDataList_${menuId}',{
+            table.reload('emptyloadDataList_${menuId}',{
                 data: emptyloadList
             });
 
             var constantloadList = ${experimentDataObj.constantloadList};
-            table.init('constantloadDataList_${menuId}',{
+            table.reload('constantloadDataList_${menuId}',{
                 data: constantloadList
             });
         }else{
@@ -430,9 +430,9 @@
 
         //实验项目下拉选中事件
         form.on('select(productSelectFilter)', function(data){
-            console.log(data.elem); //得到select原始DOM对象
-            console.log(data.value); //得到被选中的值
-            console.log(data.othis); //得到美化后的DOM对象
+            // console.log(data.elem); //得到select原始DOM对象
+            // console.log(data.value); //得到被选中的值
+            // console.log(data.othis); //得到美化后的DOM对象
             $.ajax({
                 url: APP_ENV + '/em/analysis/reloadDatas',
                 data:{
