@@ -12,6 +12,10 @@ public interface IResidentInfoService {
 
     List<ResidentInfo> findAll();
 
+    ResidentInfo findByBuildAndHouse(ResidentInfo info);
+
+    ResidentInfo findById(Long id);
+
     boolean batchAdd(List<ResidentInfo> infos);
 
     boolean batchModify(List<ResidentInfo> infos);

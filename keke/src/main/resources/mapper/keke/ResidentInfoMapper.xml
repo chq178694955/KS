@@ -54,6 +54,21 @@
     order by building,house_no,id
   </select>
 
+  <select id="findByBuildAndHouse" parameterType="com.king.keke.entity.ResidentInfo" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from resident_info
+    where building = #{building,jdbcType=VARCHAR}
+    and house_no = #{houseNo,jdbcType=VARCHAR}
+  </select>
+
+  <select id="findById" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from resident_info
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+
   <delete id="delete" parameterType="java.lang.Long">
     delete from resident_info where id = #{id,jdbcType=BIGINT}
   </delete>

@@ -6,6 +6,20 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "3334390",
+      "name": "默认",
+      "font_class": "web-icon-",
+      "unicode": "e717",
+      "unicode_decimal": 59159
+    },
+    {
+      "icon_id": "7164646",
+      "name": "业主管理",
+      "font_class": "yezhuguanli-",
+      "unicode": "e634",
+      "unicode_decimal": 58932
+    },
+    {
       "icon_id": "7336784",
       "name": "验证码",
       "font_class": "yanzhengma",

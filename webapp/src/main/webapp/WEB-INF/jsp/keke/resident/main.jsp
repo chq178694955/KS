@@ -48,7 +48,7 @@
                             <label class="layui-form-label">查找方式</label>
                             <div class="layui-inline">
                                 <div class="layui-input-inline">
-                                    <select id="searchType_${menuId}" name="searchType">
+                                    <select id="searchType_${menuId}" name="searchType" lay-filter="searchType_${menuId}">
                                         <option value="">全部</option>
                                         <option value="0">楼栋</option>
                                         <option value="1">房号</option>
@@ -60,7 +60,7 @@
                             </div>
                             <div class="layui-inline">
                                 <div class="layui-input-inline">
-                                    <input type="text" id="searchKey_${menuId}" name="searchKey" class="layui-input" placeholder="请输入你要查找的内容">
+                                    <input type="text" id="searchKey_${menuId}" name="searchKey" class="layui-input" placeholder="请输入你要查找的内容" disabled>
                                 </div>
                             </div>
                             <div class="layui-inline">
@@ -152,6 +152,24 @@
         form.render('select');
         element.render('breadcrumb');
 
+        form.on('select(searchType_${menuId})', function(data){
+            // console.log(data.elem); //得到select原始DOM对象
+            // console.log(data.value); //得到被选中的值
+            // console.log(data.othis); //得到美化后的DOM对象
+            if(data.value == ''){
+                $('#searchKey_${menuId}').attr('disabled',true)
+            }else{
+                $('#searchKey_${menuId}').attr('disabled',false)
+            }
+        });
+
+        table.init('residentList_${menuId}',{
+            id: 'residentList_${menuId}',
+            url: '${ctx}/keke/resident/find',
+            page: true
+        });
+
+
         $('#query_${menuId}').bind('click',residentReload);
         function residentReload(){
             table.reload('residentList_${menuId}',{
@@ -175,5 +193,39 @@
                 }
             });
         }
+
+        table.on('tool(residentList_${menuId})',function(obj){
+            var data = obj.data;
+            data.menuId = '${menuId}';
+            switch(obj.event){
+                case 'del':
+                    Frame.confirm('确定删除该户吗？',function(){
+                        $.ajax({
+                            url: APP_ENV + '/keke/resident/delete',
+                            data:{id: data.id},
+                            dataType:'json',
+                            success:function (result) {
+                                if(result.code == 0){
+                                    $('#query_${menuId}').click();
+                                }
+                                Frame.alert(result.msg);
+                            }
+                        });
+                    });
+                    break;
+                case 'edit':
+                    Frame.modMainTab({
+                        id:'${menuId}',
+                        url:APP_ENV + '/keke/resident/toUpdate',
+                        params:{
+                            menuId:'${menuId}',
+                            id: data.id
+                        }
+                    });
+
+                    //Frame.loadPage('${menuId}','game/vote/toVoting?menuId=${menuId}',data,WebUtils.getMessage('com.btn.modify'),400);
+                    break;
+            };
+        });
     });
 </script>

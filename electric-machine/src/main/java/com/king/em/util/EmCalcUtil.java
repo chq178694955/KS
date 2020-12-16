@@ -61,7 +61,7 @@ public class EmCalcUtil {
      * @return
      */
     public static BigDecimal getOvershoot(BigDecimal maxSpeed,BigDecimal steadySpeed){
-        return maxSpeed.subtract(steadySpeed).divide(steadySpeed,BigDecimal.ROUND_HALF_UP,4);
+        return maxSpeed.subtract(steadySpeed).divide(steadySpeed,BigDecimal.ROUND_HALF_UP,4).multiply(new BigDecimal(100));
     }
 
     /**
@@ -76,7 +76,7 @@ public class EmCalcUtil {
     public static BigDecimal getSpeedAdjustRatio(List<Experiment> sinList2, BigDecimal fixedSpeed) {
         List<EmDataSin> sins = sinList2.stream().map(e->(EmDataSin)e).collect(Collectors.toList());
         BigDecimal total = sins.stream().map(EmDataSin::getSpeed10).reduce(BigDecimal.ZERO,BigDecimal::add);
-        return total.divide(new BigDecimal(sins.size())).subtract(fixedSpeed).abs().divide(fixedSpeed,BigDecimal.ROUND_HALF_UP,4);
+        return total.divide(new BigDecimal(sins.size())).subtract(fixedSpeed).abs().divide(fixedSpeed,BigDecimal.ROUND_HALF_UP,4).multiply(new BigDecimal(100));
     }
 
     /**

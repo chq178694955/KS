@@ -193,4 +193,46 @@ public class ResidentInfoController extends BaseController {
         return mv;
     }
 
+    @ResponseBody
+    @RequestMapping("add")
+    public Object add(ResidentInfo info){
+        ResidentInfo dbinfo = residentInfoService.findByBuildAndHouse(info);
+        if(dbinfo != null)return new ResultResp<>("楼栋房号已存在");
+        if(residentInfoService.add(info)){
+            return ResultResp.ok();
+        }else{
+            return ResultResp.fail();
+        }
+    }
+
+    @RequestMapping("toUpdate")
+    public ModelAndView toUpdate(Long id){
+        ModelAndView mv = new ModelAndView("keke/resident/update");
+        ResidentInfo resident = residentInfoService.findById(id);
+        mv.addObject("resident",resident);
+        return mv;
+    }
+
+    @ResponseBody
+    @RequestMapping("update")
+    public Object update(ResidentInfo info){
+        ResidentInfo dbinfo = residentInfoService.findByBuildAndHouse(info);
+        if(dbinfo != null && !dbinfo.getId().equals(info.getId()))return new ResultResp<>("楼栋房号已存在");
+        if(residentInfoService.modify(info)){
+            return ResultResp.ok();
+        }else{
+            return ResultResp.fail();
+        }
+    }
+
+    @ResponseBody
+    @RequestMapping("delete")
+    public Object delete(Long id){
+        if(residentInfoService.del(id)){
+            return ResultResp.ok();
+        }else{
+            return ResultResp.fail();
+        }
+    }
+
 }

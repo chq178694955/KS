@@ -237,7 +237,7 @@ Frame.Tabs = {
  */
 Frame.Menu = {
 
-    defaultIcon: '&#xe666;',
+    defaultIcon: '&#xe717;',
 
     init: function(){
         $.ajax({

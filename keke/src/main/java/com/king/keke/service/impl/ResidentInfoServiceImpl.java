@@ -35,6 +35,16 @@ public class ResidentInfoServiceImpl implements IResidentInfoService {
     }
 
     @Override
+    public ResidentInfo findByBuildAndHouse(ResidentInfo info) {
+        return residentInfoDao.get("findByBuildAndHouse",info);
+    }
+
+    @Override
+    public ResidentInfo findById(Long id) {
+        return residentInfoDao.get("findById",id);
+    }
+
+    @Override
     public boolean batchAdd(List<ResidentInfo> infos) {
         return residentInfoDao.batchInsert(infos) > 0 ? true : false;
     }
