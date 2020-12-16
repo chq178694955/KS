@@ -9,77 +9,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fe042204-8736-438e-94f6-a48ebd7c8011" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/keke/src/main/java/com/king/keke/controller/ResidentInfoController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/keke/src/main/java/com/king/keke/dao/ResidentInfoDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/keke/src/main/java/com/king/keke/service/IResidentInfoService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/keke/src/main/java/com/king/keke/service/impl/ResidentInfoServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/keke/src/main/resources/mapper/keke/ResidentInfoMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/keke/resident/add.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="fe042204-8736-438e-94f6-a48ebd7c8011" name="Default Changelist" comment="电机项目20201214-&gt;电机项目bug修复">
       <change beforePath="$PROJECT_DIR$/KS_DATA/cache/2001.data" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/KS_DATA/cache/2001.index" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/KS_DATA/logs/ks_log(LAPTOP-3H9KE96D)-default-current.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/electric-machine/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/electric-machine/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/game/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/keke/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/keke/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/keke/src/main/java/com/king/keke/dao/ResidentMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keke/src/main/java/com/king/keke/entity/Resident.java" beforeDir="false" afterPath="$PROJECT_DIR$/keke/src/main/java/com/king/keke/entity/ResidentInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/keke/src/main/resources/generatorConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/keke/src/main/resources/generatorConfig.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/keke/src/main/resources/mapper/keke/ResidentMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/system/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/src/main/java/com/king/system/conf/ShiroConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/system/src/main/java/com/king/system/conf/ShiroConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/src/main/java/com/king/system/po/UserInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/framework/src/main/java/com/king/framework/model/UserInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/src/main/java/com/king/system/shiro/CustomerShiroRealm.java" beforeDir="false" afterPath="$PROJECT_DIR$/system/src/main/java/com/king/system/shiro/CustomerShiroRealm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/src/main/java/com/king/system/utils/AuthUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/framework/src/main/java/com/king/framework/utils/AuthUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/src/main/java/com/king/app/webapp/controller/api/ApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/java/com/king/app/webapp/controller/api/ApiController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/src/main/java/com/king/app/webapp/controller/em/AttrTypeMgrController.java" beforeDir="false" afterPath="$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/controller/AttrTypeMgrController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/src/main/java/com/king/app/webapp/controller/em/EmAnalysisController.java" beforeDir="false" afterPath="$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/controller/EmAnalysisController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/src/main/java/com/king/app/webapp/controller/em/EmBaseParamsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/controller/EmBaseParamsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/src/main/java/com/king/app/webapp/controller/em/EmHomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/controller/EmHomeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/src/main/java/com/king/app/webapp/controller/em/EmIndexMgrController.java" beforeDir="false" afterPath="$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/controller/EmIndexMgrController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/src/main/java/com/king/app/webapp/controller/em/EmMyIndexController.java" beforeDir="false" afterPath="$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/controller/EmMyIndexController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/src/main/java/com/king/app/webapp/controller/em/ProductManagerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/controller/ProductManagerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/src/main/java/com/king/app/webapp/controller/game/VoteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/com/king/game/controller/VoteController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/src/main/java/com/king/app/webapp/controller/game/VoteItemController.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/com/king/game/controller/VoteItemController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/src/main/java/com/king/app/webapp/controller/game/VoteItemGroupController.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/com/king/game/controller/VoteItemGroupController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/src/main/java/com/king/app/webapp/controller/game/VoteTemplateController.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/com/king/game/controller/VoteTemplateController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/src/main/java/com/king/app/webapp/controller/keke/CardHomeController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/src/main/java/com/king/app/webapp/controller/keke/ResidentController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/src/main/java/com/king/app/webapp/controller/system/DictController.java" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/java/com/king/app/webapp/controller/system/DictController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/src/main/java/com/king/app/webapp/controller/system/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/java/com/king/app/webapp/controller/system/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/src/main/java/com/king/app/webapp/controller/system/ResourcesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/java/com/king/app/webapp/controller/system/ResourcesController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/src/main/java/com/king/app/webapp/controller/system/RoleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/java/com/king/app/webapp/controller/system/RoleController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/src/main/java/com/king/app/webapp/controller/system/SysConfigController.java" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/java/com/king/app/webapp/controller/system/SysConfigController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/src/main/java/com/king/app/webapp/controller/system/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/java/com/king/app/webapp/controller/system/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/src/main/java/com/king/app/webapp/dto/ResultResp.java" beforeDir="false" afterPath="$PROJECT_DIR$/framework/src/main/java/com/king/framework/model/ResultResp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/src/main/java/com/king/app/webapp/filter/ApiFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/java/com/king/app/webapp/filter/ApiFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/em/analysis/customIndex.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/em/analysis/customIndex.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/em/analysis/customParams.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/em/analysis/customParams.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/em/analysis/main.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/em/analysis/main.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/em/baseParams/add.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/em/baseParams/add.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/em/baseParams/update.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/em/baseParams/update.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/em/indexMgr/addCategory.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/em/indexMgr/addCategory.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/em/indexMgr/addTemplate.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/em/indexMgr/addTemplate.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/em/indexMgr/updateCategory.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/em/indexMgr/updateCategory.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/em/indexMgr/updateTemplate.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/em/indexMgr/updateTemplate.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/em/myIndex/add.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/em/myIndex/add.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/em/myIndex/update.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/em/myIndex/update.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/game/vote/add.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/game/vote/add.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/keke/resident/main.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/keke/resident/main.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/login.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/src/main/webapp/static/X-admin/css/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/webapp/static/X-admin/css/login.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/src/main/webapp/static/fonts/iconfont.css" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/webapp/static/fonts/iconfont.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/src/main/webapp/static/fonts/iconfont.eot" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/webapp/static/fonts/iconfont.eot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/src/main/webapp/static/fonts/iconfont.js" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/webapp/static/fonts/iconfont.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/src/main/webapp/static/fonts/iconfont.json" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/webapp/static/fonts/iconfont.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/src/main/webapp/static/fonts/iconfont.svg" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/webapp/static/fonts/iconfont.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/src/main/webapp/static/fonts/iconfont.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/webapp/static/fonts/iconfont.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/src/main/webapp/static/fonts/iconfont.woff" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/webapp/static/fonts/iconfont.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/src/main/webapp/static/fonts/iconfont.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/webapp/static/fonts/iconfont.woff2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/src/main/webapp/static/js/frame.js" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/webapp/static/js/frame.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/.gitignore" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -778,7 +712,7 @@
       <workItem from="1607930165504" duration="6638000" />
       <workItem from="1607992032649" duration="21945000" />
       <workItem from="1608020049031" duration="4735000" />
-      <workItem from="1608079062714" duration="9292000" />
+      <workItem from="1608079062714" duration="9653000" />
     </task>
     <task id="LOCAL-00001" summary="excel导出">
       <created>1586849513817</created>
@@ -906,7 +840,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607938003262</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="电机项目20201216-&gt;弹出框BUG修复、登录界面调整、工程结构调整、其他部分bug修复">
+      <created>1608089933285</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1608089933285</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -994,7 +935,8 @@
     <MESSAGE value="电机项目20201128-&gt;导出结果的图表分析" />
     <MESSAGE value="电机项目20201128-&gt;首页调整" />
     <MESSAGE value="电机项目20201214-&gt;电机项目bug修复" />
-    <option name="LAST_COMMIT_MESSAGE" value="电机项目20201214-&gt;电机项目bug修复" />
+    <MESSAGE value="电机项目20201216-&gt;弹出框BUG修复、登录界面调整、工程结构调整、其他部分bug修复" />
+    <option name="LAST_COMMIT_MESSAGE" value="电机项目20201216-&gt;弹出框BUG修复、登录界面调整、工程结构调整、其他部分bug修复" />
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
