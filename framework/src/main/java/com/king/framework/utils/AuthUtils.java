@@ -1,7 +1,6 @@
-package com.king.system.utils;
+package com.king.framework.utils;
 
-import com.king.system.entity.SysUser;
-import com.king.system.po.UserInfo;
+import com.king.framework.model.UserInfo;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.subject.Subject;
 

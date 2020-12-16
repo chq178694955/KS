@@ -154,6 +154,7 @@ public class ShiroConfig {
         LinkedHashMap<String,String> filterChianMap = new LinkedHashMap<>();
         //设置免验证路径
         filterChianMap.put("/static/**","anon");
+        filterChianMap.put("/createVerCodeImage","anon");//放行验证码
         filterChianMap.put("/api/**","anon");//http接口放行
         filterChianMap.put("/403","anon");
         filterChianMap.put("/404","anon");

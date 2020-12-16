@@ -12,7 +12,7 @@
         <a href="javascript:;">评估系统</a>
         <a><cite>指标分类</cite></a>
     </span>
-    <a class="layui-btn layui-btn-sm layui-btn-primary" style="line-height:2.5em;margin-top:4px;float:right;" onclick="goBack()" title="<spring:message code="com.goBack"/>">
+    <a class="layui-btn layui-btn-sm layui-btn-primary" style="line-height:2.5em;margin-top:4px;float:right;" onclick="Frame.goBack('${menuId}','/em/indexMgr/toMain');" title="<spring:message code="com.goBack"/>">
         <i class="iconfont">&#xe650;</i><spring:message code="com.goBack"/>
     </a>
 </div>
@@ -64,7 +64,7 @@
                 success: function(result){
                     if(result.code == 0){
                         $('#query_${menuId}').click();
-                        layer.close(Frame.Layer.layerIndex);
+                        Frame.goBack('${menuId}','/em/indexMgr/toMain');
                     }
                     Frame.alert(result.msg);
                 }
@@ -74,13 +74,4 @@
         form.render();
     });
 
-    function goBack(){
-        Frame.modMainTab({
-            id:'${menuId}',
-            url:APP_ENV + '/em/indexMgr/toMain',
-            params:{
-                menuId:'${menuId}'
-            }
-        });
-    }
 </script>

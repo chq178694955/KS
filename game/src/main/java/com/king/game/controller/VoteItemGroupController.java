@@ -1,10 +1,10 @@
-package com.king.app.webapp.controller.game;
+package com.king.game.controller;
 
 import com.github.pagehelper.PageInfo;
 import com.github.pagehelper.StringUtil;
-import com.king.app.webapp.dto.ResultResp;
 import com.king.framework.base.BaseController;
 import com.king.framework.model.Criteria;
+import com.king.framework.model.ResultResp;
 import com.king.framework.utils.I18nUtils;
 import com.king.game.entity.VoteItemGroup;
 import com.king.game.service.IVoteItemGroupService;

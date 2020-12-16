@@ -1,4 +1,4 @@
-package com.king.app.webapp.dto;
+package com.king.framework.model;
 
 import com.king.framework.utils.I18nUtils;
 
@@ -24,7 +24,7 @@ public class ResultResp<T> {
         this.code = code;
     }
 
-    public ResultResp(int code,String msg){
+    public ResultResp(int code, String msg){
         this.code = code;
         this.msg = msg;
     }
@@ -34,7 +34,7 @@ public class ResultResp<T> {
         this.data = t;
     }
 
-    public ResultResp(int code,T t){
+    public ResultResp(int code, T t){
         this.code = code;
         this.data = t;
     }

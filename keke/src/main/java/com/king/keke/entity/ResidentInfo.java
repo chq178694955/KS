@@ -1,8 +1,9 @@
 package com.king.keke.entity;
 
 import java.io.Serializable;
+import java.math.BigDecimal;
 
-public class Resident implements Serializable {
+public class ResidentInfo implements Serializable {
     private Long id;
 
     private String houseHolder;
@@ -13,15 +14,11 @@ public class Resident implements Serializable {
 
     private String houseNo;
 
-    private Double area;
-
-    private String carNo;
+    private BigDecimal area;
 
     private String idCardNo;
 
     private String remarks;
-
-    private Long userId;
 
     private static final long serialVersionUID = 1L;
 
@@ -65,20 +62,12 @@ public class Resident implements Serializable {
         this.houseNo = houseNo == null ? null : houseNo.trim();
     }
 
-    public Double getArea() {
+    public BigDecimal getArea() {
         return area;
     }
 
-    public void setArea(Double area) {
+    public void setArea(BigDecimal area) {
         this.area = area;
-    }
-
-    public String getCarNo() {
-        return carNo;
-    }
-
-    public void setCarNo(String carNo) {
-        this.carNo = carNo == null ? null : carNo.trim();
     }
 
     public String getIdCardNo() {
@@ -95,13 +84,5 @@ public class Resident implements Serializable {
 
     public void setRemarks(String remarks) {
         this.remarks = remarks == null ? null : remarks.trim();
-    }
-
-    public Long getUserId() {
-        return userId;
-    }
-
-    public void setUserId(Long userId) {
-        this.userId = userId;
     }
 }

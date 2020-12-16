@@ -30,7 +30,9 @@
                                     <button type="button" class="layui-btn layui-btn-normal" id="residentImportBtn_${menuId}">
                                         <i class="layui-icon">&#xe67c;</i>选择文件
                                     </button>
-                                    <button class="layui-btn" lay-submit="" lay-filter="residentUpload" id="residentUploadBtn_${menuId}">
+                                </div>
+                                <div class="layui-input-inline">
+                                    <button class="layui-btn" lay-submit="" lay-filter="residentUpload" id="residentUploadBtn_${menuId}" onclick="return false">
                                         立即上传
                                     </button>
                                 </div>
@@ -47,11 +49,12 @@
                             <div class="layui-inline">
                                 <div class="layui-input-inline">
                                     <select id="searchType_${menuId}" name="searchType">
-                                        <option value="0">户主名</option>
-                                        <option value="1">手机号</option>
-                                        <option value="2">房号</option>
-                                        <option value="3">车牌号</option>
-                                        <option value="4">身份证号</option>
+                                        <option value="">全部</option>
+                                        <option value="0">楼栋</option>
+                                        <option value="1">房号</option>
+                                        <option value="2">户主名称</option>
+                                        <option value="3">身份证</option>
+                                        <option value="4">手机号</option>
                                     </select>
                                 </div>
                             </div>
@@ -83,14 +86,13 @@
                         <thead>
                         <tr>
                             <th lay-data="{checkbox:true}"></th>
-                            <th lay-data="{field:'id',width:100,align:'center',hidden:true}">ID</th>
+<%--                            <th lay-data="{field:'id',width:100,align:'center',hidden:true}">ID</th>--%>
+                            <th lay-data="{field:'building',width:80,align:'center'}">楼栋</th>
+                            <th lay-data="{field:'houseNo',width:80,align:'center'}">房号</th>
                             <th lay-data="{field:'houseHolder',width:150,align:'center'}">户主名</th>
-                            <th lay-data="{field:'phone',width:100,align:'center'}">联系方式</th>
-                            <th lay-data="{field:'carNo',width:200,align:'center'}">车牌</th>
-                            <th lay-data="{field:'building',width:200,align:'center'}">楼栋</th>
-                            <th lay-data="{field:'roomNo',width:200,align:'center'}">房号</th>
+                            <th lay-data="{field:'phone',width:150,align:'center'}">联系方式</th>
                             <th lay-data="{field:'idCardNo',width:200,align:'center'}">身份证</th>
-                            <th lay-data="{field:'area',width:200,align:'center'}">建筑面积</th>
+                            <th lay-data="{field:'area',width:120,align:'center'}">建筑面积</th>
                             <th lay-data="{field:'oper',fixed:'right',width:180,align:'center',toolbar:'#operBar_${menuId}'}"><spring:message code="com.btn.oper"/></th>
                         </thead>
                     </table>
@@ -114,13 +116,13 @@
 <script>
     layui.use(['element','table','form','upload'],function(){
         var element = layui.element;
-        var talbe = layui.table;
+        var table = layui.table;
         var form = layui.form;
         var upload = layui.upload;
 
         upload.render({
             elem: '#residentImportBtn_${menuId}'
-            ,url: APP_ENV + '/em/home/uploadExcelData'
+            ,url: APP_ENV + '/keke/resident/uploadExcelData'
             ,auto:false
             ,bindAction:'#residentUploadBtn_${menuId}'
             ,before:function(){
@@ -143,13 +145,35 @@
 
             }
             ,accept: 'file' //允许上传的文件类型
-            ,size: 50 //最大允许上传的文件大小
+            ,size: 3 * 1024 //最大允许上传的文件大小,KB
             ,exts:'xls|xlsx'
         });
 
         form.render('select');
-
         element.render('breadcrumb');
-        table.init();
+
+        $('#query_${menuId}').bind('click',residentReload);
+        function residentReload(){
+            table.reload('residentList_${menuId}',{
+                where:{
+                    searchType: $('#searchType_${menuId}').val(),
+                    searchKey: $('#searchKey_${menuId}').val()
+                },
+                page:{
+                    curr:1
+                }
+            })
+        }
+
+        $('#add_${menuId}').bind('click',toAdd);
+        function toAdd(){
+            Frame.modMainTab({
+                id:'${menuId}',
+                url:APP_ENV + '/keke/resident/toAdd',
+                params:{
+                    menuId:'${menuId}'
+                }
+            });
+        }
     });
 </script>

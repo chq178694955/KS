@@ -1,8 +1,6 @@
 var element;
-var table;
-layui.use(['element','layer','table'],function(){
+layui.use(['element','layer'],function(){
     element = layui.element;
-    table = layui.table;
 });
 
 /**
@@ -51,13 +49,13 @@ window.Frame = window.Frame || {
       this.Layer.confirm(title,doFunc);
     },
     load: function(){
-        this.Layer.load();
+        return this.Layer.load();
     },
-    closeLayer: function(){
-        if(this.Layer.layerIndex != null){
-            layer.close(this.Layer.layerIndex);
-            this.Layer.layerIndex = null;
-        }
+    closeLayer: function(index){
+        layer.close(index);
+    },
+    closeAllLayer: function(){
+        layer.closeAll();
     },
     tips: function(title,id){
         this.Layer.tips(title,id);
@@ -68,6 +66,16 @@ window.Frame = window.Frame || {
 
     exportExcel: function(layId,url,queryParams,title){
         this.DataGrid.exportExcel(layId,url,queryParams,title)
+    },
+
+    goBack: function(id,url){
+        this.modMainTab({
+            id:id,
+            url:APP_ENV + url,
+            params:{
+                menuId:id
+            }
+        })
     }
 
 }
@@ -132,11 +140,12 @@ Frame.Tabs = {
     updateTab: function(opts){
         if(Frame.Tabs.existTab(opts.id)){
             var that = this;
+            that.layerIndex = null;
             $.ajax({
                 url: opts.url,
                 data: opts.params,
                 beforeSend: function(){
-                    Frame.load();
+                    that.layerIndex = Frame.load();
                 },
                 success: function(html){
                     $('#' + that.mainContentId + opts.id).html(html);
@@ -145,8 +154,8 @@ Frame.Tabs = {
 
                 },
                 complete: function(XMLHttpRequest,status){
-                    if(Frame.Layer.layerIndex != null){
-                        Frame.closeLayer();
+                    if(that.layerIndex != null){
+                        Frame.closeLayer(that.layerIndex);
                     }
                 }
             });
@@ -164,11 +173,12 @@ Frame.Tabs = {
                     return ;
                 }
                 var that = this;
+                that.layerIndex = null;
                 $.ajax({
                     url: opts.url,
                     async: true,
                     beforeSend: function(){
-                        Frame.load();
+                        that.layerIndex = Frame.load();
                     },
                     success: function(html){
                         if(typeof html == 'string'){
@@ -188,6 +198,9 @@ Frame.Tabs = {
                         }
                     },
                     error: function(xhr,status,errorMsg){
+                        if(that.layerIndex != null){
+                            Frame.closeLayer(that.layerIndex);
+                        }
                         if(xhr.status == 404){
                             Frame.info(WebUtils.getMessage("ks.global.exception.404"),2)
                         }else if(xhr.status == 500){
@@ -197,7 +210,9 @@ Frame.Tabs = {
                         }
                     },
                     complete: function(){
-                        Frame.closeLayer();
+                        if(that.layerIndex != null){
+                            Frame.closeLayer(that.layerIndex);
+                        }
                     }
                 });
             }else if(!WebUtils.isEmpty(opts.content)){
@@ -294,33 +309,34 @@ Frame.Menu = {
  */
 Frame.Layer = {
 
-    layerIndex: null,
-
     alert: function(content){
-        layer.open({
+        return layer.open({
             title: WebUtils.getMessage('com.layer.title1'),
             content: WebUtils.fmtStr(content)
         })
     },
     warn: function(content){
-        layer.open({
+        return layer.open({
             title: WebUtils.getMessage('com.layer.title2'),
             content: WebUtils.fmtStr(content)
         })
     },
     err: function(content){
-        layer.open({
+        return layer.open({
             title: WebUtils.getMessage('com.layer.title3'),
             content: WebUtils.fmtStr(content)
         })
     },
     info: function(content,iconIndex){
+        layer.closeAll();
         layer.alert(content,{
             shade:0,
             icon:iconIndex != undefined ? iconIndex : 1,
             offset:'rb',
             time:3000,
             anim:2
+        },function(index){
+            layer.close(index);
         });
     },
     confirm: function(title,doFunc){
@@ -332,7 +348,7 @@ Frame.Layer = {
         });
     },
     load: function(){
-        this.layerIndex = layer.load();
+        return layer.load();
     },
     tips: function(title,id){
         layer.tips(title,'#' + id)
@@ -350,7 +366,7 @@ Frame.Layer = {
             data: params,
             success: function(html){
                 if(html){
-                    Frame.Layer.layerIndex = layer.open({
+                    layer.open({
                         id:'loadPage_' + id,
                         type:1,
                         title: title == null ? '' : title,

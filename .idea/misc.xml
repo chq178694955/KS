@@ -2,6 +2,9 @@
 <project version="4">
   <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/electric-machine" />
+    <file type="web" url="file://$PROJECT_DIR$/game" />
+    <file type="web" url="file://$PROJECT_DIR$/keke" />
     <file type="web" url="file://$PROJECT_DIR$/webapp" />
   </component>
   <component name="JavaScriptSettings">

@@ -1,13 +1,11 @@
-package com.king.app.webapp.controller.game;
+package com.king.em.controller;
 
 import com.github.pagehelper.PageInfo;
-import com.king.app.webapp.dto.ResultResp;
+import com.king.em.entity.EmBaseParams;
+import com.king.em.service.IEmBaseParamsService;
 import com.king.framework.base.BaseController;
 import com.king.framework.model.Criteria;
-import com.king.framework.utils.I18nUtils;
-import com.king.game.entity.VoteTemplate;
-import com.king.game.service.IVoteTemplateService;
-import com.king.system.entity.SysDict;
+import com.king.framework.model.ResultResp;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -18,42 +16,42 @@ import javax.servlet.http.HttpServletRequest;
 
 /**
  * @创建人 chq
- * @创建时间 2020/4/14
+ * @创建时间 2020/11/21
  * @描述
  */
 @Controller
-@RequestMapping("game/voteTemplate")
-public class VoteTemplateController extends BaseController {
+@RequestMapping("em/baseParams")
+public class EmBaseParamsController extends BaseController {
 
     @Autowired
-    private IVoteTemplateService voteTemplateService;
+    private IEmBaseParamsService emBaseParamsService;
 
     @RequestMapping("toMain")
     public ModelAndView toMain(){
-        ModelAndView mv = new ModelAndView("game/template/main");
+        ModelAndView mv = new ModelAndView("em/baseParams/main");
         return mv;
     }
 
     @ResponseBody
     @RequestMapping("find")
     public Object find(HttpServletRequest request){
-        PageInfo<VoteTemplate> page = super.getPage(request);
+        PageInfo<EmBaseParams> page = super.getPage(request);
         Criteria criteria = new Criteria();
-        criteria.put("name",super.getParam("name"));
-        PageInfo<VoteTemplate> pageInfo = voteTemplateService.find(page,criteria,isDownloadReq());
+        PageInfo<EmBaseParams> pageInfo = emBaseParamsService.find(page,criteria,isDownloadReq());
         return getGridData(pageInfo);
     }
 
     @RequestMapping("toAdd")
     public ModelAndView toAdd(){
-        ModelAndView mv = new ModelAndView("game/template/add");
+        ModelAndView mv = new ModelAndView("em/baseParams/add");
         return mv;
     }
 
     @RequestMapping("add")
     @ResponseBody
-    public Object add(HttpServletRequest request, VoteTemplate template){
-        if(voteTemplateService.addVoteTemplate(template) > 0){
+    public Object add(HttpServletRequest request, EmBaseParams params){
+        params.setIsDefault(0);//用户自定义，非默认
+        if(emBaseParamsService.add(params) > 0){
             return ResultResp.ok();
         }else{
             return ResultResp.fail();
@@ -61,16 +59,17 @@ public class VoteTemplateController extends BaseController {
     }
 
     @RequestMapping("toUpdate")
-    public ModelAndView toUpdate(HttpServletRequest request,VoteTemplate template){
-        ModelAndView mv = new ModelAndView("game/template/update");
-        mv.addObject("template",template);
+    public ModelAndView toUpdate(HttpServletRequest request,Integer id){
+        ModelAndView mv = new ModelAndView("em/baseParams/update");
+        EmBaseParams params = emBaseParamsService.findById(id);
+        mv.addObject("params",params);
         return mv;
     }
 
     @RequestMapping("update")
     @ResponseBody
-    public Object update(HttpServletRequest request,VoteTemplate template){
-        if(voteTemplateService.updateVoteTemplate(template) > 0){
+    public Object update(HttpServletRequest request,EmBaseParams params){
+        if(emBaseParamsService.update(params) > 0){
             return ResultResp.ok();
         }else{
             return ResultResp.fail();
@@ -79,11 +78,12 @@ public class VoteTemplateController extends BaseController {
 
     @RequestMapping("delete")
     @ResponseBody
-    public Object delete(HttpServletRequest request,Long id){
-        if(voteTemplateService.deleteVoteTemplate(id) > 0){
+    public Object delete(HttpServletRequest request,Integer id){
+        if(emBaseParamsService.delete(id) > 0){
             return ResultResp.ok();
         }else{
             return ResultResp.fail();
         }
     }
+
 }

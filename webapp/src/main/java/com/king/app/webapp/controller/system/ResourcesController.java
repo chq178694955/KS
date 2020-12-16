@@ -2,9 +2,8 @@ package com.king.app.webapp.controller.system;
 
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
-import com.king.app.webapp.dto.ResultResp;
 import com.king.framework.base.BaseController;
-import com.king.framework.utils.I18nUtils;
+import com.king.framework.model.ResultResp;
 import com.king.system.entity.SysResources;
 import com.king.system.service.ISysResourcesService;
 import org.springframework.beans.factory.annotation.Autowired;

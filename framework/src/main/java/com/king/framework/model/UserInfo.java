@@ -1,6 +1,4 @@
-package com.king.system.po;
-
-import com.king.system.entity.SysUser;
+package com.king.framework.model;
 
 import java.io.Serializable;
 

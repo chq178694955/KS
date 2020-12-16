@@ -231,10 +231,8 @@
                 data: "voteInfo=" + encodeURIComponent(JSON.stringify(params)),
                 dataType: 'json',
                 beforeSend: function(){
-                    Frame.load();
                 },
                 success: function (result) {
-                    Frame.closeLayer();
                     if(result.code == 0){
                         goBack();
                     }

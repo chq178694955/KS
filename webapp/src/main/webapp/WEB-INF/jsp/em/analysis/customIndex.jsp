@@ -59,13 +59,11 @@
                 Frame.info('只能选择一条数据',2);
                 return ;
             }
-            loadIndex(checkStatus.data[0],function(){
-                Frame.closeLayer();//手动关闭弹出框
-            });
+            loadIndex(checkStatus.data[0]);
 
         });
 
-        function loadIndex(res,callback){
+        function loadIndex(res){
             $.ajax({
                 url: APP_ENV + '/em/analysis/findCustomIndex',
                 data:{
@@ -81,9 +79,6 @@
                             var weightId = '#weight_' + indexId + '_${menuId}';
                             $(valId).val(data.val);
                             $(weightId).val(data.weight);
-                        }
-                        if(typeof(callback) == 'function'){
-                            callback();
                         }
                     }else{
                         Frame.info('选择自定义指标失败，请重新选择！',2);

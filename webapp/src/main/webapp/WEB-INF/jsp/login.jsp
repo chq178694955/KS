@@ -31,6 +31,18 @@
             font-size: 46px;
             color: #999999;
         }
+        .login-vercode-input{
+            position: absolute;
+            left:0;
+            top:0;
+            width: 160px;
+            height: 50px;
+        }
+        .login-vercode-img{
+            margin-left: 175px;
+            width: 110px;
+            height: 50px;
+        }
     </style>
 </head>
 <body class="login-bg">
@@ -49,11 +61,30 @@
             <i class="layui-icon layui-icon-password loginIcon"></i>
             <input name="password" placeholder="<spring:message code="com.login.password"/>" type="password" lay-verify="required|password" lay-verType="tips" class="layui-input">
         </div>
-        <input value="<spring:message code="com.login.loginBtn"/>" lay-submit lay-filter="login" style="width:100%;" type="submit">
+        <div class="layui-form-item loginItemContainer">
+            <div class="login-vercode login-vercode-input">
+                <i class="iconfont layui-icon-yanzhengma loginIcon"></i>
+                <input type="text" name="verCode" class="layui-input" lay-verify="required" lay-verType="tips"/>
+            </div>
+            <div class="login-vercode login-vercode-img">
+                <a href="javascript:void(0);" onclick="changeVerCodeImage()" title="看不清楚换一张？">
+                    <img id="verCodeImage" src="${ctx}/createVerCodeImage"/>
+                </a>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <input value="<spring:message code="com.login.loginBtn"/>" lay-submit lay-filter="login" style="width:100%;" type="submit">
+        </div>
     </form>
 </div>
 
 <script>
+
+    function changeVerCodeImage(){
+        var date = new Date().getTime();
+        $('#verCodeImage').attr('src','${ctx}/createVerCodeImage?t=' + date)
+    }
+
     $(function  () {
         layui.use('form', function(){
             var form = layui.form;

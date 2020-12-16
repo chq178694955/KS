@@ -1,7 +1,6 @@
-package com.king.app.webapp.controller.em;
+package com.king.em.controller;
 
 import com.github.pagehelper.PageInfo;
-import com.king.app.webapp.dto.ResultResp;
 import com.king.em.entity.EmIndexCategory;
 import com.king.em.entity.EmIndexDetail;
 import com.king.em.entity.EmIndexGroup;
@@ -12,7 +11,8 @@ import com.king.em.service.IEmIndexGroupService;
 import com.king.em.service.IEmIndexTemplateService;
 import com.king.framework.base.BaseController;
 import com.king.framework.model.Criteria;
-import com.king.system.utils.AuthUtils;
+import com.king.framework.model.ResultResp;
+import com.king.framework.utils.AuthUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.util.CollectionUtils;

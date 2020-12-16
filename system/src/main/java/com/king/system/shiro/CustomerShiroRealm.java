@@ -1,13 +1,13 @@
 package com.king.system.shiro;
 
+import com.king.framework.model.UserInfo;
+import com.king.framework.utils.AuthUtils;
 import com.king.system.entity.SysResources;
 import com.king.system.entity.SysRole;
 import com.king.system.entity.SysUser;
-import com.king.system.po.UserInfo;
 import com.king.system.service.ISysResourcesService;
 import com.king.system.service.ISysRoleService;
 import com.king.system.service.ISysUserService;
-import com.king.system.utils.AuthUtils;
 import org.apache.shiro.authc.*;
 import org.apache.shiro.authz.AuthorizationInfo;
 import org.apache.shiro.authz.SimpleAuthorizationInfo;

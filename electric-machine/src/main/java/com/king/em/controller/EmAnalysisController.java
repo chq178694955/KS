@@ -1,10 +1,8 @@
-package com.king.app.webapp.controller.em;
+package com.king.em.controller;
 
-import com.alibaba.druid.util.StringUtils;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import com.github.pagehelper.PageInfo;
-import com.king.app.webapp.dto.ResultResp;
 import com.king.em.dto.ExperimentType;
 import com.king.em.dto.FormulaType;
 import com.king.em.entity.*;
@@ -14,12 +12,12 @@ import com.king.em.service.*;
 import com.king.em.util.EmCalcUtil;
 import com.king.framework.base.BaseController;
 import com.king.framework.model.Criteria;
-import com.king.system.utils.AuthUtils;
-import org.apache.commons.codec.binary.Base64;
-import org.apache.poi.hssf.usermodel.HSSFClientAnchor;
+import com.king.framework.model.ResultResp;
+import com.king.framework.utils.AuthUtils;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
-import org.apache.poi.ss.usermodel.*;
-import org.apache.poi.xssf.usermodel.XSSFClientAnchor;
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.ss.usermodel.Sheet;
+import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -30,13 +28,14 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
-import javax.imageio.ImageIO;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.awt.image.BufferedImage;
 import java.io.*;
 import java.math.BigDecimal;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 
 /**

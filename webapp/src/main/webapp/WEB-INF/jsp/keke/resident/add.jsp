@@ -10,10 +10,10 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <div class="x-nav">
     <span class="layui-breadcrumb">
-        <a href="javascript:;">评估系统</a>
-        <a><cite>我的指标</cite></a>
+        <a href="javascript:;">业主信息</a>
+        <a><cite>新增业主信息</cite></a>
     </span>
-    <a class="layui-btn layui-btn-sm layui-btn-primary" style="line-height:2.5em;margin-top:4px;float:right;" onclick="Frame.goBack('${menuId}','/em/myIndex/toMain');" title="<spring:message code="com.goBack"/>">
+    <a class="layui-btn layui-btn-sm layui-btn-primary" style="line-height:2.5em;margin-top:4px;float:right;" onclick="Frame.goBack('${menuId}','/keke/resident/toMain');" title="<spring:message code="com.goBack"/>">
         <i class="iconfont">&#xe650;</i><spring:message code="com.goBack"/>
     </a>
 </div>
@@ -21,9 +21,9 @@
 <div class="layui-fluid">
     <div class="layui-row layui-col-space15">
         <div class="layui-col-md12">
-            <form class="layui-form layui-form-pane" lay-filter="addForm" action="${ctx}/em/myIndex/add">
+            <form class="layui-form layui-form-pane" lay-filter="addForm" action="${ctx}/keke/resident/add">
                 <div class="layui-card">
-                    <div class="layui-card-header">新增指标分类</div>
+                    <div class="layui-card-header">新增业主信息</div>
                     <div class="layui-card-body">
                         <fieldset class="layui-elem-field">
                             <legend>用户自定义的指标需要给他起一个唯一名称，用于后面计算时进行选择区分</legend>
@@ -105,7 +105,7 @@
                 success: function(result){
                     if(result.code == 0){
                         $('#query_${menuId}').click();
-                        Frame.goBack('${menuId}','/em/myIndex/toMain');
+                        Frame.goBack('${menuId}','/keke/resident/toMain');
                     }
                     Frame.alert(result.msg);
                 }

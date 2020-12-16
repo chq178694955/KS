@@ -6,6 +6,13 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "7336784",
+      "name": "验证码",
+      "font_class": "yanzhengma",
+      "unicode": "e668",
+      "unicode_decimal": 58984
+    },
+    {
       "icon_id": "410174",
       "name": "参数管理",
       "font_class": "canshuguanli",

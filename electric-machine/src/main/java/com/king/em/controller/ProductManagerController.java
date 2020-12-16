@@ -1,4 +1,4 @@
-package com.king.app.webapp.controller.em;
+package com.king.em.controller;
 
 import com.github.pagehelper.PageInfo;
 import com.king.em.dto.ExperimentType;
@@ -8,7 +8,7 @@ import com.king.em.factory.ExperimentDataServiceFactory;
 import com.king.em.service.IEmProductService;
 import com.king.framework.base.BaseController;
 import com.king.framework.model.Criteria;
-import com.king.system.utils.AuthUtils;
+import com.king.framework.utils.AuthUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -16,7 +16,6 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
-import java.util.List;
 
 /**
  * @创建人 chq

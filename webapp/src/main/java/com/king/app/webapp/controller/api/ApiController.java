@@ -1,8 +1,8 @@
 package com.king.app.webapp.controller.api;
 
 import com.alibaba.fastjson.JSONObject;
-import com.king.app.webapp.dto.ResultResp;
 import com.king.framework.base.BaseController;
+import com.king.framework.model.ResultResp;
 import com.king.framework.utils.JwtUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.env.Environment;

@@ -1,9 +1,9 @@
 package com.king.app.webapp.controller.system;
 
 import com.github.pagehelper.PageInfo;
-import com.king.app.webapp.dto.ResultResp;
 import com.king.framework.base.BaseController;
 import com.king.framework.model.Criteria;
+import com.king.framework.model.ResultResp;
 import com.king.framework.utils.I18nUtils;
 import com.king.system.entity.SysUser;
 import com.king.system.service.ISysUserService;

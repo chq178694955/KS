@@ -2,7 +2,7 @@ package com.king.app.webapp.filter;
 
 
 import com.alibaba.fastjson.JSONObject;
-import com.king.app.webapp.dto.ResultResp;
+import com.king.framework.model.ResultResp;
 import com.king.framework.model.TokenStatus;
 import com.king.framework.utils.JwtUtil;
 import org.slf4j.Logger;
@@ -61,7 +61,7 @@ public class ApiFilter implements Filter {
         return ;
     }
 
-    private void accessDeny(HttpServletResponse response,ResultResp result){
+    private void accessDeny(HttpServletResponse response, ResultResp result){
         PrintWriter write = null;
         response.setHeader("Content-Type","application/json;charset=UTF-8");
         response.setCharacterEncoding("UTF-8");

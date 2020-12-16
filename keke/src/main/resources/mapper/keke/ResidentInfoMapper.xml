@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.king.keke.dao.ResidentInfoDao">
+  <resultMap id="BaseResultMap" type="com.king.keke.entity.ResidentInfo">
+    <result column="id" jdbcType="BIGINT" property="id" />
+    <result column="house_holder" jdbcType="VARCHAR" property="houseHolder" />
+    <result column="phone" jdbcType="VARCHAR" property="phone" />
+    <result column="building" jdbcType="VARCHAR" property="building" />
+    <result column="house_no" jdbcType="VARCHAR" property="houseNo" />
+    <result column="area" jdbcType="DECIMAL" property="area" />
+    <result column="id_card_no" jdbcType="VARCHAR" property="idCardNo" />
+    <result column="remarks" jdbcType="VARCHAR" property="remarks" />
+  </resultMap>
+
+  <sql id="Base_Column_List">
+    id, house_holder, phone, building, house_no, area, id_card_no, remarks
+  </sql>
+  <select id="find" parameterType="java.util.Map" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from resident_info
+    <where>
+      <if test="searchType != null and searchKey != null">
+        <choose>
+          <when test="searchType == 0">
+            and building = #{searchKey,jdbcType=VARCHAR}
+          </when>
+          <when test="searchType == 1">
+            and house_no = #{searchKey,jdbcType=VARCHAR}
+          </when>
+          <when test="searchType == 2">
+            and house_holder like concat('%',#{searchKey,jdbcType=VARCHAR},'%')
+          </when>
+          <when test="searchType == 3">
+            and id_card_no like concat('%',#{searchKey,jdbcType=VARCHAR},'%')
+          </when>
+          <when test="searchType == 4">
+            and phone like concat('%',#{searchKey,jdbcType=VARCHAR},'%')
+          </when>
+        </choose>
+
+      </if>
+      <if test="houseNo != null">
+        and house_no = #{houseNo}
+      </if>
+    </where>
+    order by building,house_no,id
+  </select>
+
+  <select id="findAll" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from resident_info
+    order by building,house_no,id
+  </select>
+
+  <delete id="delete" parameterType="java.lang.Long">
+    delete from resident_info where id = #{id,jdbcType=BIGINT}
+  </delete>
+
+  <insert id="insert" parameterType="com.king.keke.entity.ResidentInfo">
+    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Long">
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into resident_info (house_holder, phone, building, 
+      house_no, area, id_card_no, 
+      remarks)
+    values (#{houseHolder,jdbcType=VARCHAR}, #{phone,jdbcType=VARCHAR}, #{building,jdbcType=VARCHAR}, 
+      #{houseNo,jdbcType=VARCHAR}, #{area,jdbcType=DECIMAL}, #{idCardNo,jdbcType=VARCHAR}, 
+      #{remarks,jdbcType=VARCHAR})
+  </insert>
+
+  <update id="update" parameterType="com.king.keke.entity.ResidentInfo">
+    update resident_info
+    <set>
+      <if test="houseHolder != null">
+        house_holder = #{houseHolder,jdbcType=VARCHAR},
+      </if>
+      <if test="phone != null">
+        phone = #{phone,jdbcType=VARCHAR},
+      </if>
+      <if test="building != null">
+        building = #{building,jdbcType=VARCHAR},
+      </if>
+      <if test="houseNo != null">
+        house_no = #{houseNo,jdbcType=VARCHAR},
+      </if>
+      <if test="area != null">
+        area = #{area,jdbcType=DECIMAL},
+      </if>
+      <if test="idCardNo != null">
+        id_card_no = #{idCardNo,jdbcType=VARCHAR},
+      </if>
+      <if test="remarks != null">
+        remarks = #{remarks,jdbcType=VARCHAR},
+      </if>
+    </set>
+    <where>
+      <if test="id != null">
+        and id = #{id,jdbcType=BIGINT}
+      </if>
+    </where>
+  </update>
+
+</mapper>

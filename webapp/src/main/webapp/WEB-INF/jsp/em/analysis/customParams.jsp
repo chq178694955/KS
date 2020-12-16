@@ -74,13 +74,11 @@
                 Frame.info('只能选择一条数据',2);
                 return ;
             }
-            loadParams(checkStatus.data[0],function(){
-                Frame.closeLayer();//手动关闭弹出框
-            });
+            loadParams(checkStatus.data[0]);
 
         });
 
-        function loadParams(res,callback){
+        function loadParams(res){
             $('#fixedCurrent_${menuId}').val(res.fixedCurrent);
             $('#fixedVoltage_${menuId}').val(res.fixedVoltage);
             $('#fixedSpeed_${menuId}').val(res.fixedSpeed);
@@ -91,9 +89,6 @@
             $('#machineWidth_${menuId}').val(res.machineWidth);
             $('#rotorLength_${menuId}').val(res.rotorLength);
             $('#machineWeight_${menuId}').val(res.machineWeight);
-            if(typeof(callback) == 'function'){
-                callback();
-            }
         }
 
     });

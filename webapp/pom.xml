@@ -158,11 +158,22 @@
         <dependency>
             <groupId>com.king</groupId>
             <artifactId>game</artifactId>
+            <type>war</type>
+            <scope>provided</scope>
             <version>${platform.version}</version>
         </dependency>
         <dependency>
             <groupId>com.king</groupId>
             <artifactId>electric-machine</artifactId>
+            <type>war</type>
+            <scope>provided</scope>
+            <version>${platform.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.king</groupId>
+            <artifactId>keke</artifactId>
+            <type>war</type>
+            <scope>provided</scope>
             <version>${platform.version}</version>
         </dependency>
     </dependencies>
@@ -192,6 +203,29 @@
         </resources>
 
         <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>2.5</version>
+                <configuration>
+                    <webappDirectory>${basedir}/src/main/webapp</webappDirectory>
+                    <warSourceDirectory>${basedir}/src/main/webapp</warSourceDirectory>
+                    <overlays>
+                        <overlay>
+                            <groupId>com.king</groupId>
+                            <artifactId>keke</artifactId>
+                        </overlay>
+                        <overlay>
+                            <groupId>com.king</groupId>
+                            <artifactId>electric-machine</artifactId>
+                        </overlay>
+                        <overlay>
+                            <groupId>com.king</groupId>
+                            <artifactId>game</artifactId>
+                        </overlay>
+                    </overlays>
+                </configuration>
+            </plugin>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>

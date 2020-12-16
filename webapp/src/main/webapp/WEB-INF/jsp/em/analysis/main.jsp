@@ -257,10 +257,6 @@
                                 <button class="layui-btn layui-btn-radius layui-btn-normal" lay-submit="" lay-filter="experimentForm">
                                     <i class="layui-icon">&#xe62c;</i>开始评估<i class="layui-icon">&#xe62c;</i>
                                 </button>
-
-                                <button class="layui-btn layui-btn-radius layui-btn-normal" id="clearResultBtn_${menuId}">
-                                    <i class="layui-icon layui-icon-delete"></i>清空评估结果
-                                </button>
                             </div>
                         </div>
                         <!-- 4.执行分析按钮结束 -->
@@ -274,13 +270,16 @@
         <div class="layui-col-md12">
             <div class="layui-card">
                 <div class="layui-card-header">
-                    <span>评估结果数据</span>
+                    <span style="font-weight: bold;">评估结果数据</span>
+                    <button class="layui-btn layui-btn-radius layui-btn-sm layui-btn-danger" id="clearResultBtn_${menuId}">
+                        <i class="layui-icon layui-icon-delete"></i>清空评估结果
+                    </button>
                     <a id="downloadExperiment_${menuId}" class="layui-btn layui-btn-sm layui-btn-primary" style="line-height:2.5em;margin-top:4px;float:right;" href="javascript:void(0)" title="评估结果下载">
                         <i class="iconfont layui-icon-excel" style="color: #FF5722;"></i>评估结果下载
                     </a>
                 </div>
                 <div class="layui-card-body">
-                    <form class="layui-form layui-form-pane" lay-filter="experimentResultForm">
+                    <form class="layui-form layui-form-pane" id="experimentResultForm_${menuId}" lay-filter="experimentResultForm">
 
                         <fieldset class="layui-elem-field" style="border-color: #5FB878;border-width: 1px;">
                             <legend style="font-weight: bold">等级评估</legend>
@@ -657,7 +656,7 @@
                     }
                 },
                 complete: function(XMLHttpRequest, status){
-                    Frame.closeLayer()
+                    Frame.closeAllLayer()
                 }
             })
             return false;
@@ -669,6 +668,8 @@
         });
 
         $('#downloadExperiment_${menuId}').bind('click',downloadExperiment);
+
+        $('#clearResultBtn_${menuId}').bind('click',clearResultForm)
     });
     function downloadExperiment(){
         //此种方式可行
@@ -720,5 +721,14 @@
             }
         });
         return baseCanvas.toDataURL();
+    }
+
+    function clearResultForm(){
+        $('#experimentResultForm_${menuId}').find("input[name^='evaluation']").each(function(){
+            $(this).val('');
+        });
+        $('#experimentResultForm_${menuId}').find("input[name^='calc_']").each(function(){
+            $(this).val('');
+        });
     }
 </script>

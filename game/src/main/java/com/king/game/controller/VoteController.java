@@ -1,20 +1,20 @@
-package com.king.app.webapp.controller.game;
+package com.king.game.controller;
 
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import com.github.pagehelper.PageInfo;
 import com.github.pagehelper.StringUtil;
-import com.king.app.webapp.dto.ResultResp;
 import com.king.framework.base.BaseController;
 import com.king.framework.model.Criteria;
+import com.king.framework.model.ResultResp;
+import com.king.framework.model.UserInfo;
+import com.king.framework.utils.AuthUtils;
 import com.king.framework.utils.DateUtils;
 import com.king.framework.utils.I18nUtils;
 import com.king.game.entity.*;
 import com.king.game.service.*;
 import com.king.game.vo.VoteItemVO;
 import com.king.game.vo.VoteVO;
-import com.king.system.po.UserInfo;
-import com.king.system.utils.AuthUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;

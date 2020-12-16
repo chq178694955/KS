@@ -1,11 +1,11 @@
-package com.king.app.webapp.controller.em;
+package com.king.em.controller;
 
 import com.github.pagehelper.PageInfo;
-import com.king.app.webapp.dto.ResultResp;
 import com.king.em.entity.EmAttrType;
 import com.king.em.service.IEmAttrTypeService;
 import com.king.framework.base.BaseController;
 import com.king.framework.model.Criteria;
+import com.king.framework.model.ResultResp;
 import com.king.framework.utils.I18nUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
