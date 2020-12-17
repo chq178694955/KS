@@ -152,13 +152,6 @@
 
         <dependency>
             <groupId>com.king</groupId>
-            <artifactId>game</artifactId>
-            <type>war</type>
-            <version>${platform.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>com.king</groupId>
             <artifactId>electric-machine</artifactId>
             <type>war</type>
             <version>${platform.version}</version>
@@ -212,16 +205,12 @@
                             <groupId>com.king</groupId>
                             <artifactId>electric-machine</artifactId>
                         </overlay>
-                        <overlay>
-                            <groupId>com.king</groupId>
-                            <artifactId>game</artifactId>
-                        </overlay>
                     </overlays>
                     <!-- class文件会自动打JAR包 -->
                     <archiveClasses>false</archiveClasses>
                     <!--排除netcdf-4.2-min.jar多个用逗号隔开-->
                     <packagingExcludes>
-                        WEB-INF/lib/electric-machine-1.0-SNAPSHOT.jar,WEB-INF/lib/game-1.0-SNAPSHOT.jar
+                        WEB-INF/lib/electric-machine-1.0-SNAPSHOT.jar
                     </packagingExcludes>
                 </configuration>
             </plugin>

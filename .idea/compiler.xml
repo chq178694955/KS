@@ -7,7 +7,6 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="webapp" />
-        <module name="game" />
         <module name="framework" />
         <module name="system" />
         <module name="keke" />
@@ -17,6 +16,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="game" target="1.8" />
       <module name="realtime" target="1.8" />
       <module name="study" target="1.8" />
       <module name="test-client" target="1.8" />

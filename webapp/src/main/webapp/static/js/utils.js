@@ -94,6 +94,58 @@ WebUtils.Context = {
 
 }
 
+WebUtils.GolbalAjax = {
+    init: function(){
+        $.ajaxSetup({
+            error: function (XMLHttpRequest, textStatus, errorThrown) {
+                if(XMLHttpRequest.status==403) {
+                    Frame.info('暂无权限',2)
+                    return false;
+                }
+            },
+            complete:function(XMLHttpRequest,textStatus) {
+                switch (XMLHttpRequest.status) {
+                    case 400:{
+                        Frame.info('请求参数错误',2)
+                        break;
+                    }
+                    case 405:{
+                        Frame.info('不支持当前请求方法',2)
+                        break;
+                    }
+                    case 415:{
+                        Frame.info('不支持当前媒体类型',2)
+                        break;
+                    }
+                    case 500:{
+                        Frame.info('服务器异常',2)
+                        break;
+                    }
+                    case 10001:{
+                        Frame.info('业务异常',2)
+                        break;
+                    }
+                    case 10002:{
+                        Frame.info('缓存异常',2)
+                        break;
+                    }
+                    case 10003:{
+                        Frame.info('数据异常',2)
+                        break;
+                    }
+                    case 10004:{
+                        Frame.info('参数异常',2)
+                        break;
+                    }
+                    default:{
+                        break;
+                    }
+                }
+            }
+        });
+    }
+}
+
 WebUtils.Lang = {
     init: function(result){
         var _result = JSON.parse(result);

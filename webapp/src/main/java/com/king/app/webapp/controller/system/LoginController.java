@@ -147,7 +147,10 @@ public class LoginController extends BaseController {
         DictCache.getDict(DictConts.SYS_RES_TYPE);
 
         //获取用户角色和权限
-        bindPermissionResources(request);
+        boolean flag = bindPermissionResources(request);
+        if(!flag){
+            mv = new ModelAndView("redirect:/login");
+        }
         return mv;
     }
 
@@ -155,9 +158,13 @@ public class LoginController extends BaseController {
      * 绑定资源权限到session
      * @param request
      */
-    private void bindPermissionResources(HttpServletRequest request) {
+    private boolean bindPermissionResources(HttpServletRequest request) {
         Subject subject = SecurityUtils.getSubject();
-        String account = subject.getPrincipal().toString();
+        if(!subject.isAuthenticated()){
+            subject.logout();
+            return false;
+        }
+        String account = AuthUtils.getUserInfo().getUsername();
         StringBuffer buffer = new StringBuffer();
         SysUser user = sysUserService.findByUserName(account);
         if(user != null){
@@ -178,6 +185,7 @@ public class LoginController extends BaseController {
             }
         }
         request.getSession().setAttribute("permissions", buffer.toString());
+        return true;
     }
 
     @ResponseBody

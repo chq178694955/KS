@@ -10,31 +10,82 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fe042204-8736-438e-94f6-a48ebd7c8011" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/keke/resident/update.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/framework/src/main/java/com/king/framework/exception/WebExceptionHandle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/keke/src/main/java/com/king/keke/controller/VoteController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/keke/src/main/java/com/king/keke/dao/VoteInfoDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/keke/src/main/java/com/king/keke/dao/VoteOptionDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/keke/src/main/java/com/king/keke/dao/VoteOptionItemDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/keke/src/main/java/com/king/keke/entity/VoteInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/keke/src/main/java/com/king/keke/service/IVoteService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/keke/src/main/java/com/king/keke/service/impl/VoteServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/keke/src/main/resources/mapper/keke/VoteInfoMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/keke/src/main/resources/mapper/keke/VoteOptionItemMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/keke/src/main/resources/mapper/keke/VoteOptionMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/keke/vote/main.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/electric-machine/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/electric-machine/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/util/EmCalcUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/util/EmCalcUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/game/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/keke/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/keke/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/keke/src/main/java/com/king/keke/controller/ResidentInfoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/keke/src/main/java/com/king/keke/controller/ResidentInfoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/keke/src/main/java/com/king/keke/service/IResidentInfoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/keke/src/main/java/com/king/keke/service/IResidentInfoService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/keke/src/main/java/com/king/keke/service/impl/ResidentInfoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/keke/src/main/java/com/king/keke/service/impl/ResidentInfoServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/keke/src/main/resources/mapper/keke/ResidentInfoMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/keke/src/main/resources/mapper/keke/ResidentInfoMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/com/king/game/controller/VoteController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/com/king/game/controller/VoteItemController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/com/king/game/controller/VoteItemGroupController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/com/king/game/controller/VoteTemplateController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/com/king/game/conts/VoteEnum.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/com/king/game/dao/VoteItemGroupMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/com/king/game/dao/VoteItemMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/com/king/game/dao/VoteMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/com/king/game/dao/VoteRecordDetailMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/com/king/game/dao/VoteRecordMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/com/king/game/dao/VoteTemplateMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/com/king/game/entity/Vote.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/com/king/game/entity/VoteItem.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/com/king/game/entity/VoteItemGroup.java" beforeDir="false" afterPath="$PROJECT_DIR$/keke/src/main/java/com/king/keke/entity/VoteOptionItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/com/king/game/entity/VoteRecord.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/com/king/game/entity/VoteRecordDetail.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/com/king/game/entity/VoteTemplate.java" beforeDir="false" afterPath="$PROJECT_DIR$/keke/src/main/java/com/king/keke/entity/VoteOption.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/com/king/game/service/IVoteItemGroupService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/com/king/game/service/IVoteItemService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/com/king/game/service/IVoteRecordService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/com/king/game/service/IVoteService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/com/king/game/service/IVoteTemplateService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/com/king/game/service/impl/VoteItemGroupServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/com/king/game/service/impl/VoteItemServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/com/king/game/service/impl/VoteRecordServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/com/king/game/service/impl/VoteServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/com/king/game/service/impl/VoteTemplateServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/com/king/game/vo/VoteItemVO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/com/king/game/vo/VoteVO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/resources/generatorConfig.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/resources/i18n/game_en_US.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/resources/i18n/game_zh_CN.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/resources/mapper/game/VoteItemGroupMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/resources/mapper/game/VoteItemMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/resources/mapper/game/VoteMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/resources/mapper/game/VoteRecordDetailMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/resources/mapper/game/VoteRecordMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/resources/mapper/game/VoteTemplateMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/keke/src/main/resources/generatorConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/keke/src/main/resources/generatorConfig.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/system/src/main/java/com/king/system/conf/ShiroConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/system/src/main/java/com/king/system/conf/ShiroConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webapp/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/keke/resident/add.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/keke/resident/add.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/src/main/java/com/king/app/webapp/controller/system/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/java/com/king/app/webapp/controller/system/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/common/include.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/common/include.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/game/item/add.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/game/item/main.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/game/item/update.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/game/itemGroup/add.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/game/itemGroup/main.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/game/itemGroup/update.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/game/template/add.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/game/template/main.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/game/template/update.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/game/vote/add.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/game/vote/main.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/game/vote/voting.jsp" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/keke/resident/main.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/keke/resident/main.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/src/main/webapp/static/fonts/iconfont.css" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/webapp/static/fonts/iconfont.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/src/main/webapp/static/fonts/iconfont.eot" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/webapp/static/fonts/iconfont.eot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/src/main/webapp/static/fonts/iconfont.js" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/webapp/static/fonts/iconfont.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/src/main/webapp/static/fonts/iconfont.json" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/webapp/static/fonts/iconfont.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/src/main/webapp/static/fonts/iconfont.svg" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/webapp/static/fonts/iconfont.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/src/main/webapp/static/fonts/iconfont.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/webapp/static/fonts/iconfont.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/src/main/webapp/static/fonts/iconfont.woff" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/webapp/static/fonts/iconfont.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/src/main/webapp/static/fonts/iconfont.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/webapp/static/fonts/iconfont.woff2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/src/main/webapp/static/js/frame.js" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/webapp/static/js/frame.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/src/main/webapp/static/X-admin/css/xadmin.css" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/webapp/static/X-admin/css/xadmin.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/src/main/webapp/static/js/utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/webapp/static/js/utils.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -483,9 +534,10 @@
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1606894263993" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/webapp/src/main/webapp/static/fonts" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/keke/vote" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.1366782" />
     <property name="project.structure.side.proportion" value="0.248497" />
@@ -499,11 +551,11 @@
       <recent name="com.king.framework.echarts" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\projects\KS\webapp\src\main\webapp\WEB-INF\jsp\keke\vote" />
       <recent name="C:\projects\KS\webapp\src\main\webapp\static\fonts" />
       <recent name="C:\projects\KS\webapp\src\main\webapp\WEB-INF\jsp\keke\resident" />
       <recent name="C:\projects\KS\webapp\src\main\java\com\king\app\webapp\controller\system" />
       <recent name="C:\projects\KS\electric-machine\src\main\java\com\king\em\controller" />
-      <recent name="C:\projects\KS\system\src\main\java\com\king\system\controller" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\projects\KS\webapp\src\main\webapp\WEB-INF\jsp\sys" />

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.king.keke.dao.VoteOptionDao">
+  <resultMap id="BaseResultMap" type="com.king.keke.entity.VoteOption">
+    <result column="id" jdbcType="BIGINT" property="id" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="type" jdbcType="SMALLINT" property="type" />
+    <result column="vote_id" jdbcType="BIGINT" property="voteId" />
+  </resultMap>
+
+  <sql id="Base_Column_List">
+    id, name, type, vote_id
+  </sql>
+
+  <select id="find" parameterType="java.util.Map" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from vote_option
+    <where>
+      <if test="voteId != null">
+        and vote_id = #{voteId,jdbcType=BIGINT}
+      </if>
+    </where>
+    order by id
+  </select>
+
+  <delete id="delete" parameterType="java.lang.Long">
+    delete from vote_option where id = #{id,jdbcType=BIGINT}
+  </delete>
+
+  <delete id="deleteByVoteId" parameterType="java.lang.Long">
+    delete from vote_option where vote_id = #{voteId,jdbcType=BIGINT}
+  </delete>
+
+  <insert id="insert" parameterType="com.king.keke.entity.VoteOption">
+    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Long">
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into vote_option (name, type, vote_id
+      )
+    values (#{name,jdbcType=VARCHAR}, #{type,jdbcType=SMALLINT}, #{voteId,jdbcType=BIGINT}
+      )
+  </insert>
+
+  <update id="update" parameterType="com.king.keke.entity.VoteOption">
+    update vote_option
+    <set>
+      <if test="name != null">
+        name = #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="type != null">
+        type = #{type,jdbcType=SMALLINT},
+      </if>
+      <if test="voteId != null">
+        vote_id = #{voteId,jdbcType=BIGINT},
+      </if>
+    </set>
+    <where>
+      <if test="id != null">
+        and id = #{id,jdbcType=BIGINT}
+      </if>
+    </where>
+  </update>
+
+</mapper>

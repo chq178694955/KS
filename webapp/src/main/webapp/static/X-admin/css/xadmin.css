@@ -31,6 +31,10 @@ body{
     border-color: #189f92!important;
 }
 
+.layui-table-view .layui-form-radio>i{
+    margin-top: 14px;
+}
+
 .layui-pop-search {
     cursor: pointer
 }

@@ -227,5 +227,14 @@
                     break;
             };
         });
+
+        $('#excel_${menuId}').bind('click',exportExcel)
+        function exportExcel(){
+            var layId = 'residentList_${menuId}';
+            Frame.exportExcel(layId,'${ctx}/game/vote/find',{
+                searchType: $('#searchType_${menuId}').val(),
+                searchKey: $('#searchKey_${menuId}').val()
+            },'居民列表');
+        }
     });
 </script>

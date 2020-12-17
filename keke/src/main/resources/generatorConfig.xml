@@ -59,7 +59,7 @@
         <!--<table tableName="vote_item" domainObjectName="VoteItem">-->
         <!--<table tableName="vote" domainObjectName="Vote">-->
         <!--<table tableName="vote_record" domainObjectName="VoteRecord">-->
-        <table tableName="resident_info" domainObjectName="ResidentInfo"
+        <table tableName="vote_info" domainObjectName="VoteInfo"
                enableCountByExample="true" enableUpdateByExample="true"
                enableDeleteByExample="true" enableSelectByExample="true"
                selectByExampleQueryId="true">

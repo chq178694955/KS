@@ -1,5 +1,6 @@
 package com.king.system.conf;
 
+import com.king.framework.exception.WebExceptionHandle;
 import com.king.system.shiro.CustomerShiroRealm;
 import com.king.system.shiro.RetryLimitHashedCredentialsMatcher;
 import org.apache.shiro.authc.credential.HashedCredentialsMatcher;
@@ -195,5 +196,13 @@ public class ShiroConfig {
         sourceAdvisor.setSecurityManager(securityManager);
         return sourceAdvisor;
     }
+
+    /**
+     * 功能未完善
+     */
+//    @Bean("webExceptionHandle")
+//    public WebExceptionHandle webExceptionHandle(){
+//        return new WebExceptionHandle();
+//    }
 
 }

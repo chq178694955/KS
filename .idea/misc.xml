@@ -20,6 +20,7 @@
     </option>
     <option name="ignoredFiles">
       <set>
+        <option value="$PROJECT_DIR$/game/pom.xml" />
         <option value="$PROJECT_DIR$/test-client/pom.xml" />
       </set>
     </option>

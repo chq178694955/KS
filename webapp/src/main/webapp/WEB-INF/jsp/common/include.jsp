@@ -28,5 +28,6 @@
     WebUtils.Lang.init('${empty i18nKeys ? '[]' : i18nKeys}');
     //add permission files
     WebUtils.Permission.init('${sessionScope.permissions}');
+    WebUtils.GolbalAjax.init();
 </script>
 
