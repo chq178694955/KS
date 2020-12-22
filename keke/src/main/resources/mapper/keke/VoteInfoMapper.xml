@@ -18,6 +18,24 @@
     order by create_time desc
   </select>
 
+  <select id="get" parameterType="java.util.Map" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from vote_info
+    <where>
+      <if test="title != null">
+        and title = #{title,jdbcType=VARCHAR}
+      </if>
+    </where>
+  </select>
+
+  <select id="findById" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from vote_info
+    where id = #{voteId,jdbcType=BIGINT}
+  </select>
+
   <delete id="delete" parameterType="java.lang.Long">
     delete from vote_info where id = #{id,jdbcType=BIGINT}
   </delete>

@@ -15,7 +15,7 @@
 </div>
 <div class="layui-fluid">
     <fieldset class="layui-elem-field layui-field-title site-title">
-        <legend><a name="color-design">指标分类</a></legend>
+        <legend><a name="color-design" style="font-weight: bold;">指标分类</a></legend>
     </fieldset>
 
     <div class="layui-row layui-col-space15">
@@ -69,7 +69,7 @@
     </div>
 
     <fieldset class="layui-elem-field layui-field-title site-title">
-        <legend><a name="color-design">系统指标</a></legend>
+        <legend><a name="color-design" style="font-weight: bold">系统指标</a></legend>
     </fieldset>
 
     <div class="layui-row layui-col-space15">

@@ -10,82 +10,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fe042204-8736-438e-94f6-a48ebd7c8011" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/framework/src/main/java/com/king/framework/exception/WebExceptionHandle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/keke/src/main/java/com/king/keke/controller/VoteController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/keke/src/main/java/com/king/keke/dao/VoteInfoDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/keke/src/main/java/com/king/keke/dao/VoteOptionDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/keke/src/main/java/com/king/keke/dao/VoteOptionItemDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/keke/src/main/java/com/king/keke/entity/VoteInfo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/keke/src/main/java/com/king/keke/service/IVoteService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/keke/src/main/java/com/king/keke/service/impl/VoteServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/keke/src/main/resources/mapper/keke/VoteInfoMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/keke/src/main/resources/mapper/keke/VoteOptionItemMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/keke/src/main/resources/mapper/keke/VoteOptionMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/keke/vote/main.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/keke/vote/add.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webapp/src/main/webapp/static/images/favicon_self.ico" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/src/main/java/com/king/game/controller/VoteController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/src/main/java/com/king/game/controller/VoteItemController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/src/main/java/com/king/game/controller/VoteItemGroupController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/src/main/java/com/king/game/controller/VoteTemplateController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/src/main/java/com/king/game/conts/VoteEnum.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/src/main/java/com/king/game/dao/VoteItemGroupMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/src/main/java/com/king/game/dao/VoteItemMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/src/main/java/com/king/game/dao/VoteMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/src/main/java/com/king/game/dao/VoteRecordDetailMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/src/main/java/com/king/game/dao/VoteRecordMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/src/main/java/com/king/game/dao/VoteTemplateMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/src/main/java/com/king/game/entity/Vote.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/src/main/java/com/king/game/entity/VoteItem.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/src/main/java/com/king/game/entity/VoteItemGroup.java" beforeDir="false" afterPath="$PROJECT_DIR$/keke/src/main/java/com/king/keke/entity/VoteOptionItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/src/main/java/com/king/game/entity/VoteRecord.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/src/main/java/com/king/game/entity/VoteRecordDetail.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/src/main/java/com/king/game/entity/VoteTemplate.java" beforeDir="false" afterPath="$PROJECT_DIR$/keke/src/main/java/com/king/keke/entity/VoteOption.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/src/main/java/com/king/game/service/IVoteItemGroupService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/src/main/java/com/king/game/service/IVoteItemService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/src/main/java/com/king/game/service/IVoteRecordService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/src/main/java/com/king/game/service/IVoteService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/src/main/java/com/king/game/service/IVoteTemplateService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/src/main/java/com/king/game/service/impl/VoteItemGroupServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/src/main/java/com/king/game/service/impl/VoteItemServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/src/main/java/com/king/game/service/impl/VoteRecordServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/src/main/java/com/king/game/service/impl/VoteServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/src/main/java/com/king/game/service/impl/VoteTemplateServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/src/main/java/com/king/game/vo/VoteItemVO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/src/main/java/com/king/game/vo/VoteVO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/src/main/resources/generatorConfig.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/src/main/resources/i18n/game_en_US.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/src/main/resources/i18n/game_zh_CN.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/src/main/resources/mapper/game/VoteItemGroupMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/src/main/resources/mapper/game/VoteItemMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/src/main/resources/mapper/game/VoteMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/src/main/resources/mapper/game/VoteRecordDetailMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/src/main/resources/mapper/game/VoteRecordMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/src/main/resources/mapper/game/VoteTemplateMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keke/src/main/resources/generatorConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/keke/src/main/resources/generatorConfig.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/src/main/java/com/king/system/conf/ShiroConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/system/src/main/java/com/king/system/conf/ShiroConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/controller/EmAnalysisController.java" beforeDir="false" afterPath="$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/controller/EmAnalysisController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/util/EmCalcUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/util/EmCalcUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/keke/src/main/java/com/king/keke/controller/VoteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/keke/src/main/java/com/king/keke/controller/VoteController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/keke/src/main/java/com/king/keke/entity/VoteOption.java" beforeDir="false" afterPath="$PROJECT_DIR$/keke/src/main/java/com/king/keke/entity/VoteOption.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/keke/src/main/java/com/king/keke/service/IVoteService.java" beforeDir="false" afterPath="$PROJECT_DIR$/keke/src/main/java/com/king/keke/service/IVoteService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/keke/src/main/java/com/king/keke/service/impl/VoteServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/keke/src/main/java/com/king/keke/service/impl/VoteServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/keke/src/main/resources/mapper/keke/VoteInfoMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/keke/src/main/resources/mapper/keke/VoteInfoMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/keke/src/main/resources/mapper/keke/VoteOptionItemMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/keke/src/main/resources/mapper/keke/VoteOptionItemMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/keke/src/main/resources/mapper/keke/VoteOptionMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/keke/src/main/resources/mapper/keke/VoteOptionMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webapp/src/main/java/com/king/app/webapp/controller/system/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/java/com/king/app/webapp/controller/system/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/common/include.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/common/include.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/game/item/add.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/game/item/main.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/game/item/update.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/game/itemGroup/add.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/game/itemGroup/main.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/game/itemGroup/update.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/game/template/add.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/game/template/main.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/game/template/update.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/game/vote/add.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/game/vote/main.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/game/vote/voting.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/keke/resident/main.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/keke/resident/main.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/src/main/webapp/static/X-admin/css/xadmin.css" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/webapp/static/X-admin/css/xadmin.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/src/main/webapp/static/js/utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/webapp/static/js/utils.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/em/analysis/main.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/em/analysis/main.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/em/indexMgr/main.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/em/indexMgr/main.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/keke/vote/main.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/keke/vote/main.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/src/main/webapp/static/images/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/webapp/static/images/favicon.ico" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/src/main/webapp/static/js/frame.js" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/webapp/static/js/frame.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -552,10 +494,10 @@
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\projects\KS\webapp\src\main\webapp\WEB-INF\jsp\keke\vote" />
+      <recent name="C:\projects\KS\webapp\src\main\webapp\static\images" />
       <recent name="C:\projects\KS\webapp\src\main\webapp\static\fonts" />
       <recent name="C:\projects\KS\webapp\src\main\webapp\WEB-INF\jsp\keke\resident" />
       <recent name="C:\projects\KS\webapp\src\main\java\com\king\app\webapp\controller\system" />
-      <recent name="C:\projects\KS\electric-machine\src\main\java\com\king\em\controller" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\projects\KS\webapp\src\main\webapp\WEB-INF\jsp\sys" />
@@ -786,6 +728,15 @@
       <workItem from="1607992032649" duration="21945000" />
       <workItem from="1608020049031" duration="4735000" />
       <workItem from="1608079062714" duration="31752000" />
+      <workItem from="1608269750953" duration="687000" />
+      <workItem from="1608346599634" duration="713000" />
+      <workItem from="1608362074585" duration="394000" />
+      <workItem from="1608362666436" duration="287000" />
+      <workItem from="1608364866889" duration="181000" />
+      <workItem from="1608513433776" duration="17189000" />
+      <workItem from="1608612676079" duration="1626000" />
+      <workItem from="1608614615526" duration="24000" />
+      <workItem from="1608617966497" duration="5488000" />
     </task>
     <task id="LOCAL-00001" summary="excel导出">
       <created>1586849513817</created>
@@ -927,7 +878,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608089979418</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="可可项目20201217-&gt;投票">
+      <created>1608197459462</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1608197459462</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -987,6 +945,16 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ID_ORDER">
+      <list>
+        <option value="Default.Root" />
+        <option value="Default.Author" />
+        <option value="Default.Date" />
+        <option value="Default.Subject" />
+      </list>
+    </option>
+  </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
@@ -1017,7 +985,8 @@
     <MESSAGE value="电机项目20201214-&gt;电机项目bug修复" />
     <MESSAGE value="电机项目20201216-&gt;弹出框BUG修复、登录界面调整、工程结构调整、其他部分bug修复" />
     <MESSAGE value="电机项目20201216-&gt;工程结构调整" />
-    <option name="LAST_COMMIT_MESSAGE" value="电机项目20201216-&gt;工程结构调整" />
+    <MESSAGE value="可可项目20201217-&gt;投票" />
+    <option name="LAST_COMMIT_MESSAGE" value="可可项目20201217-&gt;投票" />
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">

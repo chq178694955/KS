@@ -10,6 +10,8 @@ public class VoteOption implements Serializable {
 
     private Short type;
 
+    private String typeDesc;
+
     private Long voteId;
 
     private List<VoteOptionItem> items;
@@ -54,5 +56,13 @@ public class VoteOption implements Serializable {
 
     public void setItems(List<VoteOptionItem> items) {
         this.items = items;
+    }
+
+    public String getTypeDesc() {
+        return typeDesc;
+    }
+
+    public void setTypeDesc(String typeDesc) {
+        this.typeDesc = typeDesc;
     }
 }

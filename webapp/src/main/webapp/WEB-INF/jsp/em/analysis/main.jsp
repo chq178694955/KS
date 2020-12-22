@@ -251,7 +251,23 @@
                         </fieldset>
                         <!-- 3.系统指标结束 -->
 
-                        <!-- 4.执行分析按钮开始 -->
+                        <!-- 4.其他参数开始 -->
+                        <fieldset class="layui-elem-field">
+                            <legend style="font-weight: bold">其他参数</legend>
+                            <div class="layui-field-box">
+                                <div class="layui-form-item">
+                                    <div class="layui-inline">
+                                        <label class="layui-form-label">分辨系数</label>
+                                        <div class="layui-input-inline">
+                                            <input type="text" value="0.5" class="layui-input" name="distingCoeff" lay-verify="required|number">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                        <!-- 4.其他参数结束 -->
+
+                        <!-- 5.执行分析按钮开始 -->
                         <div class="layui-form-item">
                             <div class="layui-input-block">
                                 <button class="layui-btn layui-btn-radius layui-btn-normal" lay-submit="" lay-filter="experimentForm">
@@ -259,7 +275,7 @@
                                 </button>
                             </div>
                         </div>
-                        <!-- 4.执行分析按钮结束 -->
+                        <!-- 5.执行分析按钮结束 -->
                     </div>
                 </div>
             </form>

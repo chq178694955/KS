@@ -96,10 +96,10 @@ Frame.Tabs = {
             opts = {title: opts}
         }
         if(WebUtils.isEmpty(opts.icon)){
-            return WebUtils.isEmpty(opts.name) ? '' : opts.name;
+            return WebUtils.isEmpty(opts.name) ? '' : "<span style='font-weight: bold;'>"+opts.name+"</span>";
         }else{
             //return "<i class='layui-icon'>"+opts.icon+"</i>" + "<span>&nbsp;"+(WebUtils.isEmpty(opts.name) ? '' : opts.name)+"</span>";
-            return "<i class='iconfont'>"+opts.icon+"</i>" + "<span>&nbsp;"+(WebUtils.isEmpty(opts.name) ? '' : opts.name)+"</span>";
+            return "<i class='iconfont'>"+opts.icon+"</i>" + "<span style='font-weight: bold;'>&nbsp;"+(WebUtils.isEmpty(opts.name) ? '' : opts.name)+"</span>";
         }
     },
 
@@ -251,7 +251,7 @@ Frame.Menu = {
 
                         var $parentItem = $("<li>");
                         var $one = $("<i>").addClass("iconfont left-nav-li").attr("lay-tips",node.text).html(node.icon == "" ? Frame.Menu.defaultIcon : node.icon);
-                        var $two = $("<cite>").html(node.text);
+                        var $two = $("<cite style='font-weight: bold;'>").html(node.text);
                         var $three = $("<i>").addClass("iconfont nav_right").html("&#xe697;");
                         var $parentLink = $("<a>").attr("href","javascript:;");
                         $one.appendTo($parentLink);
@@ -263,7 +263,7 @@ Frame.Menu = {
                             for(var j=0;j<children.length;j++){
                                 var subNode = children[j];
                                 var $subIcon = $("<i>").addClass("iconfont").html(subNode.icon == "" ? Frame.Menu.defaultIcon : subNode.icon);
-                                var $subText = $("<cite>").html(subNode.text);
+                                var $subText = $("<cite style='font-weight: bold;'>").html(subNode.text);
                                 var $childLink = $("<a>").attr("href","javascript:;");
                                 //绑定lick事件
                                 $childLink.unbind('click').bind('click',subNode,Frame.Menu.itemClick);

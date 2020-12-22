@@ -47,6 +47,7 @@ public class VoteServiceImpl implements IVoteService {
         Criteria criteria = new Criteria();
         criteria.put("voteId",voteId);
         List<VoteOption> options = voteOptionDao.find("find",criteria);
+        options.forEach(o->o.setTypeDesc(o.getType().intValue() == 0 ? "单选" : "多选"));
 //        final List<Long> voteOptionIds = new ArrayList<>();
 //        options.forEach(o->voteOptionIds.add(o.getId()));
 //        criteria.put("voteOptionIds",voteOptionIds);
@@ -65,5 +66,55 @@ public class VoteServiceImpl implements IVoteService {
         criteria.put("voteOptionId",voteOptionId);
         List<VoteOptionItem> items = voteOptionItemDao.find("find",criteria);
         return items;
+    }
+
+    @Override
+    public boolean addVote(VoteInfo vote) {
+        return voteInfoDao.insert(vote) > 0 ? true : false;
+    }
+
+    @Override
+    public VoteInfo getByTitle(String title) {
+        Criteria criteria = new Criteria();
+        criteria.put("title",title);
+        return voteInfoDao.get(criteria);
+    }
+
+    @Override
+    public boolean delVote(Long id) {
+        return voteInfoDao.delete(id) > 0 ? true : false;
+    }
+
+    @Override
+    public VoteOption getOption(Long voteId, String name) {
+        Criteria criteria = new Criteria();
+        criteria.put("voteId",voteId);
+        criteria.put("name",name);
+        return voteOptionDao.get(criteria);
+    }
+
+    @Override
+    public boolean addVoteOption(VoteOption option) {
+        return voteOptionDao.insert(option) > 0 ? true : false;
+    }
+
+    @Override
+    public VoteOptionItem getOptionItem(Criteria criteria) {
+        return voteOptionItemDao.get(criteria);
+    }
+
+    @Override
+    public boolean addVoteOptionItem(VoteOptionItem item) {
+        return voteOptionItemDao.insert(item) > 0 ? true : false;
+    }
+
+    @Override
+    public boolean delVoteOption(Long id) {
+        return voteOptionDao.delete(id) > 0 ? true : false;
+    }
+
+    @Override
+    public boolean delVoteOptionItem(Long id) {
+        return voteOptionItemDao.delete(id) > 0 ? true :false;
     }
 }

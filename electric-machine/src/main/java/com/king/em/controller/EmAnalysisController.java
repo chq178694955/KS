@@ -293,6 +293,10 @@ public class EmAnalysisController extends BaseController {
         BigDecimal machineHeight = super.getDecimalParam("machineHeight");
         BigDecimal machineWeight = super.getDecimalParam("machineWeight");
         BigDecimal rotorLength = super.getDecimalParam("rotorLength");
+
+        //分辨系数
+        BigDecimal distingCoeff = super.getDecimalParam("distingCoeff");
+
         //获取指标
         List<EmIndexCategory> categories = emIndexCategoryService.findAll();
         List<EmIndexTemplate> templates = emIndexTemplateService.findAll();//根据指标模板获取对应指标内容
@@ -448,7 +452,7 @@ public class EmAnalysisController extends BaseController {
 
             //计算各指标归一化后的关联系数（综合）
             for(EmIndexTemplate template : newTemplates){
-                BigDecimal normalDiffCoeff = minNormalDiffVal.add(new BigDecimal(0.5).multiply(maxNormalDiffVal)).divide(mapIndex.get("normalDiffVal_" + template.getId()).add(new BigDecimal(0.5).multiply(maxNormalDiffVal)),BigDecimal.ROUND_HALF_UP,4);
+                BigDecimal normalDiffCoeff = minNormalDiffVal.add(distingCoeff.multiply(maxNormalDiffVal)).divide(mapIndex.get("normalDiffVal_" + template.getId()).add(distingCoeff.multiply(maxNormalDiffVal)),BigDecimal.ROUND_HALF_UP,4);
                 //mapIndex.put("normalDiffCoeff_" + template.getId(),normalDiffCoeff);
                 degree = degree.add(normalDiffCoeff.multiply(mapIndex.get("weight_" + template.getId())));
             }

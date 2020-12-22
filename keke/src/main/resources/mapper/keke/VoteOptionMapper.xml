@@ -24,6 +24,20 @@
     order by id
   </select>
 
+  <select id="get" parameterType="java.util.Map" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from vote_option
+    <where>
+      <if test="voteId != null">
+        and vote_id = #{voteId,jdbcType=BIGINT}
+      </if>
+      <if test="name != null">
+        and name = #{name,jdbcType=VARCHAR}
+      </if>
+    </where>
+  </select>
+
   <delete id="delete" parameterType="java.lang.Long">
     delete from vote_option where id = #{id,jdbcType=BIGINT}
   </delete>

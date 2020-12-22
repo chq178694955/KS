@@ -16,4 +16,22 @@ public interface IVoteService {
 
     List<VoteOptionItem> findOptionItem(Long voteOptionId);
 
+    boolean addVote(VoteInfo vote);
+
+    VoteInfo getByTitle(String title);
+
+    boolean delVote(Long id);
+
+    VoteOption getOption(Long voteId,String name);
+
+    boolean addVoteOption(VoteOption option);
+
+    VoteOptionItem getOptionItem(Criteria criteria);
+
+    boolean addVoteOptionItem(VoteOptionItem item);
+
+    boolean delVoteOption(Long id);
+
+    boolean delVoteOptionItem(Long id);
+
 }
