@@ -403,9 +403,6 @@ public class EmAnalysisController extends BaseController {
                 return t;
             }).collect(Collectors.toList());
 
-            //最优指标当中最后一个指标
-            EmIndexTemplate lastTemplate = newTemplates.stream().reduce((first,second)->second).orElse(null);
-
             //*** 归一化处理 ***
             // 1.系统预设指标不进行归一化处理和加权、因为它已经做过处理了
             // 2.自定义指标需要进行归一化处理和加权
@@ -432,13 +429,18 @@ public class EmAnalysisController extends BaseController {
 
             result.put("templates",templateToAry(newTemplates));//保存计算后的指标值
 
+            //最优指标当中最后一个指标
+            //EmIndexTemplate lastTemplate = newTemplates.stream().reduce((first,second)->second).orElse(null);
             //最后一个归一化指标值
-            BigDecimal lastNormalVal = mapIndex.get("normalVal_" + lastTemplate.getId());
+            //BigDecimal lastNormalVal = mapIndex.get("normalVal_" + lastTemplate.getId());
             //后续计算都需要用归一化的值进行计算，所以重新开一个循环，循环指标
             for(EmIndexTemplate template : newTemplates){
                 BigDecimal curNormalVal = mapIndex.get("normalVal_" + template.getId());
+                BigDecimal curCalcVal = mapIndex.get("calc_" + template.getId());
                 // 最后一个归一化指标值 - 当前归一化指标值 的绝对值
-                BigDecimal normalDiffVal = lastNormalVal.subtract(curNormalVal).abs();
+                //BigDecimal normalDiffVal = lastNormalVal.subtract(curNormalVal).abs();
+                // 当前指标计算值 - 归一化指标值 的绝对值 = 绝对差值
+                BigDecimal normalDiffVal = curCalcVal.subtract(curNormalVal).abs();
                 mapIndex.put("normalDiffVal_" + template.getId(),normalDiffVal);
             }
             //求出指标差值中最大和最小值（综合）
@@ -473,12 +475,12 @@ public class EmAnalysisController extends BaseController {
 
                 final List<BigDecimal> sumList = new ArrayList<>();
                 curTemplates.stream().forEach(e->{
-                    BigDecimal normalDiffCoeff = minCategoryNormalDiffVal.add(new BigDecimal(0.5).multiply(maxCategoryNormalDiffVal)).divide(mapIndex.get("normalDiffVal_" + e.getId()).add(new BigDecimal(0.5).multiply(maxCategoryNormalDiffVal)),BigDecimal.ROUND_HALF_UP,4);
+                    BigDecimal normalDiffCoeff = minCategoryNormalDiffVal.add(distingCoeff.multiply(maxCategoryNormalDiffVal)).divide(mapIndex.get("normalDiffVal_" + e.getId()).add(distingCoeff.multiply(maxCategoryNormalDiffVal)),BigDecimal.ROUND_HALF_UP,4);
                     sumList.add(normalDiffCoeff.multiply(mapIndex.get("weight_" + e.getId())));
                 });
                 BigDecimal total = sumList.stream().reduce(BigDecimal.ZERO,BigDecimal::add);
                 //分类评级
-                String cateEvaluation = EmCalcUtil.getComprehensiveEvaluation(total);
+                String cateEvaluation = EmCalcUtil.getCategoryEvaluation(total);
                 result.put("evaluation_" + c.getId(),cateEvaluation);
             });
 

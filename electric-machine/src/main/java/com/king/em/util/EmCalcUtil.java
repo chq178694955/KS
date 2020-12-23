@@ -200,25 +200,37 @@ public class EmCalcUtil {
      * @return
      */
     public static String getComprehensiveEvaluation(BigDecimal degree) {
-//        if(degree.compareTo(new BigDecimal(0.8)) >= 0){
-//            return "好";
-//        }else if(degree.compareTo(new BigDecimal(0.8)) < 0 && degree.compareTo(new BigDecimal(0.7)) >= 0){
-//            return "较好";
-//        }else if(degree.compareTo(new BigDecimal(0.7)) < 0 && degree.compareTo(new BigDecimal(0.6)) >= 0){
-//            return "中";
-//        }else if(degree.compareTo(new BigDecimal(0.6)) < 0 && degree.compareTo(new BigDecimal(0.45)) >= 0){
-//            return "较差";
-//        }else {
-//            return "差";
-//        }
-
-        if(degree.compareTo(new BigDecimal(0.2)) >= 0){
+        if(degree.compareTo(new BigDecimal(0.8)) >= 0){
             return "好";
-        }else if(degree.compareTo(new BigDecimal(0.2)) < 0 && degree.compareTo(new BigDecimal(0.15)) >= 0){
+        }else if(degree.compareTo(new BigDecimal(0.8)) < 0 && degree.compareTo(new BigDecimal(0.7)) >= 0){
             return "较好";
-        }else if(degree.compareTo(new BigDecimal(0.15)) < 0 && degree.compareTo(new BigDecimal(0.1)) >= 0){
+        }else if(degree.compareTo(new BigDecimal(0.7)) < 0 && degree.compareTo(new BigDecimal(0.6)) >= 0){
             return "中";
-        }else if(degree.compareTo(new BigDecimal(0.1)) < 0 && degree.compareTo(new BigDecimal(0.05)) >= 0){
+        }else if(degree.compareTo(new BigDecimal(0.6)) < 0 && degree.compareTo(new BigDecimal(0.45)) >= 0){
+            return "较差";
+        }else {
+            return "差";
+        }
+    }
+
+    /**
+     * 分类评级
+     * I >= 0.3 好
+     * 0.3 > I >= 0.25 较好
+     * 0.25 > I >= 0.2 中
+     * 0.2 > I >= 0.15 较差
+     * 0.15 > I 差
+     * @param degree
+     * @return
+     */
+    public static String getCategoryEvaluation(BigDecimal degree) {
+        if(degree.compareTo(new BigDecimal(0.3)) >= 0){
+            return "好";
+        }else if(degree.compareTo(new BigDecimal(0.3)) < 0 && degree.compareTo(new BigDecimal(0.25)) >= 0){
+            return "较好";
+        }else if(degree.compareTo(new BigDecimal(0.25)) < 0 && degree.compareTo(new BigDecimal(0.2)) >= 0){
+            return "中";
+        }else if(degree.compareTo(new BigDecimal(0.2)) < 0 && degree.compareTo(new BigDecimal(0.15)) >= 0){
             return "较差";
         }else {
             return "差";

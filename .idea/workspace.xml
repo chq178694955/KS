@@ -10,24 +10,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fe042204-8736-438e-94f6-a48ebd7c8011" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/keke/vote/add.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webapp/src/main/webapp/static/images/favicon_self.ico" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/controller/EmAnalysisController.java" beforeDir="false" afterPath="$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/controller/EmAnalysisController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/util/EmCalcUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/util/EmCalcUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/keke/src/main/java/com/king/keke/controller/VoteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/keke/src/main/java/com/king/keke/controller/VoteController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/keke/src/main/java/com/king/keke/entity/VoteOption.java" beforeDir="false" afterPath="$PROJECT_DIR$/keke/src/main/java/com/king/keke/entity/VoteOption.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/keke/src/main/java/com/king/keke/service/IVoteService.java" beforeDir="false" afterPath="$PROJECT_DIR$/keke/src/main/java/com/king/keke/service/IVoteService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/keke/src/main/java/com/king/keke/service/impl/VoteServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/keke/src/main/java/com/king/keke/service/impl/VoteServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/keke/src/main/resources/mapper/keke/VoteInfoMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/keke/src/main/resources/mapper/keke/VoteInfoMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/keke/src/main/resources/mapper/keke/VoteOptionItemMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/keke/src/main/resources/mapper/keke/VoteOptionItemMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/keke/src/main/resources/mapper/keke/VoteOptionMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/keke/src/main/resources/mapper/keke/VoteOptionMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/src/main/java/com/king/app/webapp/controller/system/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/java/com/king/app/webapp/controller/system/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/em/analysis/main.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/em/analysis/main.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/em/indexMgr/main.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/em/indexMgr/main.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/keke/vote/main.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/keke/vote/main.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/src/main/webapp/static/images/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/webapp/static/images/favicon.ico" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/src/main/webapp/static/js/frame.js" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/webapp/static/js/frame.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/framework/src/main/java/com/king/framework/utils/TestUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/framework/src/main/java/com/king/framework/utils/TestUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/welcome.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/welcome.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -736,7 +724,10 @@
       <workItem from="1608513433776" duration="17189000" />
       <workItem from="1608612676079" duration="1626000" />
       <workItem from="1608614615526" duration="24000" />
-      <workItem from="1608617966497" duration="5488000" />
+      <workItem from="1608617966497" duration="8061000" />
+      <workItem from="1608636583227" duration="3871000" />
+      <workItem from="1608678736147" duration="1570000" />
+      <workItem from="1608680498867" duration="9084000" />
     </task>
     <task id="LOCAL-00001" summary="excel导出">
       <created>1586849513817</created>
@@ -885,7 +876,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608197459462</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="1.可可项目20201222-&gt;投票管理&#10;2.电机项目部分调整">
+      <created>1608623762762</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1608623762762</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -986,7 +984,8 @@
     <MESSAGE value="电机项目20201216-&gt;弹出框BUG修复、登录界面调整、工程结构调整、其他部分bug修复" />
     <MESSAGE value="电机项目20201216-&gt;工程结构调整" />
     <MESSAGE value="可可项目20201217-&gt;投票" />
-    <option name="LAST_COMMIT_MESSAGE" value="可可项目20201217-&gt;投票" />
+    <MESSAGE value="1.可可项目20201222-&gt;投票管理&#10;2.电机项目部分调整" />
+    <option name="LAST_COMMIT_MESSAGE" value="1.可可项目20201222-&gt;投票管理&#10;2.电机项目部分调整" />
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
