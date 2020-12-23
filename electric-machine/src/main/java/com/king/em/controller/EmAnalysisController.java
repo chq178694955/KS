@@ -415,18 +415,24 @@ public class EmAnalysisController extends BaseController {
                 BigDecimal val = mapIndex.get("calc_" + template.getId());
                 BigDecimal lower = template.getMinVal();
                 BigDecimal upper = template.getMaxVal();
+
+                //获取归一化后的值
+                BigDecimal normalizationVal = FormulaMgrServiceFactory.getInstance().getCalcResult(FormulaType.fromValue(template.getFormulaId()),val,lower,upper);
+                BigDecimal _weight = mapIndex.get("weight_" + template.getId());
+                //存入map方便后续
+                mapIndex.put("normalCalcVal_" + template.getId(),normalizationVal.multiply(_weight).setScale(BigDecimal.ROUND_HALF_UP,4));
+                //因图像只需要展示归一化后的数据，不需要乘以权重，特此修改
+                //template.setNormalVal(normalizationVal.multiply(_weight));
+                template.setNormalVal(normalizationVal);
+
                 if(radioIndex == 1){
                     mapIndex.put("normalVal_" + template.getId(),template.getBestVal());
                     template.setNormalVal(template.getBestVal());
                 }else{
+                    BigDecimal val2 = mapIndex.get("val_" + template.getId());
                     //获取归一化后的值
-                    BigDecimal normalizationVal = FormulaMgrServiceFactory.getInstance().getCalcResult(FormulaType.fromValue(template.getFormulaId()),val,lower,upper);
-                    BigDecimal _weight = mapIndex.get("weight_" + template.getId());
-                    //存入map方便后续
-                    mapIndex.put("normalVal_" + template.getId(),normalizationVal.multiply(_weight));
-                    //因图像只需要展示归一化后的数据，不需要乘以权重，特此修改
-                    //template.setNormalVal(normalizationVal.multiply(_weight));
-                    template.setNormalVal(normalizationVal);
+                    BigDecimal normalizationVal2 = FormulaMgrServiceFactory.getInstance().getCalcResult(FormulaType.fromValue(template.getFormulaId()),val2,lower,upper);
+                    mapIndex.put("normalVal_" + template.getId(),normalizationVal2.multiply(_weight).setScale(BigDecimal.ROUND_HALF_UP,4));
                 }
             }
 
@@ -436,9 +442,14 @@ public class EmAnalysisController extends BaseController {
             BigDecimal lastNormalVal = mapIndex.get("normalVal_" + lastTemplate.getId());
             //后续计算都需要用归一化的值进行计算，所以重新开一个循环，循环指标
             for(EmIndexTemplate template : newTemplates){
+                BigDecimal curNormalCalcVal = mapIndex.get("normalCalcVal_" + template.getId());
                 BigDecimal curNormalVal = mapIndex.get("normalVal_" + template.getId());
+//                System.out.println("指标名：" + template.getName());
+//                System.out.println("归一化后计算值：" + curNormalCalcVal.toString());
+//                System.out.println("归一化后指标值：" + curNormalVal);
+//                System.out.println("=======================");
                 // 最后一个归一化指标值 - 当前归一化指标值 的绝对值
-                BigDecimal normalDiffVal = lastNormalVal.subtract(curNormalVal).abs();
+                BigDecimal normalDiffVal = curNormalCalcVal.subtract(curNormalVal).abs();
                 mapIndex.put("normalDiffVal_" + template.getId(),normalDiffVal);
             }
             //求出指标差值中最大和最小值（综合）
@@ -478,7 +489,7 @@ public class EmAnalysisController extends BaseController {
                 });
                 BigDecimal total = sumList.stream().reduce(BigDecimal.ZERO,BigDecimal::add);
                 //分类评级
-                String cateEvaluation = EmCalcUtil.getComprehensiveEvaluation(total);
+                String cateEvaluation = EmCalcUtil.getCategoryEvaluation(total);
                 result.put("evaluation_" + c.getId(),cateEvaluation);
             });
 
