@@ -19,7 +19,8 @@ public class NormalizationTwoServiceImpl extends AbsNormalizationMgrService {
         }else if(val.compareTo(upper) > 0){
             return BigDecimal.ZERO;
         }else {
-            return val.subtract(lower).divide(upper.subtract(lower),BigDecimal.ROUND_HALF_UP,4);
+            return upper.subtract(val).divide(upper.subtract(lower),BigDecimal.ROUND_HALF_UP,4);
+//            return val.subtract(lower).divide(upper.subtract(lower),BigDecimal.ROUND_HALF_UP,4);
         }
     }
 
