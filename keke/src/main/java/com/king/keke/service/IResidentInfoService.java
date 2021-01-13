@@ -28,4 +28,6 @@ public interface IResidentInfoService {
 
     boolean del(Long id);
 
+    List<ResidentInfo> findBuildings();
+
 }

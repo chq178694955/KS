@@ -19,7 +19,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
-@Service
+@Service("voteService")
 public class VoteServiceImpl implements IVoteService {
 
     @Autowired

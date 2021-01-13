@@ -9,13 +9,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fe042204-8736-438e-94f6-a48ebd7c8011" name="Default Changelist" comment="">
+    <list default="true" id="fe042204-8736-438e-94f6-a48ebd7c8011" name="Default Changelist" comment="1.电机项目部分调整 20201223">
+      <change afterPath="$PROJECT_DIR$/keke/src/main/java/com/king/keke/controller/ResidentVoteController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/keke/src/main/java/com/king/keke/dao/ResidentVoteDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/keke/src/main/java/com/king/keke/service/IResidentVoteService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/keke/src/main/java/com/king/keke/service/impl/ResidentVoteServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/keke/residentVote/main.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/controller/EmAnalysisController.java" beforeDir="false" afterPath="$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/controller/EmAnalysisController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/util/EmCalcUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/electric-machine/src/main/java/com/king/em/util/EmCalcUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/framework/src/main/java/com/king/framework/utils/TestUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/framework/src/main/java/com/king/framework/utils/TestUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/welcome.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/welcome.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/keke/src/main/java/com/king/keke/service/IResidentInfoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/keke/src/main/java/com/king/keke/service/IResidentInfoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/keke/src/main/java/com/king/keke/service/impl/ResidentInfoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/keke/src/main/java/com/king/keke/service/impl/ResidentInfoServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/keke/src/main/java/com/king/keke/service/impl/VoteServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/keke/src/main/java/com/king/keke/service/impl/VoteServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/keke/src/main/resources/generatorConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/keke/src/main/resources/generatorConfig.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/keke/src/main/resources/mapper/keke/ResidentInfoMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/keke/src/main/resources/mapper/keke/ResidentInfoMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/src/main/webapp/static/X-admin/css/xadmin.css" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/webapp/static/X-admin/css/xadmin.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/src/main/webapp/static/fonts/iconfont.css" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/webapp/static/fonts/iconfont.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/src/main/webapp/static/fonts/iconfont.eot" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/webapp/static/fonts/iconfont.eot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/src/main/webapp/static/fonts/iconfont.js" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/webapp/static/fonts/iconfont.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/src/main/webapp/static/fonts/iconfont.json" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/webapp/static/fonts/iconfont.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/src/main/webapp/static/fonts/iconfont.svg" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/webapp/static/fonts/iconfont.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/src/main/webapp/static/fonts/iconfont.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/webapp/static/fonts/iconfont.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/src/main/webapp/static/fonts/iconfont.woff" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/webapp/static/fonts/iconfont.woff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/src/main/webapp/static/fonts/iconfont.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/webapp/static/fonts/iconfont.woff2" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -464,7 +478,7 @@
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1606894263993" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/webapp/src/main/webapp/WEB-INF/jsp/keke/vote" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/webapp/src/main/webapp/static/fonts" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -481,11 +495,11 @@
       <recent name="com.king.framework.echarts" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\projects\KS\webapp\src\main\webapp\static\fonts" />
+      <recent name="C:\projects\KS\webapp\src\main\webapp\WEB-INF\jsp\keke\residentVote" />
+      <recent name="C:\projects\KS\keke\src\main\java\com\king\keke\controller" />
       <recent name="C:\projects\KS\webapp\src\main\webapp\WEB-INF\jsp\keke\vote" />
       <recent name="C:\projects\KS\webapp\src\main\webapp\static\images" />
-      <recent name="C:\projects\KS\webapp\src\main\webapp\static\fonts" />
-      <recent name="C:\projects\KS\webapp\src\main\webapp\WEB-INF\jsp\keke\resident" />
-      <recent name="C:\projects\KS\webapp\src\main\java\com\king\app\webapp\controller\system" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\projects\KS\webapp\src\main\webapp\WEB-INF\jsp\sys" />
@@ -727,7 +741,11 @@
       <workItem from="1608617966497" duration="8061000" />
       <workItem from="1608636583227" duration="3871000" />
       <workItem from="1608678736147" duration="1570000" />
-      <workItem from="1608680498867" duration="9084000" />
+      <workItem from="1608680498867" duration="13109000" />
+      <workItem from="1608715383162" duration="1073000" />
+      <workItem from="1610495448836" duration="264000" />
+      <workItem from="1610499882094" duration="185000" />
+      <workItem from="1610505202747" duration="18076000" />
     </task>
     <task id="LOCAL-00001" summary="excel导出">
       <created>1586849513817</created>
@@ -883,7 +901,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608623762762</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="1.电机项目部分调整 20201223">
+      <created>1608704830240</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1608704830240</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -985,7 +1010,8 @@
     <MESSAGE value="电机项目20201216-&gt;工程结构调整" />
     <MESSAGE value="可可项目20201217-&gt;投票" />
     <MESSAGE value="1.可可项目20201222-&gt;投票管理&#10;2.电机项目部分调整" />
-    <option name="LAST_COMMIT_MESSAGE" value="1.可可项目20201222-&gt;投票管理&#10;2.电机项目部分调整" />
+    <MESSAGE value="1.电机项目部分调整 20201223" />
+    <option name="LAST_COMMIT_MESSAGE" value="1.电机项目部分调整 20201223" />
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">

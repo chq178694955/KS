@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.king.keke.dao.ResidentVoteDao">
+  <resultMap id="BaseResultMap" type="com.king.keke.entity.ResidentVote">
+    <result column="house_holder" jdbcType="VARCHAR" property="houseHolder" />
+    <result column="phone" jdbcType="VARCHAR" property="phone" />
+    <result column="building" jdbcType="VARCHAR" property="building" />
+    <result column="house_no" jdbcType="VARCHAR" property="houseNo" />
+    <result column="area" jdbcType="DECIMAL" property="area" />
+    <result column="id_card_no" jdbcType="VARCHAR" property="idCardNo" />
+    <result column="remarks" jdbcType="VARCHAR" property="remarks" />
+
+    <result column="resident_id" jdbcType="BIGINT" property="residentId" />
+    <result column="vote_id" jdbcType="BIGINT" property="voteId" />
+    <result column="vote_option_id" jdbcType="BIGINT" property="voteOptionId" />
+    <result column="item_ids" jdbcType="VARCHAR" property="itemIds" />
+
+    <result column="vote_status" jdbcType="INTEGER" property="voteStatus" />
+  </resultMap>
+
+  <sql id="Base_Column_List">
+    house_holder, phone, building, house_no, area, id_card_no, remarks, resident_id, vote_id, vote_option_id, item_ids
+  </sql>
+  <select id="find" parameterType="java.util.Map" resultMap="BaseResultMap">
+    select a.id as resident_id,a.house_holder,a.building,a.house_no,a.area,a.id_card_no,a.phone
+         ,IF(b.resident_id is null,0,1) vote_status from resident_info a
+    left join resident_vote b on a.id = b.resident_id and b.vote_id = #{voteId,jdbcType=BIGINT}
+    where a.building = #{building,jdbcType=VARCHAR}
+    order by a.house_no * 1 asc
+  </select>
+
+</mapper>

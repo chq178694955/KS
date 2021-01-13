@@ -73,4 +73,9 @@ public class ResidentInfoServiceImpl implements IResidentInfoService {
     public boolean del(Long id) {
         return residentInfoDao.delete(id) > 0 ? true :false;
     }
+
+    @Override
+    public List<ResidentInfo> findBuildings() {
+        return residentInfoDao.find("findBuildings",null);
+    }
 }

@@ -546,3 +546,38 @@ table th, table td {
     color: #393D49;
 }
 
+.x-king-resident-vote{
+    font-size: 0;
+}
+.x-king-resident-vote li{
+    display: inline-block;
+    vertical-align: center;
+    width: 220px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    padding: 10px 10px;
+    color: #fff;
+    text-align: left;
+    border-radius: 2px;
+    line-height: 22px;
+    font-size: 14px;
+}
+
+.x-king-resident-vote-item{
+    display: flex;
+}
+.x-king-resident-vote-item-left{
+    width: 62px;
+    padding-right: 5px;
+    text-align: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.x-king-resident-vote-item-right{
+    flex: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+

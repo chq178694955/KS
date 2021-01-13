@@ -117,4 +117,9 @@
     </where>
   </update>
 
+  <!-- 获取小区楼栋 -->
+  <select id="findBuildings" resultMap="BaseResultMap">
+    select building from resident_info group by building order by building
+  </select>
+
 </mapper>
