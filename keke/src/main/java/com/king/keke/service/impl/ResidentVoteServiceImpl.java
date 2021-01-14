@@ -30,4 +30,22 @@ public class ResidentVoteServiceImpl implements IResidentVoteService {
         }
         return list;
     }
+
+    @Override
+    public List<ResidentVote> findResidentVote(Long residentId, Long voteId) {
+        Criteria criteria = new Criteria();
+        criteria.put("residentId",residentId);
+        criteria.put("voteId",voteId);
+        List<ResidentVote> list = residentVoteDao.find("findResidentVote",criteria);
+        return list;
+    }
+
+    @Override
+    public boolean vote(List<ResidentVote> votes) {
+        for(ResidentVote vote : votes){
+            residentVoteDao.delete(vote);
+            residentVoteDao.insert(vote);
+        }
+        return true;
+    }
 }

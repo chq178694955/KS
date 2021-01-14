@@ -21,12 +21,33 @@
   <sql id="Base_Column_List">
     house_holder, phone, building, house_no, area, id_card_no, remarks, resident_id, vote_id, vote_option_id, item_ids
   </sql>
+  <sql id="Base_Column_List2">
+    resident_id, vote_id, vote_option_id, item_ids
+  </sql>
   <select id="find" parameterType="java.util.Map" resultMap="BaseResultMap">
-    select a.id as resident_id,a.house_holder,a.building,a.house_no,a.area,a.id_card_no,a.phone
-         ,IF(b.resident_id is null,0,1) vote_status from resident_info a
-    left join resident_vote b on a.id = b.resident_id and b.vote_id = #{voteId,jdbcType=BIGINT}
+    select a.id as resident_id,a.house_holder,a.building,a.house_no,a.area,a.id_card_no,a.phone,
+      if((select count(0) from resident_vote where a.id = resident_id and vote_id = #{voteId,jdbcType=BIGINT}) <![CDATA[ > ]]> 0,1,0) vote_status
+    from resident_info a
     where a.building = #{building,jdbcType=VARCHAR}
     order by a.house_no * 1 asc
   </select>
+
+  <select id="findResidentVote" parameterType="java.util.Map" resultMap="BaseResultMap">
+    select resident_id,vote_id,vote_option_id,item_ids
+    from resident_vote
+    where resident_id = #{residentId,jdbcType=BIGINT}
+    and vote_id = #{voteId,jdbcType=BIGINT}
+  </select>
+
+  <delete id="delete" parameterType="com.king.keke.entity.ResidentVote">
+    delete from resident_vote where resident_id = #{residentId,jdbcType=BIGINT}
+    and vote_id = #{voteId,jdbcType=BIGINT}
+    and vote_option_id = #{voteOptionId,jdbcType=BIGINT}
+  </delete>
+
+  <insert id="insert" parameterType="com.king.keke.entity.ResidentVote">
+    insert into resident_vote(resident_id,vote_id,vote_option_id,item_ids)
+    values(#{residentId,jdbcType=BIGINT},#{voteId,jdbcType=BIGINT},#{voteOptionId,jdbcType=BIGINT},#{itemIds,jdbcType=VARCHAR})
+  </insert>
 
 </mapper>

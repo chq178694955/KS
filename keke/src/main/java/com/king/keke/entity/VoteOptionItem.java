@@ -9,6 +9,8 @@ public class VoteOptionItem implements Serializable {
 
     private Long voteOptionId;
 
+    private boolean checked;
+
     private static final long serialVersionUID = 1L;
 
     public Long getId() {
@@ -33,5 +35,13 @@ public class VoteOptionItem implements Serializable {
 
     public void setVoteOptionId(Long voteOptionId) {
         this.voteOptionId = voteOptionId;
+    }
+
+    public boolean isChecked() {
+        return checked;
+    }
+
+    public void setChecked(boolean checked) {
+        this.checked = checked;
     }
 }

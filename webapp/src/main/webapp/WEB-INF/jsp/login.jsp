@@ -80,6 +80,11 @@
 
 <script>
 
+    if (window != top)
+    {
+        top.location.href = location.href;
+    }
+
     function changeVerCodeImage(){
         var date = new Date().getTime();
         $('#verCodeImage').attr('src','${ctx}/createVerCodeImage?t=' + date)

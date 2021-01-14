@@ -10,6 +10,8 @@ import java.util.List;
 
 public interface IVoteService {
 
+    VoteInfo findVoteById(Long voteId);
+
     PageInfo<VoteInfo> findInfo(PageInfo<VoteInfo> page, Criteria criteria, boolean isDownload);
 
     List<VoteOption> findOption(Long voteId);

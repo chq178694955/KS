@@ -1,8 +1,8 @@
 package com.king.system.conf;
 
-import com.king.framework.exception.WebExceptionHandle;
 import com.king.system.shiro.CustomerShiroRealm;
 import com.king.system.shiro.RetryLimitHashedCredentialsMatcher;
+import com.king.system.shiro.ShiroLoginFilter;
 import org.apache.shiro.authc.credential.HashedCredentialsMatcher;
 import org.apache.shiro.cache.CacheManager;
 import org.apache.shiro.codec.Base64;
@@ -94,7 +94,7 @@ public class ShiroConfig {
     @Bean
     public SessionManager sessionManager() {
         DefaultWebSessionManager sessionManager = new DefaultWebSessionManager();
-        sessionManager.setGlobalSessionTimeout(1800000);
+        sessionManager.setGlobalSessionTimeout(1800000);//1800000
         sessionManager.setDeleteInvalidSessions(true);
         sessionManager.setCacheManager(cacheManager());
         sessionManager.setSessionDAO(redisSessionDAO());
@@ -152,16 +152,19 @@ public class ShiroConfig {
         //设置未授权403页面
         shiroFilterFactoryBean.setUnauthorizedUrl("/403");
 
+        //自定义过滤器
+//        Map<String,Filter> filterMap = new LinkedHashMap<>();
+//        filterMap.put("shiroLoginFilter",new ShiroLoginFilter());
+//        shiroFilterFactoryBean.setFilters(filterMap);
+
         LinkedHashMap<String,String> filterChianMap = new LinkedHashMap<>();
         //设置免验证路径
         filterChianMap.put("/static/**","anon");
         filterChianMap.put("/createVerCodeImage","anon");//放行验证码
         filterChianMap.put("/api/**","anon");//http接口放行
-        filterChianMap.put("/403","anon");
-        filterChianMap.put("/404","anon");
-        filterChianMap.put("/500","anon");
         //出以上url外，其余url必须通过认证才可以访问
         filterChianMap.put("/**","user");
+        //filterChianMap.put("/**","shiroLoginFilter");
         shiroFilterFactoryBean.setFilterChainDefinitionMap(filterChianMap);
         return shiroFilterFactoryBean;
     }
@@ -196,13 +199,5 @@ public class ShiroConfig {
         sourceAdvisor.setSecurityManager(securityManager);
         return sourceAdvisor;
     }
-
-    /**
-     * 功能未完善
-     */
-//    @Bean("webExceptionHandle")
-//    public WebExceptionHandle webExceptionHandle(){
-//        return new WebExceptionHandle();
-//    }
 
 }

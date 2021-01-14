@@ -128,9 +128,9 @@
                         var bgColor = voteStatus == 1 ? '#01AAED' : '#2F4056';
                         var $li = $('<li>').css('background-color',bgColor);
                         var $voteBtn = voteStatus == 1 ?
-                            $('<button>').addClass('layui-btn').addClass('layui-btn-xs').addClass('layui-btn-normal').attr('title','已投').attr('data-id',res[i].residentId).append('已投').bind('click',voteEvent)
+                            $('<button>').addClass('layui-btn').addClass('layui-btn-xs').addClass('layui-btn-warm').attr('title','已投').attr('data-resident',res[i].residentId).attr('data-vote',voteId).append('已投').bind('click',voteEvent)
                             :
-                            $('<button>').addClass('layui-btn').addClass('layui-btn-xs').addClass('layui-btn-danger').attr('title','未投').attr('data-id',res[i].residentId).append('未投').bind('click',voteEvent)
+                            $('<button>').addClass('layui-btn').addClass('layui-btn-xs').addClass('layui-btn-danger').attr('title','未投').attr('data-resident',res[i].residentId).attr('data-vote',voteId).append('未投').bind('click',voteEvent)
                         ;
 
                         //房号
@@ -181,8 +181,9 @@
         }
 
         function voteEvent(){
-            var residentId = $(this).attr('data-id');
-            alert(residentId);
+            var residentId = $(this).attr('data-resident');
+            var voteId = $(this).attr('data-vote');
+            Frame.loadPage('${menuId}','keke/residentVote/toVote?menuId=${menuId}',{residentId:residentId,voteId:voteId},'我的投票',600,450);
         }
     });
 </script>

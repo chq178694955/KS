@@ -30,6 +30,11 @@ public class VoteServiceImpl implements IVoteService {
     private VoteOptionItemDao voteOptionItemDao;
 
     @Override
+    public VoteInfo findVoteById(Long voteId) {
+        return voteInfoDao.get("findById",voteId);
+    }
+
+    @Override
     public PageInfo<VoteInfo> findInfo(PageInfo<VoteInfo> page, Criteria criteria, boolean isDownload) {
         if(!isDownload){
             PageHelper.startPage(page.getPageNum(),page.getPageSize());
