@@ -48,4 +48,9 @@ public class ResidentVoteServiceImpl implements IResidentVoteService {
         }
         return true;
     }
+
+    @Override
+    public List<ResidentVote> findByVote(Long voteId) {
+        return residentVoteDao.find("findByVote",voteId);
+    }
 }

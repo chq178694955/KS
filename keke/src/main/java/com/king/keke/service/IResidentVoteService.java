@@ -10,6 +10,8 @@ public interface IResidentVoteService {
 
     List<ResidentVote> findResidentVote(Long residentId,Long voteId);
 
+    List<ResidentVote> findByVote(Long voteId);
+
     boolean vote(List<ResidentVote> votes);
 
 }

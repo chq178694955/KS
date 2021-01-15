@@ -30,4 +30,6 @@ public interface IResidentInfoService {
 
     List<ResidentInfo> findBuildings();
 
+    List<ResidentInfo> findRepeat();
+
 }

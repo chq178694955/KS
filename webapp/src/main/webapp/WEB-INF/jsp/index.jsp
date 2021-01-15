@@ -60,7 +60,8 @@
 <%--        <a href="${ctx}/index" class="king-font-default" title="<spring:message code="com.login.title"/>"><spring:message code="com.login.title"/></a>--%>
 <%--        <img src="${ctx}/static/images/hunan_university.jfif" width="45px" style="float: left;"/>--%>
         <a href="${ctx}/index" title="湖南大学">
-            <img src="${ctx}/static/images/hn_university_logo.png" width="200px"/>
+<%--            <img src="${ctx}/static/images/hn_university_logo.png" width="200px"/>--%>
+            <img src="${ctx}/static/images/keke_logo.png" width="200px"/>
         </a>
     </div>
     <div class="left_open">
@@ -68,7 +69,8 @@
     </div>
     <ul class="layui-nav left fast-add" lay-filter="">
         <li class="layui-nav-item">
-            伺服电机性能评估系统v1.0
+<%--            伺服电机性能评估系统v1.0--%>
+            可可小城投票管理系统v1.0
         </li>
         <%--<li class="layui-nav-item">--%>
             <%--<a href="javascript:;" layadmin-event="fullscreen">--%>

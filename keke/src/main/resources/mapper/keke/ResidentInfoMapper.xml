@@ -10,6 +10,7 @@
     <result column="area" jdbcType="DECIMAL" property="area" />
     <result column="id_card_no" jdbcType="VARCHAR" property="idCardNo" />
     <result column="remarks" jdbcType="VARCHAR" property="remarks" />
+    <result column="nums" jdbcType="INTEGER" property="nums" />
   </resultMap>
 
   <sql id="Base_Column_List">
@@ -120,6 +121,15 @@
   <!-- 获取小区楼栋 -->
   <select id="findBuildings" resultMap="BaseResultMap">
     select building from resident_info group by building order by building
+  </select>
+
+  <!-- 获取多套房业主 -->
+  <select id="findRepeat" resultMap="BaseResultMap">
+    select house_holder,count(0) nums
+    from resident_info
+    where house_holder is not null
+    group by house_holder
+    having nums <![CDATA[ > ]]> 1
   </select>
 
 </mapper>

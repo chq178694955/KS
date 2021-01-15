@@ -20,6 +20,8 @@ public class ResidentInfo implements Serializable {
 
     private String remarks;
 
+    private Integer nums;
+
     private static final long serialVersionUID = 1L;
 
     public Long getId() {
@@ -84,5 +86,13 @@ public class ResidentInfo implements Serializable {
 
     public void setRemarks(String remarks) {
         this.remarks = remarks == null ? null : remarks.trim();
+    }
+
+    public Integer getNums() {
+        return nums;
+    }
+
+    public void setNums(Integer nums) {
+        this.nums = nums;
     }
 }

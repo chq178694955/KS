@@ -78,4 +78,9 @@ public class ResidentInfoServiceImpl implements IResidentInfoService {
     public List<ResidentInfo> findBuildings() {
         return residentInfoDao.find("findBuildings",null);
     }
+
+    @Override
+    public List<ResidentInfo> findRepeat() {
+        return residentInfoDao.find("findRepeat",new Criteria());
+    }
 }
