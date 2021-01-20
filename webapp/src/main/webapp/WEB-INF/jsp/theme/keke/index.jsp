@@ -228,7 +228,7 @@
     <div class="layui-tab tab" lay-filter="mainFrameTab" lay-allowclose="true" id="mainFrameTab">
         <ul class="layui-tab-title">
             <li class="home layui-this" lay-id="mainFrameHomePage">
-                <i class="layui-icon">&#xe68e;</i><span style="font-weight: bold;">首页</span>
+                <i class="layui-icon">&#xe68e;</i><span>首页</span>
             </li>
         </ul>
         <div class="layui-unselect layui-form-select layui-form-selected" id="tab_right">

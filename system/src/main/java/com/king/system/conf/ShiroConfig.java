@@ -2,7 +2,6 @@ package com.king.system.conf;
 
 import com.king.system.shiro.CustomerShiroRealm;
 import com.king.system.shiro.RetryLimitHashedCredentialsMatcher;
-import com.king.system.shiro.ShiroLoginFilter;
 import org.apache.shiro.authc.credential.HashedCredentialsMatcher;
 import org.apache.shiro.cache.CacheManager;
 import org.apache.shiro.codec.Base64;
@@ -63,7 +62,7 @@ public class ShiroConfig {
         RedisManager redisManager = new RedisManager();
         redisManager.setHost(redisHost);
         redisManager.setPort(redisPort);
-        redisManager.setExpire(1800);// 配置缓存过期时间
+        redisManager.setExpire(3600);// 配置缓存过期时间
         redisManager.setTimeout(0);
         //redisManager.setPassword();//为空可以不配置
         return redisManager;
@@ -94,7 +93,7 @@ public class ShiroConfig {
     @Bean
     public SessionManager sessionManager() {
         DefaultWebSessionManager sessionManager = new DefaultWebSessionManager();
-        sessionManager.setGlobalSessionTimeout(1800000);//1800000
+        sessionManager.setGlobalSessionTimeout(3600000L);//1800000
         sessionManager.setDeleteInvalidSessions(true);
         sessionManager.setCacheManager(cacheManager());
         sessionManager.setSessionDAO(redisSessionDAO());

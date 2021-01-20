@@ -15,7 +15,7 @@
     <meta http-equiv="expires" content="0">
     <title><spring:message code="com.king.website.name"/></title>
     <link rel="icon" href="${ctx}/static/images/favicon.ico" type="image/x-icon">
-    <%@include file="/WEB-INF/jsp/common/include.jsp"%>
+    <%@include file="/WEB-INF/jsp/common/include_machine.jsp"%>
     <script>
         function demoTest(){
             //Frame.changeTab(0);//手动切换TAB

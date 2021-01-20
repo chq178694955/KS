@@ -296,7 +296,8 @@ public class LoginController extends BaseController {
         g.setColor(new Color(57,61,73));
         g.drawRect(0,0,width - 1,height - 1);
 
-        String str = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghigklmnopqrstuvwxyz0123456789";
+        //String str = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghigklmnopqrstuvwxyz0123456789";
+        String str = "ABCDEFGHIJKLMNPQRSTUVWXYZabcdefghigklmnpqrstuvwxyz123456789";//去掉0和o，太像了傻傻分不清
         StringBuffer verCode = new StringBuffer();
         for (int i = 1; i <= 4; i++) {
             int index = ran.nextInt(str.length());
@@ -305,7 +306,7 @@ public class LoginController extends BaseController {
             g.setColor(randomColor());//随机颜色
             g.setFont(randomFont());//随机字体
             //2.3写验证码
-            g.drawString(ch+"",width/5*i,height/2);
+            g.drawString(ch+"",width/5*i - 10,height/2 + 6);
             verCode.append(ch);
         }
 
@@ -345,6 +346,9 @@ public class LoginController extends BaseController {
         int red = ran.nextInt(255);
         int green = ran.nextInt(255);
         int blue = ran.nextInt(255);
+        if(red == 95 && green == 184 && blue == 120){//和背景色一致重新生成
+            return randomColor();
+        }
         return new Color(red,green,blue);
     }
 
