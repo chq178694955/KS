@@ -1,5 +1,6 @@
 package com.king.em.controller;
 
+import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import com.github.pagehelper.PageInfo;
@@ -11,6 +12,7 @@ import com.king.em.factory.FormulaMgrServiceFactory;
 import com.king.em.service.*;
 import com.king.em.util.EmCalcUtil;
 import com.king.framework.base.BaseController;
+import com.king.framework.exception.ParamException;
 import com.king.framework.model.Criteria;
 import com.king.framework.model.ResultResp;
 import com.king.framework.utils.AuthUtils;
@@ -594,6 +596,46 @@ public class EmAnalysisController extends BaseController {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    @ResponseBody
+    @RequestMapping("delProduct")
+    public Object delProduct(HttpServletRequest request){
+        Integer productId = super.getIntegerParam("productId");
+        if(productId == null){
+            throw new ParamException("请求参数错误");
+        }
+        boolean bol1 = ExperimentDataServiceFactory.getInstance().getService(ExperimentType.STEP).deleteByProductId(productId);
+        boolean bol2 = ExperimentDataServiceFactory.getInstance().getService(ExperimentType.SIN).deleteByProductId(productId);
+        boolean bol3 = ExperimentDataServiceFactory.getInstance().getService(ExperimentType.OVERLOAD).deleteByProductId(productId);
+        boolean bol4 = ExperimentDataServiceFactory.getInstance().getService(ExperimentType.EMPTYLOAD).deleteByProductId(productId);
+        boolean bol5 = ExperimentDataServiceFactory.getInstance().getService(ExperimentType.SPEED).deleteByProductId(productId);
+        boolean bol6 = ExperimentDataServiceFactory.getInstance().getService(ExperimentType.CONSTANTLOAD).deleteByProductId(productId);
+        emProductService.delete(productId);
+
+        Criteria criteria = new Criteria();
+        criteria.put("userId", AuthUtils.getUserInfo().getId());
+        List<EmProduct> productList = emProductService.findAll(criteria);
+        JSONObject result = new JSONObject();
+        result.put("productList",productList);
+        return new ResultResp<>(0,result);
+//        if(null != productList && productList.size() > 0){
+//            Integer firstProductId = productList.get(0).getId();//获取第一个项目的实验数据，用于前端显示
+//            //获取实验数据
+//            Map<String,Object> experimentDataObj = this.getExperimentData(firstProductId);
+//            result.put("experimentDataObj",experimentDataObj);
+//            return new ResultResp<>(0,result);
+//        }else{
+//            Map<String,Object> experimentDataObj = new HashMap<>();
+//            experimentDataObj.put("hasDataFlag",false);
+//            experimentDataObj.put("msg","暂无试验数据");
+//            experimentDataObj.put("stepList",new JSONArray());
+//            experimentDataObj.put("sinList",new JSONArray());
+//            experimentDataObj.put("emptyloadList",new JSONArray());
+//            experimentDataObj.put("constantloadList",new JSONArray());
+//            result.put("experimentDataObj",experimentDataObj);
+//            return new ResultResp<>(1,"暂无试验数据");
+//        }
     }
 
 }

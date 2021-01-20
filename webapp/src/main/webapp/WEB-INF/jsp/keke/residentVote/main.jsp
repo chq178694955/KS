@@ -108,6 +108,7 @@
         var form = layui.form;
 
         element.render('breadcrumb');
+        form.render();
 
         $('#query_${menuId}').bind('click',queryResidentVoteList);
 
@@ -125,7 +126,7 @@
                     $('#buildingVoteInfo_${menuId}').find('li').remove();
                     for(var i=0;i<res.length;i++){
                         var voteStatus = res[i].voteStatus;
-                        var bgColor = voteStatus == 1 ? '#01AAED' : '#2F4056';
+                        var bgColor = voteStatus == 1 ? '#01aaed' : '#2f4056';
                         var $li = $('<li>').css('background-color',bgColor);
                         var $voteBtn = voteStatus == 1 ?
                             $('<button>').addClass('layui-btn').addClass('layui-btn-xs').addClass('layui-btn-warm').attr('title','已投').attr('data-resident',res[i].residentId).attr('data-vote',voteId).append('已投').bind('click',voteEvent)

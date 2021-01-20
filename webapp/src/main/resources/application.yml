@@ -83,4 +83,6 @@ default:
       expire:
         hours: 0
 
+ks:
+  theme: machine
 

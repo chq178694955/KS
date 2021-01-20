@@ -43,7 +43,7 @@
                         <thead>
                         <tr>
                             <th lay-data="{checkbox:true}"></th>
-                            <th lay-data="{field:'id',width:75,align:'center',hide:true}">ID</th>
+                            <th lay-data="{field:'id',width:75,align:'center'}">ID</th>
                             <th lay-data="{field:'fixedCurrent',width:160,align:'center'}">额定电流（A）</th>
                             <th lay-data="{field:'fixedVoltage',width:160,align:'center'}">额定电压（V）</th>
                             <th lay-data="{field:'fixedSpeed',width:160,align:'center'}">额定转速（r/min）</th>

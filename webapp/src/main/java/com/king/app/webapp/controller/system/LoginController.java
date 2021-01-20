@@ -35,6 +35,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.ThemeResolver;
 
 import javax.imageio.ImageIO;
 import javax.servlet.http.HttpServletRequest;
@@ -71,9 +72,13 @@ public class LoginController extends BaseController {
     @Autowired
     private ISysResourcesService sysResourcesService;
 
+    @Autowired
+    private ThemeResolver themeResolver;
+
     @RequestMapping("login")
-    public ModelAndView login(){
-        ModelAndView  mv = new ModelAndView("login");
+    public ModelAndView login(HttpServletRequest request){
+        String theme = themeResolver.resolveThemeName(request);
+        ModelAndView  mv = new ModelAndView("theme/"+theme+"/login");
         JSONArray i18nKeys = super.loadI18nData();
         mv.addObject("i18nKeys",i18nKeys);
         return mv;
@@ -139,7 +144,8 @@ public class LoginController extends BaseController {
 
         UserInfo userInfo = AuthUtils.getUserInfo();
 
-        ModelAndView mv = new ModelAndView("index");
+        String theme = themeResolver.resolveThemeName(request);
+        ModelAndView mv = new ModelAndView("theme/"+theme+"/index");
         JSONArray i18nKeys = super.loadI18nData();
         mv.addObject("i18nKeys",i18nKeys);
         mv.addObject("userInfo",userInfo);
@@ -262,8 +268,9 @@ public class LoginController extends BaseController {
     }
 
     @RequestMapping("welcome")
-    public String welcome(){
-        return "welcome";
+    public String welcome(HttpServletRequest request){
+        String theme = themeResolver.resolveThemeName(request);
+        return "theme/"+theme+"/welcome";
     }
 
     @RequestMapping("welcome1")

@@ -14,7 +14,7 @@
     <meta http-equiv="cache-control" content="no-cache">
     <meta http-equiv="expires" content="0">
     <title><spring:message code="com.king.website.name"/></title>
-    <link rel="icon" href="${ctx}/static/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="${ctx}/static/images/favicon_self.ico" type="image/x-icon">
     <%@include file="/WEB-INF/jsp/common/include.jsp"%>
     <script>
         function demoTest(){
@@ -59,9 +59,9 @@
     <div class="logo">
 <%--        <a href="${ctx}/index" class="king-font-default" title="<spring:message code="com.login.title"/>"><spring:message code="com.login.title"/></a>--%>
 <%--        <img src="${ctx}/static/images/hunan_university.jfif" width="45px" style="float: left;"/>--%>
-        <a href="${ctx}/index" title="湖南大学">
-            <img src="${ctx}/static/images/hn_university_logo.png" width="200px"/>
-<%--            <img src="${ctx}/static/images/keke_logo.png" width="200px"/>--%>
+        <a href="${ctx}/index" title="可可小城">
+<%--            <img src="${ctx}/static/images/hn_university_logo.png" width="200px"/>--%>
+            <img src="${ctx}/static/images/keke_logo.png" width="200px"/>
         </a>
     </div>
     <div class="left_open">
@@ -69,8 +69,8 @@
     </div>
     <ul class="layui-nav left fast-add" lay-filter="">
         <li class="layui-nav-item">
-            伺服电机性能评估系统v1.0
-<%--            可可小城投票管理系统v1.0--%>
+<%--            伺服电机性能评估系统v1.0--%>
+            可可小城投票管理系统v1.0
         </li>
         <%--<li class="layui-nav-item">--%>
             <%--<a href="javascript:;" layadmin-event="fullscreen">--%>

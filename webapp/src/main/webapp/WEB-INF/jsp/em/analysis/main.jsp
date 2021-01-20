@@ -35,6 +35,13 @@
                                             </select>
                                         </div>
                                     </div>
+                                    <div class="layui-inline">
+                                        <div class="layui-input-inline">
+                                            <button id="addProductList_${menuId}" type="button" class="layui-btn layui-btn-danger" title="<spring:message code="com.btn.del"/>">
+                                                <i class="layui-icon layui-icon-delete"></i><spring:message code="com.btn.del"/>
+                                            </button>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="layui-form-item">
                                     <div class="layui-inline">
@@ -447,6 +454,35 @@
             Frame.info('${experimentDataObj.msg}',2);
         }
 
+        $('#addProductList_${menuId}').bind('click',function(){
+            var productId = $('#productList_${menuId}').val();
+            Frame.confirm("确认删除该组数据？",function(){
+                $.ajax({
+                    url: APP_ENV + '/em/analysis/delProduct',
+                    data:{
+                        productId: productId
+                    },
+                    dataType:'json',
+                    success: function(res){
+                        if(res.code == 0){
+                            $('#productList_${menuId}').empty();
+                            for(var i=0;i<res.data.productList.length;i++){
+                                var prod = res.data.productList[i];
+                                $('#productList_${menuId}').append('<option value="'+prod.id+'">'+prod.name+'</option>')
+                            }
+                            form.render('select');
+                            var sss= $('#productList_${menuId}').val(); //先获取   默认选中的第一个 option 的值 （ value）
+                            var ssss = 'dd[lay-value=' + sss + ']';
+                            $('#productList_${menuId}').siblings("div.layui-form-select").find('dl').find(ssss).click();//触发
+                            Frame.info('删除成功');
+                        }else{
+                            Frame.err(res.msg);
+                        }
+                    }
+                });
+            })
+        });
+
         //实验项目下拉选中事件
         form.on('select(productSelectFilter)', function(data){
             // console.log(data.elem); //得到select原始DOM对象
@@ -599,12 +635,13 @@
             console.log(data.form);
             console.log(data.field);
 
+            var curLayer = null;
             $.ajax({
                 url: data.form.action,
                 data: data.field,
                 dataType: 'json',
                 beforeSend: function(){
-                    Frame.load();
+                    curLayer = Frame.load();
                 },
                 success: function(result){
                     if(result.code == 0){
@@ -668,11 +705,13 @@
                         }
                     }
                     if(result.msg && result.msg != undefined && result.msg != ''){
-                        Frame.alert(result.msg);
+                        Frame.info(result.msg);
                     }
                 },
-                complete: function(XMLHttpRequest, status){
-                    Frame.closeAllLayer()
+                complete: function(){
+                    if(curLayer != null){
+                        Frame.closeLayer(curLayer);
+                    }
                 }
             })
             return false;

@@ -6,6 +6,7 @@ import com.king.em.dao.EmProductDao;
 import com.king.em.entity.EmProduct;
 import com.king.em.service.IEmProductService;
 import com.king.framework.model.Criteria;
+import com.king.framework.utils.AuthUtils;
 import com.king.framework.utils.DateUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -29,7 +30,7 @@ public class EmProductServiceImpl implements IEmProductService {
     }
 
     @Override
-    public boolean delete(Long id) {
+    public boolean delete(Integer id) {
         return emProductDao.delete(id) > 0 ? true : false;
     }
 
@@ -45,7 +46,11 @@ public class EmProductServiceImpl implements IEmProductService {
 
     @Override
     public EmProduct findByName(String name) {
-        return emProductDao.get("findByName",name);
+        Long userId = AuthUtils.getUserInfo().getId();
+        Criteria criteria = new Criteria();
+        criteria.put("userId",userId);
+        criteria.put("name",name);
+        return emProductDao.get("findByName",criteria);
     }
 
     @Override

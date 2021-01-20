@@ -15,7 +15,7 @@ public interface IEmProductService {
 
     boolean add(EmProduct product);
 
-    boolean delete(Long id);
+    boolean delete(Integer id);
 
     boolean update(EmProduct product);
 

@@ -29,10 +29,10 @@
     <include refid="Base_Column_List" />
     from em_product where id = #{id,jdbcType=INTEGER}
   </select>
-  <select id="findByName" parameterType="java.lang.String" resultMap="BaseResultMap">
+  <select id="findByName" parameterType="java.util.Map" resultMap="BaseResultMap">
     select
     <include refid="Base_Column_List" />
-    from em_product where name = #{name,jdbcType=VARCHAR}
+    from em_product where name = #{name,jdbcType=VARCHAR} and user_id = #{userId,jdbcType=BIGINT}
   </select>
   <delete id="delete" parameterType="java.lang.Integer">
     delete from em_product where id = #{id,jdbcType=INTEGER}
