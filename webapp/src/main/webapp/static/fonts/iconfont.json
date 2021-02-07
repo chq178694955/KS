@@ -6,6 +6,55 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "7831441",
+      "name": "客户端APP管理",
+      "font_class": "kehuduanAPPguanli",
+      "unicode": "e626",
+      "unicode_decimal": 58918
+    },
+    {
+      "icon_id": "982596",
+      "name": "图表",
+      "font_class": "tubiao",
+      "unicode": "e670",
+      "unicode_decimal": 58992
+    },
+    {
+      "icon_id": "2086289",
+      "name": "小区",
+      "font_class": "xiaoqu",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "6077725",
+      "name": "车辆管理",
+      "font_class": "cheliangguanli",
+      "unicode": "e61e",
+      "unicode_decimal": 58910
+    },
+    {
+      "icon_id": "8728349",
+      "name": "第三方",
+      "font_class": "disanfang",
+      "unicode": "e601",
+      "unicode_decimal": 58881
+    },
+    {
+      "icon_id": "9783462",
+      "name": "任务",
+      "font_class": "renwu",
+      "unicode": "e613",
+      "unicode_decimal": 58899
+    },
+    {
+      "icon_id": "15023380",
+      "name": "统计",
+      "font_class": "tongji",
+      "unicode": "e63f",
+      "unicode_decimal": 58943
+    },
+    {
       "icon_id": "376365",
       "name": "身份证",
       "font_class": "cardid",

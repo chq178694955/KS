@@ -59,7 +59,7 @@ public class ResourcesController extends BaseController {
         node.put("id",res.getId());
         node.put("title",res.getName());
         node.put("'field","name");
-        node.put("spread",true);//全部展开
+        node.put("spread",false);//全部展开
         return node;
     }
 

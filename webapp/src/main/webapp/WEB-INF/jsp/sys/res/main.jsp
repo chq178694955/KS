@@ -20,12 +20,10 @@
                 <div class="layui-card-header">
                     <span><spring:message code="sys.role.tip.permissionSet"/></span>
                 </div>
-                <div class="layui-card-body ">
+                <div class="layui-card-body">
                     <div id="resTree_${menuId}"></div>
                 </div>
             </div>
-
-
         </div>
         <div class="layui-col-md7">
             <div class="layui-card">

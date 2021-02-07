@@ -125,7 +125,7 @@ public class HssfTableExport<T> extends AbsTableExport<T> implements ITableExpor
                 sheet.addMergedRegion(new CellRangeAddress(startRow, startRow, fieldIndex, (fieldIndex + f.getColspan() - 1)));
                 if(map.containsKey(f.getName())){
                     Object value = map.get(f.getName());
-                    HSSFRichTextString text = new HSSFRichTextString(value.toString());
+                    HSSFRichTextString text = new HSSFRichTextString(value == null ? StringUtils.EMPTY_STRING : value.toString());
                     cell.setCellValue(text);
                 }else{
                     HSSFRichTextString text = new HSSFRichTextString(StringUtils.EMPTY_STRING);
