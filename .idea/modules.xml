@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/electric-machine/electric-machine.iml" filepath="$PROJECT_DIR$/electric-machine/electric-machine.iml" />
       <module fileurl="file://$PROJECT_DIR$/game/game.iml" filepath="$PROJECT_DIR$/game/game.iml" />
-      <module fileurl="file://$PROJECT_DIR$/keke/keke.iml" filepath="$PROJECT_DIR$/keke/keke.iml" />
     </modules>
   </component>
 </project>

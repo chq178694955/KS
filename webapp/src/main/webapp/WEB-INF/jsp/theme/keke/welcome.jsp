@@ -214,25 +214,25 @@
 <script>
     layui.use(['element','layer'],function(){
         let element = layui.element;
-        layer.open({
-            title:'正在加载...',
-            content:`<div class="layui-progress layui-progress-big" lay-showPercent="yes" lay-filter="demoProgress">
-              <div class="layui-progress-bar layui-bg-blue" lay-percent="0%"></div>
-            </div>`,
-            success: function(layero,index){
-                let initVal = 0;
-                let testInterval = setInterval(function(){
-                    initVal = initVal + 10;
-                    if(initVal > 100){
-                        window.clearInterval(testInterval);
-                        Frame.closeLayer(index);
-                    }
-                    element.progress('demoProgress',initVal + '%');
-                },300);
-            },
-            closeBtn:0,
-            btn:[]
-        });
+        // layer.open({
+        //     title:'正在加载...',
+        //     content:`<div class="layui-progress layui-progress-big" lay-showPercent="yes" lay-filter="demoProgress">
+        //       <div class="layui-progress-bar layui-bg-blue" lay-percent="0%"></div>
+        //     </div>`,
+        //     success: function(layero,index){
+        //         let initVal = 0;
+        //         let testInterval = setInterval(function(){
+        //             initVal = initVal + 10;
+        //             if(initVal > 100){
+        //                 window.clearInterval(testInterval);
+        //                 Frame.closeLayer(index);
+        //             }
+        //             element.progress('demoProgress',initVal + '%');
+        //         },300);
+        //     },
+        //     closeBtn:0,
+        //     btn:[]
+        // });
     });
 </script>
 

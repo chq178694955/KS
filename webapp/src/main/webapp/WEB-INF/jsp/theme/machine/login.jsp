@@ -71,6 +71,10 @@
                     <img id="verCodeImage" src="${ctx}/createVerCodeImage"/>
                 </a>
             </div>
+            <div style="width: 100%;height: 20px;line-height:20px;text-align: center;">
+                <a href="#" onclick="changeLanguage('zh_CN')">中文</a>
+                <a href="#" onclick="changeLanguage('en_US')">English</a>
+            </div>
         </div>
         <div class="layui-form-item">
             <input value="<spring:message code="com.login.loginBtn"/>" lay-submit lay-filter="login" style="width:100%;" type="submit">
@@ -88,6 +92,10 @@
     function changeVerCodeImage(){
         var date = new Date().getTime();
         $('#verCodeImage').attr('src','${ctx}/createVerCodeImage?t=' + date)
+    }
+
+    function changeLanguage(locale){
+        window.location = APP_ENV + '/login?lang=' + locale;
     }
 
     $(function  () {
