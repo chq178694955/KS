@@ -3,7 +3,19 @@ package com.king.framework.conf;
 import com.alibaba.druid.pool.DruidDataSource;
 import com.github.pagehelper.PageHelper;
 import com.king.framework.ds.*;
-import org.apache.ibatis.plugin.Interceptor;
+import com.king.framework.utils.I18nUtils;
+import org.apache.ibatis.builder.SqlSourceBuilder;
+import org.apache.ibatis.cache.CacheKey;
+import org.apache.ibatis.executor.Executor;
+import org.apache.ibatis.mapping.BoundSql;
+import org.apache.ibatis.mapping.MappedStatement;
+import org.apache.ibatis.mapping.SqlSource;
+import org.apache.ibatis.plugin.*;
+import org.apache.ibatis.scripting.xmltags.DynamicContext;
+import org.apache.ibatis.scripting.xmltags.DynamicSqlSource;
+import org.apache.ibatis.scripting.xmltags.SqlNode;
+import org.apache.ibatis.session.ResultHandler;
+import org.apache.ibatis.session.RowBounds;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.mybatis.spring.SqlSessionFactoryBean;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,10 +30,13 @@ import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.util.CollectionUtils;
 
 import javax.sql.DataSource;
+import java.lang.reflect.Field;
 import java.sql.SQLException;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Map;
 import java.util.Properties;
+import java.util.logging.Logger;
 
 /**
  * 数据源配置
@@ -155,13 +170,99 @@ public class DataSourceConfig {
         return pageHelper;
     }
 
+    class KsSqlSource extends DynamicSqlSource{
+        private org.apache.ibatis.session.Configuration configuration;
+        private SqlNode rootSqlNode;
+
+        public KsSqlSource(org.apache.ibatis.session.Configuration configuration, SqlNode rootSqlNode) {
+            super(configuration, rootSqlNode);
+            this.configuration = configuration;
+            this.rootSqlNode = rootSqlNode;
+        }
+
+        public BoundSql getBoundSql(Object parameterObject) {
+            DynamicContext context = new DynamicContext(this.configuration, parameterObject);
+            context.getBindings().put("locale", I18nUtils.getLocale().toString());
+            this.rootSqlNode.apply(context);
+            SqlSourceBuilder sqlSourceParser = new SqlSourceBuilder(this.configuration);
+            Class<?> parameterType = parameterObject == null ? Object.class : parameterObject.getClass();
+            SqlSource sqlSource = sqlSourceParser.parse(context.getSql(), parameterType, context.getBindings());
+            BoundSql boundSql = sqlSource.getBoundSql(parameterObject);
+            Iterator var7 = context.getBindings().entrySet().iterator();
+
+            while(var7.hasNext()) {
+                Map.Entry<String, Object> entry = (Map.Entry)var7.next();
+                boundSql.setAdditionalParameter((String)entry.getKey(), entry.getValue());
+            }
+
+            return boundSql;
+        }
+    }
+
+    @Intercepts({@Signature(
+            type = Executor.class,
+            method = "query",
+            args = {MappedStatement.class, Object.class, RowBounds.class, ResultHandler.class}
+    ), @Signature(
+            type = Executor.class,
+            method = "query",
+            args = {MappedStatement.class, Object.class, RowBounds.class, ResultHandler.class, CacheKey.class, BoundSql.class}
+    )})
+    class MyBatisParamsInterceptor implements Interceptor{
+        public Object intercept(Invocation invocation) throws Throwable {
+            try {
+                Object[] args = invocation.getArgs();
+                MappedStatement ms = (MappedStatement)args[0];
+                SqlSource sqlSource = ms.getSqlSource();
+                if (sqlSource instanceof DynamicSqlSource) {
+                    KsSqlSource ksSqlSource = new KsSqlSource(ms.getConfiguration(), this.getSqlNode((DynamicSqlSource)sqlSource));
+                    this.setSource(ms, ksSqlSource);
+                }
+            } catch (Exception var6) {
+                var6.printStackTrace();
+            }
+
+            return invocation.proceed();
+        }
+
+        public SqlNode getSqlNode(DynamicSqlSource sqlSource) {
+            try {
+                Field field = DynamicSqlSource.class.getDeclaredField("rootSqlNode");
+                field.setAccessible(true);
+                SqlNode sqlnode = (SqlNode)field.get(sqlSource);
+                return sqlnode;
+            } catch (Exception var4) {
+                var4.printStackTrace();
+                return null;
+            }
+        }
+
+        public void setSource(MappedStatement ms, SqlSource sqlSource) {
+            try {
+                Field field = MappedStatement.class.getDeclaredField("sqlSource");
+                field.setAccessible(true);
+                field.set(ms, sqlSource);
+            } catch (SecurityException | IllegalArgumentException | IllegalAccessException | NoSuchFieldException var4) {
+                var4.printStackTrace();
+            }
+
+        }
+
+        public Object plugin(Object target) {
+            return Plugin.wrap(target, this);
+        }
+
+        public void setProperties(Properties properties) {
+        }
+    }
+
     @Bean(name = "sqlSessionFactory")
     @Primary
     public SqlSessionFactory sqlSessionFactory(@Autowired @Qualifier("dynamicDataSource")DataSource dataSource)
         throws Exception{
         final SqlSessionFactoryBean sessionFactory = new SqlSessionFactoryBean();
         sessionFactory.setDataSource(dataSource);
-        sessionFactory.setPlugins(new Interceptor[]{pageHelper()});
+        sessionFactory.setPlugins(new Interceptor[]{pageHelper(),new MyBatisParamsInterceptor()});
         sessionFactory.setMapperLocations(new PathMatchingResourcePatternResolver().getResources(mapperLocations));
         return sessionFactory.getObject();
     }

@@ -33,11 +33,15 @@ public class I18nUtils {
 
     public static String get(String msgKey,Object ...args){
         try{
-            return messageSource.getMessage(msgKey,args, LocaleContextHolder.getLocale());
+            return messageSource.getMessage(msgKey,args, getLocale());
         }catch(Exception ex){
             ex.printStackTrace();
         }
         return msgKey;
+    }
+
+    public static Locale getLocale(){
+        return LocaleContextHolder.getLocale();
     }
 
     /**
