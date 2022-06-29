@@ -30,7 +30,7 @@
         <ehcache.core.verion>2.5.7</ehcache.core.verion>
         <shiro.version>1.4.0</shiro.version>
         <shiro.redis.version>2.4.2.1-RELEASE</shiro.redis.version>
-        <poi.version>3.9</poi.version>
+        <poi.version>4.1.1</poi.version>
         <xmlparser.version>2.11.0</xmlparser.version>
         <jwt.version>0.9.0</jwt.version>
     </properties>
